@@ -1,2 +1,0 @@
-# introprg
-Programación
