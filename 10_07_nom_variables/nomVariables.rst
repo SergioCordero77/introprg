@@ -9,7 +9,7 @@ el teu nom = nom
 
 el color de fons del teu escriptori = color
 
-si t'agrada o no el gust de la llimona = gust
+si t'agrada o no el gust de la llimona = agradagust
 
 la lletra de la teva cançó preferida = lletra
 

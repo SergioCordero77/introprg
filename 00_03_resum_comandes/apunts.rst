@@ -4,6 +4,7 @@ COMANDA                 DESCRIPCIÓ
 
 $ mkdir carpeta/        (make) crea una carpeta anomenada carpeta/
 $ cd carpeta/           (change director) canvia de directori actual a carpeta/
+$ cd ..			Tancar carpetes
 $ cat fitxer            (concatenar) permet veure que hi ha dins del fitxer
 $ gedit fitxer &        crea un fitxer que es pot editar en gedit
 $ ls                    (list) enseña la llista dels documents que estàn dins del directori

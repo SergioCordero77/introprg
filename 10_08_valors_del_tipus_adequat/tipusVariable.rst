@@ -20,4 +20,4 @@ la lletra de la teva cançó preferida
 String lletraCanco = "Talk";
 
 la llista de pel·lícules i llibres que més t'han marcat
-String Llista = "Ciencia ficció";
+String llista = "Ciencia ficció";
