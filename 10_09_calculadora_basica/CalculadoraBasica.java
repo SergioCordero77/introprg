@@ -12,9 +12,9 @@ public class CalculadoraBasica {
     public static void main(String[] args) {
     
         // obté operands d'entrada
-        System.out.println("Primer operand");
+        System.out.println("Primer operand:");
         int primerOperand = Integer.parseInt(Entrada.readLine());
-        System.out.println("Segon operand");
+        System.out.println("Segon operand:");
         int segonOperand = Integer.parseInt(Entrada.readLine());
         
         // operacions
