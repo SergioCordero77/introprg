@@ -2,7 +2,7 @@
  * Aquest programa demana el valor del radi
  * i la unitat de mesura i finalment calcula l'àrea"
  */
-public class calculaArea {
+public class CalculaArea {
     public static void main(String[] args) {
         System.out.println("Càlcul de l'àrea d'un cercle");
         System.out.println("Introduïu el radi:");
