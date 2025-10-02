@@ -53,7 +53,7 @@ public class Expressions {
         int companys = Integer.parseInt(Entrada.readLine());
         System.out.println("Escriu quants anys tens:");
         int edatMeva = Integer.parseInt(Entrada.readLine());
-        boolean companysClasse = companys>= edatMeva;
+        boolean companysClasse = companys == edatMeva;
         System.out.println("Hi ha el mateix nombre de companys a classe com anys tens? " + companysClasse);
 
         System.out.println();
