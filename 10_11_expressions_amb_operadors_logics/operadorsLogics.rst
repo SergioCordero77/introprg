@@ -5,10 +5,10 @@ la Clara és més jove que tu
 edatClara < edatMeva
 
 la Clara i el Marc són més joves que tu
-edatClara && edatMarc < edatMeva
+edatClara < edatMeva && edatMarc < edatMeva
 
 la Clara és més jove que tu i tu ets més jove que el Marc
-edatClara < edatMeva < edatMarc
+edatClara < edatMeva && edatMeva<edatMarc
 
 la Clara no és més jove que el Marc
 !(edatClara < edatMarc)
@@ -20,7 +20,7 @@ Ni el Marc és més jove que la Clara ni tu ets més jove que el Marc
 !(edatMarc < edatClara) && !(edatMeva < edatMarc)
 
 Tu ets més gran que la Clara i el Marc junts o bé la Clara i el Marc tenen la mateixa edat
-edatMeva > edatClara && edatMarc || (edatClara == edatMarc)
+edatMeva > (edatClara + edatMarc) || (edatClara == edatMarc)
 
 // inventades per mi
 

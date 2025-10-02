@@ -12,6 +12,7 @@ la suma de 2 més 5 és igual a 7
 
 la suma de 2 més 5 és diferent de 7
 2+5 !=7
+!((2+7<7)||(2+5>7)) 
 
 l'any que ve seràs major d'edat
 edat+1 >=18
@@ -23,7 +24,7 @@ tens com a molt 35 companys a classe
 companys >= 35
 
 tens tants companys a classe com anys
-companysEdat ==32
+companysEdat == anys
 
 el Renat té quatre potes
 potesRenat ==4
