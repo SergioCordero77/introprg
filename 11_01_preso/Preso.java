@@ -12,7 +12,7 @@
             System.out.println("Aneu amb compte " + nom);
         }
         else {
-            System.out.println("Vos ja podeu anara a la pressó!");
+            System.out.println("Vos ja podeu anar a la presó!");
             System.out.println("Aneu amb compte " + nom);
         }
     }
