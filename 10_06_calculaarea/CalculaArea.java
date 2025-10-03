@@ -11,7 +11,7 @@ public class CalculaArea {
         String unitats = Entrada.readLine(); // Indiquem quina unitat de mesura volem utilitzar
         float radi = Float.parseFloat(linia); // Transforma String a Float
         float area = (float)Math.PI * radi * radi;
-        System.out.println("L'àrea és " + area + (" ") + unitats + ("²"));
+        System.out.println("L'àrea és " + area + (" ") + unitats + ("^2"));
     }
 }
         
