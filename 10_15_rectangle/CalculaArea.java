@@ -14,6 +14,6 @@ public class CalculaArea {
         float base = Float.parseFloat(horitzontal);
         float altura = Float.parseFloat(vertical); 
         float area = base * altura;
-        System.out.println("L'àrea és " + area + (" ") + unitats + ("^2"));
+        System.out.println("L'àrea d'un rectangle de base" + base + unitats + " i altura " + altura + unitats + " és " + area + unitats + ("^2"));
     }
 }
