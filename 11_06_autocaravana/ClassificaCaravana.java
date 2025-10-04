@@ -7,10 +7,10 @@ public class ClassificaCaravana {
     public static void main (String[] args) {
     int numero = Integer.parseInt(args[0]);
     
-        if (numero<50000) {
+        if (numero<=50000) {
             System.out.println ("Econòmica"); 
         }
-        else if (numero<175000) {
+        else if (numero<=175000) {
             System.out.println ("General"); 
         }
         else {
