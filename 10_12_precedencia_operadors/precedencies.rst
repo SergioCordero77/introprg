@@ -15,7 +15,7 @@ PRECEDENCIES I OPERADORS
 true && false || ! true 
 (true && false) || false 
 false || false 
-faPfalse
+false
 
 4.
 false && (10 > 3) || ! (4 > 5) 
