@@ -10,19 +10,19 @@
         System.out.println("Tercer?");
         int c = Integer.parseInt(Entrada.readLine());
         
-        if ((a<=b && a<=c) && (b>=a && b<=c) && (c>=a && c>=b)) {
+        if (a<=b && b<=c) {
             System.out.println (a + ", " + b + " i " + c);
         }
-        else if ((a<=b && a<=c) && (c>=a && c<=b) && (b>=a && b>=c)) {
+        else if (a<=c && c<=b) {
             System.out.println (a + ", " + c + " i " + b);
         }
-        else if ((b<=a && b<=c) && (a>=b && a<=c) && (c>=a && c>=b)) {
+        else if (b<=a && a<=c) {
             System.out.println (b + ", " + a + " i " + c);
         }
-        else if ((b<=c && b<=a) && (c>=a && c<=b) && (a>=b && a>=c)) {
+        else if (b<=c && c<=a) {
             System.out.println (b + ", " + c + " i " + a);
         }
-        else if ((c<=a && c<=b) && (a>=c && a<=b) && (b>=a && b>=a)) {
+        else if (c<=a && a<=b) {
             System.out.println (c + ", " + a + " i " + b);
         }
         else {
