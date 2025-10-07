@@ -6,7 +6,7 @@
 public class DiaSetmanaSwitch {
     public static void main (String[] args) {
 
-        int diaSetmana = Integer.parseInt(Entrada.readLine());
+        int diaSetmana = Integer.parseInt(args[0]);
         String dia;
         switch (diaSetmana) {
             case 1:  dia = "Dilluns";
