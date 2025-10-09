@@ -18,6 +18,6 @@
             System.out.println ("espera");
         } 
         else
-            System.out.println ("Un semàfor només té 3 colors: verd, groc i vermell");
+            System.out.println ("ves a l'oculista");
     }
  }
