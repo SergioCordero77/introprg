@@ -18,5 +18,8 @@
         else if (pis.equals("planta baixa") && boto.equals("pujar dos") || pis.equals("primer pis") && boto.equals("pujar un")) { 
             System.out.println ("segon pis");
         }
+        else {
+            System.out.println ("error");
+        }
     }
  }
