@@ -21,10 +21,14 @@
         else if (estornut.equals("sí") && malCap.equals("sí") && malEstomac.equals("sí")) { 
             System.out.println ("Pren un paracetamol.");
         }
-        else if (estornut.equals("sí") && malCap.equals("no") && tos.equals("sí") && edat<12) { 
+        else { 
+            System.out.println ("Vine a la consulta");
+        }
+       
+        if (tos.equals("sí") && edat<12) { 
             System.out.println ("Pren un caramel de mel");
         }
-        else if (estornut.equals("sí") && malCap.equals("no") && tos.equals("sí") && edat>12) { 
+        else if (tos.equals("sí") && edat>=12) { 
             System.out.println ("Pren un caramel d'eucaliptus");
         }
         else { 
