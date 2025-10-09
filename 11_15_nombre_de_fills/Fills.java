@@ -19,7 +19,7 @@
             System.out.println ("No t'avorreixes a casa, eh?");
         }
         else if (fills > 4) {
-            System.out.println ("Tú sí fas país!");
+            System.out.println ("Tu sí fas país!");
         }    
     }
  }
