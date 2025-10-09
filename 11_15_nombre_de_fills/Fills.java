@@ -7,7 +7,7 @@
         int fills = Integer.parseInt(Entrada.readLine());
         
         if (fills<0) {
-            System.out.println ("No pots tenir menys de 0 fills");
+            System.out.println ("No pots tenir menys de 0 fills!");
         }
         else if (fills == 0) {
             System.out.println ("Tot el que t'has estalviat en bolquers!");
