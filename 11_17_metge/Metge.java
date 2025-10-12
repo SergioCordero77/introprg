@@ -19,7 +19,7 @@ public class Metge {
                         System.out.println ("Pren paracetamol");
                     }
                     else if (resposta.equals ("no")) {
-                        System.out.println ("Pren una aspirina.");
+                        System.out.println ("Pren aspirina");
                     }
             }
             else if (resposta.equals("no")) {
