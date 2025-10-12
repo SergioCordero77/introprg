@@ -5,7 +5,7 @@
 public class Metge {
     public static void main (String[] args) {
         
-        System.out.println ("Estornuts? (sí o no)");
+        System.out.println ("Esternuts? (sí o no)");
         String resposta = Entrada.readLine();    
         
         if (resposta.equals("sí")) {
