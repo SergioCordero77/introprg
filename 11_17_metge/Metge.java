@@ -51,10 +51,10 @@ public class Metge {
                 int edat = Integer.parseInt(Entrada.readLine());
             
                 if (edat<12) {
-                    System.out.println ("Pren un caramel de mel");
+                    System.out.println ("Pren un carmel de mel");
                 }
                 else if (edat>=12) {
-                    System.out.println ("Pren un caramel d'eucaliptus");
+                    System.out.println ("Pren un carmel d'eucaliptus");
                 }
             }    
             else {
