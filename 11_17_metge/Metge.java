@@ -5,6 +5,8 @@
 public class Metge {
     public static void main (String[] args) {
         
+        String recomanacio = "";
+        
         System.out.println ("Esternuts? (sí o no)");
         String resposta = Entrada.readLine();    
         
@@ -16,10 +18,10 @@ public class Metge {
                 System.out.println ("Problemes d'estómac? (sí o no)");
                 resposta = Entrada.readLine();
                     if (resposta.equals ("sí")) {
-                        System.out.println ("Pren paracetamol");
+                        recomanacio = "Pren paracetamol";
                     }
                     else if (resposta.equals ("no")) {
-                        System.out.println ("Pren aspirina");
+                        recomanacio = "Pren aspirina";
                     }
             }
             else if (resposta.equals("no")) {
@@ -31,14 +33,14 @@ public class Metge {
                     int edat = Integer.parseInt(Entrada.readLine());
                 
                     if (edat<12) {
-                        System.out.println ("Pren un carmel de mel");
+                        recomanacio = "Pren un carmel de mel";
                     }
                     else if (edat>=12) {
-                        System.out.println ("Pren un carmel d'eucaliptus");
+                        recomanacio = "Pren un carmel d'eucaliptus";
                     }
                 }   
                 else {
-                        System.out.println ("Vine a la consulta");
+                        recomanacio = "Vine a la consulta";
                 }
             }
         }  
@@ -51,15 +53,17 @@ public class Metge {
                 int edat = Integer.parseInt(Entrada.readLine());
             
                 if (edat<12) {
-                    System.out.println ("Pren un carmel de mel");
+                    recomanacio = "Pren un carmel de mel";
                 }
                 else if (edat>=12) {
-                    System.out.println ("Pren un carmel d'eucaliptus");
+                    recomanacio = "Pren un carmel d'eucaliptus";
                 }
             }    
             else {
-                    System.out.println ("Vine a la consulta");
+                    recomanacio = "Vine a la consulta";
             }                
         }
+        
+        System.out.println (recomanacio);
     }
 }
