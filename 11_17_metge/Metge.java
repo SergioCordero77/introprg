@@ -18,6 +18,7 @@ public class Metge {
                 System.out.println ("Problemes d'estómac? (sí o no)");
                 resposta = Entrada.readLine();
                     if (resposta.equals ("sí")) {
+                        int posicio = contador+1
                         recomanacio = "Pren paracetamol";
                     }
                     else if (resposta.equals ("no")) {
