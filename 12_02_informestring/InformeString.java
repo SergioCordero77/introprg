@@ -22,9 +22,9 @@ public class InformeString {
     System.out.println("\"" + textPrincipal + "\".equalsIgnoreCase(\"" + textSecundari + "\"): " + textPrincipal.equalsIgnoreCase(textSecundari));
     System.out.println ("\"" + textPrincipal + "\".isBlank(): " + textPrincipal.isBlank());
     System.out.println ("\"" + textPrincipal + "\".isEmpty(): " + textPrincipal.isEmpty());
-    System.out.println ("\"" + textPrincipal + "\".charAt(\"" + numero + "\"): " + textPrincipal.charAt(numero));
+    System.out.println ("\"" + textPrincipal + "\".charAt(" + numero + "): " + textPrincipal.charAt(numero));
     System.out.println("\"" + textPrincipal + "\".concat(\"" + textSecundari + "\"): " + textPrincipal.concat(textSecundari));
-    System.out.println ("\"" + textPrincipal + "\".repeat(\"" + numero + "\"): " + textPrincipal.repeat(numero)); 
+    System.out.println ("\"" + textPrincipal + "\".repeat(" + numero + "): " + textPrincipal.repeat(numero)); 
     System.out.println ("\"" + textPrincipal + "\".toUpperCase(): " + textPrincipal.toUpperCase()); 
     System.out.println ("\"" + textPrincipal + "\".toLowerCase(): " + textPrincipal.toLowerCase());
     }
