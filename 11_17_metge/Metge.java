@@ -7,6 +7,8 @@ public class Metge {
         
         String recomanacio = "";
         
+        boolean pastilles = true;
+        
         System.out.println ("Esternuts? (sí o no)");
         String resposta = Entrada.readLine();    
         
@@ -18,37 +20,20 @@ public class Metge {
                 System.out.println ("Problemes d'estómac? (sí o no)");
                 resposta = Entrada.readLine();
                     if (resposta.equals ("sí")) {
-                        int posicio = contador+1
                         recomanacio = "Pren paracetamol";
                     }
                     else if (resposta.equals ("no")) {
                         recomanacio = "Pren aspirina";
                     }
             }
-            else if (resposta.equals("no")) {
-            System.out.println ("Tos? (sí o no)");
-            resposta = Entrada.readLine();
-            
-                if (resposta.equals ("sí") ) {
-                    System.out.println ("Edat?");
-                    int edat = Integer.parseInt(Entrada.readLine());
-                
-                    if (edat<12) {
-                        recomanacio = "Pren un carmel de mel";
-                    }
-                    else if (edat>=12) {
-                        recomanacio = "Pren un carmel d'eucaliptus";
-                    }
-                }   
-                else {
-                        recomanacio = "Vine a la consulta";
-                }
-            }
-        }  
-        else if (resposta.equals("no")) {
-            System.out.println ("Tos? (sí o no)");
-            resposta = Entrada.readLine();
-            
+        }
+        
+        pastilles = false;
+                    
+        if (resposta.equals("no")) {
+        System.out.println ("Tos? (sí o no)");
+        resposta = Entrada.readLine();
+        
             if (resposta.equals ("sí") ) {
                 System.out.println ("Edat?");
                 int edat = Integer.parseInt(Entrada.readLine());
@@ -59,7 +44,7 @@ public class Metge {
                 else if (edat>=12) {
                     recomanacio = "Pren un carmel d'eucaliptus";
                 }
-            }    
+            }   
             else {
                     recomanacio = "Vine a la consulta";
             }                
