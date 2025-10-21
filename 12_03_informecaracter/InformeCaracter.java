@@ -15,9 +15,10 @@ public class InformeCaracter {
             System.out.println ("Posició?");
             int posicio = Integer.parseInt (Entrada.readLine());
             
-            if ((posicio < 0) || (posicio > text.length())) {
+            if ((posicio <= -1) || (posicio > text.length())) {
                 System.out.println ("Error");
             }
+            else {
                
             char caracter = text.charAt(posicio);
     
@@ -32,6 +33,7 @@ public class InformeCaracter {
             System.out.println ("Character.isWhitespace('"+ caracter +"'): " + Character.isWhitespace (caracter));
             System.out.println ("Character.toLowerCase('"+ caracter +"'): " + Character.toLowerCase (caracter));
             System.out.println ("Character.toUpperCase('"+ caracter +"'): " + Character.toUpperCase (caracter));
+            }
         }
     }
 }
