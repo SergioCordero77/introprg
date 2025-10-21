@@ -7,14 +7,18 @@ public class InformeCaracter {
     
     System.out.println ("Text?");
     String text = Entrada.readLine();
+    
+        if (text.equals("")) {
+            System.out.println ("Error");
+        }
+        else {
+    
+    
     System.out.println ("Posició?");
     int posicio = Integer.parseInt (Entrada.readLine());
     char caracter = text.charAt(posicio);
     
-        if (text == null) {
-            System.out.println ("Error");
-        }
-        else {
+       
             System.out.println ("Character.getName('"+ caracter +"'): " + Character.getName(caracter));
             System.out.println ("Character.isDigit('"+ caracter +"'): " + Character.isDigit (caracter));
             System.out.println ("Character.isJavaIdentifierStart('"+ caracter +"'): " + Character.isJavaIdentifierStart (caracter));
