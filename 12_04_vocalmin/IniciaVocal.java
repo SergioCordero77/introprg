@@ -16,7 +16,7 @@ public class IniciaVocal {
         char primer = text.charAt(0);
       
             if ((primer == 'a') || (primer == 'A') || (primer == 'e') || (primer == 'E') || (primer == 'i') || (primer == 'I') || (primer == 'o') || (primer == 'O') || (primer == 'u') || (primer == 'U')) {
-                System.out.println ("\"" + text + "\" comença amb la vocal \'" + text.charAt(0) +"\'");
+                System.out.println ("\"" + text + "\" inicia amb la vocal \'" + text.charAt(0) +"\'");
             }
             else {
                 System.out.println ("\"" + text + "\" no inicia amb vocal ");
