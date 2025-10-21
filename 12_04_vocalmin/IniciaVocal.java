@@ -19,7 +19,7 @@ public class IniciaVocal {
                 System.out.println ("\"" + text + "\" inicia amb la vocal \'" + text.charAt(0) +"\'");
             }
             else {
-                System.out.println ("\"" + text + "\" no inicia amb vocal ");
+                System.out.println ("\"" + text + "\" no inicia amb vocal");
             }
         }
     }   
