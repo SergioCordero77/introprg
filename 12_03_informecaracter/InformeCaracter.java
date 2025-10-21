@@ -8,21 +8,21 @@ public class InformeCaracter {
     System.out.println ("Text?");
     String text = Entrada.readLine();
     
-        if (text.equals("")) {
+        if (text.equals("")) {  // si el text està buit
             System.out.println ("Error");
         }
-        else {
+        else {  // si hi ha text
             System.out.println ("Posició?");
+            
             int posicio = Integer.parseInt (Entrada.readLine());
             
-            if ((posicio <= -1) || (posicio > text.length())) {
+            if ((posicio <= -1) || (posicio > text.length())) { //si la posició està fora de rang
                 System.out.println ("Fora de rang");
             }
-            else {
+            else { //si la posició està dins del rang
                
             char caracter = text.charAt(posicio);
     
-       
             System.out.println ("Character.getName('"+ caracter +"'): " + Character.getName(caracter));
             System.out.println ("Character.isDigit('"+ caracter +"'): " + Character.isDigit (caracter));
             System.out.println ("Character.isJavaIdentifierStart('"+ caracter +"'): " + Character.isJavaIdentifierStart (caracter));
