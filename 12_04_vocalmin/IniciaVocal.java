@@ -8,7 +8,7 @@ public class IniciaVocal {
     System.out.println ("Text?");
     String text = Entrada.readLine();
     
-        if (text.isEmpty() == true){
+        if ((text.isEmpty() == true) || (Character.isWhitespace(text.charAt(0)))){
                 System.out.println ("El text no té lletres");
             }
         else {
