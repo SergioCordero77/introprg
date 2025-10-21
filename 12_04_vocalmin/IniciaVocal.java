@@ -9,7 +9,7 @@ public class IniciaVocal {
     String text = Entrada.readLine();
     
         if (text.isEmpty() == true){
-                System.out.println ("Error");
+                System.out.println ("El text no té lletres");
             }
         else {
    
