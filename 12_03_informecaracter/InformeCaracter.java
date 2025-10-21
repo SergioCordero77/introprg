@@ -15,9 +15,9 @@ public class InformeCaracter {
             System.out.println ("Posició?");
             int posicio = Integer.parseInt (Entrada.readLine());
             
-        if (posicio < 0) {
-            System.out.println ("Error");
-        }
+            if ((posicio < 0) || (posicio > text.length())) {
+                System.out.println ("Error");
+            }
                
             char caracter = text.charAt(posicio);
     
