@@ -17,7 +17,7 @@ public class AcabaLletraNoVocal {
                 System.out.println ("\"" + text + "\" no finalitza amb letra no vocal");
             }
             else {
-                System.out.println ("\"" + text + "\" finalitza amb la no vocal \'" + text.charAt(text.length()-1) +"\'");
+                System.out.println ("\"" + text + "\" finalitza amb la lletra no vocal \'" + text.charAt(text.length()-1) +"\'");
             }
         }
     }   
