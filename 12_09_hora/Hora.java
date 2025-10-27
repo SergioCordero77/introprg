@@ -6,12 +6,12 @@ public class Hora {
     public static void main (String [] args){
     System.out.println("Hora?");
     String hora = Entrada.readLine();
-    int valor = Integer.parseInt(hora);
     
     if (hora.isBlank()){
         System.out.println("ERROR");
     }
     else{
+        int valor = Integer.parseInt(hora);
         if (valor <= 9){
             System.out.println("00:00:0"+hora);
         }
