@@ -9,7 +9,7 @@ public class AnalitzaCaracter {
     
     
     if (text.isBlank()){
-            System.out.println ("El text no té lletres");
+            System.out.println ("Text buit");
     }
     else {
         System.out.println("Posició?");
