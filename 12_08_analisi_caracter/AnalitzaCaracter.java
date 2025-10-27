@@ -13,26 +13,21 @@ public class AnalitzaCaracter {
     }
     else {
         System.out.println("Posició?");
-        int posicio = Integer.parseInt(Entrada.readLine());    
-        char c = text.charAt(posicio);
+        int posicio = Integer.parseInt(Entrada.readLine());
+        int residu = ((posicio % text.length()) + text.length()) % text.length();    
+        char c = text.charAt(residu);
         
-        if (posicio >= 0){
-            int posicio1 = posicio % text.length()-1;
-        }
-        if (posicio < 0){
-            int posicio2 = -(posisio) % text.length()-1;
-        }
             if (Character.isUpperCase(c)){
-            System.out.println ("\'"+c+"\' és una lletra majúscula");
+                System.out.println ("\'"+c+"\' és una lletra majúscula");
             }
             else if (Character.isLowerCase(c)){
-            System.out.println ("\'"+c+"\' és una lletra minúscula");
+                System.out.println ("\'"+c+"\' és una lletra minúscula");
             }
             else if (Character.isDigit(c)){
-            System.out.println ("\'"+c+"\' és un dígit");
+                System.out.println ("\'"+c+"\' és un dígit");
             }
             else {
-            System.out.println ("\'"+c+"\' és un caràcter especial");
+                System.out.println ("\'"+c+"\' és un caràcter especial");
             }
     }
     }
