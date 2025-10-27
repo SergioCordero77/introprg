@@ -29,7 +29,7 @@ public class MatriculaValida {
                 c1 !='I' && c1 != 'O' && c1 != 'Q' && c1 != 'U' &&
                 c5 !='I' && c5 != 'O' && c5 != 'Q' && c5 != 'U' &&
                 c6 !='I' && c6 != 'O' && c6 != 'Q' && c6 != 'U' &&
-                ((c0>='A') && (c0<='Z')) && ((c1>='A') && (c1<='Z')) && ((c5>='A') && (c6<='Z')) && ((c6>='A') && (c6<='Z'))
+                ((c0>='A') && (c0<='Z')) && ((c1>='A') && (c1<='Z')) && ((c5>='A') && (c5<='Z')) && ((c6>='A') && (c6<='Z'))
                 ){
                 
             System.out.println ("És una matrícula italiana vàlida");
