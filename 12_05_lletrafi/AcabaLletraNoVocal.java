@@ -9,7 +9,7 @@ public class AcabaLletraNoVocal {
     String text = Entrada.readLine();
     char ultim = text.charAt(text.length()-1);
     
-        if ((text.isEmpty()) || (Character.isWhitespace(text.charAt(0)))){
+        if ((text.isEmpty()) || (Character.isWhitespace(ultim))){
                 System.out.println ("El text no té lletres");
             }
         else {
