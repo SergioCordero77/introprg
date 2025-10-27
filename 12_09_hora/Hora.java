@@ -4,7 +4,7 @@
  */
 public class Hora {
     public static void main (String [] args){
-    System.out.println("Hora?");
+    System.out.println("00:00:00");
     String hora = Entrada.readLine();
     
     if (hora.isBlank()){
