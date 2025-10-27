@@ -27,7 +27,7 @@ public class AnalitzaCaracter {
                 System.out.println ("\'"+c+"\' és un dígit");
             }
             else {
-                System.out.println ("\'"+c+"\' és un caràcter especial");
+                System.out.println ("\'"+c+"\' és una altra cosa");
             }
     }
     }
