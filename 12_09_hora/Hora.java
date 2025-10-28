@@ -7,46 +7,27 @@ public class Hora {
     System.out.println("00:00:00");
     String hora = Entrada.readLine();
     
-    if (hora.isBlank()){
+    if (hora.length() != 6)
         System.out.println("ERROR");
+        
+    else if (hora.isBlank()){
+        hora="0";
     }
     else{
+        
+        char c0 = hora.charAt(0);
+        char c1 = hora.charAt(1);
+        char c2 = hora.charAt(2);
+        char c3 = hora.charAt(3);
+        char c4 = hora.charAt(4);
+        char c5 = hora.charAt(5);
+        
         int valor = Integer.parseInt(hora);
-        if (valor <= 9){
-            System.out.println("00:00:0"+hora);
-        }
-        else if (valor <= 59){
-            System.out.println("00:00:"+hora);
-        }
-        else if (valor <= 959){
-            char c0 = hora.charAt(0);
-            char c1 = hora.charAt(1);
-            char c2 = hora.charAt(2);
-            System.out.println("00:0"+c0+":"+c1+c2);
-        }
-        else if (valor <= 5959){
-            char c0 = hora.charAt(0);
-            char c1 = hora.charAt(1);
-            char c2 = hora.charAt(2);
-            char c3 = hora.charAt(3);
-            System.out.println("00:"+c0+c1+":"+c2+c3);
-        }
-        else if (valor <= 95959){
-            char c0 = hora.charAt(0);
-            char c1 = hora.charAt(1);
-            char c2 = hora.charAt(2);
-            char c3 = hora.charAt(3);
-            char c4 = hora.charAt(4);
-            System.out.println("0"+c0+":"+c1+c2+":"+c3+c4);
-        }
-        else if (valor <= 235959){
-            char c0 = hora.charAt(0);
-            char c1 = hora.charAt(1);
-            char c2 = hora.charAt(2);
-            char c3 = hora.charAt(3);
-            char c4 = hora.charAt(4);
-            char c5 = hora.charAt(5);
-            System.out.println(c0+c1+":"+c2+c3+":"+c4+c5);
+        
+        if ((c5<=1 && c4<=9 && c3<6 && c2<=9 && c1<6 && c0<=9) ||
+            (c5==2 && c4<=3 && c3<6 && c2<=9 && c1<6 && c0<=9)){
+           
+            System.out.println(c5 + c4 + ":" + c3 + c2 + ":" + c1 + c0);
         }
         else{
             System.out.println("ERROR");
