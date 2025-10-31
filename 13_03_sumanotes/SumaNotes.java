@@ -10,7 +10,7 @@ public class SumaNotes {
     int suma = 0;   // Declarem la variable suma amb valor 0 per començar la suma després
     
     
-    System.out.println("Introdueix una nota:"); 
+    System.out.println("Introdueix una nota"); 
     int notes = Integer.parseInt(Entrada.readLine()); //Introduïm ja el primer valor per saber si entra dins del rang o no. Si no entra ja no inicialitzem el bucle)
     
     while (notes >= 0 && notes <= 100){
