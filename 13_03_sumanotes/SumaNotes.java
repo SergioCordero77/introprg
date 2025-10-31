@@ -6,17 +6,24 @@ public class SumaNotes {
     public static void main (String [] args){
     
     // Declarem la variable de les notes
-    int notes = 0;
     
-    // Declarem la variable suma amb valor 0 per començar la suma després
-    int suma = 0;
+    int suma = 0;   // Declarem la variable suma amb valor 0 per començar la suma després
+    
+    
+    System.out.println("Introdueix una nota:"); 
+    int notes = Integer.parseInt(Entrada.readLine()); //Introduïm ja el primer valor per saber si entra dins del rang o no. Si no entra ja no inicialitzem el bucle)
     
     while (notes >= 0 && notes <= 100){
-        System.out.println ("Introdueix una nota:");
-        notes = Integer.parseInt (Entrada.readLine());
-        suma = suma + notes;
+        if (notes >= 0 && notes <= 100){
         
+        suma = suma + notes; //Iniciem la suma amb el valor donat
+        
+        System.out.println ("Introdueix una nota"); // Tornem a preguntar per la nota per seguir amb el bucle
+        notes = Integer.parseInt (Entrada.readLine());
+        
+        } // Tanquem if
+      
     } // Tanquem bucle while
-        System.out.println("La suma de les notes vàlides és " + suma);
+        System.out.println("La suma de les notes vàlides és " + suma); // resultat final
     }
 }
