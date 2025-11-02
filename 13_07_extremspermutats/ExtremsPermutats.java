@@ -16,7 +16,7 @@ public class ExtremsPermutats{
         if (textMajuscules.length()==2){
             char c0 = textMajuscules.charAt(0);
             char c3 = textMajuscules.charAt(text.length()-1);
-            if (c0 == c3 || c3 == c0){
+            if ((c0 == c3 || c3 == c0)) {
                 System.out.println("Repeteix: " + text); 
             }
             else{
@@ -25,7 +25,7 @@ public class ExtremsPermutats{
         else if (textMajuscules.length()==3){
             char c0 = textMajuscules.charAt(0);
             char c3 = textMajuscules.charAt(text.length()-1);
-            if (c0 == c3 || c3 == c0){
+            if ((c0 == c3 || c3 == c0)) {
             System.out.println("Repeteix: " + text);  //Imprimim el mates que hem passat al principi 
             }
         }
