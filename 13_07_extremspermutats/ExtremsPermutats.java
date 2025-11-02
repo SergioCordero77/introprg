@@ -13,23 +13,33 @@ public class ExtremsPermutats{
     
     String textMajuscules = text.toUpperCase(); //Transformem el String en majúscules per a que tot sigui igual i qua faci la comparació entre majúscules i minúscules no ho detecti com a caràcters diferents
     
-        if (text.length()==2 &&
-            textMajuscules.charAt(0) == textMajuscules.charAt(text.length()-1)){
-            
-            System.out.println("Repeteix: " + text);  //Fem un "if" dient la condició que volem que es compleixi amb 2 caràcters per a que el text repeteix la cadena de text  
+        if (textMajuscules.length()==2){
+            char c0 = textMajuscules.charAt(0);
+            char c3 = textMajuscules.charAt(text.length()-1);
+            if (c0 == c3 || c3 == c0){
+                System.out.println("Repeteix: " + text); 
+            }
+            else{
+            }
         }
-        else if (text.length()==3 &&
-                 textMajuscules.charAt(0) == textMajuscules.charAt(text.length()-1)){ //Fem un "if" dient la condició que volem que es compleixi amb 3 caràcters per a que el text repeteix la cadena de text
-            
+        else if (textMajuscules.length()==3){
+            char c0 = textMajuscules.charAt(0);
+            char c3 = textMajuscules.charAt(text.length()-1);
+            if (c0 == c3 || c3 == c0){
             System.out.println("Repeteix: " + text);  //Imprimim el mates que hem passat al principi 
+            }
         }
-        else if (text.length()>=4 &&
-           (textMajuscules.charAt(0) == textMajuscules.charAt(text.length()-2) || textMajuscules.charAt(0) == text.charAt(text.length()-1)) &&
-           (textMajuscules.charAt(1) == textMajuscules.charAt(text.length()-2) || textMajuscules.charAt(1) == text.charAt(text.length()-1)) &&
-           (textMajuscules.charAt(text.length()-2) == textMajuscules.charAt(0) || textMajuscules.charAt(text.length()-2) == textMajuscules.charAt(1)) &&
-           (textMajuscules.charAt(text.length()-1) == textMajuscules.charAt(0) || textMajuscules.charAt(text.length()-1) == textMajuscules.charAt(1))) { //Fem un "if" dient la condició que volem que es compleixi amb 4 o més caràcters per a que el text repeteix la cadena de text
-            
+        else if (textMajuscules.length()>=4) {
+            char c0 = textMajuscules.charAt(0);
+            char c1 = textMajuscules.charAt(1);
+            char c2 = textMajuscules.charAt(text.length()-2);
+            char c3 = textMajuscules.charAt(text.length()-1);
+            if ((c0 == c2 || c0 == c3) &&
+                (c1 == c2 || c1 == c3) &&
+                (c2 == c0 || c2 == c1) &&
+                (c3 == c0 || c3 == c1)) {
             System.out.println("Repeteix: " + text);  //Imprimim el mates que hem passat al principi 
+            }
         }
         else {
         }
