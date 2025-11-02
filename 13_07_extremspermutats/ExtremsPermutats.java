@@ -9,7 +9,7 @@ public class ExtremsPermutats{
     System.out.println("Ves introduïnt texts (finalitza amb INTRO sol)"); // Demanem que volem que repeteixi el text
     String text = Entrada.readLine();
     
-    while (!text.isBlank() || text.length()>2) {   // Mentre el text donat no estigui en blanc o sigui només un espai, el bucle funcionarà
+    while (!text.isBlank()) {   // Mentre el text donat no estigui en blanc o sigui només un espai o sigui una cadena de text major que 2, el bucle funcionarà
     
     String textMajuscules = text.toUpperCase(); //Transformem el String en majúscules per a que tot sigui igual i qua faci la comparació entre majúscules i minúscules no ho detecti com a caràcters diferents
     
@@ -19,10 +19,11 @@ public class ExtremsPermutats{
     char c2 = textMajuscules.charAt(text.length()-2);
     char c3 = textMajuscules.charAt(text.length()-1);
     
-        if ((c0 == c2 || c0 == c3) &&
-            (c1 == c2 || c1 == c3) &&
-            (c2 == c0 || c2 == c1) &&
-            (c3 == c0 || c3 == c1)) { //Fem un "if" dient la condició que voleme que es compleixi per a que el text repeteix la cadena de text
+        if (text.length()>=2 &&
+           (c0 == c2 || c0 == c3) &&
+           (c1 == c2 || c1 == c3) &&
+           (c2 == c0 || c2 == c1) &&
+           (c3 == c0 || c3 == c1)) { //Fem un "if" dient la condició que voleme que es compleixi per a que el text repeteix la cadena de text
             
             System.out.println("Repeteix: " + text);  //Imprimim el mates que hem passat al principi 
         }
