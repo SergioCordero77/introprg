@@ -17,12 +17,12 @@ public class LloroVocalIniFi{
             inicial == 'A' || inicial == 'E' || inicial == 'I' || inicial == 'O' || inicial == 'U') &&
             (ultim == 'a' || ultim == 'e' || ultim == 'i' || ultim == 'o' || ultim == 'u' ||
             ultim == 'A' || ultim == 'E' || ultim == 'I' || ultim == 'O' || ultim == 'U')) { //Fem un "if" dient la condició que voleme que es compleixi per a que el lloro repeteix la cadena de text
-        System.out.println("Repeteixo: " + lloro);  //Imprimim el mates que hem passat al principi 
+            System.out.println("Repeteixo: " + lloro);  //Imprimim el mates que hem passat al principi 
         }
         else {
         }
-        
-    System.out.println("Paraula?"); //Tornem a preguntar per a que el bucle pogui continuar
+    
+    System.out.println("Paraula?"); // Si la condició no es dona, tornem a preguntar per a que el bucle pogui continuar
     lloro = Entrada.readLine();
     }
     
