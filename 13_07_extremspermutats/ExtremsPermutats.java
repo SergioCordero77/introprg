@@ -17,8 +17,8 @@ public class ExtremsPermutats{
             char c0 = textMajuscules.charAt(0);
             char c3 = textMajuscules.charAt(text.length()-1);
             if ((c0 == c3 || c3 == c0) &&
-                (c0>='A' && c0<='Z') &&
-                (c3>='A' && c3<='Z')) {
+                Character.isLetter(c0) &&
+                Character.isLetter(c3)) {
                 System.out.println("Repeteix: " + text); 
             }
             else{
@@ -28,8 +28,8 @@ public class ExtremsPermutats{
             char c0 = textMajuscules.charAt(0);
             char c3 = textMajuscules.charAt(text.length()-1);
             if ((c0 == c3 || c3 == c0) &&
-                (c0>='A' && c0<='Z') &&
-                (c3>='A' && c3<='Z')) {
+                Character.isLetter(c0) &&
+                Character.isLetter(c3)) {
             System.out.println("Repeteix: " + text);  //Imprimim el mates que hem passat al principi 
             }
         }
@@ -42,10 +42,10 @@ public class ExtremsPermutats{
                 (c1 == c2 || c1 == c3) &&
                 (c2 == c0 || c2 == c1) &&
                 (c3 == c0 || c3 == c1) &&
-                (c0>='A' && c0<='Z') &&
-                (c1>='A' && c1<='Z') &&
-                (c2>='A' && c2<='Z') &&
-                (c3>='A' && c3<='Z')) {
+                Character.isLetter(c0) &&
+                Character.isLetter(c1) &&
+                Character.isLetter(c2) &&
+                Character.isLetter(c3)) {
             System.out.println("Repeteix: " + text);  //Imprimim el mates que hem passat al principi 
             }
         }
