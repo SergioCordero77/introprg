@@ -11,15 +11,19 @@ public class ExtremsPermutats{
     
     while (!text.isBlank() || text.length()>2) {   // Mentre el text donat no estigui en blanc o sigui només un espai, el bucle funcionarà
     
-    char c0 = text.charAt(0);
-    char c1 = text.charAt(1);
-    char c2 = text.charAt(text.length()-2);
-    char c3 = text.charAt(text.length()-1);
+    String textMajuscules = text.toUpperCase(); //Transformem el String en majúscules per a que tot sigui igual i qua faci la comparació entre majúscules i minúscules no ho detecti com a caràcters diferents
+    
+    // Declarem els caràcters segons el text en majúscules
+    char c0 = textMajuscules.charAt(0);
+    char c1 = textMajuscules.charAt(1);
+    char c2 = textMajuscules.charAt(text.length()-2);
+    char c3 = textMajuscules.charAt(text.length()-1);
     
         if ((c0 == c2 || c0 == c3) &&
             (c1 == c2 || c1 == c3) &&
             (c2 == c0 || c2 == c1) &&
             (c3 == c0 || c3 == c1)) { //Fem un "if" dient la condició que voleme que es compleixi per a que el text repeteix la cadena de text
+            
             System.out.println("Repeteix: " + text);  //Imprimim el mates que hem passat al principi 
         }
         else {
