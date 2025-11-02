@@ -11,19 +11,19 @@ public class Mitjana {
     
     int numEntrades = 0;
      
-    System.out.println("Introdueix una nota"); 
+    System.out.println("Introdueix un valor"); 
     int notes = Integer.parseInt(Entrada.readLine()); //Introduïm ja el primer valor per saber si entra dins del rang o no. Si no entra ja no inicialitzem el bucle)
     
     if (notes>=0){
-        while (notes >= 0){
+        while (notes >= 0){ // Mentres el valor introduït sigui més gran que 0, el bucle funcionarà
             
             suma = suma + notes; //Iniciem la suma amb el valor donat
             
                 if (suma >= 0){
-                    numEntrades = numEntrades + 1;
+                    numEntrades = numEntrades + 1; // Cada vegada que la suma rebi un valor positiu el contador de número d'entrades suma +1
                 }
             
-            System.out.println ("Introdueix una nota"); // Tornem a preguntar per la nota per seguir amb el bucle
+            System.out.println ("Introdueix un valor"); // Tornem a preguntar per la nota per seguir amb el bucle
             notes = Integer.parseInt (Entrada.readLine());
             
         } // Tanquem while
