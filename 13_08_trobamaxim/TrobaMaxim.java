@@ -20,7 +20,7 @@ public class TrobaMaxim {
     valor = Integer.parseInt (Entrada.readLine());
     }
     
-    System.out.println("El valor màxim és " + maxim);
+    System.out.println("El màxim és " + maxim);
     
     }
 }
