@@ -7,16 +7,16 @@ public class Estadistiques {
     
     // Declarem la variable de les notes
     
-    int suma = 0;   // Declarem la variable suma amb valor 0 per començar la suma després
+    double suma = 0;   // Declarem la variable suma amb valor 0 per començar la suma després
     
     int numEntrades = 0;    // Declarem la variable per saber el número de entrades que hi haurà per després sumar poder fer la mitjana. la inicialitzem amb valor 0.
     
-    int maxim = 0; // Declarem la variable maxim i l'inicialitzem amb valor 0. Servirà per trobar el valor màxim
+    double maxim = 0; // Declarem la variable maxim i l'inicialitzem amb valor 0. Servirà per trobar el valor màxim
      
     System.out.println("Introdueix un valor"); 
-    int notes = Integer.parseInt(Entrada.readLine()); //Introduïm ja el primer valor per saber si entra dins del rang o no. Si no entra ja no inicialitzem el bucle)
+    double notes = Integer.parseInt(Entrada.readLine()); //Introduïm ja el primer valor per saber si entra dins del rang o no. Si no entra ja no inicialitzem el bucle)
     
-    int minim = notes; // Declarem la variable mínim per al primer valor introduït, l'agafarem de rederencia pero trobar el mínim
+    double minim = notes; // Declarem la variable mínim per al primer valor introduït, l'agafarem de rederencia pero trobar el mínim
     
     if (notes>=0){
         while (notes >= 0){ // Mentres el valor introduït sigui més gran que 0, el bucle funcionarà
