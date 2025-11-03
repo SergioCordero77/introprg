@@ -37,9 +37,9 @@ public class Estadistiques {
             notes = Integer.parseInt (Entrada.readLine());
             
         } // Tanquem while
-            System.out.println("La mínim és " + minim); // resultat número mínim
-            System.out.println("La mitjana és " + suma / numEntrades); // resultat mitjana
-            System.out.println("El màxim és " + maxim); // resultat número màxim
+            System.out.println("La mínim és: " + minim); // resultat número mínim
+            System.out.println("La mitjana és: " + suma / numEntrades); // resultat mitjana
+            System.out.println("El màxim és: " + maxim); // resultat número màxim
     } // Tanquem if      
     else{
         System.out.println("Cap valor vàlid introduït");
