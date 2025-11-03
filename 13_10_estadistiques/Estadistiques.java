@@ -37,7 +37,7 @@ public class Estadistiques {
             notes = Integer.parseInt (Entrada.readLine());
             
         } // Tanquem while
-            System.out.println("La mínim és: " + minim); // resultat número mínim
+            System.out.println("El mínim és: " + minim); // resultat número mínim
             System.out.println("La mitjana és: " + suma / numEntrades); // resultat mitjana
             System.out.println("El màxim és: " + maxim); // resultat número màxim
     } // Tanquem if      
