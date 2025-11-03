@@ -1,8 +1,8 @@
 /*
  * Programa que demana les notes que han obtingut els alumnes de la classe.
- * El programa anirà demanant notes. Un cop rebi un valor negatiu, deixarà de demanar més notes i mostrarà el valor de la mitjana de totes les notes introduïdes fin el moment.
+ * El programa anirà demanant notes. Un cop rebi un valor negatiu, deixarà de demanar més notes i mostrarà el valor màxim intoduït fins el moment, el valor mínim i la mitjana.
  */
-public class Mitjana {
+public class Estadistiques {
     public static void main (String [] args){
     
     // Declarem la variable de les notes
@@ -19,7 +19,9 @@ public class Mitjana {
             
             suma = suma + notes; //Iniciem la suma amb el valor donat
             
-            numEntrades = numEntrades + 1; // Cada vegada que la suma rebi un valor positiu el contador de número d'entrades suma +1
+                
+                    numEntrades = numEntrades + 1; // Cada vegada que la suma rebi un valor positiu el contador de número d'entrades suma +1
+                
             
             System.out.println ("Introdueix un valor"); // Tornem a preguntar per la nota per seguir amb el bucle
             notes = Integer.parseInt (Entrada.readLine());
