@@ -42,7 +42,7 @@ public class Estadistiques {
             System.out.println("El màxim és " + maxim); // resultat número màxim
     } // Tanquem if      
     else{
-        System.out.println("Cap nota vàlida introduïda");
+        System.out.println("Cap valor vàlid introduït");
     }
     }
 }
