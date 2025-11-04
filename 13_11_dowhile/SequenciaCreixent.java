@@ -7,8 +7,25 @@ public class SequenciaCreixent{
     
         int NumEntrades = 0;
         
+        int valorAnterior = 0;
+        
         System.out.println("Introdueix un valor");
-        int valor = Integer.parseInt(Entrada.readLine());
+        int valorPosterior = Integer.parseInt(Entrada.readLine());
+        
+        do{
+        
+            NumEntrades ++;
+        
+            if (valorAnterior < valorPosterior){
+                valorAnterior = valorPosterior;
+            }
+        
+        System.out.println("Introdueix un valor");
+        valorPosterior = Integer.parseInt(Entrada.readLine());
+        
+        } while (valorAnterior < valorPosterior);
+    
+    System.out.println("Longitud de la següència creixent: " + NumEntrades);
     
     }
 }
