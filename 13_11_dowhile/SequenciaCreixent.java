@@ -9,7 +9,7 @@ public class SequenciaCreixent{
         
         int valorAnterior = 0;
         
-        System.out.println("Introdueix un valor");
+        System.out.println("Introdueix un valor:");
         int valorPosterior = Integer.parseInt(Entrada.readLine());
         
         do{
@@ -20,7 +20,7 @@ public class SequenciaCreixent{
                 valorAnterior = valorPosterior;
             }
         
-        System.out.println("Introdueix un valor");
+        System.out.println("Introdueix un valor:");
         valorPosterior = Integer.parseInt(Entrada.readLine());
         
         } while (valorAnterior < valorPosterior);
