@@ -16,9 +16,7 @@ public class ExtremsPermutats{
         if (textMajuscules.length()==2){
             char c0 = textMajuscules.charAt(0);
             char c3 = textMajuscules.charAt(text.length()-1);
-            if ((c0 == c3 || c3 == c0) &&
-                Character.isLetter(c0) &&
-                Character.isLetter(c3)) {
+            if ((c0 == c3 || c3 == c0)) {
                 
                 System.out.println("Repeteix: " + text); 
             }
@@ -28,9 +26,7 @@ public class ExtremsPermutats{
         else if (textMajuscules.length()==3){
             char c0 = textMajuscules.charAt(0);
             char c3 = textMajuscules.charAt(text.length()-1);
-            if ((c0 == c3 || c3 == c0) &&
-                Character.isLetter(c0) &&
-                Character.isLetter(c3)) {
+            if ((c0 == c3 || c3 == c0)) {
                 
                 System.out.println("Repeteix: " + text);  //Imprimim el mates que hem passat al principi 
             }
@@ -43,11 +39,7 @@ public class ExtremsPermutats{
             if ((c0 == c2 || c0 == c3) &&
                 (c1 == c2 || c1 == c3) &&
                 (c2 == c0 || c2 == c1) &&
-                (c3 == c0 || c3 == c1) &&
-                Character.isLetter(c0) &&
-                Character.isLetter(c1) &&
-                Character.isLetter(c2) &&
-                Character.isLetter(c3)) {
+                (c3 == c0 || c3 == c1)) {
             
                 System.out.println("Repeteix: " + text);  //Imprimim el mates que hem passat al principi 
             }
