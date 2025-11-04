@@ -25,7 +25,7 @@ public class SequenciaCreixent{
         
         } while (valorAnterior < valorPosterior);
     
-    System.out.println("Longitud de la següència creixent: " + NumEntrades);
+    System.out.println("Longitud de la seqüència creixent: " + NumEntrades);
     
     }
 }
