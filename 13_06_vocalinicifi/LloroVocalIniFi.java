@@ -14,9 +14,13 @@ public class LloroVocalIniFi{
     char ultim0 = lloro.charAt(lloro.length()-1);
     
     char inicial = Character.toLowerCase (inicial0);
-    char ultim = Character.toLowerCase (inicial0);
-    
-        if ((inicial == 'a' && ultim == 'a') || (inicial == 'e' && ultim == 'e') || (inicial == 'i' && ultim == 'i') || (inicial == 'o' && ultim == 'o') || (inicial == 'u' && ultim == 'u')) { //Fem un "if" dient la condició que volem que es compleixi per a que el lloro repeteix la cadena de text
+    char ultim = Character.toLowerCase (ultim0);
+
+        if ((inicial == 'a' && ultim == 'a') || 
+            (inicial == 'e' && ultim == 'e') || 
+            (inicial == 'i' && ultim == 'i') || 
+            (inicial == 'o' && ultim == 'o') || 
+            (inicial == 'u' && ultim == 'u')) { //Fem un "if" dient la condició que volem que es compleixi per a que el lloro repeteix la cadena de text
             System.out.println("Repeteixo: " + lloro);  //Imprimim el mates que hem passat al principi 
         }
         else {
@@ -24,6 +28,7 @@ public class LloroVocalIniFi{
     
     System.out.println("Paraula?"); // Si la condició no es dona, tornem a preguntar per a que el bucle pogui continuar
     lloro = Entrada.readLine();
+    
     }
     
     System.out.println("Adéu"); // si el text està buit el bucle acaba i el lloro s'acomiada
