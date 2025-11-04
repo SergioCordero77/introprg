@@ -13,6 +13,7 @@ public class EndevinaNombre {
     
     int numeroEndevinar = Integer.parseInt (args[0]);
     
+    System.out.println ("Ves introduint enters entre 1 i 100 fins que encertis el que jo he pensat");
     System.out.println ("Introdueix un valor");
     int numero = Integer.parseInt(Entrada.readLine());
     
