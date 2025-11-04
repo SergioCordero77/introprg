@@ -25,7 +25,11 @@ public class Mitjana {
             notes = Integer.parseInt (Entrada.readLine());
             
         } // Tanquem while
-            System.out.println("La suma de les notes vàlides és " + suma / numEntrades); // resultat final
+        
+            double sumaTotal = suma;
+            double mitjana = sumaTotal / numEntrades;
+            
+            System.out.println("La suma de les notes vàlides és " + mitjana); // resultat final
     } // Tanquem if      
     else{
         System.out.println("Cap nota vàlida introduïda");
