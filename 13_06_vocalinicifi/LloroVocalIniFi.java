@@ -13,10 +13,8 @@ public class LloroVocalIniFi{
     char inicial = lloro.charAt(0);
     char ultim = lloro.charAt(lloro.length()-1);
     
-        if ((inicial == 'a' || inicial == 'e' || inicial == 'i' || inicial == 'o' || inicial == 'u' ||
-            inicial == 'A' || inicial == 'E' || inicial == 'I' || inicial == 'O' || inicial == 'U') &&
-            (ultim == 'a' || ultim == 'e' || ultim == 'i' || ultim == 'o' || ultim == 'u' ||
-            ultim == 'A' || ultim == 'E' || ultim == 'I' || ultim == 'O' || ultim == 'U')) { //Fem un "if" dient la condició que voleme que es compleixi per a que el lloro repeteix la cadena de text
+        if ((inicial == 'a' && ultim == 'a') || (inicial == 'e' && ultim == 'e') || (inicial == 'i' && ultim == 'i') || (inicial == 'o' && ultim == 'o') || (inicial == 'u' && ultim == 'u') ||
+            (inicial == 'A' && ultim =='A') || (inicial == 'E' && ultim == 'E') || (inicial == 'I' && ultim == 'I') || (inicial == 'O' && ultim == 'O') || (inicial == 'U' && ultim == 'U')) { //Fem un "if" dient la condició que volem que es compleixi per a que el lloro repeteix la cadena de text
             System.out.println("Repeteixo: " + lloro);  //Imprimim el mates que hem passat al principi 
         }
         else {
