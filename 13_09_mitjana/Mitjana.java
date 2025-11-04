@@ -26,8 +26,8 @@ public class Mitjana {
             
         } // Tanquem while
         
-            double sumaTotal = suma;
-            double mitjana = sumaTotal / numEntrades;
+            double sumaTotal = suma; // passem el valor de la suma a double per després utilitzar-la a l'equació de la mitjana
+            double mitjana = sumaTotal / numEntrades; // equació de la mitjana amb double
             
             System.out.println("La suma de les notes vàlides és " + mitjana); // resultat final
     } // Tanquem if      
