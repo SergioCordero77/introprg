@@ -11,7 +11,7 @@ public class ExtremsPermutats{
     
     while (!text.isBlank()) {   // Mentre el text donat no estigui en blanc o sigui només un espai o sigui una cadena de text major que 2, el bucle funcionarà
     
-        String textMajuscules = text.toLowerCase(); //Transformem el String en majúscules per a que tot sigui igual i qua faci la comparació entre majúscules i minúscules no ho detecti com a caràcters diferents
+        String textMajuscules = text.toLowerCase(); //Transformem el String en minúscules per a que tot sigui igual i qua faci la comparació entre majúscules i minúscules no ho detecti com a caràcters diferents
     
         if (textMajuscules.length()==2){
             char c0 = textMajuscules.charAt(0);
