@@ -10,11 +10,13 @@ public class LloroVocalIniFi{
     
     while (!lloro.isBlank()) {   // Mentre el text donat no estigui en blanc o sigui només un espai, el bucle funcionarà
     
-    char inicial = lloro.charAt(0);
-    char ultim = lloro.charAt(lloro.length()-1);
+    char inicial0 = lloro.charAt(0);
+    char ultim0 = lloro.charAt(lloro.length()-1);
     
-        if ((inicial == 'a' && ultim == 'a') || (inicial == 'e' && ultim == 'e') || (inicial == 'i' && ultim == 'i') || (inicial == 'o' && ultim == 'o') || (inicial == 'u' && ultim == 'u') ||
-            (inicial == 'A' && ultim =='A') || (inicial == 'E' && ultim == 'E') || (inicial == 'I' && ultim == 'I') || (inicial == 'O' && ultim == 'O') || (inicial == 'U' && ultim == 'U')) { //Fem un "if" dient la condició que volem que es compleixi per a que el lloro repeteix la cadena de text
+    char inicial = Character.toLowerCase (inicial0);
+    char ultim = Character.toLowerCase (inicial0);
+    
+        if ((inicial == 'a' && ultim == 'a') || (inicial == 'e' && ultim == 'e') || (inicial == 'i' && ultim == 'i') || (inicial == 'o' && ultim == 'o') || (inicial == 'u' && ultim == 'u')) { //Fem un "if" dient la condició que volem que es compleixi per a que el lloro repeteix la cadena de text
             System.out.println("Repeteixo: " + lloro);  //Imprimim el mates que hem passat al principi 
         }
         else {
