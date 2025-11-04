@@ -9,17 +9,16 @@ public class Mitjana {
     
     int suma = 0;   // Declarem la variable suma amb valor 0 per començar la suma després
     
-    int numEntrades = 0;
+    int numEntrades = -1;
      
-    System.out.println("Introdueix un valor"); 
-    int notes = Integer.parseInt(Entrada.readLine()); //Introduïm ja el primer valor per saber si entra dins del rang o no. Si no entra ja no inicialitzem el bucle)
+    int notes = 0;
     
     if (notes>=0){
         while (notes >= 0){ // Mentres el valor introduït sigui més gran que 0, el bucle funcionarà
             
             suma = suma + notes; //Iniciem la suma amb el valor donat
             
-            numEntrades = numEntrades + 1; // Cada vegada que la suma rebi un valor positiu el contador de número d'entrades suma +1
+            numEntrades ++; // Cada vegada que la suma rebi un valor positiu el contador de número d'entrades suma +1
             
             System.out.println ("Introdueix un valor"); // Tornem a preguntar per la nota per seguir amb el bucle
             notes = Integer.parseInt (Entrada.readLine());
