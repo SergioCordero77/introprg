@@ -49,13 +49,13 @@ public class TrobaMesProxim{
                 }
                     // RESULTATS FINALS
                     if ((ancora-valorProxDesc)<(valorProxAsc-ancora)){
-                    System.out.println("El valor introduït més próxim a " + ancora + " és " + valorProxDesc); // Si la diferencia (resta de ancora-valorProxDesc) és més petita que la diferencia (resta valorProxAsc-ancora) el valor més pròxim serà valorProxDesc
+                    System.out.println("El valor introduït més pròxim a " + ancora + " és " + valorProxDesc); // Si la diferencia (resta de ancora-valorProxDesc) és més petita que la diferencia (resta valorProxAsc-ancora) el valor més pròxim serà valorProxDesc
                      }
                     else if ((ancora-valorProxDesc)>(valorProxAsc-ancora)){
-                        System.out.println("El valor introduït més próxim a " + ancora + " és " + valorProxAsc); // Si la diferencia (resta de ancora-valorProxDesc) és més gran que la diferencia (resta valorProxAsc-ancora) el valor més pròxim serà valorProxAsc
+                        System.out.println("El valor introduït més pròxim a " + ancora + " és " + valorProxAsc); // Si la diferencia (resta de ancora-valorProxDesc) és més gran que la diferencia (resta valorProxAsc-ancora) el valor més pròxim serà valorProxAsc
                     }
                     else{
-                        System.out.println("El valor introduït més próxim a " + ancora + " és " + valorProxDesc); // Si la diferencia (resta de ancora-valorProxDesc) és igual a la diferencia (resta valorProxAsc-ancora) el valor més pròxim serà valorProxDesc
+                        System.out.println("El valor introduït més pròxim a " + ancora + " és " + valorProxDesc); // Si la diferencia (resta de ancora-valorProxDesc) és igual a la diferencia (resta valorProxAsc-ancora) el valor més pròxim serà valorProxDesc
                     }
             }    
     }   
