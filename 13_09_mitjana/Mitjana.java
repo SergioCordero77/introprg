@@ -9,12 +9,13 @@ public class Mitjana {
     
     int suma = 0;   // Declarem la variable suma amb valor 0 per començar la suma després
     
-    int numEntrades = -1;
-     
-    int notes = 0;
+    int numEntrades = 0; //Declarem la variable de número d'entrades que ens servirá per anar sumant y al final fer la mitja
     
-    if (notes>=0){
-        while (notes >= 0){ // Mentres el valor introduït sigui més gran que 0, el bucle funcionarà
+    System.out.println ("Introdueix un valor");
+    int notes = Integer.parseInt(Entrada.readLine());
+    
+    if (notes>=0) {
+        while (notes >= 0 && notes<=100){ // Mentres el valor introduït sigui més gran que 0 i més que que 100, el bucle funcionarà
             
             suma = suma + notes; //Iniciem la suma amb el valor donat
             
@@ -29,8 +30,8 @@ public class Mitjana {
             double mitjana = sumaTotal / numEntrades; // equació de la mitjana amb double
             
             System.out.println("La suma de les notes vàlides és " + mitjana); // resultat final
-    } // Tanquem if      
-    else{
+    } // Tanquem if
+    else {
         System.out.println("Cap nota vàlida introduïda");
     }
     }
