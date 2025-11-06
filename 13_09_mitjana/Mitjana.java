@@ -14,7 +14,7 @@ public class Mitjana {
     System.out.println ("Introdueix un valor");
     int notes = Integer.parseInt(Entrada.readLine());
     
-    if (notes>=0 && notes<=100) {
+    if (notes>0 && notes<=100) {
         while (notes >= 0 && notes<=100){ // Mentres el valor introduït sigui més gran que 0 i més que que 100, el bucle funcionarà
             
             suma = suma + notes; //Iniciem la suma amb el valor donat
