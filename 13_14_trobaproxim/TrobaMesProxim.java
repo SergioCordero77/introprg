@@ -33,12 +33,12 @@ public class TrobaMesProxim{
                 while (valor>=0){ // Mentre el valor sigui positiu, el bucle funcionarà
                 
                     if (valor<ancora){ // Part que analitza els valors menors de ancora
-                        if (valor>valorProxDesc){
+                        if (valor>0){
                             valorProxDesc = valor; // Si el valor que donem és major que el valorProxDesc el transformem en aquest per poder-lo tornara a comparar després
                         }
                     }
                     else{ // Part que analitza els valors majors de ancora
-                        if (valor<valorProxAsc){ 
+                        if (valor<100){ 
                             valorProxAsc = valor; // Si el valor que donem és menor que el valorProxAsc el transformem en aquest per poder-lo tornara a comparar després
                         }
                     }
