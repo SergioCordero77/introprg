@@ -19,8 +19,11 @@ public class EndevinaNombre {
     System.out.println ("Introdueix un valor");
     String textNumero = Entrada.readLine();
     
-        while (numeroEndevinar != numero || !textNumero.isEmpty()) {        
-            
+    boolean endevinat = false;
+    
+    
+        while (!textNumero.isEmpty() && !endevinat) {        
+           
             int numero = Integer.parseInt(textNumero);
             
             if (numero > 100) {
@@ -32,20 +35,23 @@ public class EndevinaNombre {
             else if (numero > numeroEndevinar) {
                 System.out.println ("És més petit que " + numero);
             }
+            else if (numero == numeroEndevinar){
+                endevinat = true;
+            }
             else {
                 System.out.println ("És més gran que " + numero);
             }  
                 
+            if (!endevinat){    
                 System.out.println ("Introdueix un valor");
-                textNumero = Entrada.readLine();
-                
+                textNumero = Entrada.readLine();      
+            }
         }
-        
-            if (numeroEndevinar != numero) {
-                System.out.println ("Has encertat!");
-            }
-            else {
-                System.out.println ("Cancel·lat!");
-            }
+                if (endevinat) {
+                    System.out.println ("Has encertat!");
+                }
+                else {
+                    System.out.println ("Cancel·lat!");
+                }
     }
 }
