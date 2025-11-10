@@ -30,7 +30,7 @@ public class TrobaMesProxim{
                 System.out.println("No s'ha introduït cap valor positiu");
             }
             else{ // Si el valor es possitiu, pot començar el bucle
-                while (valor>=0){ // Mentre el valor sigui positiu, el bucle funcionarà
+                while (valor>=0 && valor<=100){ // Mentre el valor sigui positiu o menor de 100, el bucle funcionarà
                 
                     if (valor<ancora){ // Part que analitza els valors menors de ancora
                         if (valor>0){
