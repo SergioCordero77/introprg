@@ -23,9 +23,16 @@ public class TrobaMesProxim{
         int valor = Integer.parseInt(Entrada.readLine());
         
         //Declarem les variables per fer-les servir més endavant al bucle
-        int valorProxAsc = 101;
-        int valorProxDesc = valor;
+        int valorProxAsc = 100;
+        int valorProxDesc = 0;
         int valorExacte = 0;
+        
+        if (valor<ancora){
+            valorProxDesc = valor;
+        }
+        else if (valor>ancora){
+            valorProxAsc = valor;
+        }
             
             if (valor<0){ // si té un valor negatiu, acaba el programa
                 System.out.println("No s'ha introduït cap valor positiu");
