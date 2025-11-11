@@ -9,7 +9,7 @@ public class NaturalsDecreixents{
     int numero = 1;
     
     if (numeroInici < 1){
-        System.out.println("Cap valor decreixent entre 1 i " + numeroInici);
+        System.out.println("Cap valor decreixent entre -1 i " + numeroInici);
     }
     else{
         while (numero <= numeroInici){
