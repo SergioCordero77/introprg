@@ -6,10 +6,15 @@ public class Naturals{
     
     int numeroFi = Integer.parseInt(args[0]);
     
-    for (int numero = 1;
-         numero <= numeroFi;
-         numero ++) {
-            System.out.println(numero);
-        }
+    if (numeroFi < 1){
+        System.out.println("Cap valor creixent entre 1 i " + numeroFi);
+    }
+    else{
+        for (int numero = 1;
+             numero <= numeroFi;
+             numero ++) {
+                System.out.println(numero);
+            }
+    }
     }
 }
