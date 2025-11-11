@@ -24,7 +24,7 @@ public class TrobaMesProxim{
         
         //Declarem les variables per fer-les servir més endavant al bucle
         int valorProxAsc = 101;
-        int valorProxDesc = -1;
+        int valorProxDesc = valor;
         int valorExacte = 0;
             
             if (valor<0){ // si té un valor negatiu, acaba el programa
