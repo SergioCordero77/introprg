@@ -9,5 +9,9 @@ public class NaturalsDecreixents{
             numeroInici --){                                             // Passa al número següent descendent
             System.out.println(numeroInici);
         }
+        
+        if (numeroInici < 1){
+        System.out.println("Cap valor decreixent entre " + numeroInici + " i 1");
+    }
     }
 }
