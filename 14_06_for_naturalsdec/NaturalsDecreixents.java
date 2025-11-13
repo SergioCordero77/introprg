@@ -8,10 +8,9 @@ public class NaturalsDecreixents{
             1 <= numeroInici;                                            // Condició
             numeroInici --){                                             // Passa al número següent descendent
             System.out.println(numeroInici);
+              if (numeroInici < 1){
+              System.out.println("Cap valor decreixent entre " + numeroInici + " i 1");
         }
-        
-        if (numeroInici < 1){
-        System.out.println("Cap valor decreixent entre " + numeroInici + " i 1");
     }
     }
 }
