@@ -8,7 +8,7 @@ public class NaturalsParells {
     int numero = 2;
     
     if (numeroFi < 2){
-        System.out.println("Cap valor creixent entre 1 i " + numeroFi);
+        System.out.println("Cap valor parell entre 1 i " + numeroFi);
     }
     else{
         while (numero <= numeroFi){
