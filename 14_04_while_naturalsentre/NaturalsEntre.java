@@ -33,7 +33,7 @@ public class NaturalsEntre {
                         }
                         else{   // Si es donen totes les condicions, podem fer el codi
                             valor = inici;
-                                    while (valor<=fi){
+                                    while (valor<fi){
                                         System.out.println(valor);
                                         valor = valor + salt;
                                     }
