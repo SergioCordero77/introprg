@@ -1,8 +1,8 @@
 /*
  * Programa que demana un valor inicial, un valor final i un valor pel salt. Tots els valors introduïts seràn no negatius.
  * El valors es rebrán per entrada estàndar i seràn números enters.
- * Elprograma comprovoarà que els valors no són negatiu. Que el primer no sigui menor o igual que el segon, i que el tercer sigui més gran que zero. En cas que un dels valors no compleixi les condicions, el programa deixarà de preguntar i ho indicarà amb el següent missatge: "Valor no vàlid" i finalitzarà. 
- * Si es compleixen les condicions el programa demanarà que s'introdueixi tants valors com el número de salts s'hagi introduït. Els valors introduïts no poden ser més petits que el valor anterior.
+ * El programa comprovoarà que els valors no són negatiu. Que el primer no sigui menor o igual que el segon, i que el tercer sigui més gran que zero. En cas que un dels valors no compleixi les condicions, el programa deixarà de preguntar i ho indicarà amb el següent missatge: "Valor no vàlid" i finalitzarà. 
+ * Si es compleixen les condicions el programa programa anirá sumant el valor inicial pel valor del salt que s'hagi introduït. El programa acabarà quan la suma del valor sigui més gran o igual al valor final.
  */
 public class NaturalsEntre {
     public static void main (String [] args){
