@@ -4,13 +4,17 @@
 public class NaturalsDecreixents{
     public static void main (String [] args){
     
-        for (int numeroInici = Integer.parseInt(args[0]);                // Variable de recorregut
-            1 <= numeroInici;                                            // Condició
-            numeroInici --){                                             // Passa al número següent descendent
-            System.out.println(numeroInici);
-              if (numeroInici < 1){
-              System.out.println("Cap valor decreixent entre " + numeroInici + " i 1");
+    int numeroInici = Integer.parseInt(args[0]);
+        
+        if (numeroInici < 1){
+                System.out.println("Cap valor decreixent entre " + numeroInici + " i 1");
+            }
+        else{
+            for (int numeroInici = Integer.parseInt(args[0]);                // Variable de recorregut
+                numeroInici <= 1;                                            // Condició
+                numeroInici --){                                             // Passa al número següent descendent
+                System.out.println(numeroInici);
+            }  
         }
-    }
     }
 }
