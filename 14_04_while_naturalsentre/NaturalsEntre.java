@@ -13,7 +13,6 @@ public class NaturalsEntre {
     int salt = 0;
     int valor = 0;
     int cont = 0;
-    int anterior = 0;
     
     System.out.println("Valor inicial?");
     inici = Integer.parseInt(Entrada.readLine());
@@ -34,11 +33,10 @@ public class NaturalsEntre {
                         }
                         else{   // Si es donen totes les condicions, podem fer el codi
                             valor = inici;
-                            while (valor>0 && valor>=inici && valor<=fi && cont<=salt){
-                                cont ++;
-                                valor = Integer.parseInt(Entrada.readLine());
-                                valor = inici;
-                            }
+                                    while (valor<=fi){
+                                        System.out.println(valor);
+                                        valor = valor + salt;
+                                    }
                         }
                 }
         }       
