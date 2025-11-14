@@ -28,12 +28,12 @@ public class NaturalsEntre {
                 else{
                     System.out.println("Salt?");
                     salt = Integer.parseInt(Entrada.readLine());
-                        if (salt<0){
+                        if (salt<=0){
                             System.out.println("Valor no vàlid");
                         }
                         else{   // Si es donen totes les condicions, podem fer el codi
                             valor = inici;
-                                    while (valor<fi){
+                                    while (valor<=fi){
                                         System.out.println(valor);
                                         valor = valor + salt;
                                     }
