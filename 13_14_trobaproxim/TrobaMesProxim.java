@@ -21,54 +21,32 @@ public class TrobaMesProxim{
         //Introduïm el primer valor
         System.out.println("Introdueix un valor");
         int valor = Integer.parseInt(Entrada.readLine());
-        
-        //Declarem les variables per fer-les servir més endavant al bucle
-        int valorProxAsc = valor;
-        int valorProxDesc = valor;
-        int valorExacte = 0;
-            
+          
             if (valor<0){ // si té un valor negatiu, acaba el programa
                 System.out.println("No s'ha introduït cap valor positiu");
             }
             else{ // Si el valor es possitiu, pot començar el bucle
+               
+                int valorProx = valor; //Tranformem el valor en valorProx
             
-                boolean numeroExacte = false; //Declarem un boolean que diu que es false que hem trobat el valor exacte
-            
-                while (valor>=0){ // Mentre el valor sigui positiu o menor de 100, el bucle funcionarà
-                
-                    if (valor<ancora){ // Part que analitza els valors menors de ancora
-                        if (ancora-valor<ancora-valorProxDesc){
-                            valorProxDesc = valor; // Si la diferencia entre el l'ancora i el valor és menor que la diferencia entre l'àncora i el valorProxDesc, el transformem en aquest per poder-lo tornar a comparar després
+                while (valor>=0){ // Mentre el valor sigui positiu, el bucle funcionarà
+                   
+                    if(Math.abs (valor - ancora) < Math.abs (valorProx - ancora)) { // Comparem les distancies
+                        valorProx = valor;
+                    }
+                    else if((Math.abs (valor - ancora) == Math.abs (valorProx - ancora))) { // Mirem si les dos distancies són iguals
+                        if (valor<valorProx){ 
+                            valorProx = valor;
                         }
                     }
-                    else if (valor>ancora){ // Part que analitza els valors majors de ancora
-                        if (valor-ancora<valorProxAsc-ancora){ 
-                            valorProxAsc = valor; // Si la diferencia entre el valor i l'ancora és menor que la diferencia entre el valorProxAsc i l'àncora, el transformem en aquest per poder-lo tornar a comparar després
-                        }
-                    }
-                    else { // Part que analitza si el valor és igual a l'àncora
-                        numeroExacte = true; //canviem el boolean a True
-                        valorExacte = valor; // Si el valor es igual a l'àncora, el transformem en el valorExacte per poder-lo tornar a comparar després
-                    }
-                    
+                        
                     System.out.println("Introdueix un valor"); // Tornem a demanar el valor per continuar amb el bucle
                     valor = Integer.parseInt(Entrada.readLine());
+                }       
                 
-                }
                     // RESULTATS FINALS
-                    if (numeroExacte){
-                        System.out.println("El valor introduït més pròxim a " + ancora + " és " + valorExacte); // Si el valor és exacte el valor més pròxim serà el valorExacte
-                    }
-                    else if ((ancora-valorProxDesc)<(valorProxAsc-ancora)){
-                    System.out.println("El valor introduït més pròxim a " + ancora + " és " + valorProxDesc); // Si la diferencia (resta de ancora-valorProxDesc) és més petita que la diferencia (resta valorProxAsc-ancora) el valor més pròxim serà valorProxDesc
-                     }
-                    else if ((ancora-valorProxDesc)>(valorProxAsc-ancora)){
-                        System.out.println("El valor introduït més pròxim a " + ancora + " és " + valorProxAsc); // Si la diferencia (resta de ancora-valorProxDesc) és més gran que la diferencia (resta valorProxAsc-ancora) el valor més pròxim serà valorProxAsc
-                    }
-                    else{
-                        System.out.println("El valor introduït més pròxim a " + ancora + " és " + valorProxDesc); // Si la diferencia (resta de ancora-valorProxDesc) és igual a la diferencia (resta valorProxAsc-ancora) el valor més pròxim serà valorProxDesc
-                    }
-            }    
-    }   
+                        System.out.println("El valor introduït més pròxim a " + ancora + " és " + valorProx);
+            }
+    }       
     }
 }
