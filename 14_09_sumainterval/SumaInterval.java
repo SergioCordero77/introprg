@@ -17,7 +17,7 @@ public class SumaInterval{
             numero<=segon;
             numero ++){
                 
-                System.out.println("" + inicial + "+" + "" + numero + "=" + inicial);
+                System.out.println("" + inicial + " + " + "" + numero + " = " + inicial);
                 inicial = inicial + numero;
         }
     
