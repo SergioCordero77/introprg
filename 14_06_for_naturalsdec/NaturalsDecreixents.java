@@ -10,9 +10,7 @@ public class NaturalsDecreixents{
                 System.out.println("Cap valor decreixent entre " + numeroInici + " i 1");
             }
         else{
-            for (int inici = numeroInici;                              // Variable de recorregut
-                inici >= 1;                                            // Condició
-                inici --){                                             // Passa al número següent descendent
+            for (int inici = numeroInici; inici >= 1; inici --){
                 System.out.println(inici);
             }  
         }
