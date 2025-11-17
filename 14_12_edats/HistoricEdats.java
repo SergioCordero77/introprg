@@ -11,7 +11,7 @@ public class HistoricEdats{
     System.out.println("edat?");
     int edat = Integer.parseInt (Entrada.readLine());
     
-    System.out.println("any?");
+    System.out.println("any actual?");
     int any = Integer.parseInt (Entrada.readLine());
     
     int anyNeixement = any - edat; //any de neixement
