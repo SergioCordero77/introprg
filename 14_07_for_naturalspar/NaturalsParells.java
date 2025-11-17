@@ -11,9 +11,7 @@ public class NaturalsParells {
         System.out.println("Cap valor parell creixent entre 1 i " + numeroFi);
     }
     else{   // Si el valoer es major que 1, el programa començarà i entrarà al bucle
-        for (int fi = numeroFi;     // Inicialitzacó de la variable
-            numero <= fi;           // Condició
-            numero = numero + 2){   // Actualització del numero
+        for (int fi = numeroFi; numero <= fi;numero = numero + 2){   
  
             System.out.println(numero); //Resultat final
         
