@@ -16,7 +16,7 @@ public class HistoricEdats{
     
     int anyNeixement = any - edat; //any de neixement
     
-        if (!nom.isEmpty() && edat>1 && any>=1971) {
+        if (!nom.isEmpty() && edat>=0 && any>=1971) {
             for (int i = anyNeixement; i<any; i++){
             
                 int edatAntiga = i - anyNeixement; // Resta per trobar l'edat que correspón segons l'any.
