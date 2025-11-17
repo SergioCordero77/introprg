@@ -26,9 +26,7 @@ public class SumaInterval{
     int inicial = 0;
     int resultat = 0;
     
-        for (int numero = valorPetit;
-            numero<=valorGran;
-            numero ++){
+        for (int numero = valorPetit; numero<=valorGran; numero ++){
                 
                 resultat = inicial + numero;
                 System.out.println("" + inicial + " + " + "" + numero + " = " + resultat);
