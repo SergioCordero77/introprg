@@ -40,7 +40,7 @@ public class LletresInterval{
                             System.out.println();
                     }
                     else{
-                        System.out.println("ERROR");
+                        System.out.println("ERROR: una com a mínim");
                     }
                 }
                 else{
