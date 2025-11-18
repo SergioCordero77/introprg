@@ -13,22 +13,31 @@ public class LletresInterval{
     
     char inicial = lletra.charAt(0);
     int ascii = (int) inicial;
-    int suma = ascii + numero;
-    
-    if ((ascii >= 65 && ascii <= 90) && lletra.length() == 1 && numero >=1) {
-        for (int i = ascii; i<=suma; i++){
-            System.out.print("" + (char) i);
+        
+        if ((ascii >= 65 && ascii <= 90) && lletra.length() == 1 && numero >=1) {
+            for (int i = 0; i<=numero; i++){
+                if (ascii > 90){
+                    ascii=65;
+                }
+                System.out.print("" + (char) ascii);
+                ascii ++;
+            }
+                System.out.println();
         }
-            System.out.println();
-    }
-    else if ((ascii >= 97 && ascii <= 122) && lletra.length() == 1 && numero >=1){
-        for (int i = ascii; i<=suma; i++){
-            System.out.print("" + (char) i);
+        else if ((ascii >= 97 && ascii <= 122) && lletra.length() == 1 && numero >=1){
+            for (int i = 0; i<=numero; i++){
+                if (ascii > 122){
+                    ascii=97;
+                }
+                System.out.print("" + (char) ascii);
+                ascii ++;
+            }
+                System.out.println();
         }
-            System.out.println();
-    }
-    else{
-        System.out.println("ERROR");
+        else{
+            System.out.println("ERROR");
     }
     }
 }
+
+
