@@ -15,7 +15,7 @@ public class LletresInterval{
     int ascii = (int) inicial;
         
         if ((ascii >= 65 && ascii <= 90) && lletra.length() == 1 && numero >=1) {
-            for (int i = 0; i<=numero; i++){
+            for (int i = 0; i<numero; i++){
                 if (ascii > 90){
                     ascii=65;
                 }
@@ -25,7 +25,7 @@ public class LletresInterval{
                 System.out.println();
         }
         else if ((ascii >= 97 && ascii <= 122) && lletra.length() == 1 && numero >=1){
-            for (int i = 0; i<=numero; i++){
+            for (int i = 0; i<numero; i++){
                 if (ascii > 122){
                     ascii=97;
                 }
