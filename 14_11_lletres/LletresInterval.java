@@ -8,6 +8,10 @@ public class LletresInterval{
     System.out.println("lletra?");
     String lletra = Entrada.readLine();
     
+        if (lletra.length()>1 || lletra.isBlank()){
+            System.out.println("ERROR");
+        }
+    
     System.out.println("quantes?");
     int numero = Integer.parseInt (Entrada.readLine());
     
@@ -36,7 +40,7 @@ public class LletresInterval{
         }
         else{
             System.out.println("ERROR");
-    }
+        }
     }
 }
 
