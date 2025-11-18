@@ -8,12 +8,13 @@ public class LletresInterval{
     System.out.println("lletra?");
     String lletra = Entrada.readLine();
     
-        if (lletra.length()==1 || lletra.isBlank()){
+    char inicial = lletra.charAt(0);
+    
+        if (lletra.length()==1 || lletra.isBlank() || (inicial>'A' && inicial<'Z') || (inicial>'a' && inicial<'z')){
     
             System.out.println("quantes?");
             int numero = Integer.parseInt (Entrada.readLine());
             
-            char inicial = lletra.charAt(0);
             int ascii = (int) inicial;
                 
                 if ((ascii >= 65 && ascii <= 90) && lletra.length() == 1 && numero >=1) {
