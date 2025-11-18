@@ -43,6 +43,9 @@ public class LletresInterval{
                         System.out.println("ERROR");
                     }
                 }
+                else{
+                    System.out.println("ERROR: \'" + inicial + "\' no és una lletra vàlida.");
+                }
         }
         else{
             System.out.println("ERROR: cal especificar una única lletra.");
