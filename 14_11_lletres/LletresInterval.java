@@ -8,36 +8,40 @@ public class LletresInterval{
     System.out.println("lletra?");
     String lletra = Entrada.readLine();
     
-    char inicial = lletra.charAt(0);
-    int ascii = (int) inicial;
+        if (lletra.length()==1){
     
-        if (lletra.length()==1 || lletra.isBlank() || (ascii >= 65 && ascii <= 90) || (ascii >= 97 && ascii <= 122)){
-    
-            System.out.println("quantes?");
-            int numero = Integer.parseInt (Entrada.readLine());   
-                
-                if ((ascii >= 65 && ascii <= 90) && lletra.length() == 1 && numero >=1) {
-                    for (int i = 0; i<numero; i++){
-                        if (ascii > 90){
-                            ascii=65;
+            char inicial = lletra.charAt(0);
+            int ascii = (int) inicial;
+            
+            if ((ascii >= 65 && ascii <= 90) || (ascii >= 97 && ascii <= 122)){ 
+            
+                System.out.println("quantes?");
+                int numero = Integer.parseInt (Entrada.readLine());   
+                    
+                    if ((ascii >= 65 && ascii <= 90) && lletra.length() == 1 && numero >=1) {
+                    
+                        for (int i = 0; i<numero; i++){
+                            if (ascii > 90){
+                                ascii=65;
+                            }
+                            System.out.print("" + (char) ascii);
+                            ascii ++;
                         }
-                        System.out.print("" + (char) ascii);
-                        ascii ++;
+                            System.out.println();
                     }
-                        System.out.println();
-                }
-                else if ((ascii >= 97 && ascii <= 122) && lletra.length() == 1 && numero >=1){
-                    for (int i = 0; i<numero; i++){
-                        if (ascii > 122){
-                            ascii=97;
+                    else if ((ascii >= 97 && ascii <= 122) && lletra.length() == 1 && numero >=1){
+                        for (int i = 0; i<numero; i++){
+                            if (ascii > 122){
+                                ascii=97;
+                            }
+                            System.out.print("" + (char) ascii);
+                            ascii ++;
                         }
-                        System.out.print("" + (char) ascii);
-                        ascii ++;
+                            System.out.println();
                     }
-                        System.out.println();
-                }
-                else{
-                    System.out.println("ERROR");
+                    else{
+                        System.out.println("ERROR");
+                    }
                 }
         }
         else{
