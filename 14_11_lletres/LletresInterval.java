@@ -41,7 +41,7 @@ public class LletresInterval{
                 }
         }
         else{
-            System.out.println("ERROR");
+            System.out.println("ERROR: cal especificar una única lletra.");
         }
     }
 }
