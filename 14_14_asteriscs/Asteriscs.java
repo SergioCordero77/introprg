@@ -4,7 +4,6 @@
 public class Asteriscs {
     public static void main (String[] args) {
     
-    System.out.println("Valor final?");
     int valor = Integer.parseInt(args[0]);
     
         if (valor>0 && valor<10) {
