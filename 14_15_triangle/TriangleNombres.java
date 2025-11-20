@@ -8,11 +8,12 @@ public class TriangleNombres {
     int valor = Integer.parseInt(Entrada.readLine());
     
         if (valor>0 && valor<10) {
-            for(int linia =0; linia<=valor; linia++){
-                System.out.println();
-                    for(int columna =1; columna <=linia; columna++){
+            for(int linia =1; linia<=valor; linia++){
+                    for(int columna = linia;  columna<= valor; columna++){
+                        
                         System.out.print(columna);
                     }
+                    System.out.println();
             }
                 System.out.println();
         }
