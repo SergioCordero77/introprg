@@ -8,20 +8,18 @@ public class TriangleInvertit {
     int valor = Integer.parseInt(Entrada.readLine());
     
         if (valor>0 && valor<10) {
-            for(int linia =1; linia<=valor; linia++){
-                    for(int columna = linia;  columna<= valor; columna++){
+            for(int linia =0; linia<=valor; linia++){
+                for(int columna = 1;  columna<= (valor-linia); columna++){
                         
-                        if (columna < valor){
-                        System.out.print(columna + ", ");
+                        if (columna < (valor-linia)){
+                            System.out.print(columna + ", ");
                         }
                         else {
-                        System.out.print(columna);
-                        }
-                        
-                    }
-                    System.out.println();
-            }
+                            System.out.print(columna);
+                        } 
+                }
                 System.out.println();
+            }
         }
         else {
             System.out.println("Valor inadequat");
