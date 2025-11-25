@@ -7,7 +7,7 @@ public class Triangle {
     System.out.println("quants?");
     int valor = Integer.parseInt(Entrada.readLine());
     
-        if (valor>0 && valor<10) {
+        if (valor>=0 && valor<10) {
         
             for(int i=0; i<valor; i++){
                 for(int linia=9; linia>=0; linia--){
