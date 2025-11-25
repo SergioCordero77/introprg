@@ -7,7 +7,7 @@ public class Rombos {
     System.out.println("quants?");
     int valor = Integer.parseInt(Entrada.readLine());
     
-        if (valor>0 && valor<10) {
+        if (valor>=0 && valor<10) {
         
             // Triangle superior
             for(int i=0; i<valor; i++){
