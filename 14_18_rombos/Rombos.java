@@ -1,5 +1,5 @@
 /*
- * El programa demanará un número i aquest número determinarà el número de rombos que dibuixarà. Es dibuixaràn triangles amb números i sortiràn un sota de l'altre.
+ * El programa demanará un número i aquest número determinarà el número de rombos que dibuixarà. Es dibuixaràn rombos amb números i sortiràn un sota de l'altre.
  */
 public class Rombos {
     public static void main (String[] args) {
