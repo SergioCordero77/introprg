@@ -10,7 +10,7 @@ public class Triangle {
         if (valor>0 && valor<10) {
         
             for(int i=0; i<valor; i++){
-                for(int linia=9; linia>=1; linia--){
+                for(int linia=9; linia>=0; linia--){
                     System.out.println();
                         // Triangle punts esquerre
                         for(int columna=1; columna<=linia; columna++){
