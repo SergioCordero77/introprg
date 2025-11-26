@@ -22,28 +22,28 @@ public class TaulaMultiplicar {
         System.out.println("El quart argument és  " + args[3]);
         
         // Condicions i for segons la condició
-        if (primer1 < primer2 && segon1<segon2){
+        if (primer1 <= primer2 && segon1 <= segon2){
             for (int i = primer1; i<=primer2; i++){
                     for (int s = segon1; s<=segon2; s++){
                         System.out.println(i + " x " + s + " = " + (s*i));
                     }
             }   
         }
-        else if (primer2 < primer1 && segon1<segon2){
+        else if (primer2 <= primer1 && segon1 <= segon2){
             for (int i = primer2; i<=primer1; i++){
                     for (int s = segon1; s<=segon2; s++){
                         System.out.println(i + " x " + s + " = " + (s*i));
                     }
             }
         }
-        else if (primer1 < primer2 && segon2<segon1){
+        else if (primer1 <= primer2 && segon2 <= segon1){
             for (int i = primer1; i<=primer2; i++){
                     for (int s = segon2; s<=segon1; s++){
                         System.out.println(i + " x " + s + " = " + (s*i));
                     }
             }   
         }
-        else{   /*(primer2 < primer1 && segon2<segon1)*/
+        else{   /*(primer2 < primer1 && segon2 <= segon1)*/
             for (int i = primer2; i<=primer1; i++){
                     for (int s = segon2; s<=segon1; s++){
                         System.out.println(i + " x " + s + " = " + (s*i));
