@@ -16,10 +16,6 @@ public class TaulaMultiplicar {
         int segon1 = Integer.parseInt(args[2]);
         int segon2 = Integer.parseInt(args[3]);
         
-        System.out.println("El primer argument és " + args[0]);
-        System.out.println("El segon argument és  " + args[1]);
-        System.out.println("El tercer argument és " + args[2]);
-        System.out.println("El quart argument és  " + args[3]);
         
         // Condicions i for segons la condició
         if (primer1 <= primer2 && segon1 <= segon2){
