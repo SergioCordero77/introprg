@@ -8,9 +8,8 @@ public class RombosH {
     int valor = Integer.parseInt(Entrada.readLine());
     
         if (valor>=0) {
-        
+            
             // Triangle superior
-           
                 for(int linia=9; linia>=0; linia--){
                     System.out.println(); 
                         for(int i=0; i<valor; i++){
@@ -19,6 +18,7 @@ public class RombosH {
                                 System.out.print(".");
                             }
                             // Triangle números esquerre
+                            
                             for(int columna=linia; columna<=9; columna++){
                                 System.out.print(columna);
                             }
