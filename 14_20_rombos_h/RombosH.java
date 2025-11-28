@@ -7,7 +7,7 @@ public class RombosH {
     System.out.println("quants?");
     int valor = Integer.parseInt(Entrada.readLine());
         
-        if (valor>=0) {
+        if (valor>0) {
            
             
             // Triangle superior
