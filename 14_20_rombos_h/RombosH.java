@@ -6,21 +6,30 @@ public class RombosH {
     
     System.out.println("quants?");
     int valor = Integer.parseInt(Entrada.readLine());
-    
+        
         if (valor>=0) {
+           
             
             // Triangle superior
                 for(int linia=9; linia>=0; linia--){
-                    System.out.println(); 
+                    if (linia>=1){
+                    System.out.print(".");
+                    }
+                    else {
+                    System.out.print(0);
+                    } 
                         for(int i=0; i<valor; i++){
                             // Triangle punts esquerre
                             for(int columna=1; columna<=linia; columna++){
-                                System.out.print(".");
+                                if (columna<linia){ //Treure punts iniciales
+                                    System.out.print(".");
+                                }
                             }
                             // Triangle números esquerre
-                            
                             for(int columna=linia; columna<=9; columna++){
-                                System.out.print(columna);
+                                if (columna>0){ //Treure el 0
+                                    System.out.print(columna);
+                                }
                             }
                             // Triangle números dret
                             for(int columna=8; columna>=linia; columna--){
@@ -31,14 +40,19 @@ public class RombosH {
                                 System.out.print(".");
                             }
                         }
-                }
+                        System.out.println(); 
+                }    
+            
+                
                 // Triangle inferior
                 for(int linia=0; linia<=8; linia++){
-                    System.out.println();
+                    System.out.print(".");
                         for(int i=0; i<valor; i++){
                             // Triangle punts esquerre
                             for(int columna=0; columna<=linia; columna++){
-                                System.out.print(".");
+                                if (columna > 0){
+                                    System.out.print(".");
+                                }
                             }
                             // Triangle números esquerre
                             for(int columna=linia+1; columna<=9; columna++){
@@ -51,9 +65,10 @@ public class RombosH {
                             for(int columna=0; columna<=linia; columna++){
                                 System.out.print(".");
                             }        
-                        }
+                        } 
+                        System.out.println();
                 }
-                    System.out.println();
+                   
         }
         else {
             System.out.println("Valor inadequat");
