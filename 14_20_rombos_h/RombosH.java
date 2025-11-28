@@ -70,8 +70,8 @@ public class RombosH {
                 }
                    
         }
-        else {
+ /*       else {
             System.out.println("Valor inadequat");
         }
-    }
+   */ }
 }
