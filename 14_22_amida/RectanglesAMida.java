@@ -21,10 +21,10 @@ public class RectanglesAMida {
      
             for (int linia = -1; primer>linia; linia++){
                 if (linia > -1) {
-                    System.out.print ("" + linia);
+                    System.out.print (" " + linia);
                 }
                 else{
-                    System.out.print (" ");
+                    System.out.print ("  ");
                 }
                 for (int columna = 0; segon>columna; columna++){
                     if (linia == -1){
