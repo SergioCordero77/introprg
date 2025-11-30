@@ -14,7 +14,7 @@ public class Parentitza {
             else{
                 System.out.print(text.charAt(posicio));
             }
-        }
-        System.out.println();
+        } 
+        
     }
 }
