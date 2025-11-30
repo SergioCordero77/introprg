@@ -27,8 +27,9 @@ public class RectanglesAMida {
                     System.out.print ("  ");
                 }
                 for (int columna = 0; segon>columna; columna++){
+                    
                     if (linia == -1){
-                        System.out.print ("" + columna);
+                        System.out.print ("" + columna%10);
                     }
                     else{
                         System.out.print ("*");
