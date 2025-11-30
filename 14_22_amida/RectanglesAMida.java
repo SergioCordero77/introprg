@@ -7,20 +7,17 @@
 public class RectanglesAMida {
     public static void main (String [] args) {
     
-    System.out.println("primer?");
-    int primer = Integer.parseInt(Entrada.readLine());
+    int primer = 1;
     
-    System.out.println("segon?");
+    System.out.println(primer + " x ?");
     String segon1 = Entrada.readLine();
     
     int contRectangle = 0;
     int contPunts = 0;
     
-    while (!segon1.isBlank()){
+    while (!segon1.isBlank() && Integer.parseInt(segon1) >= 0){
         
         int segon = Integer.parseInt(segon1);
-        
-        System.out.println(primer + " x " + segon);
      
             for (int linia = -1; primer>linia; linia++){
                 if (linia > -1) {
