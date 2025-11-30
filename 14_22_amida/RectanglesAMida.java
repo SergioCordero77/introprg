@@ -48,8 +48,13 @@ public class RectanglesAMida {
         segon1 = Entrada.readLine();
     }
     
-    System.out.println("Rectangles: " + contRectangle);
-    System.out.println("Punts: " + contPunts);
+        if (contRectangle > 0){
+            System.out.println("Rectangles: " + contRectangle);
+            System.out.println("Punts: " + contPunts);
+        }
+        else{
+            System.out.println("Cap rectangle dibuixat");
+        }
     
     }
 }
