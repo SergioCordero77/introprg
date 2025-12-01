@@ -12,7 +12,7 @@ public class TriangleNombres {
                     if (linia>=1){
                     }
                     else {
-                    System.out.print(0);
+                    System.out.print("");
                     } 
                         for(int i=0; i<valor; i++){
                             // Triangle punts esquerre
