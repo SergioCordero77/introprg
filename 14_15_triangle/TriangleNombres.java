@@ -8,7 +8,7 @@ public class TriangleNombres {
     int valor = Integer.parseInt(Entrada.readLine());
     
         if (valor>0 && valor<10) {
-            
+            if (valor>1){
             // Triangle
             for(int i=0; i<valor; i++){
                 for(int linia=9; linia>=0; linia--){
@@ -30,6 +30,7 @@ public class TriangleNombres {
                             System.out.print(".");
                         }
                 }  
+            }
             }
                 System.out.println();
         }
