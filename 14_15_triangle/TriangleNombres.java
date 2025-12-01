@@ -8,11 +8,10 @@ public class TriangleNombres {
     int valor = Integer.parseInt(Entrada.readLine());
     
         if (valor>0 && valor<10) {
-            if (valor>1){
             // Triangle
             for(int i=0; i<valor; i++){
                 for(int linia=9; linia>=0; linia--){
-                    System.out.println();
+            
                         // Triangle punts esquerre
                         for(int columna=1; columna<=linia; columna++){
                             System.out.print(".");
@@ -29,10 +28,10 @@ public class TriangleNombres {
                         for(int columna=1; columna<=linia; columna++){
                             System.out.print(".");
                         }
+                        
+                        System.out.println();
                 }  
             }
-            }
-                System.out.println();
         }
         else {
             System.out.println("Valor inadequat");
