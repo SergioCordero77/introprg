@@ -10,7 +10,7 @@ public class MostraInterval{
     System.out.println("inici?");
     int inici = Integer.parseInt(Entrada.readLine());
     
-    System.out.println("segon?");
+    System.out.println("final?");
     int ultim = Integer.parseInt(Entrada.readLine());
     
     //normalització de números
