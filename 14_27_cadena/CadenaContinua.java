@@ -9,7 +9,7 @@ public class CadenaContinua{
     String text = Entrada.readLine();
     
     if (text.isBlank()){
-        System.out.println("Error");    
+        System.out.println("ERROR: el text no conté caràcters no blancs");    
     }
     else{
         System.out.println("Nombre?");
