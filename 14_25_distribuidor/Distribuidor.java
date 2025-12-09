@@ -21,11 +21,10 @@ public class Distribuidor {
         
             //Vocals
             for(int i=0; i<text.length(); i++){
-                char a = text.charAt(i);
-                char c = Character.toUpperCase(a);
+                char c = text.charAt(i);
                 
             
-                    String vocals = "AÀEÉÈIÍÏOÒÓUÚÜ";
+                    String vocals = "aàeéèiíïoòóuúü";
                     
                     boolean esVocal = false;
                     
@@ -50,12 +49,11 @@ public class Distribuidor {
                     
             //Consonants
             for(int i=0; i<text.length(); i++){
-                char a = text.charAt(i);
-                char c = Character.toUpperCase(a);
+                char c = text.charAt(i);
                     
                     if (Character.isLetter(c)){
                     
-                    String vocals = "AÀEÉÈIÍÏOÒÓUÚÜ";
+                    String vocals = "aàeéèiíïoòóuúü";
                     
                     boolean esVocal = false;
                     
@@ -144,7 +142,7 @@ public class Distribuidor {
         }
         
         //Impressió símbols
-        if (nomesDigit.length()>0){
+        if (nomesSimbol.length()>0){
             System.out.println ("Símbols: " + nomesSimbol);
         }
     }
