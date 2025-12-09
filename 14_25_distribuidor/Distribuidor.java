@@ -17,7 +17,7 @@ public class Distribuidor {
         String nomesDigit = "";
         String nomesSimbol = "";
         
-        String vocals = "aàeéèiíïoòóuúü";
+        String vocals = "aàeéèiïoòóuúü";
         
         while (!text.isEmpty()) { 
         
