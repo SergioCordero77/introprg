@@ -22,10 +22,10 @@ public class Distribuidor {
             //Vocals
             for(int i=0; i<text.length(); i++){
                 char a = text.charAt(i);
-                char c = Character.toLowerCase(a);
+                char c = Character.toUpperCase(a);
                 
             
-                    String vocals = "aàeèéiíïoòóuúü";
+                    String vocals = "AÀEÉÈIÍÏOÒÓUÚÜ";
                     
                     boolean esVocal = false;
                     
@@ -51,11 +51,11 @@ public class Distribuidor {
             //Consonants
             for(int i=0; i<text.length(); i++){
                 char a = text.charAt(i);
-                char c = Character.toLowerCase(a);
+                char c = Character.toUpperCase(a);
                     
                     if (Character.isLetter(c)){
                     
-                    String vocals = "aàeèéiíïoòóuúü";
+                    String vocals = "AÀEÉÈIÍÏOÒÓUÚÜ";
                     
                     boolean esVocal = false;
                     
