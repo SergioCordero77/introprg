@@ -118,10 +118,13 @@ public class Distribuidor {
         }
         
         //Impressió vocals
-        String vocalsMajuscula = nomesVocals.toUpperCase();
-        System.out.println ("Vocals: " + vocalsMajuscula);
+        if (nomesVocals.length()>0){
+            String vocalsMajuscula = nomesVocals.toUpperCase();
+            System.out.println ("Vocals: " + vocalsMajuscula);
+        }
         
         //Impressió consonants
+        if (nomesConsonant.length()>0){
         String consonantMajuscula = "";
             for (int i = 0; i < nomesConsonant.length(); i++) {
                 char c = nomesConsonant.charAt(i);
@@ -133,11 +136,16 @@ public class Distribuidor {
                 }
             }
         System.out.println("Consonants: " + consonantMajuscula);
+        }
         
         //Impressió digits
-        System.out.println ("Nombres: " + nomesDigit);
+        if (nomesDigit.length()>0){
+            System.out.println ("Nombres: " + nomesDigit);
+        }
         
         //Impressió símbols
-        System.out.println ("Símbols: " + nomesSimbol);
+        if (nomesDigit.length()>0){
+            System.out.println ("Símbols: " + nomesSimbol);
+        }
     }
 }
