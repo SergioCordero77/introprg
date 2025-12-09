@@ -122,8 +122,16 @@ public class Distribuidor {
         System.out.println ("Vocals: " + vocalsMajuscula);
         
         //Impressió consonants
-        String consonantMajuscula = nomesConsonant.toUpperCase();
-        System.out.println ("Consonants: " + consonantMajuscula);
+        String consonantMajuscula = "";
+            for (int i = 0; i < nomesConsonant.length(); i++) {
+                char c = nomesConsonant.charAt(i);
+
+                if (c == 'ß') {
+                    consonantMajuscula = consonantMajuscula + 'ß';  // Mantenerla igual
+                } else {
+                    consonantMajuscula = consonantMajuscula + Character.toUpperCase(c);
+                }
+            }
         
         //Impressió digits
         System.out.println ("Nombres: " + nomesDigit);
