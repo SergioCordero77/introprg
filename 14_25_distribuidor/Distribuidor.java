@@ -9,12 +9,15 @@
 public class Distribuidor {
     public static void main (String [] args){
     
-        System.out.println("Introduïu texts (INTRO per finalitzar");
+        System.out.println("Introduïu texts INTRO per finalitzar");
         String text = Entrada.readLine();
         
         String nomesVocals = "";
+        String nomesConsonant = "";
+        String nomesDigit = "";
+        String nomesSimbol = "";
         
-/*        //Lletres
+       //Lletres
         for(int i=0; i<text.length(); i++){
           char c = text.charAt(i);
         
@@ -26,45 +29,51 @@ public class Distribuidor {
                         if (c == vocals.charAt(v)) {
                             esVocal = true;
                             
-                            nomesVocals = nomesVocals + c;
+                           nomesVocals = nomesVocals + c;
                         }
                     
-                        for (int n = 0; n<nomesVocals.length(); n++){
-                            if (c!=nomesVocals.charAt(n)){
-                                
-                                nomesVocals = nomesVocals + c;
-                            }
-                        }
-                    }                
-        }
-
-                System.out.println ("Vocals: " + nomesVocals);
-        
- */       //consonants
-        for(int i=0; i<text.length(); i++){
-          char c = text.charAt(i);
-        
-                    String vocals = "aàeèéiíïoòóuúü";
-                    
-                    boolean esVocal = true;
-                    
-                    for (int v = 0; v < vocals.length(); v++) {
-                        if (c != vocals.charAt(v)) {
-                            esVocal = false;
-                            
-                            nomesVocals = nomesVocals + c;
-                        }
-                    
-                     /*   for (int n = 0; n<nomesVocals.length(); n++){
-                            if (c!=nomesVocals.charAt(n)){
-                                
+                       /* for (int n = 0; n<nomesVocals.length(); n++){
+                            if (c==nomesVocals.charAt(n)){
                                 nomesVocals = nomesVocals + c;
                             }
                         }*/
                     }                
         }
-
-                System.out.println ("Vocals: " + nomesVocals);
-
+                String vocalsMajuscula = nomesVocals.toUpperCase();
+                System.out.println ("Vocals: " + vocalsMajuscula);
+                
+/*        //Consonants
+        for(int i=0; i<text.length(); i++){
+          char c = text.charAt(i);
+          if (Character.isLetter(c)){
+            nomesConsonant = nomesConsonant + c;
+          }
+        }
+        System.out.println ("Consonants: " + nomesConsonant);
+       
+        //Nombres
+        for(int i=0; i<text.length(); i++){
+          char c = text.charAt(i);
+          
+          if (Character.isDigit(c)){
+            nomesDigit = nomesDigit + c;
+            
+            for (int j=0; j<nomesDigit.length(); j++);
+                if(c == text.charAt(j)){
+                
+                } 
+          }       
+        }
+        System.out.println ("Nombres: " + nomesNombres);
+        
+        //Simbols
+        for(int i=0; i<text.length(); i++){
+          char c = text.charAt(i);
+          
+          if (!Character.isDigit(c) && !Character.isLetter(c)){
+            nomesSimbol = nomesSimbol + c;
+          }
+        }
+        System.out.println ("Símbols: " + nomesSimbol);*/
     }
 }
