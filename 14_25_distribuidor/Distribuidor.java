@@ -19,7 +19,7 @@ public class Distribuidor {
         
         while (!text.isEmpty()) {
         
-            //Lletres
+            //Vocals
             for(int i=0; i<text.length(); i++){
                 char c = text.charAt(i);
             
