@@ -17,14 +17,13 @@ public class Distribuidor {
         String nomesDigit = "";
         String nomesSimbol = "";
         
+        String vocals = "aàeéèiíïoòóuúü";
+        
         while (!text.isEmpty()) { 
         
             //Vocals
             for(int i=0; i<text.length(); i++){
-                char c = text.charAt(i);
-                
-            
-                    String vocals = "aàeéèiíïoòóuúü";
+                char c = Character.toLowerCase(text.charAt(i));
                     
                     boolean esVocal = false;
                     
@@ -49,11 +48,9 @@ public class Distribuidor {
                     
             //Consonants
             for(int i=0; i<text.length(); i++){
-                char c = text.charAt(i);
+                char c = Character.toLowerCase(text.charAt(i));
                     
                     if (Character.isLetter(c)){
-                    
-                    String vocals = "aàeéèiíïoòóuúü";
                     
                     boolean esVocal = false;
                     
@@ -128,7 +125,7 @@ public class Distribuidor {
                 char c = nomesConsonant.charAt(i);
 
                 if (c == 'ß') {
-                    consonantMajuscula = consonantMajuscula + 'ß';  // Mantenerla igual
+                    consonantMajuscula = consonantMajuscula + 'ß';
                 } else {
                     consonantMajuscula = consonantMajuscula + Character.toUpperCase(c);
                 }
