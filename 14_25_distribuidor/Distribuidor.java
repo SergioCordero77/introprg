@@ -100,7 +100,7 @@ public class Distribuidor {
             for(int i=0; i<text.length(); i++){
                 char c = text.charAt(i);
               
-                if (!Character.isDigit(c) && !Character.isLetter(c)){
+                if (!Character.isDigit(c) && !Character.isLetter(c) && !Character.isWhitespace(c)){
                     boolean simbolRepetit = false;
                         for (int j=0; j<nomesSimbol.length(); j++){
                             if(c == nomesSimbol.charAt(j)){
