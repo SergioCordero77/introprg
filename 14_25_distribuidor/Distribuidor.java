@@ -31,6 +31,7 @@ public class Distribuidor {
                         if (c == vocals.charAt(v)) {
                             esVocal = true;   
                         }
+                    }
                      
                         if (esVocal){
                             boolean vocalRepetida = false;
@@ -42,11 +43,8 @@ public class Distribuidor {
                                 if (!vocalRepetida){
                                     nomesVocals = nomesVocals + c;
                                 }
-                        }
-                    }                
+                        }                
             }
-           /*     String vocalsMajuscula = nomesVocals.toUpperCase();
-                System.out.println ("Vocals: " + vocalsMajuscula); */
                     
             //Consonants
             for(int i=0; i<text.length(); i++){
