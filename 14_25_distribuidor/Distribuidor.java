@@ -17,101 +17,117 @@ public class Distribuidor {
         String nomesDigit = "";
         String nomesSimbol = "";
         
-        //Lletres
-        for(int i=0; i<text.length(); i++){
-            char c = text.charAt(i);
+        while (!text.isEmpty()) {
         
-                String vocals = "aàeèéiíïoòóuúü";
-                
-                boolean esVocal = false;
-                
-                for (int v = 0; v < vocals.length(); v++) {
-                    if (c == vocals.charAt(v)) {
-                        esVocal = true;   
-                    }
-                 
-                    if (esVocal){
-                        boolean vocalRepetida = false;
-                        for (int n = 0; n<nomesVocals.length(); n++){
-                            if (c==nomesVocals.charAt(n)){
-                               vocalRepetida = true;
-                            }
-                        }
-                            if (!vocalRepetida){
-                                nomesVocals = nomesVocals + c;
-                            }
-                    }
-                }                
-        }
-            String vocalsMajuscula = nomesVocals.toUpperCase();
-            System.out.println ("Vocals: " + vocalsMajuscula);
-                
-        //Consonants
-        for(int i=0; i<text.length(); i++){
-            char c = text.charAt(i);
-                
-                if (Character.isLetter(c)){
-                
-                String vocals = "aàeèéiíïoòóuúü";
-                
-                boolean esVocal = false;
-                
+            //Lletres
+            for(int i=0; i<text.length(); i++){
+                char c = text.charAt(i);
+            
+                    String vocals = "aàeèéiíïoòóuúü";
+                    
+                    boolean esVocal = false;
+                    
                     for (int v = 0; v < vocals.length(); v++) {
                         if (c == vocals.charAt(v)) {
                             esVocal = true;   
                         }
-                    }     
-                        
-                        if (!esVocal){
-                            boolean consonantRepetida = false;
-                            for (int n = 0; n<nomesConsonant.length(); n++){
-                                if (c==nomesConsonant.charAt(n)){
-                                   consonantRepetida = true;
+                     
+                        if (esVocal){
+                            boolean vocalRepetida = false;
+                            for (int n = 0; n<nomesVocals.length(); n++){
+                                if (c==nomesVocals.charAt(n)){
+                                   vocalRepetida = true;
                                 }
                             }
-                                if (!consonantRepetida){
-                                    nomesConsonant = nomesConsonant + c;
+                                if (!vocalRepetida){
+                                    nomesVocals = nomesVocals + c;
                                 }
-                        }                
-                }
-        }
-        String consonantMajuscula = nomesConsonant.toUpperCase();
-        System.out.println ("Consonants: " + consonantMajuscula);
-       
-       //Nombres
-        for(int i=0; i<text.length(); i++){
-            char c = text.charAt(i);
-          
-            if (Character.isDigit(c)){
-                boolean digitRepetit = false;
-                for (int j=0; j<nomesDigit.length(); j++){
-                    if(c == nomesDigit.charAt(j)){
-                       digitRepetit = true;
+                        }
+                    }                
+            }
+           /*     String vocalsMajuscula = nomesVocals.toUpperCase();
+                System.out.println ("Vocals: " + vocalsMajuscula); */
+                    
+            //Consonants
+            for(int i=0; i<text.length(); i++){
+                char c = text.charAt(i);
+                    
+                    if (Character.isLetter(c)){
+                    
+                    String vocals = "aàeèéiíïoòóuúü";
+                    
+                    boolean esVocal = false;
+                    
+                        for (int v = 0; v < vocals.length(); v++) {
+                            if (c == vocals.charAt(v)) {
+                                esVocal = true;   
+                            }
+                        }     
+                            
+                            if (!esVocal){
+                                boolean consonantRepetida = false;
+                                for (int n = 0; n<nomesConsonant.length(); n++){
+                                    if (c==nomesConsonant.charAt(n)){
+                                       consonantRepetida = true;
+                                    }
+                                }
+                                    if (!consonantRepetida){
+                                        nomesConsonant = nomesConsonant + c;
+                                    }
+                            }                
                     }
-                }
-                    if (!digitRepetit){
-                        nomesDigit = nomesDigit + c;
-                    } 
-            }       
-        }
-        System.out.println ("Nombres: " + nomesDigit);
-        
-        //Simbols
-        for(int i=0; i<text.length(); i++){
-            char c = text.charAt(i);
-          
-            if (!Character.isDigit(c) && !Character.isLetter(c)){
-                boolean simbolRepetit = false;
-                    for (int j=0; j<nomesSimbol.length(); j++){
-                        if(c == nomesSimbol.charAt(j)){
-                            simbolRepetit = true;
+            }
+           
+           //Nombres
+            for(int i=0; i<text.length(); i++){
+                char c = text.charAt(i);
+              
+                if (Character.isDigit(c)){
+                    boolean digitRepetit = false;
+                    for (int j=0; j<nomesDigit.length(); j++){
+                        if(c == nomesDigit.charAt(j)){
+                           digitRepetit = true;
                         }
                     }
-                    if (!simbolRepetit){
-                        nomesSimbol = nomesSimbol + c;
-                    } 
-          }
+                        if (!digitRepetit){
+                            nomesDigit = nomesDigit + c;
+                        } 
+                }       
+            }
+            
+            //Simbols
+            for(int i=0; i<text.length(); i++){
+                char c = text.charAt(i);
+              
+                if (!Character.isDigit(c) && !Character.isLetter(c)){
+                    boolean simbolRepetit = false;
+                        for (int j=0; j<nomesSimbol.length(); j++){
+                            if(c == nomesSimbol.charAt(j)){
+                                simbolRepetit = true;
+                            }
+                        }
+                        if (!simbolRepetit){
+                            nomesSimbol = nomesSimbol + c;
+                        } 
+              }
+            }
+            
+            text = Entrada.readLine();
+    
         }
+        
+        //Impressió vocals
+        String vocalsMajuscula = nomesVocals.toUpperCase();
+        System.out.println ("Vocals: " + vocalsMajuscula);
+        
+        //Impressió consonants
+        String consonantMajuscula = nomesConsonant.toUpperCase();
+        System.out.println ("Consonants: " + consonantMajuscula);
+        
+        //Impressió digits
+        System.out.println ("Nombres: " + nomesDigit);
+        
+        //Impressió símbols
         System.out.println ("Símbols: " + nomesSimbol);
     }
 }
