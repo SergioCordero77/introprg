@@ -17,11 +17,13 @@ public class Distribuidor {
         String nomesDigit = "";
         String nomesSimbol = "";
         
-        while (!text.isEmpty()) {
+        while (!text.isEmpty()) { 
         
             //Vocals
             for(int i=0; i<text.length(); i++){
-                char c = text.charAt(i);
+                char a = text.charAt(i);
+                char c = Character.toLowerCase(a);
+                
             
                     String vocals = "aàeèéiíïoòóuúü";
                     
@@ -48,7 +50,8 @@ public class Distribuidor {
                     
             //Consonants
             for(int i=0; i<text.length(); i++){
-                char c = text.charAt(i);
+                char a = text.charAt(i);
+                char c = Character.toLowerCase(a);
                     
                     if (Character.isLetter(c)){
                     
