@@ -132,6 +132,7 @@ public class Distribuidor {
                     consonantMajuscula = consonantMajuscula + Character.toUpperCase(c);
                 }
             }
+        System.out.println("Consonants: " + consonantMajuscula);
         
         //Impressió digits
         System.out.println ("Nombres: " + nomesDigit);
