@@ -10,25 +10,30 @@ public class Enters{
     
     int inicial = 0;
     
-    if (text.charAt(0) == '+' || text.charAt(0) == '-'){
-        inicial = 1;
-    }
-    
-    boolean esDigit = true;
-        for (int i=inicial; i<text.length(); i++){
-            char c = text.charAt(i);
-            
-            if (!Character.isDigit(c)){
-                esDigit = false;
-            }
-        }
+        while (!text.isEmpty()){
         
-        if (esDigit){
-            System.out.println(text + " es digit");
+            if (text.charAt(0) == '+' || text.charAt(0) == '-'){
+                inicial = 1;
+            }
+            
+            boolean esDigit = true;
+                for (int i=inicial; i<text.length(); i++){
+                    char c = text.charAt(i);
+                    
+                    if (!Character.isDigit(c)){
+                        esDigit = false;
+                    }
+                }
+                
+                if (esDigit){
+                    System.out.println("\"" + text + "\" és digit");
+                }
+                else {
+                    System.out.println("\"" + text + "\" no és digit");
+                }
+                
+                text = Entrada.readLine();
         }
-        else {
-            System.out.println(text + " NO es digit");
-        }
-
+            System.out.println("Adéu");
     }       
 }
