@@ -26,10 +26,10 @@ public class Enters{
                 }
                 
                 if (esDigit){
-                    System.out.println("\"" + text + "\" és digit");
+                    System.out.println("\"" + text + "\" és enter");
                 }
                 else {
-                    System.out.println("\"" + text + "\" no és digit");
+                    System.out.println("\"" + text + "\" no és enter");
                 }
                 
                 text = Entrada.readLine();
