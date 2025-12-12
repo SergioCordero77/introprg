@@ -11,29 +11,35 @@ public class Enters{
     System.out.println("Introdueix els texts a analitzar:");
     String text = Entrada.readLine();
     
+    
     int inicial = 0;
     
-       /* while (!text.isEmpty()){ */
+    
+    
+    
+        while (!text.isEmpty()){
         
             if (text.charAt(0) == '+' || text.charAt(0) == '-'){
                 inicial = 1;
             }
             
             boolean esDigit = true;
-            boolean apareixEspai = false;
-            
+            boolean hihaSeparador = true;
                 for (int i=inicial; i<text.length(); i++){
                     char c = text.charAt(i);
                     
-                    if (!Character.isDigit(c)){
+                String anterior = c-1;
+                String posterior = c+1;
+                    
+                        if (text.charAt(0) == '.' || text.charAt(0) == '_' ||
+                            text.charAt(text.length()-1) == '.' || text.charAt(text.length()-1) == '_'){
+                                hihaSeparador = false;
+                            }
+                    
+                    if (!Character.isDigit(c) && !Character.isWhitespace(c) && !hihaSeparador){
                         esDigit = false;
                     }
-                    
-                    if (Character.isWhitespace(c)){
-                        apareixEspai = true;
-                    }
-                }
-                
+                }            
                 if (esDigit){
                     System.out.println("\"" + text + "\" és enter");
                 }
@@ -41,8 +47,12 @@ public class Enters{
                     System.out.println("\"" + text + "\" no és enter");
                 }
                 
-           /*     text = Entrada.readLine();
+                text = Entrada.readLine();
+                
+                inicial = 0;
         }
-            System.out.println("Adéu"); */
-    }       
+            System.out.println("Adéu");
+                
+    }
 }
+
