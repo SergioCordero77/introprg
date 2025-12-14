@@ -28,15 +28,22 @@ public class Enters{
                 for (int i=inicial; i<text.length(); i++){
                     char c = text.charAt(i);
                     
-                String anterior = c-1;
-                String posterior = c+1;
+                    if (i > 0 && i < text.length() - 1) {
+                        char anterior = text.charAt(i - 1);
+                        char posterior = text.charAt(i + 1);
+
+                        if ((c == '.' || c == '_') &&
+                            (!Character.isDigit(anterior) || !Character.isDigit(posterior))) {
+                            hihaSeparador = false;
+                        }
+                    }
                     
                         if (text.charAt(0) == '.' || text.charAt(0) == '_' ||
                             text.charAt(text.length()-1) == '.' || text.charAt(text.length()-1) == '_'){
                                 hihaSeparador = false;
-                            }
+                            } 
                     
-                    if (!Character.isDigit(c) && !Character.isWhitespace(c) && !hihaSeparador){
+                    if (!Character.isDigit(c) && !Character.isWhitespace(c)){
                         esDigit = false;
                     }
                 }            
