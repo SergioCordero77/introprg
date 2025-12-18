@@ -26,6 +26,11 @@ public class Enters{
                 hihaSigne = true;
                 inicial = 1;
             }
+            
+            if ((text.charAt(0) == '_' || text.charAt(0) == '.') || 
+                text.charAt (text.length() - 1) == '_' || text.charAt (text.length() - 1) == '.'){
+                esDigit = false;
+            }
                 
                 //Bucle per recorrer els caràcters
                 for (int i=inicial; i<text.length(); i++){
