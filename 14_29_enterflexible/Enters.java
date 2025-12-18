@@ -55,7 +55,7 @@ public class Enters{
                         char posterior = text.charAt(i + 1);
 
                         // Si el caracter anterior es un espai, si hi ha un '+' o un '-' i el caracter posterior es un digit
-                        if (!Character.isWhitespace(anterior) && !hihaSigne && !Character.isDigit (posterior)){
+                        if (!Character.isWhitespace(anterior) && !hihaSigne && !Character.isDigit(posterior) && !Character.isWhitespace(posterior)){
                             esDigit = false;
                         }
                         
