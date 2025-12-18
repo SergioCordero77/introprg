@@ -17,7 +17,6 @@ public class Enters{
             
             boolean esDigit = true;
             boolean hihaDigit = false;
-            boolean hihaSeparador = true;
             boolean hihaSigne = false;
             boolean digitAbansDelSigne = false;
             boolean digitDespresDelSigne = false;
@@ -67,12 +66,6 @@ public class Enters{
                                 esDigit = false;
                             }
                         }
-
-                        // Si hi ha un '.' o una '_' a la primera posició o a l'última posició
-                        if (text.charAt(0) == '.' || text.charAt(0) == '_' ||
-                            text.charAt(text.length()-1) == '.' || text.charAt(text.length()-1) == '_'){
-                                hihaSeparador = false;
-                            }
                     } 
                     
                     // Si el caràcter no es digit, no es un espai en blanc, no té signes i no té separadors
