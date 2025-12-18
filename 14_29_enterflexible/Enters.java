@@ -20,14 +20,24 @@ public class Enters{
             }
             
             boolean esDigit = true;
+            boolean hihaDigit = false;
             boolean hihaSeparador = true;
 
                 for (int i=inicial; i<text.length(); i++){
                     char c = text.charAt(i);
                     
+                    if (Character.isDigit(c)){
+                            hihaDigit = true;
+                        }
+                    
                     if (i > 0 && i < text.length() - 1) {
                         char anterior = text.charAt(i - 1);
                         char posterior = text.charAt(i + 1);
+                                             
+                        
+                        if ((c == '+' || c == '-') && i != 0) {
+                            esDigit = false;
+                        }
 
                         if ((c == '.' || c == '_') &&
                             (!Character.isDigit(anterior) || !Character.isDigit(posterior))) {
@@ -44,7 +54,7 @@ public class Enters{
                         esDigit = false;
                     }
                 }            
-                if (esDigit){
+                if (esDigit && hihaDigit){
                     System.out.println("\"" + text + "\" és enter");
                 }
                 else {
