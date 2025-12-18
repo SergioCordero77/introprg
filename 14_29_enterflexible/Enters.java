@@ -11,13 +11,9 @@ public class Enters{
     System.out.println("Introdueix els texts a analitzar:");
     String text = Entrada.readLine();
     
-    int inicial = 0;
-    
         while (!text.isEmpty()){
         
-            if (text.charAt(0) == '+' || text.charAt(0) == '-'){
-                inicial = 1;
-            }
+            int inicial = 0;
             
             boolean esDigit = true;
             boolean hihaDigit = false;
@@ -26,7 +22,13 @@ public class Enters{
             boolean digitAbansDelSigne = false;
             boolean digitDespresDelSigne = false;
             
-
+            // Si comença per '+' o '-' es canvia la posició inicial a 1
+            if (text.charAt(0) == '+' || text.charAt(0) == '-'){
+                hihaSigne = true;
+                inicial = 1;
+            }
+                
+                //Bucle per recorrer els caràcters
                 for (int i=inicial; i<text.length(); i++){
                     char c = text.charAt(i);
                     
@@ -101,10 +103,10 @@ public class Enters{
                
 /*-------------------------------------------------------------------------------------------------------------------*/
                 
+                // Tornem a demanar text per continuar amb el bucle
                 text = Entrada.readLine();
-                
-                inicial = 0;
         }
+            // Missatge final quan acaba el bucle
             System.out.println("Adéu");
                 
     }
