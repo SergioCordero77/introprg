@@ -54,11 +54,6 @@ public class Enters{
                     if (i > 0 && i < text.length() - 1) {
                         char anterior = text.charAt(i - 1);
                         char posterior = text.charAt(i + 1);
-
-                        // Si el caracter anterior es un espai, si hi ha un '+' o un '-' i el caracter posterior es un digit
-                        if (!Character.isWhitespace(anterior) && !hihaSigne && !Character.isDigit(posterior) && !Character.isWhitespace(posterior)){
-                            esDigit = false;
-                        }
                         
                         // Si hi ha un '.' o una '_' entre dos digits
                         if (c == '.' || c == '_') {
