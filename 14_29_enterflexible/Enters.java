@@ -11,11 +11,7 @@ public class Enters{
     System.out.println("Introdueix els texts a analitzar:");
     String text = Entrada.readLine();
     
-    
     int inicial = 0;
-    
-    
-    
     
         while (!text.isEmpty()){
         
@@ -25,6 +21,7 @@ public class Enters{
             
             boolean esDigit = true;
             boolean hihaSeparador = true;
+
                 for (int i=inicial; i<text.length(); i++){
                     char c = text.charAt(i);
                     
@@ -43,7 +40,7 @@ public class Enters{
                                 hihaSeparador = false;
                             } 
                     
-                    if (!Character.isDigit(c) && !Character.isWhitespace(c)){
+                    if (!Character.isDigit(c) && !Character.isWhitespace(c) && !hihaSeparador){
                         esDigit = false;
                     }
                 }            
