@@ -62,19 +62,23 @@ public class Enters{
                         }
                         
                         // Si hi ha un '.' o una '_' entre dos digits
-                        if ((c == '.' || c == '_') &&
-                            (!Character.isDigit(anterior) || !Character.isDigit(posterior))) {
-                            hihaSeparador = false;
+                        if (c == '.' || c == '_') {
+                            if (!Character.isDigit(anterior) || !Character.isDigit(posterior)) {
+                                esDigit = false;
+                            }
                         }
-                    }
+
                         // Si hi ha un '.' o una '_' a la primera posició o a l'última posició
                         if (text.charAt(0) == '.' || text.charAt(0) == '_' ||
                             text.charAt(text.length()-1) == '.' || text.charAt(text.length()-1) == '_'){
                                 hihaSeparador = false;
-                            } 
+                            }
+                    } 
                     
-                    // Si el caràcter no es digit, no es un espai en blanc i no té separadors
-                    if (!Character.isDigit(c) && !Character.isWhitespace(c) && !hihaSeparador){
+                    // Si el caràcter no es digit, no es un espai en blanc, no té signes i no té separadors
+                    if (!Character.isDigit(c) && !Character.isWhitespace(c)
+                        && c != '+' && c != '-' && 
+                        c != '.' && c != '_') {
                         esDigit = false;
                     }
                 }
