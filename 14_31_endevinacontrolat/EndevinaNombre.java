@@ -15,7 +15,7 @@ public class EndevinaNombre {
     
     int numeroEndevinar = Integer.parseInt (args[0]);
     
-    System.out.println ("Ves introduint enters entre 1 i 100 fins que encertis el que jo he pensat");
+    System.out.println ("Nombre?");
     System.out.println ("Introdueix un valor");
     String textNumero = Entrada.readLine();
     
@@ -48,7 +48,7 @@ public class EndevinaNombre {
             }
         }
                 if (endevinat) {
-                    System.out.println ("Has encertat!");
+                    System.out.println ("Encertat!");
                 }
                 else {
                     System.out.println ("Cancel·lat!");
