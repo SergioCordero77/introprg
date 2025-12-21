@@ -21,8 +21,7 @@ public class EndevinaNombre {
     
     boolean endevinat = false;
     
-    
-        while (!textNumero.isEmpty() && !endevinat) {        
+        while (!textNumero.isEmpty()) {        
            
             int numero = Integer.parseInt(textNumero);
             
@@ -37,6 +36,7 @@ public class EndevinaNombre {
             }
             else if (numero == numeroEndevinar){
                 endevinat = true;
+                break;
             }
             else {
                 System.out.println ("És més gran que " + numero);
