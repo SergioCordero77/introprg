@@ -10,11 +10,12 @@ public class ConteDarrer{
     
     String textAnterior = "";
     
+    textAnterior = text;
+    
     while (!text.isEmpty()){
         
         boolean trobat = false;        
-        textAnterior = text;
-            
+        
             for (int i=0; i<text.length(); i++){
                 char c = text.charAt(i);
                 char cMaj = Character.toUpperCase(c);
@@ -33,6 +34,8 @@ public class ConteDarrer{
             if (!trobat){
                 break;
             }
+            
+            textAnterior = text;
             
             text = Entrada.readLine();
     
