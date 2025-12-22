@@ -16,42 +16,49 @@ public class EndevinaNombre {
     int numeroEndevinar = Integer.parseInt (args[0]);
     
     System.out.println ("Nombre?");
-    System.out.println ("Introdueix un valor");
     String textNumero = Entrada.readLine();
     
     boolean endevinat = false;
     
         while (!textNumero.isEmpty()) {        
-           
-            int numero = Integer.parseInt(textNumero);
             
-            if (numero > 100) {
-                System.out.println ("Com a màxim 100");
+            for(int i=0; i<textNumero.length(); i++){
+                char c = textNumero.charAt(i);
+                
+                if (!Character.isDigit(c)){
+                    System.out.println("Només nombres");
+                    break;
+                }
+                else{
+                    int numero = Integer.parseInt(textNumero);
+            
+                    if (numero > 100 || numero <= 0) {
+                        System.out.println ("Fora de rang");
+                        break;   
+                    }
+                    else if (numero > numeroEndevinar) {
+                        System.out.println ("Massa gran");
+                        break;
+                    }
+                    else if (numero == numeroEndevinar){
+                        endevinat = true;
+                        System.out.println ("Encertat!");
+                        return;
+                    }
+                    else{
+                        System.out.println ("Massa petit");
+                        break;
+                    }
+                }
             }
-            else if (numero <= 0) {
-                System.out.println ("Com a mínim 1");   
-            }
-            else if (numero > numeroEndevinar) {
-                System.out.println ("És més petit que " + numero);
-            }
-            else if (numero == numeroEndevinar){
-                endevinat = true;
-                break;
-            }
-            else {
-                System.out.println ("És més gran que " + numero);
-            }  
                 
             if (!endevinat){    
                 System.out.println ("Introdueix un valor");
                 textNumero = Entrada.readLine();      
             }
         }
-                if (endevinat) {
-                    System.out.println ("Encertat!");
-                }
-                else {
-                    System.out.println ("Cancel·lat!");
-                }
+        
+            System.out.println ("Cancel·lat!");
+
     }
 }
