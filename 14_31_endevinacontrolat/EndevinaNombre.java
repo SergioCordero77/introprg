@@ -1,12 +1,12 @@
 /*
  * Programa on s'ha d'endevinar el número pensat. El número pensat el passarem per la línia de comandes ( args[0] ). 
- Després el programa demanarà un número per comparar-lo amb el que em donat al principi i veure si s'endivina o no. 
+ Després el programa demanarà un número per comparar-lo amb el que hem donat al principi i veure si s'endivina o no. 
  Possibles respostes després de fer la comparació:
- - Si el valor que hem donat és més gran que el valor pensat: "És més gran que n"
- - Si el valor que hem donat és més petit que el valor pensat: "És més petit que n"
- - Si el valor que hem donat és 0 o menor: "Com a mínim 1"
- - Si el valor que hem donat és més gran que 100: "Com a màxim 100"
- - Si el valor que hem donat és igual al valor pensat: "Has encertat!"
+ - Si el valor que hem donat és més gran que el valor pensat: "Massa gran"
+ - Si el valor que hem donat és més petit que el valor pensat: "Massa petit"
+ - Si el valor que hem donat és 0 o menor o és més gran que 100: "Fora de rang"
+ - Si el valor que hem donat és igual al valor pensat: "Encertat!"
+ - Si el valor no es un enter: "Només digit"
  El programa podrá ser canel·lat quan l'usuari passi una cadena buida. la resposta que rebrem será:
  - "Cancel·lat!"
  */
@@ -53,7 +53,7 @@ public class EndevinaNombre {
             }
                 
             if (!endevinat){    
-                System.out.println ("Introdueix un valor");
+                System.out.println ("Nombre?");
                 textNumero = Entrada.readLine();      
             }
         }
