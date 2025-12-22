@@ -22,7 +22,14 @@ public class EndevinaNombre {
     
         while (!textNumero.isEmpty()) {        
             
-            for(int i=0; i<textNumero.length(); i++){
+            int inicial = 0;
+            
+            // Si comença per '+' o '-' es canvia la posició inicial a 1
+            if (textNumero.charAt(0) == '+' || textNumero.charAt(0) == '-'){
+                inicial = 1;
+            }
+            
+            for(int i=inicial; i<textNumero.length(); i++){
                 char c = textNumero.charAt(i);
                 
                 if (!Character.isDigit(c)){
