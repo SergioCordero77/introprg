@@ -7,6 +7,7 @@
  - Si el valor que hem donat és 0 o menor o és més gran que 100: "Fora de rang"
  - Si el valor que hem donat és igual al valor pensat: "Encertat!"
  - Si el valor no es un enter: "Només digit"
+ - També es tindrá en compte si comença per '-' o '+'.
  El programa podrá ser canel·lat quan l'usuari passi una cadena buida. la resposta que rebrem será:
  - "Cancel·lat!"
  */
@@ -29,13 +30,16 @@ public class EndevinaNombre {
                 inicial = 1;
             }
             
+            // for per comprobar caràcter a caràcter si es digit o no
             for(int i=inicial; i<textNumero.length(); i++){
                 char c = textNumero.charAt(i);
                 
+                //Si no és digit
                 if (!Character.isDigit(c)){
                     System.out.println("Només nombres");
                     break;
                 }
+                //Si es digit
                 else{
                     int numero = Integer.parseInt(textNumero);
             
@@ -58,7 +62,8 @@ public class EndevinaNombre {
                     }
                 }
             }
-                
+            
+            //Si encara no s'ha endevinat, demanarà un altre nombre    
             if (!endevinat){    
                 System.out.println ("Nombre?");
                 textNumero = Entrada.readLine();      
