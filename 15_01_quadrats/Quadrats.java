@@ -5,7 +5,7 @@
 public class Quadrats {
     public static void main(String[] args) {
 
-    System.out.println ("Número?");
+    System.out.println ("Quants?");
     int numero = Integer.parseInt(Entrada.readLine());
     
     // si el número és més gran que 0, el programa es dibuixaràn els quadrats
