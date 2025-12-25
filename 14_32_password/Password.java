@@ -197,6 +197,10 @@ public class Password{
             
         }
         
+        if (contMajuscules >= contMinuscules){
+                nombreMajuscules = true;
+        }
+        
         // RESULTATS
         
         // COMPROVACIÓ SI ESTÀN TOTS ELS ELEMENTS
@@ -215,6 +219,12 @@ public class Password{
             System.out.println("El password ha de contenir com a mínim una lletra minúscula.");
             return;
         }
+        
+        if (!nombreMajuscules) {
+            System.out.println("El password no pot contenir menys majúscules que minúscules.");
+            return;
+        }
+        
         if (!hihaSimbol) {
             System.out.println("El password ha de contenir com a mínim un símbol.");
             return;
@@ -249,9 +259,7 @@ public class Password{
             return;
         } 
         
-        if (contMajuscules >= contMinuscules){
-                nombreMajuscules = true;
-        }
+        
         
         if (hihaDigit && hihaMajuscula && hihaMinuscula && hihaSimbol && nombreMajuscules){
             System.out.println("El Password és vàlid");
