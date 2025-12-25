@@ -117,7 +117,7 @@ public class Password{
             }
             
             if (!hihaMajuscula){
-                System.out.println("El password ha de contenir com a mínim una majúscula.");
+                System.out.println("El password ha de contenir com a mínim una lletra majúscula.");
                 return;
             }
             
@@ -142,7 +142,7 @@ public class Password{
             }
             
             if (!hihaMinuscula){
-                System.out.println("El password ha de contenir com a mínim una minúscula.");
+                System.out.println("El password ha de contenir com a mínim una lletra minúscula.");
                 return;
             }
             
@@ -165,8 +165,8 @@ public class Password{
                 }
             }
             
-            if (!hihaMinuscula){
-                System.out.println("El password ha de contenir com a mínim una minúscula.");
+            if (!hihaSimbol){
+                System.out.println("El password ha de contenir com a mínim un símbol.");
                 return;
             }
             
