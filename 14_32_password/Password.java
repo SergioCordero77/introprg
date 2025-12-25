@@ -65,18 +65,18 @@ public class Password{
             char c = text.charAt(i);
             
             char tipusActual;
-            
-            // Caracters repetits
+
+            // Caracter repetit
             if (Character.isDigit(c)) {
-                tipusActual = ' ';
+                tipusActual = 'D';
             } else if (Character.isUpperCase(c)) {
-                tipusActual = ' ';
+                tipusActual = 'U';
             } else if (Character.isLowerCase(c)) {
-                tipusActual = ' ';
+                tipusActual = 'L';
             } else if (!Character.isWhitespace(c)) {
-                tipusActual = ' ';
+                tipusActual = 'S';
             } else {
-                tipusActual = ' ';
+                tipusActual = 'E';
             }
 
             if (tipusActual == tipusAnt) {
@@ -271,13 +271,13 @@ public class Password{
             return;
         }
         
-        if (mateixTipus){
-            System.out.println("El password no pot contenir més de 4 caràcters seguits del mateix tipus.");
-            return;
-        }
-        
         if (digitConsecutiu) {
             System.out.println("El password ha de contenir més de 3 números consecutius.");
+            return;
+        }
+
+        if (mateixTipus){
+            System.out.println("El password no pot contenir més de 4 caràcters seguits del mateix tipus.");
             return;
         }
         
