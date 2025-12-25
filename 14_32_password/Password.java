@@ -55,6 +55,7 @@ public class Password{
         boolean majusculaRepetida = false;
         boolean minusculaRepetida = false;
         boolean simbolRepetit = false;
+        boolean caracterRepetit =false;
         
         
         for (int i = 0; i<text.length(); i++){
@@ -175,7 +176,6 @@ public class Password{
                     for (int n = 0; n<nomesVocals.length(); n++){
                         if (cMaj==nomesVocals.charAt(n)){
                             vocalRepetida = true;
-                            continue;
                         }
                     }
                         if (!vocalRepetida){
@@ -184,7 +184,6 @@ public class Password{
                 }
                 else {
                     // Caracters repetits
-                    boolean caracterRepetit = false;
                     for (int j=0; j<cadenaCaracter.length(); j++){
                         if(c == cadenaCaracter.charAt(j)){
                             caracterRepetit = true;
@@ -233,13 +232,14 @@ public class Password{
         if (hihaEspai){   
             System.out.println("El password no pot contenir espais en blanc.");
             return;
-        }
-         
-        
-        
-        
+        }  
         
         // COMPROVACIÓ SI HI HA REPETICIÓ D'ELEMENTS
+        
+        if (caracterRepetit){
+            System.out.println("El password no pot contenir caràcters repetits.");
+            return;
+        }
         
         if (digitRepetit) {
             System.out.println("El password no pot contenir numeros repetits.");
