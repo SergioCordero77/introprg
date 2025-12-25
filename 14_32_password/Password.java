@@ -84,8 +84,7 @@ public class Password{
                     if (numActual == numAnterior + 1) {
                         contConsecutius++;
                         if (contConsecutius > 3) {
-                            System.out.println("Incorrecte");
-                            return;
+                            digitConsecutiu = true;
                         }
                     } else {
                         contConsecutius = 1;
@@ -228,7 +227,7 @@ public class Password{
             return;
         }
         
-        if (!digitConsecutiu) {
+        if (digitConsecutiu) {
             System.out.println("El password ha de contenir més de 3 números consecutius.");
             return;
         }
