@@ -184,12 +184,14 @@ public class Password{
                 }
                 else {
                     // Caracters repetits
+                    boolean repetitActual = false;
                     for (int j=0; j<cadenaCaracter.length(); j++){
                         if(c == cadenaCaracter.charAt(j)){
                             caracterRepetit = true;
+                            repetitActual = true;
                         }
                     }
-                        if (!caracterRepetit){
+                        if (!repetitActual){
                             cadenaCaracter = cadenaCaracter + c;
                         } 
                 }               
@@ -261,19 +263,9 @@ public class Password{
             return;
         }
         
-        // COMPROVCIÓ SI HI HA ESPAIS
-        
-        
-        
-        
-        
-        if (hihaDigit && hihaMajuscula && hihaMinuscula && hihaSimbol && nombreMajuscules){
-            System.out.println("El Password és vàlid");
-        }
-        else{
-            System.out.println("El Password no vàlid");
-        }
-    }
+        System.out.println("El Password és vàlid");
+    
+    }    
     else{
         System.out.println("El password ha de tenir entre 8 i 16 caràcters.");
     }
