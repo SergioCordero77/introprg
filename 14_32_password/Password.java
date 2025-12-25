@@ -281,15 +281,6 @@ public class Password{
             System.out.println("El password no pot contenir caràcters repetits.");
             return;
         }
-        
-        if (mateixTipus && digitConsecutiu) {
-            if (posMateixTipus < posDigitConsecutiu) {
-                System.out.println("El password no pot contenir més de 4 caràcters seguits del mateix tipus.");
-            } else {
-                System.out.println("El password no pot contenir més de 3 números consecutius.");
-            }
-            return;
-        }
 
         if (mateixTipus){
             System.out.println("El password no pot contenir més de 4 caràcters seguits del mateix tipus.");
