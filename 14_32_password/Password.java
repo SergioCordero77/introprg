@@ -47,6 +47,7 @@ public class Password{
         boolean hihaMajuscula = false;
         boolean hihaMinuscula = false;
         boolean hihaSimbol = false;
+        boolean hihaEspai = false;
         
         boolean digitRepetit = false;
         boolean digitConsecutiu = false;
@@ -155,8 +156,7 @@ public class Password{
             
             // Conté espais en blanc
             if (Character.isWhitespace (c)){
-                System.out.println("El password no pot contenir espais en blanc.");
-                return;
+                hihaEspai = true;
             } 
             
             // Anàlisis de vocal repetida o qualsevol altre caràcter repetit    
@@ -230,6 +230,10 @@ public class Password{
             System.out.println("El password ha de contenir com a mínim un símbol.");
             return;
         }
+        if (hihaEspai){   
+            System.out.println("El password no pot contenir espais en blanc.");
+            return;
+        } 
         
         if (contMajuscules >= contMinuscules){
                 nombreMajuscules = true;
