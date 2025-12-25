@@ -220,20 +220,22 @@ public class Password{
             return;
         }
         
-        if (!nombreMajuscules && !hihaSimbol) {
+        if (!nombreMajuscules) {
             System.out.println("El password no pot contenir menys majúscules que minúscules.");
             return;
         }
         
+        if (hihaEspai){   
+            System.out.println("El password no pot contenir espais en blanc.");
+            return;
+        }
+         
         if (!hihaSimbol) {
             System.out.println("El password ha de contenir com a mínim un símbol.");
             return;
         }
         
-        if (!nombreMajuscules) {
-            System.out.println("El password no pot contenir menys majúscules que minúscules.");
-            return;
-        }
+        
         
         // COMPROVACIÓ SI HI HA REPETICIÓ D'ELEMENTS
         
@@ -259,10 +261,7 @@ public class Password{
         
         // COMPROVCIÓ SI HI HA ESPAIS
         
-        if (hihaEspai){   
-            System.out.println("El password no pot contenir espais en blanc.");
-            return;
-        } 
+        
         
         
         
