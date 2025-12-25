@@ -198,38 +198,53 @@ public class Password{
             
         }
         
+        // RESULTATS
+        
+        // COMPROVACIÓ SI ESTÀN TOTS ELS ELEMENTS
+        
         if (!hihaDigit) {
             System.out.println("El password ha de contenir com a mínim un numero.");
             return;
         }
-        if (!digitRepetit) {
-            System.out.println("El password ha de contenir numeros repetits.");
-            return;
-        }
-        if (!digitConsecutiu) {
-            System.out.println("El password ha de contenir més de 3 números consecutius.");
-            return;
-        }
+        
         if (!hihaMajuscula) {
             System.out.println("El password ha de contenir com a mínim una lletra majúscula.");
             return;
         }
-        if (majusculaRepetida) {
-            System.out.println("El password no pot contenir una majúscula repetida.");
-            return;
-        }
+        
         if (!hihaMinuscula) {
             System.out.println("El password ha de contenir com a mínim una lletra minúscula.");
-            return;
-        }
-        if (minusculaRepetida) {
-            System.out.println("El password no pot contenir una minúscula repetida.");
             return;
         }
         if (!hihaSimbol) {
             System.out.println("El password ha de contenir com a mínim un símbol.");
             return;
         }
+        
+        // COMPROVACIÓ SI HI HA REPETICIÓ D'ELEMENTS
+        
+        if (!digitRepetit) {
+            System.out.println("El password no pot contenir numeros repetits.");
+            return;
+        }
+        
+        if (!digitConsecutiu) {
+            System.out.println("El password ha de contenir més de 3 números consecutius.");
+            return;
+        }
+        
+        if (majusculaRepetida) {
+            System.out.println("El password no pot contenir una majúscula repetida.");
+            return;
+        }
+        
+        if (minusculaRepetida) {
+            System.out.println("El password no pot contenir una minúscula repetida.");
+            return;
+        }
+        
+        // COMPROVCIÓ SI HI HA ESPAIS
+        
         if (hihaEspai){   
             System.out.println("El password no pot contenir espais en blanc.");
             return;
