@@ -271,10 +271,7 @@ public class Password{
             return;
         }
         
-        if (digitRepetit) {
-            System.out.println("El password no pot contenir numeros repetits.");
-            return;
-        }
+        
         
         if (digitConsecutiu) {
             System.out.println("El password ha de contenir més de 3 números consecutius.");
@@ -286,7 +283,10 @@ public class Password{
             return;
         }
          
-        
+        if (digitRepetit) {
+            System.out.println("El password no pot contenir numeros repetits.");
+            return;
+        }
         
         
         
