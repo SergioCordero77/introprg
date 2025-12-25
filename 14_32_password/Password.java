@@ -307,7 +307,7 @@ public class Password{
             return;
         }
         
-        System.out.println("El malaït password és vàlid!");
+        System.out.println("El maleït password és vàlid!");
     
     }    
     else{
