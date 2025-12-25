@@ -220,23 +220,22 @@ public class Password{
             return;
         }
         
-        if (!nombreMajuscules) {
-            System.out.println("El password no pot contenir menys majúscules que minúscules.");
-            return;
-        }
-        
         if (!hihaSimbol) {
             System.out.println("El password ha de contenir com a mínim un símbol.");
             return;
         }
         
+        if (!nombreMajuscules) {
+            System.out.println("El password no pot contenir menys majúscules que minúscules.");
+            return;
+        }
         
         
         
         
         // COMPROVACIÓ SI HI HA REPETICIÓ D'ELEMENTS
         
-        if (!digitRepetit) {
+        if (digitRepetit) {
             System.out.println("El password no pot contenir numeros repetits.");
             return;
         }
