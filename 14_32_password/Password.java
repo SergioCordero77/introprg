@@ -120,13 +120,19 @@ public class Password{
                             digitConsecutiu = true;
                             posDigitConsecutiu = i;
                         }
-                    } else {
+                    } 
+                    else {
                         contConsecutius = 1;
                     }
-                } else {
+                } 
+                else {
                     contConsecutius = 1;
                 }
             }
+            else{
+                contConsecutius = 1;
+            }
+            
             
             // actualitzar carácter anterior
             cAnt = c;        
