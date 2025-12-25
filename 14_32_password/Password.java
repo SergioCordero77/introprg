@@ -88,11 +88,6 @@ public class Password{
                 }
             }
             
-            if (!hihaDigit){
-                System.out.println("El password ha de contenir com a mínim un numero.");
-                return;
-            }
-            
             // actualitzar carácter anterior
             cAnt = c;        
 
@@ -116,11 +111,6 @@ public class Password{
                 }
             }
             
-            if (!hihaMajuscula){
-                System.out.println("El password ha de contenir com a mínim una lletra majúscula.");
-                return;
-            }
-            
             // Conté Minúscula
             if (Character.isLetter(c) && !Character.isUpperCase(c)){
                 hihaMinuscula = true;
@@ -141,11 +131,6 @@ public class Password{
                 }
             }
             
-            if (!hihaMinuscula){
-                System.out.println("El password ha de contenir com a mínim una lletra minúscula.");
-                return;
-            }
-            
             // Conté Símbom
             if (!Character.isLetter(c) && !Character.isDigit(c) && !Character.isWhitespace(c)){
                 hihaSimbol = true;
@@ -163,11 +148,6 @@ public class Password{
                     System.out.println("Incorrecte");
                     return;
                 }
-            }
-            
-            if (!hihaSimbol){
-                System.out.println("El password ha de contenir com a mínim un símbol.");
-                return;
             }
             
             // Conté espais en blanc
@@ -217,15 +197,32 @@ public class Password{
             
         }
         
+        if (!hihaDigit) {
+            System.out.println("El password ha de contenir com a mínim un numero.");
+            return;
+        }
+        if (!hihaMajuscula) {
+            System.out.println("El password ha de contenir com a mínim una lletra majúscula.");
+            return;
+        }
+        if (!hihaMinuscula) {
+            System.out.println("El password ha de contenir com a mínim una lletra minúscula.");
+            return;
+        }
+        if (!hihaSimbol) {
+            System.out.println("El password ha de contenir com a mínim un símbol.");
+            return;
+        }
+        
         if (contMajuscules >= contMinuscules){
                 nombreMajuscules = true;
         }
         
         if (hihaDigit && hihaMajuscula && hihaMinuscula && hihaSimbol && nombreMajuscules){
-            System.out.println("Contrasenya vàlida");
+            System.out.println("El Password és vàlid");
         }
         else{
-            System.out.println("Contrasenya no vàlida");
+            System.out.println("El Password no vàlid");
         }
     }
     else{
