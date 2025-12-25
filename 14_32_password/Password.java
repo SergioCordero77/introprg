@@ -26,6 +26,7 @@ public class Password{
     
     String text = Entrada.readLine();
     
+    int contTipusSeguit = 1;
     int contMajuscules = 0;
     int contMinuscules = 0;
     int contMayusculesRep = 0;
@@ -35,6 +36,7 @@ public class Password{
     int contConsecutius = 1;
 
     char cAnt = ' ';
+    char tipusAnt = ' ';
     
     String cadenaCaracter = "";
     String nomesVocals = "";
@@ -60,6 +62,33 @@ public class Password{
         
         for (int i = 0; i<text.length(); i++){
             char c = text.charAt(i);
+            
+            char tipusActual;
+            
+            // Caracters repetits
+            if (Character.isDigit(c)) {
+                tipusActual = 'D';
+            } else if (Character.isUpperCase(c)) {
+                tipusActual = 'U';
+            } else if (Character.isLowerCase(c)) {
+                tipusActual = 'L';
+            } else if (!Character.isWhitespace(c)) {
+                tipusActual = 'S';
+            } else {
+                tipusActual = 'E';
+            }
+
+            // Control de más de 4 del mismo tipo
+            if (tipusActual == tipusAnt) {
+                contTipusSeguit++;
+                if (contTipusSeguit > 4) {
+                    System.out.println("El password no pot contenir més de 4 caràcters seguits del mateix tipus.");
+                    return;
+                }
+            } else {
+                contTipusSeguit = 1;
+            }
+            tipusAnt = tipusActual;
             
             // Conté digit
             if (Character.isDigit(c)){
