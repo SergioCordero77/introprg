@@ -286,17 +286,22 @@ public class Password{
             System.out.println("El password no pot contenir més de 4 caràcters seguits del mateix tipus.");
             return;
         }
-         
+
+        if (digitConsecutiu){
+            System.out.println("El password no pot contenir més de 3 números consecutius.");
+            return;
+        }
+
         if (digitRepetit) {
             System.out.println("El password no pot contenir numeros repetits.");
             return;
         }
-        
+
         if (majusculaRepetida) {
             System.out.println("El password no pot contenir una majúscula repetida.");
             return;
         }
-        
+
         if (minusculaRepetida) {
             System.out.println("El password no pot contenir una minúscula repetida.");
             return;
