@@ -89,7 +89,7 @@ public class Password{
             }
             
             if (!hihaDigit){
-                System.out.println("El password ha de contenir com a mínim un número.");
+                System.out.println("El password ha de contenir com a mínim un numero.");
                 return;
             }
             
@@ -116,6 +116,11 @@ public class Password{
                 }
             }
             
+            if (!hihaMajuscula){
+                System.out.println("El password ha de contenir com a mínim una majúscula.");
+                return;
+            }
+            
             // Conté Minúscula
             if (Character.isLetter(c) && !Character.isUpperCase(c)){
                 hihaMinuscula = true;
@@ -134,6 +139,11 @@ public class Password{
                     System.out.println("Incorrecte");
                     return;
                 }
+            }
+            
+            if (!hihaMinuscula){
+                System.out.println("El password ha de contenir com a mínim una minúscula.");
+                return;
             }
             
             // Conté Símbom
@@ -155,9 +165,14 @@ public class Password{
                 }
             }
             
+            if (!hihaMinuscula){
+                System.out.println("El password ha de contenir com a mínim una minúscula.");
+                return;
+            }
+            
             // Conté espais en blanc
             if (Character.isWhitespace (c)){
-                System.out.println("Contrasenya no vàlida");
+                System.out.println("El password no pot contenir espais en blanc.");
                 return;
             } 
             
@@ -198,7 +213,7 @@ public class Password{
                         if (!caracterRepetit){
                             cadenaCaracter = cadenaCaracter + c;
                         } 
-                }                
+                }               
             
         }
         
