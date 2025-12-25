@@ -86,7 +86,7 @@ public class Password{
                 contTipusSeguit++;
                 if (contTipusSeguit > 4 && posMateixTipus == -1) {
                     mateixTipus = true;
-                    posMateixTipus = i;
+                    posMateixTipus = i - 4;
                 }
             } else {
                 contTipusSeguit = 1;
