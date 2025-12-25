@@ -118,7 +118,7 @@ public class Password{
                         contConsecutius++;
                         if (contConsecutius > 3 && posDigitConsecutiu == -1) {
                             digitConsecutiu = true;
-                            posDigitConsecutiu = i;
+                            posDigitConsecutiu = i - 3;
                         }
                     } 
                     else {
