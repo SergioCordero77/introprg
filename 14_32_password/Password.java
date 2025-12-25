@@ -219,16 +219,16 @@ public class Password{
             System.out.println("El password ha de contenir com a mínim una lletra minúscula.");
             return;
         }
-        
+        if (!nombreMajuscules) {
+            System.out.println("El password no pot contenir menys majúscules que minúscules.");
+            return;
+        }
         if (!hihaSimbol) {
             System.out.println("El password ha de contenir com a mínim un símbol.");
             return;
         }
         
-        if (!nombreMajuscules) {
-            System.out.println("El password no pot contenir menys majúscules que minúscules.");
-            return;
-        }
+        
         
         
         
