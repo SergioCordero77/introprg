@@ -114,7 +114,7 @@ public class Password{
                     int numActual = c - '0';
                     int numAnterior = cAnt - '0';
 
-                    if (numActual == numAnterior + 1) {
+                    if (numActual == numAnterior + 1 || numActual == numAnterior - 1) {
                         contConsecutius++;
                         if (contConsecutius > 3 && posDigitConsecutiu == -1) {
                             digitConsecutiu = true;
