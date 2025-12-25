@@ -45,6 +45,7 @@ public class Password{
     
     if (text.length()>=8 && text.length()<=16){
         
+        boolean mateixTipus = false;
         boolean hihaDigit = false;
         boolean hihaMajuscula = false;
         boolean hihaMinuscula = false;
@@ -67,23 +68,21 @@ public class Password{
             
             // Caracters repetits
             if (Character.isDigit(c)) {
-                tipusActual = 'D';
+                tipusActual = ' ';
             } else if (Character.isUpperCase(c)) {
-                tipusActual = 'U';
+                tipusActual = ' ';
             } else if (Character.isLowerCase(c)) {
-                tipusActual = 'L';
+                tipusActual = ' ';
             } else if (!Character.isWhitespace(c)) {
-                tipusActual = 'S';
+                tipusActual = ' ';
             } else {
-                tipusActual = 'E';
+                tipusActual = ' ';
             }
 
-            // Control de más de 4 del mismo tipo
             if (tipusActual == tipusAnt) {
                 contTipusSeguit++;
                 if (contTipusSeguit > 4) {
-                    System.out.println("El password no pot contenir més de 4 caràcters seguits del mateix tipus.");
-                    return;
+                    mateixTipus = true;
                 }
             } else {
                 contTipusSeguit = 1;
@@ -267,6 +266,10 @@ public class Password{
         
         // COMPROVACIÓ SI HI HA REPETICIÓ D'ELEMENTS
         
+        if (mateixTipus){
+        System.out.println("El password no pot contenir més de 4 caràcters seguits del mateix tipus.");
+        }
+         
         if (caracterRepetit){
             System.out.println("El password no pot contenir caràcters repetits.");
             return;
