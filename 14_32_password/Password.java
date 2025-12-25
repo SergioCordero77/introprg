@@ -47,7 +47,14 @@ public class Password{
         boolean hihaMajuscula = false;
         boolean hihaMinuscula = false;
         boolean hihaSimbol = false;
+        
+        boolean digitRepetit = false;
+        boolean digitConsecutiu = false;
         boolean nombreMajuscules = false;
+        boolean majusculaRepetida = false;
+        boolean minusculaRepetida = false;
+        boolean simbolRepetit = false;
+        
         
         for (int i = 0; i<text.length(); i++){
             char c = text.charAt(i);
@@ -65,8 +72,7 @@ public class Password{
                 contSimbolsRep = 0;
 
                 if (contDigitsRep > 4) {
-                    System.out.println("El password no pot tenir més de 4 digits repetits.");
-                    return;
+                    digitRepetit = true;
                 }
 
                 // Dígits consecutius
@@ -106,8 +112,7 @@ public class Password{
                 contConsecutius = 1;
 
                 if (contMayusculesRep > 4) {
-                    System.out.println("Incorrecte");
-                    return;
+                    majusculaRepetida = true;
                 }
             }
             
@@ -126,8 +131,7 @@ public class Password{
                 contConsecutius = 1;
 
                 if (contMinusculesRep > 4) {
-                    System.out.println("Incorrecte");
-                    return;
+                    minusculaRepetida = true;
                 }
             }
             
@@ -145,8 +149,7 @@ public class Password{
                 contConsecutius = 1;
 
                 if (contSimbolsRep > 4) {
-                    System.out.println("Incorrecte");
-                    return;
+                    simbolRepetit = true;
                 }
             }
             
@@ -186,8 +189,6 @@ public class Password{
                     for (int j=0; j<cadenaCaracter.length(); j++){
                         if(c == cadenaCaracter.charAt(j)){
                             caracterRepetit = true;
-                            System.out.println("Contrasenya no vàlida");
-                            return;
                         }
                     }
                         if (!caracterRepetit){
@@ -201,12 +202,28 @@ public class Password{
             System.out.println("El password ha de contenir com a mínim un numero.");
             return;
         }
+        if (!digitRepetit) {
+            System.out.println("El password ha de contenir numeros repetits.");
+            return;
+        }
+        if (!digitConsecutiu) {
+            System.out.println("El password ha de contenir més de 3 números consecutius.");
+            return;
+        }
         if (!hihaMajuscula) {
             System.out.println("El password ha de contenir com a mínim una lletra majúscula.");
             return;
         }
+        if (majusculaRepetida) {
+            System.out.println("El password no pot contenir una majúscula repetida.");
+            return;
+        }
         if (!hihaMinuscula) {
             System.out.println("El password ha de contenir com a mínim una lletra minúscula.");
+            return;
+        }
+        if (minusculaRepetida) {
+            System.out.println("El password no pot contenir una minúscula repetida.");
             return;
         }
         if (!hihaSimbol) {
