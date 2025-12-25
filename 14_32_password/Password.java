@@ -29,6 +29,13 @@ public class Password{
     
     int contMajuscules = 0;
     int contMinuscules = 0;
+    int contMayusculesRep = 0;
+    int contMinusculesRep = 0;
+    int contSimbolsRep = 0;
+    int contDigitsRep = 0;
+    int contConsecutius = 1;
+
+    char cAnt = ' ';
     
     String cadenaCaracter = "";
     String nomesVocals = "";
@@ -46,74 +53,154 @@ public class Password{
         for (int i = 0; i<text.length(); i++){
             char c = text.charAt(i);
             
+            // Conté digit
             if (Character.isDigit(c)){
-                hihaDigit = true;        
-            }
-              
-            if (Character.isUpperCase(c)){
-                hihaMajuscula = true;
-                contMajuscules ++;
+                hihaDigit = true;
+                
+                // Increment de comptador
+                contDigitsRep++;
+                
+                // Reinici de comptadors
+                contMayusculesRep = 0;
+                contMinusculesRep = 0;
+                contSimbolsRep = 0;
+
+                if (contDigitsRep > 4) {
+                    System.out.println("Incorrecte");
+                    return;
+                }
+
+                // Dígits consecutius
+                if (Character.isDigit(cAnt)) {
+                    int numActual = c - '0';
+                    int numAnterior = cAnt - '0';
+
+                    if (numActual == numAnterior + 1) {
+                        contConsecutius++;
+                        if (contConsecutius > 3) {
+                            System.out.println("Incorrecte");
+                            return;
+                        }
+                    } else {
+                        contConsecutius = 1;
+                    }
+                } else {
+                    contConsecutius = 1;
+                }
             }
             
+            // actualitzar carácter anterior
+            cAnt = c;        
+
+            // Conté Majúscula  
+            if (Character.isLetter(c) && Character.isUpperCase(c)){
+                hihaMajuscula = true;
+                
+                // Increment de comptadors
+                contMajuscules ++;
+                contMayusculesRep++;
+                
+                //Reinici de comptadors
+                contMinusculesRep = 0;
+                contSimbolsRep = 0;
+                contDigitsRep = 0;
+                contConsecutius = 1;
+
+                if (contMayusculesRep > 4) {
+                    System.out.println("Incorrecte");
+                    return;
+                }
+            }
+            
+            // Conté Minúscula
             if (Character.isLetter(c) && !Character.isUpperCase(c)){
                 hihaMinuscula = true;
+                
+                // Increment de comptadors
                 contMinuscules ++;
+                contMinusculesRep++;
+                
+                // Reinici de comptadors
+                contMayusculesRep = 0;
+                contSimbolsRep = 0;
+                contDigitsRep = 0;
+                contConsecutius = 1;
+
+                if (contMinusculesRep > 4) {
+                    System.out.println("Incorrecte");
+                    return;
+                }
             }
             
+            // Conté Símbom
             if (!Character.isLetter(c) && !Character.isDigit(c) && !Character.isWhitespace(c)){
                 hihaSimbol = true;
+                
+                //Increment de comptador
+                contSimbolsRep++;
+                
+                // Reinici de comptadors
+                contMayusculesRep = 0;
+                contMinusculesRep = 0;
+                contDigitsRep = 0;
+                contConsecutius = 1;
+
+                if (contSimbolsRep > 4) {
+                    System.out.println("Incorrecte");
+                    return;
+                }
             }
             
+            // Conté espais en blanc
             if (Character.isWhitespace (c)){
                 System.out.println("Contrasenya no vàlida");
                 return;
             } 
-                
-                char cMaj = Character.toUpperCase(c);
-                
-                boolean esVocal = false;
-                
-                for (int v = 0; v < vocals.length(); v++) {
-                    if (cMaj == vocals.charAt(v)) {
-                        esVocal = true;   
-                    }
-                }
-                 
-                    if (esVocal){
-                        // Vocals repetides
-                        boolean vocalRepetida = false;
-                        for (int n = 0; n<nomesVocals.length(); n++){
-                            if (cMaj==nomesVocals.charAt(n)){
-                                vocalRepetida = true;
-                                continue;
-                            }
-                        }
-                            if (!vocalRepetida){
-                                nomesVocals = nomesVocals + c;
-                            }
-                    }
-                    else {
-                        // Caracters repetits
-                        boolean caracterRepetit = false;
-                        for (int j=0; j<cadenaCaracter.length(); j++){
-                            if(c == cadenaCaracter.charAt(j)){
-                                caracterRepetit = true;
-                                System.out.println("Contrasenya no vàlida");
-                                return;
-                            }
-                        }
-                            if (!caracterRepetit){
-                                cadenaCaracter = cadenaCaracter + c;
-                            } 
-                    }                
             
+            // Anàlisis de vocal repetida o qualsevol altre caràcter repetit    
+            char cMaj = Character.toUpperCase(c);
+            
+            boolean esVocal = false;
+            
+            for (int v = 0; v < vocals.length(); v++) {
+                if (cMaj == vocals.charAt(v)) {
+                    esVocal = true;   
+                }
+            }
              
+                if (esVocal){
+                    // Vocals repetides
+                    boolean vocalRepetida = false;
+                    for (int n = 0; n<nomesVocals.length(); n++){
+                        if (cMaj==nomesVocals.charAt(n)){
+                            vocalRepetida = true;
+                            continue;
+                        }
+                    }
+                        if (!vocalRepetida){
+                            nomesVocals = nomesVocals + c;
+                        }
+                }
+                else {
+                    // Caracters repetits
+                    boolean caracterRepetit = false;
+                    for (int j=0; j<cadenaCaracter.length(); j++){
+                        if(c == cadenaCaracter.charAt(j)){
+                            caracterRepetit = true;
+                            System.out.println("Contrasenya no vàlida");
+                            return;
+                        }
+                    }
+                        if (!caracterRepetit){
+                            cadenaCaracter = cadenaCaracter + c;
+                        } 
+                }                
             
         }
         
         if (contMajuscules >= contMinuscules){
                 nombreMajuscules = true;
-            }
+        }
         
         if (hihaDigit && hihaMajuscula && hihaMinuscula && hihaSimbol && nombreMajuscules){
             System.out.println("Contrasenya vàlida");
