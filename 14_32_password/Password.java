@@ -43,6 +43,9 @@ public class Password{
     
     String vocals = "AEIOU";
     
+    int posMateixTipus = -1;
+    int posDigitConsecutiu = -1;
+    
     if (text.length()>=8 && text.length()<=16){
         
         boolean mateixTipus = false;
@@ -81,8 +84,9 @@ public class Password{
 
             if (tipusActual == tipusAnt) {
                 contTipusSeguit++;
-                if (contTipusSeguit > 4) {
+                if (contTipusSeguit > 4 && posMateixTipus == -1) {
                     mateixTipus = true;
+                    posMateixTipus = i;
                 }
             } else {
                 contTipusSeguit = 1;
@@ -112,8 +116,9 @@ public class Password{
 
                     if (numActual == numAnterior + 1) {
                         contConsecutius++;
-                        if (contConsecutius > 3) {
+                        if (contConsecutius > 3 && posDigitConsecutiu == -1) {
                             digitConsecutiu = true;
+                            posDigitConsecutiu = i;
                         }
                     } else {
                         contConsecutius = 1;
@@ -271,8 +276,12 @@ public class Password{
             return;
         }
         
-        if (digitConsecutiu) {
-            System.out.println("El password ha de contenir més de 3 números consecutius.");
+        if (mateixTipus && digitConsecutiu) {
+            if (posMateixTipus < posDigitConsecutiu) {
+                System.out.println("El password no pot contenir més de 4 caràcters seguits del mateix tipus.");
+            } else {
+                System.out.println("El password no pot contenir més de 3 números consecutius.");
+            }
             return;
         }
 
@@ -280,15 +289,11 @@ public class Password{
             System.out.println("El password no pot contenir més de 4 caràcters seguits del mateix tipus.");
             return;
         }
-        
-        
          
         if (digitRepetit) {
             System.out.println("El password no pot contenir numeros repetits.");
             return;
         }
-        
-        
         
         if (majusculaRepetida) {
             System.out.println("El password no pot contenir una majúscula repetida.");
