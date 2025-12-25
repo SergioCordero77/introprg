@@ -24,7 +24,6 @@
 public class Password{
     public static void main (String [] args){
     
-    System.out.println("Contrasenya:");
     String text = Entrada.readLine();
     
     int contMajuscules = 0;
@@ -210,7 +209,7 @@ public class Password{
         }
     }
     else{
-        System.out.println("La contrasenya ha de tenir com a mínim 8 caràcters i màxim de 16.");
+        System.out.println("El password ha de tenir entre 8 i 16 caràcters.");
     }
     
     }
