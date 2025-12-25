@@ -210,7 +210,7 @@ public class Password{
         }
     }
     else{
-        System.out.println("Contrasenya no vàlida");
+        System.out.println("La contrasenya ha de tenir com a mínim 8 caràcters i màxim de 16.");
     }
     
     }
