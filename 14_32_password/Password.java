@@ -220,7 +220,7 @@ public class Password{
             return;
         }
         
-        if (!hihaSimbol) {
+        if (!hihaSimbol && !hihaEspai) {
             System.out.println("El password ha de contenir com a mínim un símbol.");
             return;
         }
