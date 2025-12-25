@@ -266,14 +266,17 @@ public class Password{
         
         // COMPROVACIÓ SI HI HA REPETICIÓ D'ELEMENTS
         
-        if (mateixTipus){
-        System.out.println("El password no pot contenir més de 4 caràcters seguits del mateix tipus.");
-        }
-         
         if (caracterRepetit){
             System.out.println("El password no pot contenir caràcters repetits.");
             return;
         }
+        
+        if (mateixTipus){
+            System.out.println("El password no pot contenir més de 4 caràcters seguits del mateix tipus.");
+            return;
+        }
+         
+        
         
         if (digitRepetit) {
             System.out.println("El password no pot contenir numeros repetits.");
