@@ -65,7 +65,7 @@ public class Password{
                 contSimbolsRep = 0;
 
                 if (contDigitsRep > 4) {
-                    System.out.println("Incorrecte");
+                    System.out.println("El password no pot tenir més de 4 digits repetits.");
                     return;
                 }
 
@@ -86,6 +86,11 @@ public class Password{
                 } else {
                     contConsecutius = 1;
                 }
+            }
+            
+            if (!hihaDigit){
+                System.out.println("El password ha de contenir com a mínim un número.");
+                return;
             }
             
             // actualitzar carácter anterior
