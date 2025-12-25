@@ -271,17 +271,17 @@ public class Password{
             return;
         }
         
-        
+        if (mateixTipus){
+            System.out.println("El password no pot contenir més de 4 caràcters seguits del mateix tipus.");
+            return;
+        }
         
         if (digitConsecutiu) {
             System.out.println("El password ha de contenir més de 3 números consecutius.");
             return;
         }
         
-        if (mateixTipus){
-            System.out.println("El password no pot contenir més de 4 caràcters seguits del mateix tipus.");
-            return;
-        }
+        
          
         if (digitRepetit) {
             System.out.println("El password no pot contenir numeros repetits.");
