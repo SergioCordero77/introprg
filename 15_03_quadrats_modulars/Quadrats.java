@@ -4,11 +4,11 @@
  */
 public class Quadrats {
     public static void main(String[] args) {
-        dibuixaQuadrat();
+        dibuixaQuadrats();
     }
     
 
-    public static void dibuixaQuadrat(){
+    public static void dibuixaQuadrats(){
     System.out.println ("Quants?");
     int numero = Integer.parseInt(Entrada.readLine());
 
