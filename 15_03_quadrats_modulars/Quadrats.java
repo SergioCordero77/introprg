@@ -17,12 +17,18 @@ public class Quadrats {
             // número de quadrats
             for (int i=1; i <= numero; i++) {
                 // dibuixa un quadrat
-                for (int linia=1; linia <= 5; linia++) {
-                    dibuixaLinia();
+                dibuixaQuadrat();
+                
+                // dibuixa un salt de línia
+                System.out.println();
                 }
-            // dibuixa un salt de línia
-            System.out.println();
             }
+    }
+    
+    public static void dibuixaQuadrat(){
+        // dibuixa un quadrat
+        for (int linia=1; linia <= 5; linia++) {
+            dibuixaLinia();
         }
     }
                     
