@@ -19,6 +19,7 @@ public class LloroQuadrat {
                 System.out.println("El lloro repeteix: " + text);
             }
             
+            System.out.println("El lloro espera paraula:");
             text = Entrada.readLine();
         }
         System.out.println("Adéu");
