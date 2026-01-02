@@ -15,11 +15,11 @@ public class AnalitzaCaracter {
             int residu = ((posicio % text.length()) + text.length()) % text.length();    
             char caracter = text.charAt(residu);
             
-            AnalitzaCaracter (caracter);
+            analitzaCaracter (caracter);
         }
     }
     
-    public static void AnalitzaCaracter (char caracter){
+    public static void analitzaCaracter (char caracter){
         // Analisi del caracter
         if (Character.isUpperCase(caracter)){
             System.out.println ("\'"+caracter+"\' és una lletra majúscula");
