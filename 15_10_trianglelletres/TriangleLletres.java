@@ -23,12 +23,7 @@ public class TriangleLletres{
     System.out.println("Text?");
     String text = Entrada.readLine();
         
-        if (text.isBlank()){
-            System.out.println("ERROR: el text no conté caràcters no blancs");    
-        }
-        else{
-            dibuixaTriangle(text);
-        }
+        dibuixaTriangle(text);
     }
     
     public static void dibuixaTriangle(String text){
