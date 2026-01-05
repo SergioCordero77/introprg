@@ -25,7 +25,7 @@ public class Codifica {
         
             char c = text.charAt(i);
             
-            if (c >= 'a' && c <= 'w'){
+            if (c >= 'a' && c <= 'y'){
                 
                 c++; 
             }
