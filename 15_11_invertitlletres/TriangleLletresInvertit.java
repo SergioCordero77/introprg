@@ -37,11 +37,11 @@ public class TriangleLletresInvertit{
             
             linia --;
             
-            dibuixaLinia(text, linia);    
+            dibuixaLiniaInvertida(text, linia);    
         }
     }
     
-    public static void dibuixaLinia(String text, int linia){
+    public static void dibuixaLiniaInvertida (String text, int linia){
         for (int i=linia; i>=0; i--){
             char c = text.charAt(i);
             
