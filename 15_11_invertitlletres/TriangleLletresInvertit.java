@@ -26,10 +26,10 @@ public class TriangleLletresInvertit{
     System.out.println("Text?");
     String text = Entrada.readLine();
         
-        dibuixaTriangle(text);
+        dibuixaTriangleInvertit(text);
     }
     
-    public static void dibuixaTriangle(String text){
+    public static void dibuixaTriangleInvertit(String text){
         
         int linia = text.length();
         
