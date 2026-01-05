@@ -24,13 +24,13 @@ public class Codifica {
         for (int i=0; i<text.length(); i++){
         
             char c = text.charAt(i);
-        
-            if (c >= 'a' && c <= 'z'){
-                if (c>'z'){
-                    c='a';
-                }
+            
+            if (c >= 'a' && c <= 'w'){
                 
                 c++; 
+            }
+            else if (c=='z'){
+                c='a';
             }
             System.out.print(c);
         }
