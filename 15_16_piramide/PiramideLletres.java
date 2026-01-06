@@ -15,7 +15,6 @@
 public class PiramideLletres{
     public static void main (String [] args) {
     
-    System.out.println("Text?");
     String text = args[0];
         
         piramitza(text);
