@@ -6,7 +6,7 @@ public class ComptaAiEs {
         
         comptaLletra(entrada, 'a');
         comptaLletra(entrada, 'e');
-        comparaOcurrencia(entrada, 'a', 'e');
+        comparaOcurrencies(entrada, 'a', 'e');
     }
     public static void comptaLletra(String text, char lletra) {
         int comptador = 0;
@@ -17,7 +17,7 @@ public class ComptaAiEs {
         }
         System.out.println("Nombre de '" + lletra + "'s: " + comptador);
     }
-    public static void comparaOcurrencia(String text, char lletra1, char lletra2) {
+    public static void comparaOcurrencies(String text, char lletra1, char lletra2) {
         int comptadorA = 0;
         int comptadorE = 0;
         for (int i=0; i < text.length(); i++) {
