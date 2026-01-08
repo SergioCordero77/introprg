@@ -14,10 +14,12 @@ public class MatriculaValida {
     String matricula = Entrada.readLine(); 
     
         if ((matricula.isEmpty()) || (Character.isWhitespace(matricula.charAt(0)))){ 
-            System.out.println ("El text no té lletres"); 
+            System.out.println ("El text no té lletres");
+            return; 
         } 
         else if (matricula.length() != 7) { 
-            System.out.println ("No és una matrícula italiana vàlida"); 
+            System.out.println ("No és una matrícula italiana vàlida");
+            return; 
         } 
         else { 
             formatValid(matricula); 
