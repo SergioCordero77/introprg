@@ -23,6 +23,7 @@ public class TriangleParaules{
         
         int contador = 0;
         boolean paraula = false;
+        String imprimir ="";
         
         //comptem quantes paraules hi ha per saber quantes iteracions hem de fer
         for(int i=0; i<text.length(); i++){
@@ -37,10 +38,18 @@ public class TriangleParaules{
             }
         }
         
-        //formació el triangle
+        //formació el triangle.
         for(int i=0; i<contador; i++){
+        int num_espais =0;
             for(int j=0; j<text.length(); j++){
                 char c = text.charAt(j);
+                
+                if (Character.isWhitespace(c)){
+                    num_espais++;
+                    if(i < num_espais){
+                        break;
+                    }
+                }    
                 
                 System.out.print(c);
             }
