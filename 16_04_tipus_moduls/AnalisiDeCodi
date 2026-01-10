@@ -1,0 +1,59 @@
+línia                   signatura                                           classificació
+#####                   #########                                           #############
+58                      String OStrings.getString(String)                   Funció perquè la crida assigna el valor de retorn a una variable Apostaria que és pura perquè rep un String
+
+65                      super(boolean)                                      Procediment doncs la crida no recull el valor de retorn. Nota: en realitat no és ben bé un procediment però és una bona aproximació.
+
+67                      setEditable(boolean)                                Procediment doncs la crida no recull el valor de retorn.
+
+68                      AlwaysVisibleCaret.apply(NiIdea)                    Procediment doncs la crida no recull el valor de retorn. El tipus de l'argument… ni idea. Nota: ni idea és raonable aquí.
+
+69                      this.setText(NiIdea)                                Procediment doncs la crida no recull el valor de retorn. Ni idea de l'argument.
+
+70                      setMinimumSize(new Dimension(int, int)              Funció perque la crida perque la crida assigna un valor de integer. Podria ser impura
+
+73                      Core.getMainWindow()                                Funció impura. Retorna un objecte però depèn de l’estat global de l’aplicació.
+
+73                      addDockable(new DockableScrollPane)                 Procediment. No retorna valor.
+
+76                      PluginUtils.getMachineTranslationClasses()          Procediment. No retorna valor.
+
+81                      Log.log(Exception)                                  Procediment. No retorna valor.
+
+84                      tr.toArray(IMachineTranslation[])                   Funció. Retorna una Array. Podria ser pura.
+
+88                      String getDisplayedTranslation()                    Procediment. No retorna valor.
+
+93                      onProjectClose()                                    Procediment. No retorna valor.
+
+94                      UIThreadsUtil.mustBeSwingThread()                   Procediment. No retorna valor.
+
+99                      startSearchThread(niIdea)                           Funció. Retorna valor, pero no sé el que. Podria ser impura.
+
+104                     FindThread(niIdea, niIdea)                          Funció. Retorna valor, pero no sé el que. Podria ser impura.
+
+104                     start()                                             Procediment. No retorna valor.
+
+110                     getText()                                           Procediment. No retorna valor.
+
+123                     FindThread(niIdea, niIdea)                          Funció. Retorna valor. Podria ser impura.
+
+124                     super(niIdea, niIdea)                               Funció. Retorna valor. Podria ser impura.
+
+126                     newEntry.getSrcText()                               Procediment. No retorna valor.
+
+130                     MachineTranslationInfo search()                     Procediment. No retorna valor.
+
+133                     Core.getProject()                                   Procediment. No reotrna valor.
+
+133                     Core.getProject()                                   Procediment. No reotrna valor.
+
+133                     getProjectProperties()                              Procediment. No reotrna valor.
+
+135                     pp.getSourceLanguage()                              Procediment. No reotrna valor.
+
+136                     pp.getTargetLanguage()                              Procediment. No reotrna valor.
+
+142                     translator.getName()                                Funcio. Retorna un String.
+
+143                     translator.getTranslation(niIdea, niIdea, String)   Funció. Retorna valor (possiblement un String). Pot ser impura.
