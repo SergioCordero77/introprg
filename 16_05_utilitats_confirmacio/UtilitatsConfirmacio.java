@@ -13,10 +13,20 @@ public class UtilitatsConfirmacio {
      * Altrament considera false.
      */
     public static boolean respostaABoolean(String resposta) {
+        String respostaNeta ="";
+        for(int i=0; i<resposta.length(); i++){
+            char c = resposta.charAt(i);
+            
+            if (!Character.isWhitespace(c)){
+                respostaNeta += c;
+            }
+        }
+             
         if (null == resposta) {     // si la resposta és null, la donem com a false
             return false;
         }
-        resposta = resposta.toLowerCase();
+        
+        resposta = respostaNeta.toLowerCase();
         if (resposta.equals("s") || resposta.equals("y")) {
             return true;
         }
