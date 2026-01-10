@@ -11,7 +11,7 @@ public class Semafor{
     System.out.println("Ets major d'edat?");
     String resposta = Entrada.readLine();
     
-        if (UtilitatsConfirmacio.respostaABoolean(resposta)){
+        if (TestExercise.respostaABoolean(resposta)){
             System.out.println("Color?");
             String color = Entrada.readLine();
             
