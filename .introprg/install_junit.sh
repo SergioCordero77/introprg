@@ -29,6 +29,16 @@ then
     exit 0
 fi
 
+# Comprova que wget estigui disponible
+if ! which wget &> /dev/null;
+then
+    show_error "wget no està instal·lat"
+    echo "Instala-ho o parla amb el teu docent."
+    echo "$ sudo apt install wget"
+    echo
+    exit 1
+fi
+
 # Descarrega junit
 if java -cp "$JUNITJARPATH" org.junit.platform.console.ConsoleLauncher -h &> /dev/null;
 then

@@ -51,6 +51,7 @@ then
 fi
 show_ok "sqlite3 instal·lat"
 
+
 # Obtenció dels noms dels paràmeters
 scriptdir=$(dirname "$0")
 if [[ "$scriptdir" != ".introprg" ]]; then
@@ -69,6 +70,17 @@ cd "$DRIVERDEST"
 # Decisió de si cal descarregar
 if ! check_driver;
 then
+
+    # Comprova que wget estigui disponible
+    if ! which wget &> /dev/null;
+    then
+        show_error "wget no està instal·lat"
+        echo "Instala-ho o parla amb el teu docent."
+        echo "$ sudo apt install wget"
+        echo
+        exit 1
+    fi
+
     download_driver
     if [ "$?" -ne 0 ];
     then
