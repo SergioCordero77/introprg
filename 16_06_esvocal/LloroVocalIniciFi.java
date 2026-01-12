@@ -16,9 +16,14 @@ public class LloroVocalIniciFi{
     public static void mostraText(String text, int contador){
     
     while (true){
-    
-        char inici = text.charAt(0);
-        char fi = text.charAt(text.length()-1);
+        
+        char inici = ' ';
+        char fi = ' ';
+        
+        if (text.length()>0){
+            inici = text.charAt(0);
+            fi = text.charAt(text.length()-1);
+        }
             
             if (UtilString.esVocal(inici) || UtilString.esVocal(fi)){
             
