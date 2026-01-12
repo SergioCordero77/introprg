@@ -27,17 +27,15 @@ public class LloroVocalIniciFi{
             
             if (UtilString.esVocal(inici) || UtilString.esVocal(fi)){
             
-            contador ++;
+                contador ++;
             
-            if (contador<10){
-                System.out.println("  " + contador + ": " + "\"" + text + "\"");
-            }
-            else{
                 if (contador<10){
-                System.out.println(" " + contador + ": " + "\"" + text + "\"");
+                    System.out.println("  " + contador + ": " + "\"" + text + "\"");
+                }
+                else{
+                    System.out.println(" " + contador + ": " + "\"" + text + "\"");
+                }
             }
-            }
-        }
         
             if(text.isBlank()){
                 System.out.println("Sortir?");
