@@ -1,5 +1,5 @@
 /*
- * Programa que demana un text i mostra totes les lletres en minúscules excepte les vocals que hauràn de ser majúscules.
+ * Programa que demana un text i mostra totes les lletre en minúscules excepte les vocals que es transformaran en majúscules.
  */
 public class VocalsMajuscules{
     public static void main (String [] args){
@@ -26,8 +26,8 @@ public class VocalsMajuscules{
             }
             else{
                 textFinal = textFinal + c;
-            }
+            }    
         }
-        return textFinal;
+        return textFinal;   
     }
 }
