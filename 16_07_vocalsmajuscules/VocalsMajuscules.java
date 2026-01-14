@@ -17,13 +17,17 @@ public class VocalsMajuscules{
             char c = text.charAt(i);
             
             if (UtilString.esVocal(c)){
-                char cMaj=Character.toUpperCase(c);
-                System.out.print(cMaj);
+                majusculitzaVocal(c);
             }
             else{
                 System.out.print(c);
             }
         }
         System.out.println();
+    }
+    
+    public static void majusculitzaVocal(char vocal){
+        char vocalMaj=Character.toUpperCase(vocal);
+        System.out.print(vocalMaj);
     }
 }
