@@ -1,0 +1,209 @@
+/*
+ * S'ha de localitzar al codi les següents variables i respondre a les següents preguntes:
+
+        -Quin tipus de dades guardarà?
+
+        -És un paràmetre?
+
+        -És una constant?
+
+        -Respecta la convenció camelCase?
+
+        -Indica un mòdul pel que aquesta variable sigui global
+
+        -Indica un mòdul pel que aquesta variable sigui local
+
+        -Indica un mòdul pel que aquesta variable sigui inaccessible
+
+Les variables són:
+    -externalLinked a la línia 366
+
+    -id a la línia 330
+
+    -levelTwo a la línia 162
+
+    -PROP_FILE a la línia 61
+
+    -segmentSource a la línia 317
+
+    -sourceLang a la línia 278
+
+    -translationUpdatedByUser a la línia 127
+ */
+
+externalLinked a la línia 366
+#############################
+
+Quin tipus de dades guardarà?
+Enum
+
+És un paràmetre?
+No
+
+És una constant?
+No
+
+Respecta la convenció camelCase?
+Sí
+
+Indica un mòdul pel que aquesta variable sigui global
+Cap
+
+Indica un mòdul pel que aquesta variable sigui local
+CalcExternalLinkedMode
+
+Indica un mòdul pel que aquesta variable sigui inaccessible
+Fora del métode CalcExternalLinkedMode
+
+
+id a la línia 330
+#################
+
+Quin tipus de dades guardarà?
+String
+
+És un paràmetre?
+No
+
+És una constant?
+No
+
+Respecta la convenció camelCase?
+Sí
+
+Indica un mòdul pel que aquesta variable sigui global
+cap
+
+Indica un mòdul pel que aquesta variable sigui local
+CalcExternalLinkedMode
+
+Indica un mòdul pel que aquesta variable sigui inaccessible
+Fora del métode CalcExternalLinkedMode
+
+
+levelTwo a la línia 162
+#######################
+
+Quin tipus de dades guardarà?
+boolean
+
+És un paràmetre?
+Sí
+
+És una constant?
+Sí
+
+Respecta la convenció camelCase?
+Sí
+
+Indica un mòdul pel que aquesta variable sigui global
+Cap
+
+Indica un mòdul pel que aquesta variable sigui local
+Métode exportTMX
+
+Indica un mòdul pel que aquesta variable sigui inaccessible
+Fora del métode exportTMX
+
+
+
+PROP_FILE a la línia 61
+#######################
+
+Quin tipus de dades guardarà?
+String
+
+És un paràmetre?
+No
+
+És una constant?
+Sí
+
+Respecta la convenció camelCase?
+No
+
+Indica un mòdul pel que aquesta variable sigui global
+Clase ProjectTMX
+
+Indica un mòdul pel que aquesta variable sigui local
+Cap
+
+Indica un mòdul pel que aquesta variable sigui inaccessible
+Fora de la subclasse (protected)
+
+
+
+segmentSource a la línia 317
+############################
+
+Quin tipus de dades guardarà?
+String
+
+És un paràmetre?
+No
+
+És una constant?
+No
+
+Respecta la convenció camelCase?
+Sí
+
+Indica un mòdul pel que aquesta variable sigui global
+Cap
+
+Indica un mòdul pel que aquesta variable sigui local
+Métode onEntry
+
+Indica un mòdul pel que aquesta variable sigui inaccessible
+Fora del métode onEntry
+
+
+sourceLang a la línia 278
+#########################
+
+Quin tipus de dades guardarà?
+Language
+
+És un paràmetre?
+No
+
+És una constant?
+Sí
+
+Respecta la convenció camelCase?
+Sí
+
+Indica un mòdul pel que aquesta variable sigui global
+Classe interna Loader
+
+Indica un mòdul pel que aquesta variable sigui local
+Instancia de Loader
+
+Indica un mòdul pel que aquesta variable sigui inaccessible
+Fora de la calsse Loader
+
+
+
+translationUpdatedByUser a la línia 127
+#######################################
+
+Quin tipus de dades guardarà?
+Boolean
+
+És un paràmetre?
+Sí
+
+És una constant?
+No
+
+Respecta la convenció camelCase?
+Sí
+
+Indica un mòdul pel que aquesta variable sigui global
+Cap
+
+Indica un mòdul pel que aquesta variable sigui local
+Métode save
+
+Indica un mòdul pel que aquesta variable sigui inaccessible
+Fora del métode save
