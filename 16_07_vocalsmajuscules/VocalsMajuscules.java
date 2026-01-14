@@ -7,27 +7,27 @@ public class VocalsMajuscules{
     System.out.println("Text?");
     String text = Entrada.readLine();
     
-    mostraText(text);
+    String textFinal = majusculitzaVocals(text);
+    
+    System.out.println(textFinal);
     
     }
     
-    public static void mostraText(String text){
+    public static String majusculitzaVocals(String text){
+        
+        String textFinal = "";
         
         for(int i=0; i<text.length(); i++){
             char c = text.charAt(i);
             
             if (UtilString.esVocal(c)){
-                majusculitzaVocal(c);
+                char vocalMaj=Character.toUpperCase(c);
+                textFinal = textFinal + vocalMaj;
             }
             else{
-                System.out.print(c);
+                textFinal = textFinal + c;
             }
         }
-        System.out.println();
-    }
-    
-    public static void majusculitzaVocal(char vocal){
-        char vocalMaj=Character.toUpperCase(vocal);
-        System.out.print(vocalMaj);
+        return textFinal;
     }
 }
