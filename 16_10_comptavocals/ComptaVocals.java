@@ -6,16 +6,15 @@ public class ComptaVocals{
     
     System.out.println("Text?");
     String text = Entrada.readLine();
-      
-    int numVocals = numVocalsMinuscules(text);
+    String textMinuscules = text.toLowerCase();  
+    
+    int numVocals = numVocalsMinuscules(textMinuscules);
     
     System.out.println(numVocals);
     
     }
     
-    public static int numVocalsMinuscules(String text){
-        
-        String textMinuscules = text.toLowerCase();
+    public static int numVocalsMinuscules(String textMinuscules){
         
         int comptador = 0;
         
