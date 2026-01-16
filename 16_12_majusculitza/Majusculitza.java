@@ -17,39 +17,30 @@ public class Majusculitza{
         for(int i=0; i<text.length(); i++){
             char c = text.charAt(i);
                
-           /* if(text.length() == 1){
+            if(i==0){
                 if(Character.isLetter(c)){
                     char cMaj = Character.toUpperCase(c);
-                    
+                
                     textFinal += cMaj;
                 }
+                else{
+                    textFinal += c;
+                }
             }
-            else{*/
-                if(i==0){
-                    if(Character.isLetter(c)){
-                        char cMaj = Character.toUpperCase(c);
-                    
-                        textFinal += cMaj;
-                    }
-                    else{
-                        textFinal += c;
-                    }
+            if(i>0){
+                char cAnt = text.charAt(i-1);
+                char cMaj = Character.toUpperCase(c);
+                
+                if(!Character.isLetter(cAnt) && Character.isLetter(c)){
+                                        
+                    textFinal += cMaj;
                 }
-                if(i>0){
-                    char cAnt = text.charAt(i-1);
-                    char cMaj = Character.toUpperCase(c);
+                else{
+                    char cMin = Character.toLowerCase(c);
                     
-                    if(!Character.isLetter(cAnt) && Character.isLetter(c)){
-                                            
-                        textFinal += cMaj;
-                    }
-                    else{
-                        char cMin = Character.toLowerCase(c);
-                        
-                        textFinal += cMin;
-                    }
+                    textFinal += cMin;
                 }
-            /*}*/
+            }
         }
         return textFinal;
     }
