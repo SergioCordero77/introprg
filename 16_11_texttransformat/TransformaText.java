@@ -16,39 +16,65 @@ public class TransformaText{
     System.out.println("Text?");
     String text = Entrada.readLine();
     
-    String nombre="";
+    System.out.println(transformaText(text)); 
     
-    for(int i=0; i<text.length(); i++){
-        char c = text.charAt(i);
+    } 
         
-        if (Character.isDigit(c)){
-            if (i==0 && Character.isDigit(c)){
-                System.out.print("(" + c);
-            }
-        
-            if (i==text.length()-1 && Character.isDigit(c)){
-                System.out.print(c + ")");
-            }
-        
-            if (i > 0 && i < text.length() - 1) {
-                char anterior = text.charAt(i - 1);
-                char posterior = text.charAt(i + 1);
+    public static String transformaText(String text){
+    
+        String textFinal ="";
+    
+        for(int i=0; i<text.length(); i++){
+            char c = text.charAt(i);
+            char cMin = Character.toLowerCase(c);
             
-                if (!Character.isDigit(anterior) && Character.isDigit(c) && Character.isDigit(posterior)){
-                    System.out.print("(" + c);
+            if (Character.isLetter(cMin)){
+                if (UtilString.esVocal(cMin)){
+                    
+                    textFinal += cMin; 
                 }
-                else if (Character.isDigit(anterior) && Character.isDigit(c) && !Character.isDigit(posterior)){
-                    System.out.print(c + ")");
+                else{
+                    char consonantMaj = Character.toUpperCase(c);
+                    
+                    textFinal += consonantMaj;
                 }
             }
+            else if (Character.isDigit(c)){
+                if (i==0 && Character.isDigit(c)){
+                    textFinal += "(" + c;
+                }
+            
+                if (i==text.length()-1){
+                    char anterior = text.charAt(i - 1); 
+                    
+                    if (Character.isDigit(anterior) && Character.isDigit(c)){
+                        textFinal += c + ")";
+                    }
+                    else if (!Character.isDigit(anterior) && Character.isDigit(c)){
+                        textFinal += "(" + c + ")";
+                    }
+                }
+            
+                if (i > 0 && i < text.length() - 1) {
+                    char anterior = text.charAt(i - 1);
+                    char posterior = text.charAt(i + 1);
+                
+                    if (!Character.isDigit(anterior) && Character.isDigit(c) && Character.isDigit(posterior)){
+                        textFinal += "(" + c;
+                    }
+                    else if (Character.isDigit(anterior) && Character.isDigit(c) && !Character.isDigit(posterior)){
+                        textFinal += c + ")";
+                    }
+                }
+            }
+            else if (Character.isWhitespace(c)){
+                textFinal += c;
+            }
+       
         }
-        else{
-            System.out.print(c);  
-        }
-    }
         
-    System.out.println();
-    
+        return textFinal;
+       
     }
 }
 
