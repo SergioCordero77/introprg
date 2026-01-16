@@ -53,7 +53,7 @@ public class UtilString {
                 textSeparat += c;
             }
             else{
-                textSeparat += c + ", ";
+                textSeparat += c + " ,";
             }
         }
             
