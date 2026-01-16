@@ -26,6 +26,7 @@ public class UtilString {
         
     }
     
+    /*Filtra un text i només retorna les lletres del text*/
     public static String nomesLletres(String text) {
         String nomesLletres ="";
     
@@ -41,7 +42,8 @@ public class UtilString {
         
     }
     
-    public static String lletresSeparades(String text) {
+    /*Separa cada caràcter que no sigui un espai en blanc amb una coma i un espai.*/
+    public static String cometeja(String text) {
         String textSeparat = "";
         
         for (int i=0; i<text.length(); i++){
@@ -57,6 +59,22 @@ public class UtilString {
             
         return textSeparat;
         
-    }  
+    }
+    
+    /* Retorna el text al revés*/
+    public static String inverteix(String text) {
+        String textReves = "";
+        
+        for (int i=text.length(); i>=0; i--){
+            char c = text.charAt(i);
+            
+            if(Character.isLetter(c)){
+                textReves += c;
+            }
+        }
+            
+        return textReves;
+        
+    }    
       
 }
