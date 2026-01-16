@@ -6,7 +6,12 @@ public class Majusculitza{
     
         System.out.println("Text?");
         String text = Entrada.readLine();
+    
+        System.out.println(majusculitza(text));    
+    }
         
+    public static String majusculitza(String text){
+    
         String textFinal = "";
         
         for(int i=0; i<text.length(); i++){
@@ -43,6 +48,6 @@ public class Majusculitza{
                 }
             /*}*/
         }
-        System.out.println(textFinal);
+        return textFinal;
     }
 }
