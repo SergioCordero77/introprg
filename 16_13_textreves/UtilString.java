@@ -65,7 +65,7 @@ public class UtilString {
     public static String inverteix(String text) {
         String textReves = "";
         
-        for (int i=text.length(); i>=0; i--){
+        for (int i=text.length()-1; i>=0; i--){
             char c = text.charAt(i);
             
                 textReves += c;
