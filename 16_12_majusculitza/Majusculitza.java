@@ -31,6 +31,9 @@ public class Majusculitza{
                     
                         textFinal += cMaj;
                     }
+                    else{
+                        textFinal += c;
+                    }
                 }
                 if(i>0){
                     char cAnt = text.charAt(i-1);
