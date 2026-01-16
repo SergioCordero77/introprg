@@ -40,30 +40,41 @@ public class TransformaText{
                 }
             }
             else if (Character.isDigit(c)){
-                if (i==0 && Character.isDigit(c)){
-                    textFinal += "(" + c;
-                }
-            
-                if (i==text.length()-1){
-                    char anterior = text.charAt(i - 1); 
-                    
-                    if (Character.isDigit(anterior) && Character.isDigit(c)){
-                        textFinal += c + ")";
-                    }
-                    else if (!Character.isDigit(anterior) && Character.isDigit(c)){
+                
+                if (text.length()==1){
+                    if (Character.isDigit(c)){
                         textFinal += "(" + c + ")";
                     }
                 }
-            
-                if (i > 0 && i < text.length() - 1) {
-                    char anterior = text.charAt(i - 1);
-                    char posterior = text.charAt(i + 1);
-                
-                    if (!Character.isDigit(anterior) && Character.isDigit(c) && Character.isDigit(posterior)){
-                        textFinal += "(" + c;
+                else{
+                    if (i==0){ 
+                        char posterior = text.charAt(i + 1);
+                        
+                        if (Character.isDigit(c) && Character.isDigit(posterior)){
+                            textFinal += "(" + c;
+                        }
                     }
-                    else if (Character.isDigit(anterior) && Character.isDigit(c) && !Character.isDigit(posterior)){
-                        textFinal += c + ")";
+                    if (i==text.length()-1){
+                        char anterior = text.charAt(i - 1); 
+                        
+                        if (Character.isDigit(anterior) && Character.isDigit(c)){
+                            textFinal += c + ")";
+                        }
+                        else if (!Character.isDigit(anterior) && Character.isDigit(c)){
+                            textFinal += "(" + c + ")";
+                        }
+                    }
+                
+                    if (i > 0 && i < text.length() - 1) {
+                        char anterior = text.charAt(i - 1);
+                        char posterior = text.charAt(i + 1);
+                    
+                        if (!Character.isDigit(anterior) && Character.isDigit(c) && Character.isDigit(posterior)){
+                            textFinal += "(" + c;
+                        }
+                        else if (Character.isDigit(anterior) && Character.isDigit(c) && !Character.isDigit(posterior)){
+                            textFinal += c + ")";
+                        }
                     }
                 }
             }
