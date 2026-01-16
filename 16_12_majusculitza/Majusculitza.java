@@ -5,34 +5,44 @@ public class Majusculitza{
     public static void main (String [] args){
     
         System.out.println("Text?");
-        String text = Entrada.readLine;
+        String text = Entrada.readLine();
         
         String textFinal = "";
         
         for(int i=0; i<text.length(); i++){
             char c = text.charAt(i);
-            char cAnt = text.charAt(i-1);
-        
-            if(text.length() == 1){
+               
+           /* if(text.length() == 1){
                 if(Character.isLetter(c)){
-                    cMaj = Character.toUpperCase(c);
+                    char cMaj = Character.toUpperCase(c);
                     
                     textFinal += cMaj;
                 }
             }
-            else{
-                if(!Character.isLetter(cAnt) && Character.isLetter(c)){
-                    cMaj = Character.toUpperCase(c);
+            else{*/
+                if(i==0){
+                    if(Character.isLetter(c)){
+                        char cMaj = Character.toUpperCase(c);
                     
-                    textFinal += cMaj;
+                        textFinal += cMaj;
+                    }
                 }
-                else{
-                    cMin = Character.toLowerCase(c);
+                if(i>0){
+                    char cAnt = text.charAt(i-1);
+                    char cMaj = Character.toUpperCase(c);
                     
-                    textFinal += cMin;
+                    if(!Character.isLetter(cAnt) && Character.isLetter(c)){
+                                            
+                        textFinal += cMaj;
+                    }
+                    else{
+                        char cMin = Character.toLowerCase(c);
+                        
+                        textFinal += cMin;
+                    }
                 }
-            }
+            /*}*/
         }
-        System.out.prin
+        System.out.println(textFinal);
     }
 }
