@@ -53,6 +53,9 @@ public class TransformaText{
                         if (Character.isDigit(c) && Character.isDigit(posterior)){
                             textFinal += "(" + c;
                         }
+                        else if (Character.isDigit(c) && !Character.isDigit(posterior)){
+                            textFinal += "(" + c + ")";
+                        }
                     }
                     if (i==text.length()-1){
                         char anterior = text.charAt(i - 1); 
