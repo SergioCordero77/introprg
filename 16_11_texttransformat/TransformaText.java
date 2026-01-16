@@ -78,6 +78,9 @@ public class TransformaText{
                         else if (Character.isDigit(anterior) && Character.isDigit(c) && !Character.isDigit(posterior)){
                             textFinal += c + ")";
                         }
+                        else{
+                            textFinal += c;
+                        }
                     }
                 }
             }
