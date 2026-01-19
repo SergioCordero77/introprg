@@ -13,6 +13,10 @@ public class TextReves{
     System.out.println("Text?");
     String text = Entrada.readLine();
     
+    System.out.println(inverteixText(text));
+    }
+   
+    public static String inverteixText (String text){
     String senseEspais = "";
     
     for(int i=0; i<text.length(); i++){
@@ -23,13 +27,12 @@ public class TextReves{
         }        
     }
     
-    System.out.println(
+    return
         UtilString.inverteix(
             UtilString.cometeja(
                 senseEspais
                 )
-            )
-        );
+            );
     
     }
 }
