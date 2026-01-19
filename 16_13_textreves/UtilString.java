@@ -52,12 +52,23 @@ public class UtilString {
     
     /*Separa cada caràcter que no sigui un espai en blanc amb una coma i un espai.*/
     public static String cometeja(String text) {
+        
+        String senseEspais = "";
+
+        for (int i = 0; i < text.length(); i++) {
+            char c = text.charAt(i);
+
+            if (!Character.isWhitespace(c)) {
+                senseEspais += c;
+            }
+        }
+        
         String textSeparat = "";
         
-        for (int i=0; i<text.length(); i++){
-            char c = text.charAt(i);
+        for (int i=0; i<senseEspais.length(); i++){
+            char c = senseEspais.charAt(i);
             
-            if (i == text.length()-1){
+            if (i == senseEspais.length()-1){
                 textSeparat += c;
             }
             else{

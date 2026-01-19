@@ -14,19 +14,9 @@ public class TextReves {
         System.out.println("Text?");
         String text = Entrada.readLine();
 
-        String senseEspais = "";
-
-        for (int i = 0; i < text.length(); i++) {
-            char c = text.charAt(i);
-
-            if (!Character.isWhitespace(c)) {
-                senseEspais += c;
-            }
-        }
-
         System.out.println(
             UtilString.cometeja(
-                UtilString.inverteix(senseEspais)
+                UtilString.inverteix(text)
             )
         );
     }
