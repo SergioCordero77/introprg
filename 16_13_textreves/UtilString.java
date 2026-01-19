@@ -78,18 +78,8 @@ public class UtilString {
             
                 textReves += c;
         }
-        
-        String senseEspais = "";
-    
-        for(int i=0; i<textReves.length(); i++){
-            char c = textReves.charAt(i);
-        
-            if (!Character.isWhitespace(c)){
-                senseEspais += c;
-            }        
-        }
             
-        return senseEspais;
+        return textReves;
         
     }    
       
