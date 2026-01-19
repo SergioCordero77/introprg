@@ -5,10 +5,10 @@
  */
 public class UtilString {
     
-    /* public static void main(String args[]){
+    /*public static void main(String args[]){
         System.out.println(cometeja(inverteix("Es gibt keinen Weg zurück")));
     
-    } */
+    }*/
     
     
     
@@ -78,8 +78,18 @@ public class UtilString {
             
                 textReves += c;
         }
+        
+        String senseEspais = "";
+    
+        for(int i=0; i<textReves.length(); i++){
+            char c = textReves.charAt(i);
+        
+            if (!Character.isWhitespace(c)){
+                senseEspais += c;
+            }        
+        }
             
-        return textReves;
+        return senseEspais;
         
     }    
       
