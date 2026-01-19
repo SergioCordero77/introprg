@@ -4,6 +4,14 @@
  *
  */
 public class UtilString {
+    
+    /* public static void main(String args[]){
+        System.out.println(cometeja(inverteix("Es gibt keinen Weg zurück")));
+    
+    } */
+    
+    
+    
     /*
      * Donada una resposta textual, aquesta funció tradueix la resposta a
      * un booleà.
@@ -53,7 +61,7 @@ public class UtilString {
                 textSeparat += c;
             }
             else{
-                textSeparat += c + " ,";
+                textSeparat += c + ", ";
             }
         }
             

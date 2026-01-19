@@ -24,6 +24,7 @@ public class TextReves{
     }
     
     System.out.println(inverteixText(senseEspais));
+    
     }
    
     public static String inverteixText (String senseEspais){
@@ -31,8 +32,8 @@ public class TextReves{
     String textFinal = senseEspais;
     
     return
-        UtilString.inverteix(
-            UtilString.cometeja(
+        UtilString.cometeja(
+            UtilString.inverteix(
                 textFinal
                 )
             );

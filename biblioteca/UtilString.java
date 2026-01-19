@@ -61,6 +61,25 @@ public class UtilString {
         
     }
     
+    /* Separa un text per comes*/
+    public static String lletresSeparades(String text) {
+        String textSeparat = "";
+        
+        for (int i=0; i<text.length(); i++){
+            char c = text.charAt(i);
+            
+            if (i == text.length()-1){
+                textSeparat += c;
+            }
+            else{
+                textSeparat += c + ", ";
+            }
+        }
+            
+        return textSeparat;
+        
+    }  
+    
     /* Retorna el text al revés*/
     public static String inverteix(String text) {
         String textReves = "";
