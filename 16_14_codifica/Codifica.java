@@ -19,7 +19,7 @@ public class Codifica {
         int index = Integer.parseInt(args[0]);
         
         if (index<0){
-            index = 0;
+            System.out.println("Un text que no es veurà codificat!");
         }
         
         System.out.println(codifica(text, index));
