@@ -7,7 +7,9 @@ public class VocalsMajuscules{
     System.out.println("Text?");
     String text = Entrada.readLine();
     
-    String textFinal = majusculitzaVocals(text);
+    String textMinuscules = text.toLowerCase();
+    
+    String textFinal = majusculitzaVocals(textMinuscules);
     
     System.out.println(textFinal);
     
