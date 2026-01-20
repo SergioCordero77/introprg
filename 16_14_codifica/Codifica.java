@@ -23,11 +23,11 @@ public class Codifica {
             index = 0;
         }
         
-        System.out.println(mostraCodificat(text, index));
+        System.out.println(Codifica(text, index));
         
     }
         
-    public static String mostraCodificat(String text, int index){
+    public static String Codifica(String text, int index){
         String textCodificat = "";
         
         for (int i=0; i<text.length(); i++){
