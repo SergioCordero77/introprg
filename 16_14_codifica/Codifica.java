@@ -16,8 +16,7 @@ public class Codifica {
         System.out.println("Text?");
         String text = Entrada.readLine();
         
-        System.out.println("Index?");
-        int index = Integer.parseInt(Entrada.readLine());
+        int index = Integer.parseInt(args[0]);
         
         if (index<0){
             index = 0;
