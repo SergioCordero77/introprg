@@ -154,7 +154,7 @@ public class UtilString {
                 c = 'u';
             }
             // Per la 'U'
-            else if (c =='Ù' || c=='Ú'){
+            else if (c =='Ù' || c=='Ú' || c=='Ü'){
                 c = 'U';
             }
             // Per la ç
