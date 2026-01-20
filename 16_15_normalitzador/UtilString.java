@@ -100,90 +100,72 @@ public class UtilString {
     -La ç apareixerà com a c.
     */
     public static String normalitzaText(String text){
-        
+       
         String textNormalitzat = "";
         
         for (int i=0; i<text.length(); i++){
             char c = text.charAt(i);
-            
-            // Per la 'a'
-            if (c =='à' || c=='á'){
-                c = 'a';
                 
-                textNormalitzat += c;
-            }
-            // Per la 'A'
-            else if (c =='À' || c=='Á'){
-                c = 'A';
-                
-                textNormalitzat += c;
-            }
-            // Per la 'e'
-            else if (c =='è' || c=='é'){
-                c = 'e';
-                
-                textNormalitzat += c;
-            }
-            // Per la 'E'
-            else if (c =='È' || c=='É'){
-                c = 'E';
-                
-                textNormalitzat += c;
-            }
-            // Per la 'i'
-            else if (c =='ì' || c=='í' || c=='ï'){
-                c = 'i';
-                
-                textNormalitzat += c;
-            }
-            // Per la 'I'
-            else if (c =='Ì' || c=='Í' || c=='Ï'){
-                c = 'E';
-                
-                textNormalitzat += c;
-            }
-            // Per la 'o'
-            else if (c=='ò' || c=='ó'){
-                c = 'o';
-                
-                textNormalitzat += c;
-            }
-            // Per la 'O'
-            else if (c =='Ò' || c=='Ó'){
-                c = 'O';
-                
-                textNormalitzat += c;
-            }
-            // Per la 'u'
-            else if (c =='ù' || c=='ú' || c=='ü'){
-                c = 'u';
-                
-                textNormalitzat += c;
-            }
-            // Per la 'U'
-            else if (c =='Ù' || c=='Ú'){
-                c = 'U';
-                
-                textNormalitzat += c;
-            }
-            // Per la ç
-            else if (c =='ç'){
-                c= 'c';
-                
-                textNormalitzat += c;
-            }
-            // Per la Ç
-            else if (c =='Ç'){
-                c= 'C';
-                
-                textNormalitzat += c;
-            }
-            else{
-                textNormalitzat += c;
-            }
+            textNormalitzat += normalitzaChar(c);
+               
         }
     
       return textNormalitzat;
     
     }
+    
+    /* Normalitza els caràcters */
+    public static char normalitzaChar(char c){
+        
+            // Per la 'a'
+            if (c =='à' || c=='á'){
+                c = 'a';
+            }
+            // Per la 'A'
+            else if (c =='À' || c=='Á'){
+                c = 'A';
+            }
+            // Per la 'e'
+            else if (c =='è' || c=='é'){
+                c = 'e';
+            }
+            // Per la 'E'
+            else if (c =='È' || c=='É'){
+                c = 'E';
+            }
+            // Per la 'i'
+            else if (c =='ì' || c=='í' || c=='ï'){
+                c = 'i';
+            }
+            // Per la 'I'
+            else if (c =='Ì' || c=='Í' || c=='Ï'){
+                c = 'I';
+            }
+            // Per la 'o'
+            else if (c=='ò' || c=='ó'){
+                c = 'o';
+            }
+            // Per la 'O'
+            else if (c =='Ò' || c=='Ó'){
+                c = 'O';
+            }
+            // Per la 'u'
+            else if (c =='ù' || c=='ú' || c=='ü'){
+                c = 'u';
+            }
+            // Per la 'U'
+            else if (c =='Ù' || c=='Ú'){
+                c = 'U';
+            }
+            // Per la ç
+            else if (c =='ç'){
+                c= 'c';
+            }
+            // Per la Ç
+            else if (c =='Ç'){
+                c= 'C';
+            }
+    
+      return c;
+  }
 }
