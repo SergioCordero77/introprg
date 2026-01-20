@@ -21,9 +21,9 @@ public class Codifica {
         if (index<0){
             System.out.println("Un text que no es veurà codificat!");
         }
-        
-        System.out.println(codifica(text, index));
-        
+        else{
+            System.out.println(codifica(text, index));
+        }        
     }
         
     public static String codifica(String text, int index){
