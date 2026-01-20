@@ -29,7 +29,7 @@ public class Codifica {
     public static String codifica(String text, int index){
         String textCodificat = "";
         
-        String accents = "àáäâeéèëêíìïîóòöôúùüû";
+        String accents = "àáäâéèëêíìïîóòöôúùüû";
         
         for (int i=0; i<text.length(); i++){
         
