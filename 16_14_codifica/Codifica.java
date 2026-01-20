@@ -19,34 +19,48 @@ public class Codifica {
         System.out.println("Index?");
         int index = Integer.parseInt(Entrada.readLine());
         
-        mostraCodificat(text, index);
+        if (index<0){
+            index = 0;
+        }
+        
+        System.out.println(mostraCodificat(text, index));
         
     }
         
-    public static void mostraCodificat(String text, int index){
+    public static String mostraCodificat(String text, int index){
+        String textCodificat = "";
+        
         for (int i=0; i<text.length(); i++){
         
             char c = text.charAt(i);
 
             if (c >= 'a' && c <= 'z'){
                 
-                c = (char)('a'+(c-'a'+index)%26); 
+                c = (char)('a'+(c-'a'+index)%26);
+                
+                textCodificat += c; 
             }
             
            if (c >= 'A' && c <= 'Z'){
                 
-                 c = (char)('A'+(c-'A'+index)%26);  
+                 c = (char)('A'+(c-'A'+index)%26);
+                 
+                 textCodificat += c;  
             }
             
            if (Character.isDigit(c)){
 
                 c = (char)('0'+(c-'0'+index)%10);
+                
+                textCodificat += c;
             }
             
-            System.out.print(c);
-
-        }
-        System.out.println();
-         
+            if (Character.isWhitespace(c) || (!Character.isLetter(c) && !Character.isDigit(c))){
+                
+                textCodificat += c;
+            }
+            
+        }     
+        return textCodificat;
     }
 }
