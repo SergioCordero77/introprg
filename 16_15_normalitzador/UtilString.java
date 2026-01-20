@@ -99,7 +99,7 @@ public class UtilString {
     -Les vocals catalanes amb accent apareixeran en la seva variant sense accent.
     -La ç apareixerà com a c.
     */
-    public static String normalitzaChar(String text){
+    public static String normalitzaText(String text){
         
         String textNormalitzat = "";
         
