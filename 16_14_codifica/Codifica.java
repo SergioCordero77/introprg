@@ -29,6 +29,8 @@ public class Codifica {
     public static String codifica(String text, int index){
         String textCodificat = "";
         
+        String accents = "àáäâeéèëêíìïîóòöôúùüû";
+        
         for (int i=0; i<text.length(); i++){
         
             char c = text.charAt(i);
@@ -57,6 +59,14 @@ public class Codifica {
             if (Character.isWhitespace(c) || (!Character.isLetter(c) && !Character.isDigit(c))){
                 
                 textCodificat += c;
+            }
+            
+            for (int j=0; j<accents.length(); j++){
+                char a = accents.charAt(j);
+                
+                if (c==a){
+                    textCodificat += c;
+                }
             }
             
         }     
