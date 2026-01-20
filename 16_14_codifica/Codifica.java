@@ -19,8 +19,7 @@ public class Codifica {
         int index = Integer.parseInt(args[0]);
            
         System.out.println(codifica(text, index));
-  
-       /*System.out.println(codifica("hola", -1));*/    
+      
     }
         
     public static String codifica(String text, int index){
