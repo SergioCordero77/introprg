@@ -17,16 +17,18 @@ public class Codifica {
         String text = Entrada.readLine();
         
         int index = Integer.parseInt(args[0]);
-        
-        if (index<0){
-            System.out.println("Un text que no es veurà codificat!");
-        }
-        else{
-            System.out.println(codifica(text, index));
-        }        
+           
+        System.out.println(codifica(text, index));
+  
+       /*System.out.println(codifica("hola", -1));*/    
     }
         
     public static String codifica(String text, int index){
+        
+        if (index<0){
+            index = 0;
+        }
+    
         String textCodificat = "";
         
         String accents = "àáäâéèëêíìïîóòöôúùüû";
