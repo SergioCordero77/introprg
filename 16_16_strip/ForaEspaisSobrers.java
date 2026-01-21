@@ -20,7 +20,7 @@ public class ForaEspaisSobrers{
     
     while(!text.isEmpty()){
             
-        System.out.println("El lloro respon: " + normalitzaBlancs(text));
+        System.out.println("El lloro respon: " + UtilString.normalitzaBlancs(text));
         
         System.out.println("El lloro espera un text");
         text = Entrada.readLine();
@@ -29,25 +29,5 @@ public class ForaEspaisSobrers{
     
     System.out.println("El·lloro·s'acomiada·atentament");
     
-    }
-    
-    public static String normalitzaBlancs (String text){
-        String textNormalitzat="";
-    
-        for(int i=0; i<text.length(); i++){
-            char c = text.charAt(i);
-            
-            
-            if (i<text.length()-1){ 
-                char cPost = text.charAt(i+1); 
-                
-                if (Character.isWhitespace(c) && Character.isLetter(cPost)){ 
-                    textNormalitzat += '·'; } 
-                else if (!Character.isWhitespace(c)){ 
-                    textNormalitzat += c; 
-                } 
-            }            
-        }
-        return textNormalitzat;
     }
 }
