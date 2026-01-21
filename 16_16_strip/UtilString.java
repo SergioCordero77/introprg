@@ -170,43 +170,61 @@ public class UtilString {
   }
   /*Normalitza espais en blanc*/
   public static String normalitzaBlancs (String text){
-        String textNormalitzat="";
+        
+        String textNormalitzat="";      
+        
+        boolean totBlanc = true;
         
         int comptador=0;
     
         for(int i=0; i<text.length(); i++){
             char c = text.charAt(i);
             
-             if (i==0){
+            for(int j=0; j<text.length(); j++){
+                char espai = text.charAt(j);
+                
                 if (!Character.isWhitespace(c)){
-                    textNormalitzat += '"';
-                    comptador++;
+                    totBlanc = false;
+                    break;
                 } 
             }
             
-            if (i<text.length()-1){ 
-                char cPost = text.charAt(i+1); 
+            if(!totBlanc){
+                if (i==0){
+                    if (!Character.isWhitespace(c)){
+                        textNormalitzat += '"';
+                        comptador++;
+                    } 
+                }
                 
-                if (Character.isWhitespace(c) && Character.isLetter(cPost)){ 
-                    textNormalitzat += '·'; 
-                    comptador++;
+                if (i<text.length()-1){ 
+                    char cPost = text.charAt(i+1); 
                     
-                    if (comptador==1){
+                    if (Character.isWhitespace(c) && Character.isLetter(cPost)){ 
+                        textNormalitzat += '·'; 
+                        comptador++;
+                        
+                        if (comptador==1){
+                            textNormalitzat += '"';
+                        }
+                    } 
+                    else if (!Character.isWhitespace(c)){ 
+                        textNormalitzat += c; 
+                    }
+                }
+                
+                if (i==text.length()-1){
+                    if (!Character.isWhitespace(c)){
+                        textNormalitzat += c + "\"";
+                    }
+                    else{
                         textNormalitzat += '"';
                     }
-                } 
-                else if (!Character.isWhitespace(c)){ 
-                    textNormalitzat += c; 
                 }
             }
-            
-            if (i==text.length()-1){
-                if (!Character.isWhitespace(c)){
-                    textNormalitzat += c + "\"";
-                }
-                else{
-                    textNormalitzat += '"';
-                }
+            else{
+                textNormalitzat += "\"\"";
+                break;
             }
         } 
                             
