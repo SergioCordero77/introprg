@@ -201,11 +201,15 @@ public class UtilString {
                     char cPost = text.charAt(i+1); 
                     
                     if (Character.isWhitespace(c) && Character.isLetter(cPost)){ 
-                        textNormalitzat += ' '; 
+                        
+                      /*  textNormalitzat += ' '; */
                         comptador++;
                         
                         if (comptador==1){
                             textNormalitzat += '"';
+                        }
+                        else if (comptador>1){
+                            textNormalitzat += ' ';
                         }
                     } 
                     else if (!Character.isWhitespace(c)){ 
