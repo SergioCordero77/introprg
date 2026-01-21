@@ -183,7 +183,7 @@ public class UtilString {
             for(int j=0; j<text.length(); j++){
                 char espai = text.charAt(j);
                 
-                if (!Character.isWhitespace(c)){
+                if (!Character.isWhitespace(j)){
                     totBlanc = false;
                     break;
                 } 
