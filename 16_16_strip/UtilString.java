@@ -171,21 +171,46 @@ public class UtilString {
   /*Normalitza espais en blanc*/
   public static String normalitzaBlancs (String text){
         String textNormalitzat="";
+        
+        int comptador=0;
     
         for(int i=0; i<text.length(); i++){
             char c = text.charAt(i);
             
+             if (i==0){
+                if (!Character.isWhitespace(c)){
+                    textNormalitzat += '"';
+                    comptador++;
+                } 
+            }
             
             if (i<text.length()-1){ 
                 char cPost = text.charAt(i+1); 
                 
                 if (Character.isWhitespace(c) && Character.isLetter(cPost)){ 
-                    textNormalitzat += '·'; } 
+                    textNormalitzat += '·'; 
+                    comptador++;
+                    
+                    if (comptador==1){
+                        textNormalitzat += '"';
+                    }
+                } 
                 else if (!Character.isWhitespace(c)){ 
                     textNormalitzat += c; 
-                } 
-            }            
-        }
+                }
+            }
+            
+            if (i==text.length()-1){
+                if (!Character.isWhitespace(c)){
+                    textNormalitzat += c + "\"";
+                }
+                else{
+                    textNormalitzat += '"';
+                }
+            }
+        } 
+                            
+        
         return textNormalitzat;
     }
   
