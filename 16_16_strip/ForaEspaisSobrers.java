@@ -27,7 +27,7 @@ public class ForaEspaisSobrers{
     
     }
     
-    System.out.println("El·lloro·s'acomiada·atentament");
+    System.out.println("El lloro s'acomiada atentament");
     
     }
 }
