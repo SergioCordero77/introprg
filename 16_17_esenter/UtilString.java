@@ -246,7 +246,7 @@ public class UtilString {
         char c = text.charAt(i);
         
         //Si hi ha espais
-        if (c == ' ') {
+        if (Character.isWhitespace(c)) {
            if (numeroIniciat){
                 numeroAcabat = true;
            }
