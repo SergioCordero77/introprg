@@ -272,14 +272,11 @@ public class UtilString {
         //Si hi ha digit
         if (Character.isDigit(c)) {
             
-            for(int j=0; j<numeros.length(); j++){
-                char cNum = numeros.charAt(j);
-                
-                //Comprovació si el número està entre el 1 i el 9.
-                if (c==cNum){    
-                    comptador ++;
-                }
+            if (c=='0' && !esDigit){
+                continue;
             }
+            
+            comptador ++;
             
             if (numeroAcabat || comptador>9){
                 return false;
