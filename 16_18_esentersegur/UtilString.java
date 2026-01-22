@@ -272,7 +272,7 @@ public class UtilString {
             
             comptador ++;
             
-            if (numeroAcabat || comptador>9){
+            if (numeroAcabat /*|| comptador>9*/){
                 return false;
             }
             
