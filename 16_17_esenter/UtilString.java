@@ -256,6 +256,11 @@ public class UtilString {
         
         //Si hi ha espais
         if (Character.isWhitespace(c)) {
+        
+            if (hihaSigne && !digitDespresDelSigne) {
+                return false;
+            }
+        
             hihaSigne = false;
             digitAbansDelSigne = false;
             digitDespresDelSigne = false;
@@ -309,7 +314,7 @@ public class UtilString {
         esEnter = true;
     }
    /* else {
-        System.out.println("\"" + text + "\" no és enter");
+        esEnter = false;
     }*/
     
     return esEnter;
