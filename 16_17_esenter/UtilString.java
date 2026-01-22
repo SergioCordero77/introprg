@@ -237,86 +237,50 @@ public class UtilString {
     
     public static boolean esEnter (String text){
     
-    int inicial = 0;
-    
-    boolean esDigit = true;
-    boolean hihaDigit = false;
     boolean hihaSigne = false;
-    boolean digitAbansDelSigne = false;
-    boolean digitDespresDelSigne = false;
-    boolean esEnter = false;
+    boolean esDigit = false;
+    boolean numeroIniciat = false;
+    boolean numeroAcabat = false;
     
-    if (text.charAt(0) == '+' || text.charAt(0) == '-'){
-        hihaSigne = true;
-        inicial = 1;
-    }
-    
-    for(int i=inicial; i<text.length(); i++){
+    for(int i=0; i<text.length(); i++){
         char c = text.charAt(i);
         
         //Si hi ha espais
         if (Character.isWhitespace(c)) {
-        
-            if (hihaSigne && !digitDespresDelSigne) {
-                return false;
-            }
-        
-            hihaSigne = false;
-            digitAbansDelSigne = false;
-            digitDespresDelSigne = false;
+           if (numeroIniciat){
+                numeroAcabat = true;
+           }
+ 
             continue;
         }
         
-        //Si hi ha un digit
-        if (Character.isDigit(c)) {
-            hihaDigit = true;
-            
-            if (hihaSigne) {
-                digitDespresDelSigne = true;
-            } else {
-                digitAbansDelSigne = true;
-            }
-        }
-        
-        // Si hi ha '+' o '-'
-        if (c == '+' || c == '-') {
-            if (hihaSigne) {
-                esDigit = false;   // més d'un signe
-                break;
+        //Si hi ha signes
+        if (c=='+' || c=='-') {
+            if (hihaSigne || numeroAcabat || esDigit){
+                return false;
             }
             hihaSigne = true;
+            numeroIniciat = true;
+            
+            continue;
         }
         
-        // Si el caràcter no es digit, no es un espai en blanc i no té signes
-        if (!Character.isDigit(c) && !Character.isWhitespace(c)
-            && c != '+' && c != '-') {
-            return false;
+        //Si hi ha digit
+        if (Character.isDigit(c)) {
+            
+            if (numeroAcabat){
+                return false;
+            }
+            
+            esDigit = true;
+            numeroIniciat = true;
+            
+            continue;
         }
         
-    }
+        return false;
+    }   
     
-    //----- Validacions finals del signe -----//
-                    
-    // Si hi ha signe després d'un número
-    if (hihaSigne && digitAbansDelSigne) {
-        esDigit = false;   
-    }
-    
-    // Si NO hi ha número després
-    if (hihaSigne && !digitDespresDelSigne) {
-        esDigit = false;   
-    }
-    
-    //------ RESULTAT FINAL -----//
-    
-    // Si es compleixen les condicions esDigit i hihaDigit            
-    if (esDigit && hihaDigit){
-        esEnter = true;
-    }
-   /* else {
-        esEnter = false;
-    }*/
-    
-    return esEnter;
+    return esDigit;
     }
 }
