@@ -239,25 +239,79 @@ public class UtilString {
     
     int inicial = 0;
     
-    if (text.charAt(0) == '+' || text.charAt(0) == '-'){
-            inicial = 1;
-    }
-    
     boolean esDigit = true;
+    boolean hihaDigit = false;
+    boolean hihaSigne = false;
+    boolean digitAbansDelSigne = false;
+    boolean digitDespresDelSigne = false;
+    boolean esEnter = false;
     
+    if (text.charAt(0) == '+' || text.charAt(0) == '-'){
+        hihaSigne = true;
+        inicial = 1;
+    }
     
     for(int i=inicial; i<text.length(); i++){
         char c = text.charAt(i);
         
+        //Si hi ha espais
         if (Character.isWhitespace(c)) {
+            hihaSigne = false;
+            digitAbansDelSigne = false;
+            digitDespresDelSigne = false;
             continue;
         }
         
-        if (!Character.isDigit(c)){
-            esDigit = false;
+        //Si hi ha un digit
+        if (Character.isDigit(c)) {
+            hihaDigit = true;
+            
+            if (hihaSigne) {
+                digitDespresDelSigne = true;
+            } else {
+                digitAbansDelSigne = true;
+            }
         }
+        
+        // Si hi ha '+' o '-'
+        if (c == '+' || c == '-') {
+            if (hihaSigne) {
+                esDigit = false;   // més d'un signe
+                break;
+            }
+            hihaSigne = true;
+        }
+        
+        // Si el caràcter no es digit, no es un espai en blanc i no té signes
+        if (!Character.isDigit(c) && !Character.isWhitespace(c)
+            && c != '+' && c != '-') {
+            return false;
+        }
+        
     }
     
-    return esDigit;
+    //----- Validacions finals del signe -----//
+                    
+    // Si hi ha signe després d'un número
+    if (hihaSigne && digitAbansDelSigne) {
+        esDigit = false;   
+    }
+    
+    // Si NO hi ha número després
+    if (hihaSigne && !digitDespresDelSigne) {
+        esDigit = false;   
+    }
+    
+    //------ RESULTAT FINAL -----//
+    
+    // Si es compleixen les condicions esDigit i hihaDigit            
+    if (esDigit && hihaDigit){
+        esEnter = true;
+    }
+   /* else {
+        System.out.println("\"" + text + "\" no és enter");
+    }*/
+    
+    return esEnter;
     }
 }
