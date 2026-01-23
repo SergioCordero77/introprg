@@ -28,7 +28,9 @@ public class ForaEspaisSobrers{
             System.out.println("\"\"");
             break;
         }
+        else{
         System.out.println("El lloro respon " + UtilString.normalitzaBlancs(text));
+        }
         
         System.out.println("El lloro espera un text");
         text = Entrada.readLine();
