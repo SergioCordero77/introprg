@@ -226,10 +226,10 @@ public class UtilString {
                 }
             }
         }
-        else{
+       /* else{
             textNormalitzat += "\"\"";
             break;
-        }
+        }*/
     }
 
 
