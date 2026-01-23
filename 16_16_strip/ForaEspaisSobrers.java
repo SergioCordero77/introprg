@@ -25,7 +25,7 @@ public class ForaEspaisSobrers{
     while(true){
         
         if (text.isBlank()){
-            System.out.println("\"\"");
+            System.out.println("El lloro respon \"\"");
             break;
         }
         else{
