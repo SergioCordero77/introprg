@@ -26,10 +26,12 @@ public class ForaEspaisSobrers{
         
         if (text.isBlank()){
             System.out.println("El lloro respon \"\"");
-            break;
         }
+        else if (text.isEmpty()){
+            break;
+        } 
         else{
-        System.out.println("El lloro respon " + UtilString.normalitzaBlancs(text));
+            System.out.println("El lloro respon " + UtilString.normalitzaBlancs(text));
         }
         
         System.out.println("El lloro espera un text");
