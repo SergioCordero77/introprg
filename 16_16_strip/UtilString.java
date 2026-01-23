@@ -116,7 +116,21 @@ public class UtilString {
     
     /* Normalitza els caràcters */
     public static char normalitzaChar(char c){
-        
+
+        String lletresOrigen = "àÀèÈéÉíÍìÌïÏòÒóÓùÙúÚüÜ";
+        String lletresSubs   = "aAeEeEiIiIiOoOoUuUuU";
+
+        for (int i = 0; i < lletresOrigen.length(); i++) {
+            if (c == lletresOrigen.charAt(i)) {
+                return lletresSubs.charAt(i);
+            }
+        }
+
+             /*
+             si c == lletreOrigen(i);
+             
+             c = llestresSub(i);
+             
             // Per la 'a'
             if (c =='à' || c=='á'){
                 c = 'a';
@@ -165,7 +179,7 @@ public class UtilString {
             else if (c =='Ç'){
                 c= 'C';
             }
-    
+    */
       return c;
   }
  /*Normalitza espais en blanc*/
@@ -226,10 +240,10 @@ public class UtilString {
                 }
             }
         }
-       /* else{
+       else{
             textNormalitzat += "\"\"";
             break;
-        }*/
+        }
     }
 
 
