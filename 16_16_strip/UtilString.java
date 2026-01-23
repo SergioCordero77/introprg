@@ -180,22 +180,22 @@ public class UtilString {
         for(int i=0; i<text.length(); i++){
             char c = text.charAt(i);
             
-            for(int j=0; j<text.length(); j++){
+           /* for(int j=0; j<text.length(); j++){
                 char espai = text.charAt(j);
                 
                 if (!Character.isWhitespace(espai)){
                     totBlanc = false;
                     break;
                 } 
-            }
+            }*/
             
-            if(!totBlanc){
+           /* if(!totBlanc){*/
                 if (i==0){
                     if (!Character.isWhitespace(c)){
                         textNormalitzat += '"';
                         comptador++;
                     } 
-                }
+                /*}*/
                 
                 if (i<text.length()-1){ 
                     char cPost = text.charAt(i+1); 
