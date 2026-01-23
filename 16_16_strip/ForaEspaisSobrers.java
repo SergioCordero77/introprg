@@ -24,7 +24,7 @@ public class ForaEspaisSobrers{
     
     while(true){
         
-        if (text.isEmpty()){
+        if (text.isBlank()){
             System.out.println("\"\"");
             break;
         }
