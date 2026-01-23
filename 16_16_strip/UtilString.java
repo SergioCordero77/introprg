@@ -99,7 +99,7 @@ public class UtilString {
     -Les vocals catalanes amb accent apareixeran en la seva variant sense accent.
     -La ç apareixerà com a c.
     */
- /*   public static String normalitzaText(String text){
+    public static String normalitzaText(String text){
        
         String textNormalitzat = "";
         
@@ -115,7 +115,7 @@ public class UtilString {
     }
     
     /* Normalitza els caràcters */
- /*   public static char normalitzaChar(char c){
+    public static char normalitzaChar(char c){
 
         String lletresOrigen = "àÀèÈéÉíÍìÌïÏòÒóÓùÙúÚüÜ";
         String lletresSubs   = "aAeEeEiIiIiOoOoUuUuU";
@@ -179,9 +179,9 @@ public class UtilString {
             else if (c =='Ç'){
                 c= 'C';
             }
-    
+    */
       return c;
-  } */
+  } 
  /*Normalitza espais en blanc*/
   public static String normalitzaBlancs (String text){
 
