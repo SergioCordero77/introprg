@@ -25,10 +25,10 @@ public class ForaEspaisSobrers{
     while(true){
         
         if (text.isBlank()){
-            System.out.println("El lloro respon \"\"");
+            break;
         }
         else if (text.isEmpty()){
-            break;
+            System.out.println("El lloro respon \"\"");
         } 
         else{
             System.out.println("El lloro respon " + UtilString.normalitzaBlancs(text));
