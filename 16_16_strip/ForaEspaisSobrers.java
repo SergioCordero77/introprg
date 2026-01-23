@@ -15,9 +15,9 @@
 public class ForaEspaisSobrers{
     public static void main (String [] args){
     
-    System.out.println("El lloro respon " + UtilString.normalitzaBlancs(" "));
+   /* System.out.println("El lloro respon " + UtilString.normalitzaBlancs(" ")); */
     
-/*    System.out.println("El lloro espera un text");
+    System.out.println("El lloro espera un text");
     String text = Entrada.readLine();
     
     
@@ -31,7 +31,7 @@ public class ForaEspaisSobrers{
     
     }
     
-    System.out.println("El lloro s'acomiada atentament");*/
+    System.out.println("El lloro s'acomiada atentament");
     
     }
 }
