@@ -4,6 +4,9 @@
  *
  */
 public class UtilString {
+    public static void main (String [] args){
+        System.out.printf("XXX |%s|%n", normalitzaBlancs(" "));
+    }
     /*
      * Donada una resposta textual, aquesta funció tradueix la resposta a
      * un booleà.
