@@ -202,7 +202,7 @@ public class UtilString {
                     
                     if (Character.isWhitespace(c) && Character.isLetter(cPost)){ 
                         
-                      /*  textNormalitzat += ' '; */
+                        textNormalitzat += ' ';
                         comptador++;
                         
                         if (comptador==1){

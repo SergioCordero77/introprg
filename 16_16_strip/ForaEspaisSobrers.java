@@ -22,9 +22,13 @@ public class ForaEspaisSobrers{
     
     
     
-    while(!text.isEmpty()){
-            
-        System.out.println("El lloro respon \"" + UtilString.normalitzaBlancs(text) + "\"");
+    while(true){
+        
+        if (text.isEmpty()){
+            System.out.println("\"\"");
+            break;
+        }
+        System.out.println("El lloro respon " + UtilString.normalitzaBlancs(text));
         
         System.out.println("El lloro espera un text");
         text = Entrada.readLine();
