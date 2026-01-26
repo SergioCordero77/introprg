@@ -52,7 +52,7 @@ public class NotaMesAlta{
                 notesFinals += c + ", ";
             }
         }
-        System.out.println ("La nota més alta és " + notaAlta + " de les notes introduïdes: " + notesFinals);
+        System.out.println ("La nota més alta és " + notaAlta + " de les introduïdes: " + notesFinals);
     }
     
     }
