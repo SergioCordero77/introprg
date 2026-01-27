@@ -9,6 +9,7 @@ public class EntersEntreComes{
     
     int cont = 0;
     
+    if (quantitat>0){
     int[] valors;
     valors = new int [quantitat];
        
@@ -26,5 +27,6 @@ public class EntersEntreComes{
             System.out.print(", " + valors[i]);
         }
         System.out.println();
+    }
     }
 }
