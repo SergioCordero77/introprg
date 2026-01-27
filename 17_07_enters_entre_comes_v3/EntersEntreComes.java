@@ -4,7 +4,7 @@
 public class EntersEntreComes{
     public static void main (String [] args){
     
-    System.out.println("Quantitat de valors?");
+    System.out.println("Quants?");
     int quantitat = Integer.parseInt(Entrada.readLine());
     
     int cont = 0;
@@ -13,6 +13,7 @@ public class EntersEntreComes{
     valors = new int [quantitat];
         
     while (cont<quantitat){
+        System.out.println("Valor "+ (cont+1) + "?");
         int numero = Integer.parseInt(Entrada.readLine());
         
         valors[cont] = numero;
