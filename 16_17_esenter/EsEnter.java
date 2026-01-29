@@ -13,9 +13,11 @@ public class EsEnter{
     System.out.println("Introdueix els texts a analitzar:");
     String text = Entrada.readLine();
     
+    String textNet = UtilString.normalitzaBlancs(text);
+    
     while (!text.isEmpty()){
         
-        if (UtilString.esEnter(text)){
+        if (UtilString.esEnter(textNet)){
             System.out.println("\"" + text + "\" és enter");
         }
         else {
