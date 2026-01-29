@@ -208,22 +208,22 @@ public class UtilString {
     public static boolean esEnter (String text){
     
     //Treiem els espais
-    String textNet = normalitzaBlancs(text);
+    //String textNet = normalitzaBlancs(text);
     
     int inicial = 0;
     
     boolean esDigit = true;
     
-    if (textNet.isEmpty()){
+    if (text.isEmpty()){
         return false;
     }
     else{
-        if (textNet.charAt(0) == '+' || textNet.charAt(0) == '-'){
-            inicial = 1;
+        if (text.charAt(0) == '+' || text.charAt(0) == '-'){
+            inicial = 1; // Si el número comença amb '+' o '-', el numero inicial amb el que començarà el bucle for serà 1
         } 
-            
-            for (int i=inicial; i<textNet.length(); i++){
-                char c = textNet.charAt(i);
+            // Recorre el text filtrat (sense espais)
+            for (int i=inicial; i<text.length(); i++){
+                char c = text.charAt(i);
                 
                 if (!Character.isDigit(c)){
                     return false;
