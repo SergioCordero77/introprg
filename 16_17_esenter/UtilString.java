@@ -213,12 +213,12 @@ public class UtilString {
     int inicial = 0;
     
     if (textNet.charAt(0) == '+' || textNet.charAt(0) == '-'){
-                inicial = 1;
+        inicial = 1;
     }
             
         boolean esDigit = true;
         for (int i=inicial; i<textNet.length(); i++){
-            char c = text.charAt(i);
+            char c = textNet.charAt(i);
             
             if (!Character.isDigit(c)){
                 esDigit = false;
