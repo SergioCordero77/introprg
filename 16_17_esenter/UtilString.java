@@ -13,7 +13,7 @@ public class UtilString {
      */
      
      public static void main (String [] args){
-        System.out.println(esEnter("	+124"));
+        System.out.println(esEnter(" 62"));
      } 
     public static boolean esVocal(char lletra) {
         String vocals = "aàeèéiíïoòóuúü";
@@ -214,7 +214,7 @@ public class UtilString {
     
     if (textNet.charAt(0) == '+' || textNet.charAt(0) == '-'){
                 inicial = 1;
-            }
+    }
             
         boolean esDigit = true;
         for (int i=inicial; i<textNet.length(); i++){
