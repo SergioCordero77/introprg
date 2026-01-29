@@ -43,9 +43,9 @@ Valor 5?
 public class EntersEntreComes{
     public static void main (String [] args){
     
-    int quantitat=0;
+    String numeroEnter="";
     
-    quantitat = demanaEnter (quantitat);
+    int quantitat = Integer.parseInt (demanaEnter (numeroEnter));
     
     System.out.println("Separador?");
     String separador = Entrada.readLine();
@@ -75,24 +75,24 @@ public class EntersEntreComes{
         System.out.println (entreComes(valors, c));
     }
     
-    public static int demanaEnter (int numero) {
+    public static String demanaEnter (String numeroEnter) {
         
-        System.out.println("Quants?");
-        numero = Integer.parseInt(Entrada.readLine());
+    System.out.println("Quants?");
+    numeroEnter = Entrada.readLine();
         
-        if (numero>0){
-            return numero;
-        }
-        else{
-            while (numero<0){
-            
-            System.out.println("Per favor, un valor enter");
-            
-            numero = Integer.parseInt(Entrada.readLine());
+        while (true){
+        
+            if (!UtilString.esEnter(numeroEnter)){
+                System.out.println("Per favor, un valor enter");
             }
+            else{
+                break;
+            }
+            
+            numeroEnter = Entrada.readLine();
         }
         
-        return numero;
+        return numeroEnter;
     
     }
     
