@@ -11,6 +11,10 @@ public class UtilString {
      * una vocal catalana: a, à, e, è, é, i, í, ï, o, ò, ó, u, ú i ü.
      * Altrament considera false.
      */
+     
+     public static void main (String [] args){
+        System.out.println(esEnter("	+124"));
+     } 
     public static boolean esVocal(char lletra) {
         String vocals = "aàeèéiíïoòóuúü";
         
@@ -251,7 +255,7 @@ public class UtilString {
             if (numeroIniciat){
                 numeroAcabat = true;
             }
-            //hihaEspai=true;
+            hihaEspai=true;
 
             continue;
         }
@@ -262,7 +266,7 @@ public class UtilString {
                 return false;
             }
             
-            //hihaEspai = false;
+            hihaEspai = false;
             hihaSigne = true;
             numeroIniciat = true;
             
@@ -276,7 +280,7 @@ public class UtilString {
                 return false;
             }
             
-            //hihaEspai = false;
+            hihaEspai = false;
             esDigit = true;
             numeroIniciat = true;
             
