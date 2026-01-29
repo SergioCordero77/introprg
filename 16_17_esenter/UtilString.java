@@ -251,7 +251,7 @@ public class UtilString {
             if (numeroIniciat){
                 numeroAcabat = true;
             }
-            hihaEspai=true;
+            //hihaEspai=true;
 
             continue;
         }
@@ -262,7 +262,7 @@ public class UtilString {
                 return false;
             }
             
-            hihaEspai = false;
+            //hihaEspai = false;
             hihaSigne = true;
             numeroIniciat = true;
             
@@ -276,7 +276,7 @@ public class UtilString {
                 return false;
             }
             
-            hihaEspai = false;
+            //hihaEspai = false;
             esDigit = true;
             numeroIniciat = true;
             
