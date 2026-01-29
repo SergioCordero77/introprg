@@ -13,11 +13,22 @@ public class EsEnter{
     System.out.println("Introdueix els texts a analitzar:");
     String text = Entrada.readLine();
     
-    String textNet = UtilString.normalitzaBlancs(text);
-    
     while (!text.isEmpty()){
         
-        if (UtilString.esEnter(textNet)){
+        String textNormalitzat ="";
+        
+        for(int i=0; i<text.length(); i++){
+            char c = text.charAt(i);
+            
+            if(Character.isWhitespace(c)){
+                continue;
+            }
+            else{
+                textNormalitzat += c;
+            }
+        } 
+        
+        if (UtilString.esEnter(textNormalitzat)){
             System.out.println("\"" + text + "\" és enter");
         }
         else {
