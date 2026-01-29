@@ -13,7 +13,7 @@ public class UtilString {
      */
      
      public static void main (String [] args){
-        System.out.println(esEnter(" 62"));
+        System.out.println(esEnter("	+67"));
      } 
     public static boolean esVocal(char lletra) {
         String vocals = "aàeèéiíïoòóuúü";
@@ -220,8 +220,7 @@ public class UtilString {
     else{
         if (textNet.charAt(0) == '+' || textNet.charAt(0) == '-'){
             inicial = 1;
-        }
-                
+        } 
             
             for (int i=inicial; i<textNet.length(); i++){
                 char c = textNet.charAt(i);
@@ -231,56 +230,6 @@ public class UtilString {
                 }
             }
     }
-    
-    /*
-    boolean hihaEspai = false;
-    boolean hihaSigne = false;
-    boolean esDigit = false;
-    boolean numeroIniciat = false;
-    boolean numeroAcabat = false;
-    
-    for(int i=0; i<text.length(); i++){
-        char c = text.charAt(i);
-        
-        //Si hi ha espais
-        if (Character.isWhitespace(c)) {
-            if (numeroIniciat){
-                numeroAcabat = true;
-            }
-            hihaEspai=true;
-
-            continue;
-        }
-        
-        //Si hi ha signes
-        if (c=='+' || c=='-') {
-            if (hihaSigne || numeroAcabat || esDigit || hihaEspai){
-                return false;
-            }
-            
-            hihaEspai = false;
-            hihaSigne = true;
-            numeroIniciat = true;
-            
-            continue;
-        }
-        
-        //Si hi ha digit
-        if (Character.isDigit(c)) {
-            
-            if (numeroAcabat){
-                return false;
-            }
-            
-            hihaEspai = false;
-            esDigit = true;
-            numeroIniciat = true;
-            
-            continue;
-        }
-        
-        return false;
-    }   */
     
     return esDigit; 
     }
