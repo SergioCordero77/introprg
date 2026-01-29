@@ -237,6 +237,7 @@ public class UtilString {
     
     public static boolean esEnter (String text){
     
+    boolean hihaEspai = false;
     boolean hihaSigne = false;
     boolean esDigit = false;
     boolean numeroIniciat = false;
@@ -247,18 +248,21 @@ public class UtilString {
         
         //Si hi ha espais
         if (Character.isWhitespace(c)) {
-           if (numeroIniciat){
+            if (numeroIniciat){
                 numeroAcabat = true;
-           }
- 
+            }
+            hihaEspai=true;
+
             continue;
         }
         
         //Si hi ha signes
         if (c=='+' || c=='-') {
-            if (hihaSigne || numeroAcabat || esDigit){
+            if (hihaSigne || numeroAcabat || esDigit || hihaEspai){
                 return false;
             }
+            
+            hihaEspai = false;
             hihaSigne = true;
             numeroIniciat = true;
             
@@ -272,6 +276,7 @@ public class UtilString {
                 return false;
             }
             
+            hihaEspai = false;
             esDigit = true;
             numeroIniciat = true;
             
