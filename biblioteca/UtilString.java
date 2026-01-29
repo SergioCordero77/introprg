@@ -92,6 +92,38 @@ public class UtilString {
             
         return textReves;
         
-    }    
+    }
+    
+    /*Normalitza espais en blanc*/
+  public static String normalitzaBlancs (String text){
+
+    String textNormalitzat="";
+
+    int comptador=0;
+
+    for(int i=0; i<text.length(); i++){
+        char c = text.charAt(i);
+
+        if (i<text.length()-1){ 
+            char cPost = text.charAt(i+1); 
+
+            if (Character.isWhitespace(c) && !Character.isWhitespace(cPost) && comptador>=1){ 
+
+                    textNormalitzat += ' ';
+            }
+        }
+        
+        if(Character.isWhitespace(c)){
+            continue;
+        }
+        else{
+            comptador++;
+            textNormalitzat += c;
+        }
+    } 
+
+    return textNormalitzat;
+    
+    }
       
 }

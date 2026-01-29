@@ -172,75 +172,60 @@ public class UtilString {
     
       return c;
   }
-  /*Normalitza espais en blanc*/
-  public static String normalitzaBlancs (String text){
-        
-        String textNormalitzat="";      
-        
-        boolean totBlanc = true;
-        
-        int comptador=0;
     
-        for(int i=0; i<text.length(); i++){
-            char c = text.charAt(i);
-            
-            for(int j=0; j<text.length(); j++){
-                char espai = text.charAt(j);
-                
-                if (!Character.isWhitespace(espai)){
-                    totBlanc = false;
-                    break;
-                } 
+    /*Normalitza espais en blanc*/
+    public static String normalitzaBlancs (String text){
+
+    String textNormalitzat="";
+
+    int comptador=0;
+
+    for(int i=0; i<text.length(); i++){
+        char c = text.charAt(i);
+
+        if (i<text.length()-1){ 
+            char cPost = text.charAt(i+1); 
+
+            if (Character.isWhitespace(c) && !Character.isWhitespace(cPost) && comptador>=1){ 
+
+                    textNormalitzat += ' ';
             }
-            
-            if(!totBlanc){
-                if (i==0){
-                    if (!Character.isWhitespace(c)){
-                        textNormalitzat += '"';
-                        comptador++;
-                    } 
-                }
-                
-                if (i<text.length()-1){ 
-                    char cPost = text.charAt(i+1); 
-                    
-                    if (Character.isWhitespace(c) && Character.isLetter(cPost)){ 
-                        
-                      /*  textNormalitzat += ' '; */
-                        comptador++;
-                        
-                        if (comptador==1){
-                            textNormalitzat += '"';
-                        }
-                        else if (comptador>1){
-                            textNormalitzat += ' ';
-                        }
-                    } 
-                    else if (!Character.isWhitespace(c)){ 
-                        textNormalitzat += c; 
-                    }
-                }
-                
-                if (i==text.length()-1){
-                    if (!Character.isWhitespace(c)){
-                        textNormalitzat += c + "\"";
-                    }
-                    else{
-                        textNormalitzat += '"';
-                    }
-                }
-            }
-            else{
-                textNormalitzat += "\"\"";
-                break;
-            }
-        } 
-                               
-        return textNormalitzat;
+        }
+        
+        if(Character.isWhitespace(c)){
+            continue;
+        }
+        else{
+            comptador++;
+            textNormalitzat += c;
+        }
+    } 
+
+    return textNormalitzat;
+    
     }
     
     public static boolean esEnter (String text){
     
+    //Treiem els espais
+    String textNet = normalitzaBlancs(text);
+    
+    int inicial = 0;
+    
+    if (textNet.charAt(0) == '+' || textNet.charAt(0) == '-'){
+                inicial = 1;
+            }
+            
+        boolean esDigit = true;
+        for (int i=inicial; i<textNet.length(); i++){
+            char c = text.charAt(i);
+            
+            if (!Character.isDigit(c)){
+                esDigit = false;
+            }
+        }
+    
+    /*
     boolean hihaEspai = false;
     boolean hihaSigne = false;
     boolean esDigit = false;
@@ -288,8 +273,8 @@ public class UtilString {
         }
         
         return false;
-    }   
+    }   */
     
-    return esDigit;
+    return esDigit; 
     }
 }
