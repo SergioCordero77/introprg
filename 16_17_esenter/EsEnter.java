@@ -15,18 +15,8 @@ public class EsEnter{
     
     while (!text.isEmpty()){
         
-        String textNormalitzat ="";
-        
-        for(int i=0; i<text.length(); i++){
-            char c = text.charAt(i);
-            
-            if(Character.isWhitespace(c)){
-                continue;
-            }
-            else{
-                textNormalitzat += c;
-            }
-        } 
+        //Treiem els espais
+        String textNormalitzat = UtilString.normalitzaBlancs(text);
         
         if (UtilString.esEnter(textNormalitzat)){
             System.out.println("\"" + text + "\" és enter");
