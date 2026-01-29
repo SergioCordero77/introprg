@@ -72,7 +72,7 @@ public class EntersEntreComes{
             cont ++;
         }
         
-        System.out.println (entreComes(valors, c));
+        System.out.println (UtilString.entreComes(valors, c));
     }
     
     public static String demanaEnter (String numeroEnter) {
@@ -96,7 +96,7 @@ public class EntersEntreComes{
     
     }
     
-    public static String entreComes(int[] valors, char separador){
+  /*  public static String entreComes(int[] valors, char separador){
     
         String resultatFinal = "" + valors[0];
         
@@ -104,5 +104,5 @@ public class EntersEntreComes{
             resultatFinal += separador + " " + valors[i];
         }
         return resultatFinal;
-    }
+    }*/
 }

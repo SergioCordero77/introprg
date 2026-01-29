@@ -12,9 +12,10 @@ public class UtilString {
      * Altrament considera false.
      */
      
-     public static void main (String [] args){
+    /*public static void main (String [] args){
         System.out.println(esEnter("	+67"));
-     } 
+    }*/ 
+    
     public static boolean esVocal(char lletra) {
         String vocals = "aàeèéiíïoòóuúü";
         
@@ -232,5 +233,16 @@ public class UtilString {
     }
     
     return esDigit; 
+    }
+    
+    public static String entreComes(int[] valors, char separador){
+    
+        String resultatFinal = "" + valors[0];
+        
+            for (int i = 1; i < valors.length; i++) {
+                resultatFinal += separador + " " + valors[i];
+            }
+            
+        return resultatFinal;
     }
 }
