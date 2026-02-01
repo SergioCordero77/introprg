@@ -235,6 +235,7 @@ public class UtilString {
     return esDigit; 
     }
     
+    /* Separa elements d'una array amb un separador*/
     public static String entreComes(int[] valors, char separador){
     
         String resultatFinal = "" + valors[0];

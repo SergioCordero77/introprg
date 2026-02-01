@@ -79,8 +79,12 @@ public class EntersEntreComes{
                     cont ++;
                 }
                 
-                System.out.println (UtilString.entreComes(valors, c));
-        
+                if (valors.length == 0){
+                    System.out.println("Res a fer");
+                }
+                else{
+                    System.out.println (UtilString.entreComes(valors, c));
+                }
         }
     }
     
@@ -102,23 +106,5 @@ public class EntersEntreComes{
         
         return enter;
     
-    }
-    
-    public static String entreComes(int[] valors, char separador){
-    
-        String resultatFinal = "";
-        
-        if (valors.length == 0){
-            resultatFinal = "Res a fer";
-        }
-        else{
-            
-            resultatFinal += valors[0];
-            
-            for (int i = 1; i < valors.length; i++) {
-                resultatFinal += separador + " " + valors[i];
-            }
-        }
-        return resultatFinal;
     }
 }
