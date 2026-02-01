@@ -4,35 +4,20 @@
 public class Arguments{
     public static void main (String [] args){
     
-   
-   /* int cont = 0;
-    
-    String argument = args []; 
-    
-      String[] argument;
-        argument = new String [];
-        
-        argument[0] = args[0];
-    
-    int cont = 0;
-    
-    if (cont == -){
-        System.out.println("Cap argument");
-    } 
+    if (args.length == 0) {
+            System.out.println("Cap argument");
+    }
     else{
-        while(!argument.isEmpty()){
-        
-        argument = args [cont];
-        
-        
-        
-        cont ++;
-        
-        prova += argument +  " ";
+        for (int i=0; i<args.length; i++){
+            String argument = args [i];
+            
+            if (UtilString.esEnter(argument)){
+                System.out.println("[" + i + "] \"" + argument + "\": és enter"); 
+            }
+            else{
+                System.out.println("[" + i + "] \"" + argument + "\": no és enter"); 
+            }
         }
     }
-    
-    System.out.println(argument);*/
-    
     }
 }
