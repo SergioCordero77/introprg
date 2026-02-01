@@ -78,8 +78,7 @@ public class EntersEntreComes{
                     cont ++;
                 }
                 
-                    System.out.println (UtilString.entreComes(valors, c));
-                
+            System.out.println (UtilString.entreComes(valors, c));
         }
     }
     
