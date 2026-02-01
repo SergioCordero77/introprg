@@ -50,7 +50,6 @@ public class EntersEntreComes{
     
         if (quantitat<1){
             System.out.println("Res a fer");
-            return;
         }
         else{
     
