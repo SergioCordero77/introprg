@@ -54,32 +54,32 @@ public class EntersEntreComes{
         }
         else{
     
-    System.out.println("Separador?");
-    String separador = Entrada.readLine();
-        char c = ' ';
-        
-        if (separador.isEmpty()){
-            c = ',';
-        }
-        else{
-            c = separador.charAt(0);
-        }
-    
-        int cont = 0;
-    
-        int[] valors;
-        valors = new int [quantitat];
-           
-        while (cont<quantitat){
-            System.out.println("Valor "+ (cont+1) + "?");
-            String numero = Entrada.readLine();
+            System.out.println("Separador?");
+            String separador = Entrada.readLine();
+                char c = ' ';
+                
+                if (separador.isEmpty()){
+                    c = ',';
+                }
+                else{
+                    c = separador.charAt(0);
+                }
             
-            valors [cont] = demanaEnter (numero);
+                int cont = 0;
             
-            cont ++;
-        }
-        
-        System.out.println (UtilString.entreComes(valors, c));
+                int[] valors;
+                valors = new int [quantitat];
+                   
+                while (cont<quantitat){
+                    System.out.println("Valor "+ (cont+1) + "?");
+                    String numero = Entrada.readLine();
+                    
+                    valors [cont] = demanaEnter (numero);
+                    
+                    cont ++;
+                }
+                
+                System.out.println (UtilString.entreComes(valors, c));
         
         }
     }
@@ -106,10 +106,18 @@ public class EntersEntreComes{
     
     public static String entreComes(int[] valors, char separador){
     
-        String resultatFinal = "" + valors[0];
+        String resultatFinal = "";
         
-        for (int i = 1; i < valors.length; i++) {
-            resultatFinal += separador + " " + valors[i];
+        if (valors.length == 0){
+            resultatFinal = "Res a fer";
+        }
+        else{
+            
+            resultatFinal += valors[0];
+            
+            for (int i = 1; i < valors.length; i++) {
+                resultatFinal += separador + " " + valors[i];
+            }
         }
         return resultatFinal;
     }
