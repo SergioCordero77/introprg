@@ -1,5 +1,5 @@
 /*
- * programa que a partir dels arguments que rebi per línia de comandes, mostri el resultat de sumar els enters que rebi.
+ * Programa que a partir dels arguments que rebi per línia de comandes, mostri el resultat de sumar els enters que rebi.
  */
 public class SumaEnters {
     public static void main (String [] args){
@@ -12,24 +12,6 @@ public class SumaEnters {
             quantsEnters(args);
             
             System.out.println(sumaEnters(filtraEnters (args)));
-        
-           /* int suma = 0;
-        
-            for (int i=0; i<args.length; i++){
-                String argument = args [i];
-                
-                if (UtilString.esEnter(argument)){
-                    
-                    int numero = Integer.parseInt(argument);
-                    
-                    suma += numero; 
-                }
-                else{
-                    System.out.println("[" + i + "] \"" + argument + "\": no és enter"); 
-                }
-            }
-            System.out.println("Els enters sumen: " + suma);
-        }*/
         }
     }
     public static int quantsEnters(String[] valors){    // nombre d'enters a valors
