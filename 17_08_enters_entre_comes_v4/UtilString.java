@@ -237,13 +237,19 @@ public class UtilString {
     
     /* Separa elements d'una array amb un separador*/
     public static String entreComes(int[] valors, char separador){
-    
-        String resultatFinal = "" + valors[0];
+        String resultatFinal = "";
         
-            for (int i = 1; i < valors.length; i++) {
-                resultatFinal += separador + " " + valors[i];
-            }
-            
+        if (valors.length == 0){
+            System.out.println("Res a fer");
+        }
+        else{
+        
+            resultatFinal = "" + valors[0];
+        
+                for (int i = 1; i < valors.length; i++) {
+                    resultatFinal += separador + " " + valors[i];
+                }
+        }    
         return resultatFinal;
     }
 }

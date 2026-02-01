@@ -78,12 +78,8 @@ public class EntersEntreComes{
                     cont ++;
                 }
                 
-                if (valors.length == 0){
-                    System.out.println("Res a fer");
-                }
-                else{
                     System.out.println (UtilString.entreComes(valors, c));
-                }
+                
         }
     }
     
