@@ -65,9 +65,15 @@ public class EntersEntreComes{
            
         while (cont<quantitat){
             System.out.println("Valor "+ (cont+1) + "?");
-            int numero = Integer.parseInt(Entrada.readLine());
+            String numero = Entrada.readLine();
             
-            valors[cont] = numero;
+            if(UtilString.esEnter(numero)){
+                int enter = Integer.parseInt(numero);
+                
+                valors[cont] = enter;
+            }
+            
+            
             
             cont ++;
         }
