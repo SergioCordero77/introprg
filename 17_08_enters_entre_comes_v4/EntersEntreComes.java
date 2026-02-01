@@ -48,6 +48,11 @@ public class EntersEntreComes{
     
     int quantitat = demanaEnter (numeroEnter);
     
+        if (quantitat<0){
+            System.out.println("ha de ser superior a 0");
+        }
+        else{
+    
     System.out.println("Separador?");
     String separador = Entrada.readLine();
         char c = ' ';
@@ -74,6 +79,8 @@ public class EntersEntreComes{
         }
         
         System.out.println (UtilString.entreComes(valors, c));
+        
+        }
     }
     
     public static int demanaEnter (String numeroEnter) {
