@@ -49,7 +49,8 @@ public class EntersEntreComes{
     int quantitat = demanaEnter (numeroEnter);
     
         if (quantitat<0){
-            System.out.println("ha de ser superior a 0");
+            System.out.println("Res a fer");
+            return;
         }
         else{
     
