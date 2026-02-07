@@ -269,4 +269,18 @@ public class UtilString {
             
         return textJunt;   
     }
+    
+    public static String junta (String[] text, String separador){
+        
+        String textJunt = "";
+        
+        textJunt = "" + text[0];
+        
+            for (int i = 1; i < text.length; i++) {
+            
+                textJunt += separador + " " + text[i];
+            }
+            
+        return textJunt;   
+    }
 }
