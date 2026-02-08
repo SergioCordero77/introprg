@@ -11,6 +11,13 @@ public class UtilString {
      * una vocal catalana: a, à, e, è, é, i, í, ï, o, ò, ó, u, ú i ü.
      * Altrament considera false.
      */
+
+    public static void main (String [] args){
+    
+        System.out.println(esEnter("      +67"));
+    
+    } 
+     
     public static boolean esVocal(char lletra) {
         String vocals = "aàeèéiíïoòóuúü";
         
@@ -235,7 +242,7 @@ public class UtilString {
         return textNormalitzat;
     }
     
-   /* public static boolean esEnter (String text){
+    public static boolean esEnter (String text){
     
     boolean hihaSigne = false;
     boolean esDigit = false;
@@ -251,10 +258,10 @@ public class UtilString {
         
         //Si hi ha espais
         if (Character.isWhitespace(c)) {
-           if (numeroIniciat){
-                numeroAcabat = true;
-           }
- 
+            if (!numeroIniciat) {
+                return false;
+            }
+            numeroAcabat = true;
             continue;
         }
         
@@ -292,31 +299,6 @@ public class UtilString {
     }   
     
     return esDigit;
-    }*/
-    
-    public static boolean esEnter (String text){
-    
-    int inicial = 0;
-    
-    boolean esDigit = true;
-    
-    if (text.isEmpty()){
-        return false;
     }
-    else{
-        if (text.charAt(0) == '+' || text.charAt(0) == '-'){
-            inicial = 1; // Si el número comença amb '+' o '-', el numero inicial amb el que començarà el bucle for serà 1
-        } 
-            // Recorre el text filtrat (sense espais)
-            for (int i=inicial; i<text.length(); i++){
-                char c = text.charAt(i);
-                
-                if (!Character.isDigit(c)){
-                    return false;
-                }
-            }
-    }
-    
-    return esDigit; 
-    }
+
 }
