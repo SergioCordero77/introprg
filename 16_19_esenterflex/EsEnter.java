@@ -27,7 +27,7 @@ public class EsEnter{
             //Treiem els espais
             String textNormalitzat = UtilString.normalitzaBlancs(text);
             
-            if (UtilString.esEnter(textNormalitzat, esEstricte)){
+            if (!UtilString.esEnter(textNormalitzat, esEstricte)){
                 System.out.println("\"" + text + "\" és enter");
             }
             else {
