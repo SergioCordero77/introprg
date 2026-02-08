@@ -328,7 +328,7 @@ public class UtilString {
     int inicial = 0;
     
     
-    if (estricte){
+    if (!estricte){
         
         boolean esDigit = true;
         
@@ -355,48 +355,48 @@ public class UtilString {
     }
     else{
 
-    boolean esDigit = false;
-    boolean hihaDiferentAZero = false;
+        boolean esDigit = false;
+        boolean hihaDiferentAZero = false;
 
-    int comptador = 0;
+        int comptador = 0;
 
-    if (text.isEmpty()){
-        return false;
-    }
-    else{
-        // Comprovem si el primer caràcter és un '+' o '-'
-        if (text.charAt(0) == '+' || text.charAt(0) == '-'){
-            inicial = 1; // canviem el número inicial per a començar a analitzar
-            if (text.length() == 1) { //Si el String només té un signe
-                return false;
-            }
+        if (text.isEmpty()){
+            return false;
         }
-
-        for (int i = inicial; i < text.length(); i++){
-            char c = text.charAt(i);
-            
-            // Si no és digit
-            if (!Character.isDigit(c)){
-                return false;
-            }
-            else{ //Si hi ha digit
-                esDigit = true; //S'ha trobat digit i canviem el boolean a True
-
-                if (c != '0'){ // Si el digit és diferent a 0
-                    hihaDiferentAZero = true; // El digit és diferent a 0 i es canvia el boolean a true
+        else{
+            // Comprovem si el primer caràcter és un '+' o '-'
+            if (text.charAt(0) == '+' || text.charAt(0) == '-'){
+                inicial = 1; // canviem el número inicial per a començar a analitzar
+                if (text.length() == 1) { //Si el String només té un signe
+                    return false;
                 }
+            }
 
-                if (hihaDiferentAZero){ //Tenim un número que es diferent a 0
-                    comptador++; // sumem +1 al comptador
+            for (int i = inicial; i < text.length(); i++){
+                char c = text.charAt(i);
+                
+                // Si no és digit
+                if (!Character.isDigit(c)){
+                    return false;
+                }
+                else{ //Si hi ha digit
+                    esDigit = true; //S'ha trobat digit i canviem el boolean a True
 
-                    if (comptador > 9){ // Si el comptador és major a 9, retorna False
-                        return false;
+                    if (c != '0'){ // Si el digit és diferent a 0
+                        hihaDiferentAZero = true; // El digit és diferent a 0 i es canvia el boolean a true
+                    }
+
+                    if (hihaDiferentAZero){ //Tenim un número que es diferent a 0
+                        comptador++; // sumem +1 al comptador
+
+                        if (comptador > 9){ // Si el comptador és major a 9, retorna False
+                            return false;
+                        }
                     }
                 }
             }
-        }
 
-        return esDigit;
+            return esDigit;
     }
     }
     
