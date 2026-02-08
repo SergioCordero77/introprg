@@ -332,6 +332,8 @@ public class UtilString {
         
         boolean esDigit = true;
         
+        int comptador = 0;
+        
         if (text.isEmpty()){
             return false;
         }
@@ -346,6 +348,13 @@ public class UtilString {
                     if (!Character.isDigit(c)){
                         return false;
                     }
+                    else{
+                        comptador++; // sumem +1 al comptador
+
+                        if (comptador > 9){ // Si el comptador és major a 9, retorna False
+                            return false;
+                        }
+                    }   
                 }
         }
         
