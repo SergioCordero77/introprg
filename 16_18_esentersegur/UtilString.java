@@ -301,17 +301,17 @@ public class UtilString {
             if (!Character.isDigit(c)){
                 return false;
             }
-            else{
-                esDigit = true; //S'ha 
+            else{ //Si hi ha digit
+                esDigit = true; //S'ha trobat digit i canviem el boolean a True
 
-                if (c != '0'){
-                    hihaDiferentAZero = true;
+                if (c != '0'){ // Si el digit és diferent a 0
+                    hihaDiferentAZero = true; // El digit és diferent a 0 i es canvia el boolean a true
                 }
 
-                if (hihaDiferentAZero){
-                    comptador++;
+                if (hihaDiferentAZero){ //Tenim un número que es diferent a 0
+                    comptador++; // sumem +1 al comptador
 
-                    if (comptador > 9){
+                    if (comptador > 9){ // Si el comptador és major a 9, retorna False
                         return false;
                     }
                 }
