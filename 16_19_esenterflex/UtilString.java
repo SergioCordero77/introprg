@@ -328,7 +328,7 @@ public class UtilString {
     int inicial = 0;
     
     
-    if (!estricte){
+    if (estricte){
         
         boolean esDigit = true;
         
