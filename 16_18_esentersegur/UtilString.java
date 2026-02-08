@@ -242,7 +242,7 @@ public class UtilString {
         return textNormalitzat;
     }
     
-   /* public static boolean esEnter (String text){
+    public static boolean esEnter (String text){
     
     boolean hihaSigne = false;
     boolean esDigit = false;
@@ -306,9 +306,9 @@ public class UtilString {
     }   
     
     return esDigit;
-    } */
+    }
     
-    public static boolean esEnter (String text){
+ /*   public static boolean esEnter (String text){
     
     int inicial = 0;
     
@@ -358,6 +358,6 @@ public class UtilString {
     }
     
     return esDigit; 
-    }
+    }*/
 
 }
