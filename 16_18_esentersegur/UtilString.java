@@ -313,6 +313,7 @@ public class UtilString {
     int inicial = 0;
     
     boolean esDigit = true;
+    boolean hihaDiferentAZero = false;
     
     int comptador = 0;
     
@@ -334,10 +335,11 @@ public class UtilString {
                 //Si hi ha digit
                 if (Character.isDigit(c)) {
                     
-                    if (c=='0' && !esDigit){
-                        continue;
+                    if (c!='0'){
+                        hihaDiferentAZero = true;
                     }
-                    else{
+                    
+                    if (hihaDiferentAZero){
                     
                         comptador ++;
                         
