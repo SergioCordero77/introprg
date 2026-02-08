@@ -15,6 +15,8 @@ public class UtilString {
     public static void main (String [] args){
     
         System.out.println(esEnter("0333333333"));
+        
+        
     
     } 
      
@@ -176,73 +178,38 @@ public class UtilString {
       return c;
   }
   /*Normalitza espais en blanc*/
-  public static String normalitzaBlancs (String text){
+    public static String normalitzaBlancs (String text){
+
+    String textNormalitzat="";
+
+    int comptador=0;
+
+    for(int i=0; i<text.length(); i++){
+        char c = text.charAt(i);
+
+        if (i<text.length()-1){ 
+            char cPost = text.charAt(i+1); 
+
+            if (Character.isWhitespace(c) && !Character.isWhitespace(cPost) && comptador>=1){ 
+
+                    textNormalitzat += ' ';
+            }
+        }
         
-        String textNormalitzat="";      
-        
-        boolean totBlanc = true;
-        
-        int comptador=0;
+        if(Character.isWhitespace(c)){
+            continue;
+        }
+        else{
+            comptador++;
+            textNormalitzat += c;
+        }
+    } 
+
+    return textNormalitzat;
     
-        for(int i=0; i<text.length(); i++){
-            char c = text.charAt(i);
-            
-            for(int j=0; j<text.length(); j++){
-                char espai = text.charAt(j);
-                
-                if (!Character.isWhitespace(espai)){
-                    totBlanc = false;
-                    break;
-                } 
-            }
-            
-            if(!totBlanc){
-                if (i==0){
-                    if (!Character.isWhitespace(c)){
-                        textNormalitzat += '"';
-                        comptador++;
-                    } 
-                }
-                
-                if (i<text.length()-1){ 
-                    char cPost = text.charAt(i+1); 
-                    
-                    if (Character.isWhitespace(c) && Character.isLetter(cPost)){ 
-                        
-                      /*  textNormalitzat += ' '; */
-                        comptador++;
-                        
-                        if (comptador==1){
-                            textNormalitzat += '"';
-                        }
-                        else if (comptador>1){
-                            textNormalitzat += ' ';
-                        }
-                    } 
-                    else if (!Character.isWhitespace(c)){ 
-                        textNormalitzat += c; 
-                    }
-                }
-                
-                if (i==text.length()-1){
-                    if (!Character.isWhitespace(c)){
-                        textNormalitzat += c + "\"";
-                    }
-                    else{
-                        textNormalitzat += '"';
-                    }
-                }
-            }
-            else{
-                textNormalitzat += "\"\"";
-                break;
-            }
-        } 
-                               
-        return textNormalitzat;
     }
     
-   /* public static boolean esEnter (String text){
+    public static boolean esEnter (String text){
     
     boolean hihaSigne = false;
     boolean esDigit = false;
@@ -250,8 +217,6 @@ public class UtilString {
     boolean numeroAcabat = false;
     
     int comptador = 0;
-    
-    String numeros = "123456789";
     
     for(int i=0; i<text.length(); i++){
         char c = text.charAt(i);
@@ -306,9 +271,9 @@ public class UtilString {
     }   
     
     return esDigit;
-    }*/
+    }
     
-    public static boolean esEnter (String text){
+   /* public static boolean esEnter (String text){
 
     int inicial = 0;
 
@@ -352,6 +317,6 @@ public class UtilString {
 
         return esDigit;
     }
-    }
+    } */
 
 }
