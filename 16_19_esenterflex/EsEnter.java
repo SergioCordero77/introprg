@@ -41,7 +41,7 @@ public class EsEnter{
         
     }
     else{
-        System.out.println("Modalitat no reconeguda.");
+        System.out.println("Modalitat no reconeguda");
     }
     }
 }
