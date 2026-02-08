@@ -14,7 +14,7 @@ public class UtilString {
 
     public static void main (String [] args){
     
-        System.out.println(esEnter("      +67"));
+        System.out.println(esEnter("0333333333"));
     
     } 
      
@@ -330,22 +330,25 @@ public class UtilString {
                 if (!Character.isDigit(c)){
                     return false;
                 }
+                
                 //Si hi ha digit
                 if (Character.isDigit(c)) {
                     
                     if (c=='0' && !esDigit){
                         continue;
                     }
+                    else{
                     
-                    comptador ++;
-                    
-                    if (comptador>9){
-                        return false;
+                        comptador ++;
+                        
+                        if (comptador>9){
+                            return false;
+                        }
+                        
+                        esDigit = true;          
+                        
+                        continue;
                     }
-                    
-                    esDigit = true;          
-                    
-                    continue;
                 }
             }
     }
