@@ -15,6 +15,8 @@ public class EsEnter{
     
     while (!text.isEmpty()){
         
+        UtilString.normalitzaBlancs(text);
+        
         if (UtilString.esEnter(text)){
             System.out.println("\"" + text + "\" és enter");
         }
