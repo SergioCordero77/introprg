@@ -508,8 +508,8 @@ public class UtilString {
                 char posterior = text.charAt(i + 1);
                 
                 // Si hi ha un '.' o una '_' entre dos digits
-                if (c == '.' || c == '_') {
-                    if (posterior == '.' || posterior == '_') {
+                if (c == '.' || c == '_' || c== ' ') {
+                    if (posterior == '.' || posterior == '_' || posterior== ' ') {
                         numNet += c;
                     }
                 }
