@@ -325,35 +325,9 @@ public class UtilString {
     
     public static boolean esEnter(String text, boolean estricte){
     
-    int inicial = 0;
-    
-    
     if (estricte){
         
-        boolean esDigit = true;
-        
-        int comptador = 0;
-        
-        if (text.isEmpty()){
-            return false;
-        }
-        else{
-            if (text.charAt(0) == '+' || text.charAt(0) == '-'){
-                inicial = 1; // Si el número comença amb '+' o '-', el numero inicial amb el que començarà el bucle for serà 1
-            } 
-                // Recorre el text filtrat (sense espais)
-                for (int i=inicial; i<text.length(); i++){
-                    char c = text.charAt(i);
-                    
-                    if (!Character.isDigit(c)){
-                        return false;
-                    }   
-                }
-        }
-        
-        return esDigit; 
-    }
-    else{
+        int inicial = 0;
 
         boolean esDigit = false;
         boolean hihaDiferentAZero = false;
@@ -395,11 +369,91 @@ public class UtilString {
                     }
                 }
             }
+            
+            return esDigit; 
+        }
+    }
+    else{
 
-            return esDigit;
+        int inicial = 0;
+            
+        boolean esDigit = true;
+        boolean hihaDigit = false;
+        boolean hihaSigne = false;
+        boolean digitAbansDelSigne = false;
+        boolean digitDespresDelSigne = false;
+        
+        // Si comença per '+' o '-' es canvia la posició inicial a 1
+        if (text.charAt(0) == '+' || text.charAt(0) == '-'){
+            hihaSigne = true;
+            inicial = 1;
+        }
+        
+        if ((text.charAt(0) == '_' || text.charAt(0) == '.') || 
+            text.charAt (text.length() - 1) == '_' || text.charAt (text.length() - 1) == '.'){
+            esDigit = false;
+        }
+            
+            //Bucle per recorrer els caràcters
+            for (int i=inicial; i<text.length(); i++){
+                char c = text.charAt(i);
+                
+                //Si hi ha un digit
+                if (Character.isDigit(c)) {
+                    hihaDigit = true;
+
+                    if (hihaSigne) {
+                        digitDespresDelSigne = true;
+                    } else {
+                        digitAbansDelSigne = true;
+                    }
+                }
+
+                // Si hi ha '+' o '-'
+                if (c == '+' || c == '-') {
+                    if (hihaSigne) {
+                        esDigit = false;   // més d'un signe
+                    }
+                    hihaSigne = true;
+                }
+                
+                // Condició si el text està entre la segona posició la penúltima
+                if (i > 0 && i < text.length() - 1) {
+                    char anterior = text.charAt(i - 1);
+                    char posterior = text.charAt(i + 1);
+                    
+                    // Si hi ha un '.' o una '_' entre dos digits
+                    if (c == '.' || c == '_') {
+                        if (!Character.isDigit(anterior) || !Character.isDigit(posterior)) {
+                            esDigit = false;
+                        }
+                    }
+                } 
+                
+                // Si el caràcter no es digit, no es un espai en blanc, no té signes i no té separadors
+                if (!Character.isDigit(c) && !Character.isWhitespace(c)
+                    && c != '+' && c != '-' && 
+                    c != '.' && c != '_') {
+                    esDigit = false;
+                }
+            }
+            
+                // Validacions finals del signe
+                
+                // Si hi ha signe després d'un número
+                if (hihaSigne && digitAbansDelSigne) {
+                    esDigit = false;   
+                }
+                
+                // Si NO hi ha número després
+                if (hihaSigne && !digitDespresDelSigne) {
+                    esDigit = false;   
+                }
+            
+/*--------------------------------------------------RESULTAT FINAL --------------------------------------------------*/
+
+        return esDigit && hihaDigit;
     }
-    }
-    
     }
 
     public static int aEnter(String text){
