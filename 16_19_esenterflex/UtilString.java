@@ -502,8 +502,10 @@ public class UtilString {
                 numNet += c;
             }
             
-            if (text.charAt(0) == '+' || text.charAt(0) == '-'){
-                continue;
+            if (i==0){
+                if (text.charAt(0) == '+' || text.charAt(0) == '-'){
+                    continue;
+                }
             }
             
             if (i > 0 && i < text.length() - 1) {
