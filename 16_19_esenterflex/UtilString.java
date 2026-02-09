@@ -384,7 +384,7 @@ public class UtilString {
         boolean hihaSigne = false;
         boolean digitAbansDelSigne = false;
         boolean digitDespresDelSigne = false;
-        boolean hihaZero = true;
+        boolean numeroComencat = false;
         
         // Si comença per '+' o '-' es canvia la posició inicial a 1
         if (text.charAt(0) == '+' || text.charAt(0) == '-'){
@@ -410,9 +410,21 @@ public class UtilString {
                     } else {
                         digitAbansDelSigne = true;
                     }
-                
-                    if (c!='0'){
-                    hihaZero = false;
+                    
+                    // Ignorem els zeros inicials
+                    if (!numeroComencat){
+                        if (c=='0'){
+                            continue;
+                        }
+                        else{
+                            numeroComencat=true;
+                        }
+                    }
+                    
+                    cont ++;
+                    
+                    if(cont>9){
+                        esDigit = false;
                     }
                 }
 
@@ -420,9 +432,9 @@ public class UtilString {
                 if (c == '+' || c == '-') {
                     if (hihaSigne) {
                         esDigit = false;   // més d'un signe
-                    }
-                    hihaSigne = true;
+                    }       
                 }
+                
                 
                 // Condició si el text està entre la segona posició la penúltima
                 if (i > 0 && i < text.length() - 1) {
@@ -435,20 +447,7 @@ public class UtilString {
                             esDigit = false;
                         }
                     }
-                    // Si hi ha un 0 entre digits, s'ignora
-                    if (Character.isDigit(anterior) && c=='0' && Character.isDigit(posterior)){
-                        continue;
-                    }
                 }
-                
-                // Si l'últim digit és '0'
-                if (i == text.length() - 1) {
-                    char anterior = text.charAt(i - 1);
-                    
-                    if (Character.isDigit(anterior) && c=='0'){
-                        continue;
-                    }
-                } 
                 
                 // Si el caràcter no es digit, no es un espai en blanc, no té signes i no té separadors
                 if (!Character.isDigit(c) && !Character.isWhitespace(c)
@@ -466,25 +465,15 @@ public class UtilString {
                 }
                 
                 // Si NO hi ha número després
-                if (hihaSigne && !digitDespresDelSigne) {
-                    esDigit = false;   
-                }
+                    if (hihaSigne && !digitDespresDelSigne) {
+                        esDigit = false;   
+                    }
                 
-                // Si el digit no es 0
-                if (!hihaZero){
-                    cont ++;
-                        if (cont>9){
-                            esDigit =false;
-                        }
-                }
-                
-                
-            
 /*--------------------------------------------------RESULTAT FINAL --------------------------------------------------*/
 
         return esDigit && hihaDigit;
     }
-    }
+    }    
 
     public static int aEnter(String text){
     
