@@ -376,12 +376,15 @@ public class UtilString {
     else{
 
         int inicial = 0;
+        
+        int cont = 0;
             
         boolean esDigit = true;
         boolean hihaDigit = false;
         boolean hihaSigne = false;
         boolean digitAbansDelSigne = false;
         boolean digitDespresDelSigne = false;
+        boolean hihaZero = true;
         
         // Si comença per '+' o '-' es canvia la posició inicial a 1
         if (text.charAt(0) == '+' || text.charAt(0) == '-'){
@@ -407,6 +410,10 @@ public class UtilString {
                     } else {
                         digitAbansDelSigne = true;
                     }
+                
+                    if (c!='0'){
+                    hihaZero = false;
+                    }
                 }
 
                 // Si hi ha '+' o '-'
@@ -427,6 +434,19 @@ public class UtilString {
                         if (!Character.isDigit(anterior) || !Character.isDigit(posterior)) {
                             esDigit = false;
                         }
+                    }
+                    // Si hi ha un 0 entre digits, s'ignora
+                    if (Character.isDigit(anterior) && c=='0' && Character.isDigit(posterior)){
+                        continue;
+                    }
+                }
+                
+                // Si l'últim digit és '0'
+                if (i == text.length() - 1) {
+                    char anterior = text.charAt(i - 1);
+                    
+                    if (Character.isDigit(anterior) && c=='0'){
+                        continue;
                     }
                 } 
                 
@@ -449,6 +469,16 @@ public class UtilString {
                 if (hihaSigne && !digitDespresDelSigne) {
                     esDigit = false;   
                 }
+                
+                // Si el digit no es 0
+                if (!hihaZero){
+                    cont ++;
+                        if (cont>9){
+                            esDigit =false;
+                        }
+                }
+                
+                
             
 /*--------------------------------------------------RESULTAT FINAL --------------------------------------------------*/
 
