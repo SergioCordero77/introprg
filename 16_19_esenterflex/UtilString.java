@@ -503,8 +503,11 @@ public class UtilString {
             }
             
             if (i==0){
-                if (text.charAt(0) == '+' || text.charAt(0) == '-'){
+                if (text.charAt(0) == '+'){
                     continue;
+                }
+                else if (text.charAt(0) == '-'){
+                    numNet += c;
                 }
             }
             
