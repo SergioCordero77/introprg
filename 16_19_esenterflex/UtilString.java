@@ -495,12 +495,15 @@ public class UtilString {
         for (int i = 0; i<text.length(); i++){
             char c = text.charAt(i);
             
-            if (text.charAt(0) == '+' || text.charAt(0) == '-' ||
-                text.charAt(0) == '_' || text.charAt(0) == '.' ||
+            if (text.charAt(0) == '_' || text.charAt(0) == '.' ||
                 text.charAt(text.length()-1) == '+' || text.charAt(text.length()-1) == '-' ||
                 text.charAt(text.length()-1) == '_' || text.charAt(text.length()-1) == '.') {
 
                 numNet += c;
+            }
+            
+            if (text.charAt(0) == '+' || text.charAt(0) == '-'){
+                continue;
             }
             
             if (i > 0 && i < text.length() - 1) {
