@@ -485,7 +485,27 @@ public class UtilString {
     }
     
     public static int aEnter(String text, boolean estricte){
+    
+    if (estricte){
+        return Integer.parseInt(text);
+    }
+    else{
+        String numNet = "";
+        
+        for (int i = 0; i<text.length(); i++){
+            char c = text.charAt(i);
+        
+            if (Character.isDigit(c)){
+                numNet += c;
+            }
+        }
+        
+        return Integer.parseInt(numNet);
+    }
+    
 
+
+/*
     if (estricte){
         return Integer.parseInt(text);
     }
@@ -496,6 +516,6 @@ public class UtilString {
         else{
             return Integer.parseInt(text);
         }
-    }
+    }*/
     }
 }
