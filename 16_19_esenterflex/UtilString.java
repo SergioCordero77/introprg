@@ -385,6 +385,7 @@ public class UtilString {
         boolean digitAbansDelSigne = false;
         boolean digitDespresDelSigne = false;
         boolean numeroComencat = false;
+        boolean signePermes = true;
         
         // Si comença per '+' o '-' es canvia la posició inicial a 1
         if (text.charAt(0) == '+' || text.charAt(0) == '-'){
@@ -435,13 +436,13 @@ public class UtilString {
 
                 // Si hi ha '+' o '-'
                 if (c == '+' || c == '-') {
-                    if (hihaSigne) {
-                        esDigit = false;   // més d'un signe
+                    if (hihaSigne || !signePermes) {
+                        esDigit = false;   // signe no permès
+                        break;
                     }
-                    
-                    if (hihaDigit){
-                        esDigit = false;   // Si hi ha un signe després d'un digit
-                    }       
+                    hihaSigne = true;   // marquem que hi ha signe
+                    signePermes = false; // ja no es permet un altre signe
+                    continue;
                 }
                 
                 
