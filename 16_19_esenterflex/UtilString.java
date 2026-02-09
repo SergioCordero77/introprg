@@ -375,6 +375,10 @@ public class UtilString {
     }
     else{
 
+        if (text.isBlank()){
+            return false;
+        }
+
         int inicial = 0;
         
         int cont = 0;
