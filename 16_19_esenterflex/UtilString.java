@@ -502,6 +502,18 @@ public class UtilString {
 
                 numNet += c;
             }
+            
+            if (i > 0 && i < text.length() - 1) {
+                char anterior = text.charAt(i - 1);
+                char posterior = text.charAt(i + 1);
+                
+                // Si hi ha un '.' o una '_' entre dos digits
+                if (c == '.' || c == '_') {
+                    if (posterior == '.' || posterior == '_') {
+                        numNet += c;
+                    }
+                }
+            }
         
             if (Character.isWhitespace(c) || c=='.' || c=='_'){
                 continue;
