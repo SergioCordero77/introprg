@@ -432,6 +432,10 @@ public class UtilString {
                 if (c == '+' || c == '-') {
                     if (hihaSigne) {
                         esDigit = false;   // més d'un signe
+                    }
+                    
+                    if (hihaDigit){
+                        esDigit = false;   // Si hi ha un signe després d'un digit
                     }       
                 }
                 
