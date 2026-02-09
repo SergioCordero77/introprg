@@ -508,6 +508,7 @@ public class UtilString {
                 }
                 else if (text.charAt(0) == '-'){
                     numNet += c;
+                    continue;
                 }
             }
             
