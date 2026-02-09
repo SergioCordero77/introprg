@@ -401,6 +401,11 @@ public class UtilString {
             for (int i=inicial; i<text.length(); i++){
                 char c = text.charAt(i);
                 
+                //Si hi ha espais
+                if (Character.isWhitespace(c)){
+                    continue;
+                }
+                
                 //Si hi ha un digit
                 if (Character.isDigit(c)) {
                     hihaDigit = true;
