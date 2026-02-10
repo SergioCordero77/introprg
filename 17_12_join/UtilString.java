@@ -260,7 +260,7 @@ public class UtilString {
                 if (i==0){
                     textJunt += text[i];
                 }
-                if (i==text.length-1 && i!=0){
+                else if (i==text.length-1){
                     textJunt += separadorFinal + text[i];
                 }
                 else{
