@@ -256,11 +256,6 @@ public class UtilString {
         
         String textJunt = "";
         
-        if (text.length == 0){
-            return "";
-            
-        }
-        else{
         textJunt = "" + text[0];
         
             for (int i = 1; i < text.length; i++) {
@@ -273,14 +268,14 @@ public class UtilString {
             }
             
         return textJunt;
-        }   
+           
     }
     
     public static String junta (String[] text, String separador){
         
         String textJunt = "";
         
-        textJunt = "" + text[0];
+        textJunt += text[0];
         
             for (int i = 1; i < text.length; i++) {
             
