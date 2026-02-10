@@ -256,7 +256,7 @@ public class UtilString {
         
         String textJunt = "";
         
-        textJunt = "" + text[0];
+        textJunt += text[0];
         
             for (int i = 1; i < text.length; i++) {
                 if (i==text.length-1){
