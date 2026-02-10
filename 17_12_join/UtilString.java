@@ -258,7 +258,7 @@ public class UtilString {
         
             for (int i = 0; i < text.length; i++) {
                 if (i==0){
-                    textJunt += text[0];
+                    textJunt += text[i];
                 }
                 if (i==text.length-1){
                     textJunt += separadorFinal + text[i];
@@ -278,7 +278,7 @@ public class UtilString {
         
             for (int i = 0; i < text.length; i++) {
                 if (i==0){
-                    textJunt += text[0];
+                    textJunt += text[i];
                 }
                 else{
                     textJunt += separador + text[i];
