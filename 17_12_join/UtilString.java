@@ -256,9 +256,10 @@ public class UtilString {
         
         String textJunt = "";
         
-        textJunt += text[0];
-        
             for (int i = 1; i < text.length; i++) {
+                if (i==0){
+                    textJunt += text[0];
+                }
                 if (i==text.length-1){
                     textJunt += separadorFinal + text[i];
                 }
@@ -275,11 +276,13 @@ public class UtilString {
         
         String textJunt = "";
         
-        textJunt += text[0];
-        
             for (int i = 1; i < text.length; i++) {
-            
-                textJunt += separador + text[i];
+                if (i==0){
+                    textJunt += text[0];
+                }
+                else{
+                    textJunt += separador + text[i];
+                }
             }
             
         return textJunt;   
