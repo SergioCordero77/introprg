@@ -14,18 +14,18 @@ public class TresEnRatlla {
         char[][] tauler = new char[3][3];
 
         // inicialització de la fila 0
-        tauler[0][0] = ' ';
+        tauler[0][0] = '·';
         tauler[0][1] = 'O';
         tauler[0][2] = 'O';
 
         // inicialització de la fila 1
-        tauler[1][0] = ' ';
+        tauler[1][0] = '·';
         tauler[1][1] = 'X';
-        tauler[1][2] = ' ';
+        tauler[1][2] = '·';
 
         // inicialització de la fila 2
-        tauler[2][0] = ' ';
-        tauler[2][1] = ' ';
+        tauler[2][0] = '·';
+        tauler[2][1] = '·';
         tauler[2][2] = 'X';
 
         // mostra la posició inicial del tauler
@@ -42,7 +42,7 @@ public class TresEnRatlla {
 
         // marquem el nou moviment
         // Comprovem que les coordenades siguin vàlides i que la casella estigui buida
-        if ((fila>=0 && fila<=2) && (columna>=0 && columna<=2) && tauler [fila][columna] == ' '){
+        if ((fila>=0 && fila<=2) && (columna>=0 && columna<=2) && tauler [fila][columna] == '·'){
             tauler[fila][columna] = 'X';
         
         // tornem a mostrar el tauler (Amb la 'X' que hem afegit
