@@ -45,7 +45,10 @@ public class TresEnRatlla {
         if ((fila>=0 && fila<=2) && (columna>=0 && columna<=2) && tauler [fila][columna] == '·'){
             tauler[fila][columna] = 'X';
         }
-        else{
+        else if (!(fila>=0 && fila<=2) || !(columna>=0 && columna<=2)){
+            System.out.println("Coordenades incorrectes");
+        }
+        else if (tauler [fila][columna] != '·'){
             System.out.println("Posició ocupada");
         }
         
