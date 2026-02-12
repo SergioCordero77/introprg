@@ -52,7 +52,7 @@ public class TresEnRatlla {
         mostraFila(tauler[2]);     // mostra la línia 2
         }
         else{
-            System.out.println("Error");
+            System.out.println("Posició ocupada");
         }
     }
 
