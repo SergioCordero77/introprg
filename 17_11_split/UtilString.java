@@ -395,6 +395,7 @@ public class UtilString {
         int inici = 0;
         
         boolean hihaEspai = false;
+        boolean fraseComencada = false;
         
         for (int i = 0; i<cont; i++){
         
@@ -404,19 +405,31 @@ public class UtilString {
                 char c = text.charAt(j);
                 inici ++;
                 
-                if (Character.isWhitespace(c)){                
-                    if (hihaEspai){
-                        continue;
-                    }
-                    hihaEspai = true;
-     
-                    break;
-                }
-                else{
-                    hihaEspai = false;
+                
+                if (!Character.isWhitespace(c)){
+                    fraseComencada = true;
                 }
                 
-                paraula += c;
+                if (fraseComencada){
+                    if (Character.isWhitespace(c)){                
+                        if (hihaEspai){
+                            continue;
+                        }
+                        hihaEspai = true;
+         
+                        break;
+                    }
+                    else{
+                        hihaEspai = false;
+                    }
+                    
+                    paraula += c;
+                }
+                
+                if (Character.isWhitespace(c)){
+                    continue;
+                }
+                
             }
             
             cadenaParaules [i] = paraula; 
