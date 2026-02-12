@@ -44,16 +44,17 @@ public class TresEnRatlla {
         // Comprovem que les coordenades siguin vàlides i que la casella estigui buida
         if ((fila>=0 && fila<=2) && (columna>=0 && columna<=2) && tauler [fila][columna] == '·'){
             tauler[fila][columna] = 'X';
+        }
+        else{
+            System.out.println("Posició ocupada");
+        }
         
         // tornem a mostrar el tauler (Amb la 'X' que hem afegit
         System.out.println("La posició final del taulell:");
         mostraFila(tauler[0]);     // mostra la línia 0
         mostraFila(tauler[1]);     // mostra la línia 1
         mostraFila(tauler[2]);     // mostra la línia 2
-        }
-        else{
-            System.out.println("Posició ocupada");
-        }
+   
     }
 
     // mostra el contingut de la fila per sortida estàndard
