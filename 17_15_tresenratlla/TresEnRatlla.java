@@ -68,6 +68,8 @@ public class TresEnRatlla {
                 // Comprova si la longitud de les coordenades es correcte
                 if (coordenada.length() != 2){
                     System.out.println ("Coordenades no vàlides");
+                    
+                    mostraTaulell(tauler);
                 }
                 else{
                     int fila = coordenada.charAt(0) - '0';
@@ -118,6 +120,8 @@ public class TresEnRatlla {
                 
                 if (coordenada.length() != 2){
                     System.out.println ("Coordenades no vàlides");
+                    
+                    mostraTaulell(tauler);
                 }
                 else{
                     int fila = coordenada.charAt(0) - '0';
