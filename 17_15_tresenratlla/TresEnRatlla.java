@@ -74,10 +74,14 @@ public class TresEnRatlla {
                     int columna = coordenada.charAt(1) - '0';
                     
                     if (!(fila>=0 && fila<=2) || !(columna>=0 && columna<=2)){
-                        System.out.println("Coordenades incorrectes");                   
+                        System.out.println("Coordenades incorrectes");
+                        
+                        mostraTaulell(tauler);                   
                     }
                     else if (casellaOcupada(tauler, fila, columna)){
-                            System.out.println("Casella ocupada");
+                        System.out.println("Casella ocupada");
+                        
+                        mostraTaulell(tauler);
                     }
                     else{ // Si les coordenades són correctes
                         if (tauler [fila][columna] == '·'){
@@ -120,10 +124,14 @@ public class TresEnRatlla {
                     int columna = coordenada.charAt(1) - '0';
                     
                     if (!(fila>=0 && fila<=2) || !(columna>=0 && columna<=2)){
-                        System.out.println("Coordenades incorrectes");                   
+                        System.out.println("Coordenades incorrectes");
+                        
+                        mostraTaulell(tauler);                   
                     }
                     else if (casellaOcupada(tauler, fila, columna)){
-                            System.out.println("Casella ocupada");
+                        System.out.println("Casella ocupada");
+                        
+                        mostraTaulell(tauler);
                     }
                     else{ // Si les coordenades són correctes
                         if (tauler [fila][columna] == '·'){
