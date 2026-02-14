@@ -76,7 +76,7 @@ public class TresEnRatlla {
                     int columna = coordenada.charAt(1) - '0';
                     
                     if (!(fila>=0 && fila<=2) || !(columna>=0 && columna<=2)){
-                        System.out.println("Coordenades incorrectes");
+                        System.out.println("Coordenades no vàlides");
                         
                         mostraTaulell(tauler);                   
                     }
@@ -128,7 +128,7 @@ public class TresEnRatlla {
                     int columna = coordenada.charAt(1) - '0';
                     
                     if (!(fila>=0 && fila<=2) || !(columna>=0 && columna<=2)){
-                        System.out.println("Coordenades incorrectes");
+                        System.out.println("Coordenades no vàlides");
                         
                         mostraTaulell(tauler);                   
                     }
