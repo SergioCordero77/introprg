@@ -92,7 +92,7 @@ public class TresEnRatlla {
                     
                         // Comprova si s'ha guanyat o s'ha empatat 
                         if (jugadorGuanya(tauler, jugador)){
-                            System.out.println (jugador + " Guanya");
+                            System.out.println (jugador + " guanya");
                             return;
                         }
                         else if (hiHaEmpat(tauler)){
@@ -142,7 +142,7 @@ public class TresEnRatlla {
                     
                         // Comprova si s'ha guanyat o s'ha empatat 
                         if (jugadorGuanya(tauler, jugador)){
-                            System.out.println (jugador + " Guanya");
+                            System.out.println (jugador + " guanya");
                             return;
                         }
                         else if (hiHaEmpat(tauler)){
