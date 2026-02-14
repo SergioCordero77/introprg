@@ -117,7 +117,7 @@ public class TresEnRatlla {
                 }
                 
                 if (coordenada.length() != 2){
-                    System.out.println ("Error");
+                    System.out.println ("Coordenades no vàlides");
                 }
                 else{
                     int fila = coordenada.charAt(0) - '0';
