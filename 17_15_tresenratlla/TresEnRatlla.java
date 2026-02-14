@@ -77,7 +77,7 @@ public class TresEnRatlla {
                         System.out.println("Coordenades incorrectes");                   
                     }
                     else if (casellaOcupada(tauler, fila, columna)){
-                            System.out.println("Posició ocupada");
+                            System.out.println("Casella ocupada");
                     }
                     else{ // Si les coordenades són correctes
                         if (tauler [fila][columna] == '·'){
@@ -123,7 +123,7 @@ public class TresEnRatlla {
                         System.out.println("Coordenades incorrectes");                   
                     }
                     else if (casellaOcupada(tauler, fila, columna)){
-                            System.out.println("Posició ocupada");
+                            System.out.println("Casella ocupada");
                     }
                     else{ // Si les coordenades són correctes
                         if (tauler [fila][columna] == '·'){
