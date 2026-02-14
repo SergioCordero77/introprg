@@ -61,7 +61,7 @@ public class TresEnRatlla {
                 
                 // Comprova si el jugador abandona la partida
                 if (coordenada.equals ("a") || coordenada.equals ("A")){
-                    System.out.println("Jugador \"" + jugador + "\" abandona");
+                    System.out.println(jugador + " abandona");
                     return;
                 }
                 
@@ -79,7 +79,7 @@ public class TresEnRatlla {
                     else if (casellaOcupada(tauler, fila, columna)){
                             System.out.println("Posició ocupada");
                     }
-                    else{
+                    else{ // Si les coordenades són correctes
                         if (tauler [fila][columna] == '·'){
                             tauler [fila][columna] = jugador;
                                 
@@ -108,7 +108,7 @@ public class TresEnRatlla {
             String coordenada = Entrada.readLine();
                 
                 if (coordenada.equals ("a") || coordenada.equals ("A")){
-                    System.out.println("Jugador \"" + jugador + "\" abandona");
+                    System.out.println(jugador + " abandona");
                     return;
                 }
                 
@@ -125,7 +125,7 @@ public class TresEnRatlla {
                     else if (casellaOcupada(tauler, fila, columna)){
                             System.out.println("Posició ocupada");
                     }
-                    else{
+                    else{ // Si les coordenades són correctes
                         if (tauler [fila][columna] == '·'){
                             tauler [fila][columna] = jugador;
                                 
