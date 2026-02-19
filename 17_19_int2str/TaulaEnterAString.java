@@ -1,13 +1,33 @@
-/*…*/
+/*
+ * Programa que rep com a paràmetres de la línia de comandes una o més especificacions de taules en format "n'x'm", on n representa el nombre de files i m el nombre de columnes.
+ *
+ * Per cada especificació:
+ *  - Comprova si el format és correcte.
+ *  - Si no és correcte, mostra el missatge:
+ *        "Especificació no vàlida"
+ *  - Si és correcte:
+ *        - Crea una taula d'enters de dimensions n x m.
+ *        - Inicialitza totes les posicions amb el valor 1.
+ *        - Converteix la taula a String amb el format establert
+ *          (valors amb amplada mínima de 8 caràcters).
+ *        - Mostra el resultat per pantalla.
+ */
 public class TaulaEnterAString {
     public static void main(String[] args){
         for (int i=0; i<args.length; i++) {
             System.out.println(args[i]);
+            
+            if (!especificacioCorrecta (args[i])){
+                System.out.println("Especificació no vàlida");
+                return;
+            }
+            
             int files = obteFiles(args[i]);
             int columnes = obteColumnes(args[i]);
             if (files < 1 || columnes < 1) {
                 System.out.println("Especificació no vàlida");
-            } else {
+            } 
+            else {
                 int[][] taula  = new int[files][columnes];
                 UtilTaula.inicialitzaTaula(taula, 1);
                 String resultat = UtilTaula.taulaToString(taula);
