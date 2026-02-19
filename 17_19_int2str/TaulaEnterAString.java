@@ -20,18 +20,19 @@ public class TaulaEnterAString {
             if (!especificacioCorrecta (args[i])){
                 System.out.println("Especificació no vàlida");
             }
-            
-            int files = obteFiles(args[i]);
-            int columnes = obteColumnes(args[i]);
-            if (files < 1 || columnes < 1) {
-                System.out.println("Especificació no vàlida");
-            } 
-            else {
-                int[][] taula  = new int[files][columnes];
-                UtilTaula.inicialitzaTaula(taula, 1);
-                String resultat = UtilTaula.taulaToString(taula);
-                System.out.println(resultat);
-                System.out.println();
+            else{
+                int files = obteFiles(args[i]);
+                int columnes = obteColumnes(args[i]);
+                if (files < 1 || columnes < 1) {
+                    System.out.println("Especificació no vàlida");
+                } 
+                else {
+                    int[][] taula  = new int[files][columnes];
+                    UtilTaula.inicialitzaTaula(taula, 1);
+                    String resultat = UtilTaula.taulaToString(taula);
+                    System.out.println(resultat);
+                    System.out.println();
+                }
             }
         }
     }
