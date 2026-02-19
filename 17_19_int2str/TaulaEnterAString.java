@@ -19,7 +19,6 @@ public class TaulaEnterAString {
             
             if (!especificacioCorrecta (args[i])){
                 System.out.println("Especificació no vàlida");
-                return;
             }
             
             int files = obteFiles(args[i]);
