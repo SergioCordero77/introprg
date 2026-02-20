@@ -84,7 +84,10 @@ public class TaulaEnterAString {
          * és "12x5", retornarà 5.
          * Altrament, retornarà el valor -1.  */
          
-         boolean hihaX = false; 
+         boolean hihaX = false;
+         boolean hihaDigit = false;
+         boolean xDespresDeDigit = false;
+          
          String num = "";
          
          for (int i = 0; i < especificacio.length(); i++){
@@ -92,9 +95,19 @@ public class TaulaEnterAString {
             
             if (c == 'x'){
                 hihaX = true;
+                if (hihaDigit){
+                    xDespresDeDigit = true;
+                }
             }
             
-            if (hihaX && Character.isDigit(c)){
+            if (Character.isDigit(c)){
+                hihaDigit = true;
+            }
+            else{
+                hihaDigit = false;
+            }
+            
+            if (xDespresDeDigit){
                 num += c;
             }
          }
