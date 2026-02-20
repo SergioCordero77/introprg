@@ -88,6 +88,10 @@ public class TaulaEnterAString {
           
          String num = "";
          
+         if (!especificacioCorrecta(especificacio)) {
+            return -1;
+        }
+         
          for (int i = 0; i < especificacio.length(); i++){
             char c = especificacio.charAt(i);
             
