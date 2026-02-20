@@ -59,19 +59,23 @@ public class TaulaEnterAString {
          * Altrament, retornarà el valor -1.  */
          String num = "";
          
-         for (int i = 0; i < especificacio.length(); i++){
-            char c = especificacio.charAt(i);
-            
-            if (Character.isDigit(c)){
-                num += c;
+            for (int i = 0; i < especificacio.length(); i++){
+                char c = especificacio.charAt(i);
+                    
+                if (Character.isDigit(c)){
+                    num += c;
+                }
+                else{
+                    break;
+                }
             }
-            else{
-                break;
+
+            if (num.isEmpty()) {
+                return -1;
             }
-         }
-         
-         return Integer.parseInt(num);
-    }
+                 
+            return Integer.parseInt(num);
+        }
 
     public static int obteColumnes(String especificacio) {
         /* Aquesta funció espera l'especificació de la forma d'una taula.
