@@ -99,6 +99,10 @@ public class TaulaEnterAString {
             }
          }
          
+         if (num.isEmpty()) {
+            return -1;
+         }
+         
          return Integer.parseInt(num);
     }
 }
