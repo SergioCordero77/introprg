@@ -85,8 +85,6 @@ public class TaulaEnterAString {
          * Altrament, retornarà el valor -1.  */
          
          boolean hihaX = false;
-         boolean hihaDigit = false;
-         boolean xDespresDeDigit = false;
           
          String num = "";
          
@@ -95,19 +93,9 @@ public class TaulaEnterAString {
             
             if (c == 'x'){
                 hihaX = true;
-                if (hihaDigit){
-                    xDespresDeDigit = true;
-                }
             }
             
-            if (Character.isDigit(c)){
-                hihaDigit = true;
-            }
-            else{
-                hihaDigit = false;
-            }
-            
-            if (xDespresDeDigit){
+            if (hihaX && Character.isDigit(c)){
                 num += c;
             }
          }
