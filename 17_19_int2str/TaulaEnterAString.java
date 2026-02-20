@@ -59,6 +59,10 @@ public class TaulaEnterAString {
          * Altrament, retornarà el valor -1.  */
          String num = "";
          
+            if (!especificacioCorrecta(especificacio)) {
+                return -1;
+            }
+         
             for (int i = 0; i < especificacio.length(); i++){
                 char c = especificacio.charAt(i);
                     
@@ -90,7 +94,7 @@ public class TaulaEnterAString {
          
          if (!especificacioCorrecta(especificacio)) {
             return -1;
-        }
+         }
          
          for (int i = 0; i < especificacio.length(); i++){
             char c = especificacio.charAt(i);
