@@ -97,9 +97,6 @@ public class TaulaEnterAString {
             if (hihaX && Character.isDigit(c)){
                 num += c;
             }
-            else{
-                return -1;
-            }
          }
          
          if (num.isEmpty()) {
