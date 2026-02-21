@@ -8,7 +8,7 @@ public class MostraInterval{
     String text = Entrada.readLine();
     
         if (text.isBlank()){
-            System.out.println("Error");
+            System.out.println("ERROR: cadena buida");
         }
         else{    
             System.out.println("inici?");
