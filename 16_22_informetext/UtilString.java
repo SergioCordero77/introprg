@@ -17,7 +17,7 @@ public class UtilString {
     } 
      
     public static boolean esVocal(char lletra) {
-        String vocals = "aàeèéiíïoòóuúüAÀEÈÉiÍÏOÒÓUÚÜ";
+        String vocals = "aàeèéiíïoòóuúüAÀEÈÉIÍÏOÒÓUÚÜ";
         
             for (int i=0; i<vocals.length(); i++){
                 char v = vocals.charAt(i);
