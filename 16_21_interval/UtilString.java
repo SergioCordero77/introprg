@@ -506,10 +506,10 @@ public class UtilString {
     if (inici <0){
         inici = 0;
     }
-    else if (inici > text.length()){
+    else if (inici >= text.length()){
         inici = text.length()-1;
     }
-    else if (ultim > text.length()){
+    else if (ultim >= text.length()){
         ultim = text.length()-1;
     }
     else if (ultim < 0){
