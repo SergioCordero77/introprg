@@ -480,7 +480,10 @@ public class UtilString {
         return Integer.parseInt(numNet);
     }
     }
-    
+    /*
+     * Retorna una cadena construïda repetint el text original tantes vegades com sigui necessari fins arribar al nombre de caràcters indicat. 
+     Si el nombre és més gran que la longitud del text, el text es repeteix des del principi tantes vegades com calgui.
+     */
     public static String cadenaContinua(String text, int nombre){
     String cadena = "";
     
