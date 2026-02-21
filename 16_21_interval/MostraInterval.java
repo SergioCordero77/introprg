@@ -18,7 +18,7 @@ public class MostraInterval{
                     System.out.println("final?");
                     String ultim = Entrada.readLine();
                     
-                        if (UtilString.esEnter(inici)){
+                        if (UtilString.esEnter(ultim)){
                             System.out.println(
                                 UtilString.intervalString(text, Integer.parseInt(inici), Integer.parseInt(ultim))
                             );
