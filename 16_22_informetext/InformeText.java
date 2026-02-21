@@ -33,8 +33,9 @@ public class InformeText{
     else{
         for (int i=0; i<text.length(); i++){
             char c = text.charAt(i);
+            char cMin = Character.toLowerCase(c);
             
-            if (UtilString.esVocal(c)){
+            if (UtilString.esVocal(cMin)){
                 numVocals ++;
             }
             else{
