@@ -4,7 +4,7 @@ public class CadenaContinua{
     String text = Entrada.readLine();
     
         if (text.isBlank()){
-            System.out.println("ERROR: el text no conté caràcters no blancs");    
+            System.out.println("error");    
         }
         else{
             System.out.println("Nombre?");
