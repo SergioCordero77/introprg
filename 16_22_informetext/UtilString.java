@@ -17,7 +17,7 @@ public class UtilString {
     } 
      
     public static boolean esVocal(char lletra) {
-        String vocals = "aàeèéiíïoòóuúüAÀEÈÉIÍÏOÒÓUÚÜ";
+        String vocals = "aàeèéiíïoòóuúü";
         
             for (int i=0; i<vocals.length(); i++){
                 char v = vocals.charAt(i);
@@ -563,8 +563,9 @@ public static int numVocalsMajuscules(String text){
     
     for (int i = 0; i < text.length(); i++){
         char c = text.charAt(i);
+        char cMin = Character.toLowerCase(c);
         
-        if (esVocal(c)){
+        if (esVocal(cMin)){
             if (Character.isUpperCase(c)){
                 contVocMaj++;
             }
