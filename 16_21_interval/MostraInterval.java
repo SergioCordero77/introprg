@@ -23,6 +23,12 @@ public class MostraInterval{
                                 UtilString.intervalString(text, Integer.parseInt(inici), Integer.parseInt(ultim))
                             );
                         }
+                        else{
+                            System.out.println("ERROR: \"final\" no és un enter vàlid");
+                        }
+                }
+                else{
+                    System.out.println("ERROR: \"principi\" no és un enter vàlid");
                 }
         }   
     }
