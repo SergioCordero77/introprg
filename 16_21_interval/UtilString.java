@@ -499,7 +499,7 @@ public class UtilString {
      Si el primer número és més petit que l'últim, retorna la cadena amb els caracters en ordre ascendent.
      Si el segon número és més petit que el primer, retorna la cadena amb els caracters en ordre descendent.
      */
-    public static String cadenaContinua(String text, int inici, int ultim){
+    public static String intervalString(String text, int inici, int ultim){
     String cadena = "";
     
     //normalització de números

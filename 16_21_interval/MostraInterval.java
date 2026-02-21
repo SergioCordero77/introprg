@@ -20,7 +20,7 @@ public class MostraInterval{
                     
                         if (UtilString.esEnter(inici)){
                             System.out.println(
-                                UtilString.cadenaContinua(text, Integer.parseInt(inici), Integer.parseInt(ultim))
+                                UtilString.intervalString(text, Integer.parseInt(inici), Integer.parseInt(ultim))
                             );
                         }
                 }
