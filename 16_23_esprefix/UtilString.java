@@ -674,6 +674,17 @@ public static boolean esPrefix(String prefix, String text, boolean estricte){
         }           
     }
     else{
+        if (text.isBlank()){
+            if (prefix.isBlank()){
+                return true;
+            }
+            return false;
+        }
+        
+        if (prefix.isBlank()){
+                return true;
+        }
+        
         String prefixFiltrat = normalitzaText(
                                     normalitzaBlancs(
                                             prefix.toLowerCase()
