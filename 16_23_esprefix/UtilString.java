@@ -639,23 +639,28 @@ public static int numLletres(String text){
 // retorna cert quan text comença amb prefix, considerant si ha de ser o no estricte
 public static boolean esPrefix(String prefix, String text, boolean estricte){
     if (estricte){
-        if (prefix.isBlank()){
-            return true;
+        if (text.isBlank()){
+            return false;
         }
         else{
-        boolean coincident = false;
-        for (int i = 0; i<prefix.length(); i ++){
-            char c1 = text.charAt(i); 
-            char c2 = prefix.charAt(i);
-            
-            if(c1 == c2){
-                coincident = true;
+            if (prefix.isBlank()){
+                return true;
             }
             else{
-                return false;
+            boolean coincident = false;
+            for (int i = 0; i<prefix.length(); i ++){
+                char c1 = text.charAt(i); 
+                char c2 = prefix.charAt(i);
+                
+                if(c1 == c2){
+                    coincident = true;
+                }
+                else{
+                    return false;
+                }
             }
-        }
-        return coincident; 
+            return coincident; 
+            }
         }           
     }
     else{
