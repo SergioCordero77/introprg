@@ -651,12 +651,12 @@ public static boolean esPrefix(String prefix, String text, boolean estricte){
             }
             else{
             
-            String prefixFiltrat = normalitzaBlancs(prefix);
+            //String prefixFiltrat = normalitzaBlancs(prefix);
             
             boolean coincident = false;
-            for (int i = 0; i<prefixFiltrat.length(); i ++){
+            for (int i = 0; i<prefix.length(); i ++){
                 char c1 = text.charAt(i); 
-                char c2 = prefixFiltrat.charAt(i);
+                char c2 = prefix.charAt(i);
                 
                 if(c1 == c2){
                     coincident = true;
