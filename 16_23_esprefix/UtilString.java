@@ -640,6 +640,9 @@ public static int numLletres(String text){
 public static boolean esPrefix(String prefix, String text, boolean estricte){
     if (estricte){
         if (text.isBlank()){
+            if (prefix.isBlank()){
+                return true;
+            }
             return false;
         }
         else{
