@@ -652,24 +652,7 @@ public static boolean esPrefix(String prefix, String text, boolean estricte){
             else{
                 
                 if (prefix.length()>text.length()){
-                    
-                    boolean coincident = false;
-                    
-                    
-                    for (int i = 0; i<text.length(); i ++){
-                        char c1 = text.charAt(i); 
-                        char c2 = prefix.charAt(i);
-                        
-                        
-                        
-                        if(c1 == c2){
-                            coincident = true;
-                        }
-                        else{
-                            return false;
-                        }
-                    }
-                    return coincident; 
+                    return false;
                 }
                 else{
                     boolean coincident = false;
