@@ -639,6 +639,10 @@ public static int numLletres(String text){
 // retorna cert quan text comença amb prefix, considerant si ha de ser o no estricte
 public static boolean esPrefix(String prefix, String text, boolean estricte){
     if (estricte){
+        if (text.isBlank()){
+            return true;
+        }
+        else{
         boolean coincident = false;
         for (int i = 0; i<prefix.length(); i ++){
             char c1 = text.charAt(i); 
@@ -651,7 +655,8 @@ public static boolean esPrefix(String prefix, String text, boolean estricte){
                 return false;
             }
         }
-        return coincident;            
+        return coincident; 
+        }           
     }
     else{
         String prefixFiltrat = normalitzaText(
