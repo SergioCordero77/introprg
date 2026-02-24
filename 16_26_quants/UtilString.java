@@ -912,7 +912,7 @@ public static int quants(String substring, String text, boolean estricte){
         }
         else{
             if (substring.isBlank()){
-                return -1;
+                return 0;
             }
             else{
                 
