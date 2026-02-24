@@ -908,7 +908,7 @@ public static boolean esSubstring(String substring, String text){
 public static int quants(String substring, String text, boolean estricte){
  if (estricte){
         if (text.isBlank()){
-            return 0;
+            return -1;
         }
         else{
             if (substring.isBlank()){
@@ -949,7 +949,7 @@ public static int quants(String substring, String text, boolean estricte){
     }
     else{
         if (text.isBlank()){
-            return 0;
+            return -1;
         }
         
         if (substring.isBlank()){
