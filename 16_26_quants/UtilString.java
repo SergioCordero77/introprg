@@ -908,6 +908,9 @@ public static boolean esSubstring(String substring, String text){
 public static int quants(String substring, String text, boolean estricte){
  if (estricte){
         if (text.isBlank()){
+            if (substring.isBlank()){
+                return -1;
+            }
             return 0;
         }
         else{
@@ -949,47 +952,51 @@ public static int quants(String substring, String text, boolean estricte){
     }
     else{
         if (text.isBlank()){
+            if (substring.isBlank()){
+                return -1;
+            }
             return 0;
         }
-        
-        if (substring.isBlank()){
-            return -1;
-        }
-        
-        String substringFiltrat = normalitzaText(
-                                    normalitzaBlancs(
-                                            substring.toLowerCase()
-                                    )
-                               );
-        String textFiltrat = normalitzaText(
-                                    normalitzaBlancs(
-                                            text.toLowerCase()
-                                    )
-                               );
-        
-        int cont = 0;
-                               
-        for (int i = 0; i <= textFiltrat.length() - substringFiltrat.length(); i++) {
+        else{
+            if (substring.isBlank()){
+                return -1;
+            }
+            
+            String substringFiltrat = normalitzaText(
+                                        normalitzaBlancs(
+                                                substring.toLowerCase()
+                                        )
+                                   );
+            String textFiltrat = normalitzaText(
+                                        normalitzaBlancs(
+                                                text.toLowerCase()
+                                        )
+                                   );
+            
+            int cont = 0;
+                                   
+            for (int i = 0; i <= textFiltrat.length() - substringFiltrat.length(); i++) {
 
-            boolean coincident = true;
+                boolean coincident = true;
 
-            for (int j = 0; j < substringFiltrat.length(); j++) {
+                for (int j = 0; j < substringFiltrat.length(); j++) {
 
-                char c1 = textFiltrat.charAt(i + j);
-                char c2 = substringFiltrat.charAt(j);
+                    char c1 = textFiltrat.charAt(i + j);
+                    char c2 = substringFiltrat.charAt(j);
 
-                if (c1 != c2) {
-                    coincident = false;
-                    break;
+                    if (c1 != c2) {
+                        coincident = false;
+                        break;
+                    }
+                }
+
+                if (coincident) {
+                    cont ++;
                 }
             }
 
-            if (coincident) {
-                cont ++;
-            }
+            return cont;
         }
-
-        return cont;
     }
 }
 
