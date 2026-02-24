@@ -912,7 +912,7 @@ public static int quants(String substring, String text, boolean estricte){
         }
         else{
             if (substring.isBlank()){
-                return 0;
+                return -1;
             }
             else{
                 
@@ -953,7 +953,7 @@ public static int quants(String substring, String text, boolean estricte){
         }
         
         if (substring.isBlank()){
-            return 0;
+            return -1;
         }
         
         String substringFiltrat = normalitzaText(
