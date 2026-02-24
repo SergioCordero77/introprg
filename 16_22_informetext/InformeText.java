@@ -23,29 +23,13 @@ public class InformeText{
     System.out.println("Text?");
     String text = Entrada.readLine();
     
-    int total = 0;
-    int numVocals = 0;
-    int numAltres = 0;
-    
     if (text.isEmpty()){
         System.out.printf("Cadena buida%n");
     }
     else{
-        for (int i=0; i<text.length(); i++){
-            char c = text.charAt(i);
-            char cMin = Character.toLowerCase(c);
-            
-            if (UtilString.esVocal(cMin)){
-                numVocals ++;
-            }
-            else{
-                if (!Character.isLetter(c) && !Character.isDigit(c)){
-                    numAltres ++;
-                }
-            }
-            
-            total ++;
-        }
+        
+        int numAltres = text.length() -(UtilString.numLletres (text) + UtilString.numDigits(text));
+        int total = numAltres + UtilString.numLletres (text) + UtilString.numDigits(text);
         
         System.out.printf("Informe%n");
         System.out.printf("=======%n");
@@ -65,8 +49,8 @@ public class InformeText{
                       UtilString.numVocalsMinuscules (text),
                       100.0 * UtilString.numVocalsMinuscules (text) / total);
         System.out.printf("total vocals: %d (%.2f%%)%n",
-                      numVocals,
-                      100.0 * numVocals / total);
+                      UtilString.numVocalsMajuscules (text) + UtilString.numVocalsMinuscules (text),
+                      100.0 * (UtilString.numVocalsMajuscules (text) + UtilString.numVocalsMinuscules (text)) / total);
         System.out.printf("digits: %d (%.2f%%)%n",
                       UtilString.numDigits(text),
                       100.0 * UtilString.numDigits(text) / total);
@@ -75,6 +59,6 @@ public class InformeText{
                       100.0 * numAltres / total);
         System.out.printf("total caràcters: %d%n",
                       total);
-        }
+    }
     }
 }
