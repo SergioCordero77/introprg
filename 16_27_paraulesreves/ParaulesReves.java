@@ -16,7 +16,9 @@ public class ParaulesReves{
         System.out.println("Text?");
         String text = Entrada.readLine();
         
-        System.out.println (inverteixParaules(text));
+        String invertit = inverteixParaules(text);
+
+        System.out.println(copiaCas(invertit, text));
     }
     
     // Funció que va paraula per paraula i la inverteix
@@ -41,7 +43,7 @@ public class ParaulesReves{
                 }
                 
                 // Cridem a la funcio copiaCas
-                textInvertit += copiaCas(paraulaInvertida, paraula) + c;
+                textInvertit += paraulaInvertida + c;
                 
                 paraula = "";
             }
