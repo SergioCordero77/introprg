@@ -9,26 +9,25 @@ public class SumaDigits {
         System.out.println(nombres);
     }
 
-    // XXX
+    // Extreu els nombres i els suma
     public static int sumaDigits(String text) {
         // cas base
         if (text.isEmpty()){
-            return;
+            return 0;
         }
 
         // tracta pas actual
         char c = text.charAt(0);
-        String actual = "";
+        int suma = 0;
         if (Character.isDigit(c)) {
             int num = c - '0';
-            actual = "" + c;
+            suma = num;
         }
 
-
         // tracta pas recursiu
-        String resta = extreuNombres(text.substring(1));
+        suma += sumaDigits(text.substring(1));
 
         // composa resultat
-        return actual + resta;
+        return suma;
     }
 }
