@@ -1,7 +1,5 @@
 /*
- * programa que mostra el seu propi codi
- * Nota: pressuposa que el codi font es troba en la mateixa carpeta que
- * l'executable.
+ * Programa que mostra les linies d'un fitxer en el qual la linia comença i acaba per vocal.
  */
 import java.io.BufferedReader;
 import java.io.FileReader;
