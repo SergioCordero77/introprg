@@ -39,7 +39,7 @@ public class Mitjana {
                     
                     int suma = 0;
                     
-                    for (int i=1; i<= nombre; i++){
+                    for (int i=1; i<=nombre; i++){
                         if (i >= array.length){
                             break;
                         }
@@ -63,8 +63,8 @@ public class Mitjana {
                         System.out.print (text + " ");
                     }
                     
-                    double mitjana = (double)suma / nombre;
-                    System.out.printf("(%.2f)\n", mitjana);
+                        double mitjana = (double)suma / nombre;
+                        System.out.printf("(%.2f)\n", mitjana);
                     
                 }
                 numLinies ++;
