@@ -25,7 +25,7 @@ public class Mitjana {
         
         int nombre = Integer.parseInt(numero);
         
-        System.out.println ("Càlcul de la mitjana de notes per a " + nombre + " exàmens");
+        System.out.println ("Càlcul de la mitjana de notes per " + nombre + " exàmens");
        
         while (true) {
             String linia = input.readLine(); // Lectura de la linia
