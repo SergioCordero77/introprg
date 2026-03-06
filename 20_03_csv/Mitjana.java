@@ -39,7 +39,7 @@ public class Mitjana {
                     
                     int suma = 0;
                     
-                    for (int i=4; i<(4 + nombre); i++){
+                    for (int i=1; i<= nombre; i++){
                         if (i >= array.length){
                             break;
                         }
