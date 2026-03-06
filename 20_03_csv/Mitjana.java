@@ -65,7 +65,8 @@ public class Mitjana {
                     }
                     
                     if (numNotes > 0){
-                        System.out.println("(" + suma/numNotes + ")");
+                        double mitjana = (double)suma / numNotes;
+                        System.out.println("(" + mitjana + ")");
                     }    
                 }
                 numLinies ++;
