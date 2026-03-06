@@ -11,12 +11,16 @@ public class Mitjana {
         BufferedReader input = new BufferedReader(fileReader);
         
         int numLinies=0;
-        int numNotes=0;
+        
         
         // Nombre d'examens que volem analitzar
-        String numero = args[0];
-        if (numero.isEmpty()){
+        String numero = "";
+        
+        if (args.length == 0){
             numero = "6";
+        }
+        else{
+            numero = args[0];
         }
         
         int nombre = Integer.parseInt(numero);
@@ -30,52 +34,41 @@ public class Mitjana {
                 if (numLinies != 0){
             
                     String[] array = UtilString.separa(linia);
-                    int suma = 0;
                     
-                    for (int files=0; files<numLinies; files++){
-                        if(files==0){
-                            continue;
+                    int suma = 0;
+                    int numNotes=0;
+                    
+                    for (int i=4; i<(4 + nombre); i++){
+                        if (i >= array.length){
+                            break;
                         }
-                        else{
-                            for (int i=4; i<nombre; i++){
-                                String text = array[i];
-                                
-                                if (text !=","){
-                                    numNotes ++;
-                                }
-                                
-                                boolean esDigit = false;
-                                
-                                for (int j=0; j<text.length(); j++){
-                                    char c = text.charAt(j);
-                                    
-                                    if(Character.isDigit(c)){
-                                        esDigit = true;
-                                    }
-                                    else{
-                                        esDigit = false;
-                                    }
-                                }
-                                
-                                if(esDigit){
-                                    suma += Integer.parseInt(text);
-                                }
-                            }
+                        
+                        String text = array[i];
+                        
+                        if (!text.isEmpty()){
                             
-                            //Imprimim resultat final
-                            for (int i=0; i<3; i++){
-                                String text = array[i];
-                                
-                                System.out.print (text);
-                            }
-                            System.out.println("(" + suma/nombre + ")");
+                        if(UtilString.esEnter(text)){ 
+                            suma += Integer.parseInt(text);
+                            numNotes++;
+                        }
                         }
                     }
+                    
+                    //Imprimim resultat final
+                    for (int i=0; i<3; i++){
+                        String text = array[i];
+                        
+                        System.out.print (text + " ");
+                    }
+                    
+                    if (numNotes > 0){
+                        System.out.println("(" + suma/numNotes + ")");
+                    }    
                 }
                 numLinies ++;
             }
         }
-    input.close();
+        input.close();
     }
 }
 

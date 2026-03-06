@@ -373,7 +373,7 @@ public class UtilString {
     }
     // equival a separa(text, false)
     public static String[] separa(String text){
-        
+            
         int cont = 0;
         
         boolean dinsParaula = false;
@@ -381,13 +381,13 @@ public class UtilString {
         for (int i = 0; i<text.length(); i++){
             char c = text.charAt(i);
             
-                if (!Character.isWhitespace(c) && !dinsParaula){
-                    dinsParaula = true;
-                    cont ++;
-                }
-                else if (Character.isWhitespace(c)){
-                    dinsParaula = false; 
-                }
+            if (!Character.isWhitespace(c) && c != ',' && !dinsParaula){
+                dinsParaula = true;
+                cont ++;
+            }
+            else if (Character.isWhitespace(c) || c == ','){
+                dinsParaula = false; 
+            }
         }
         
         String[] cadenaParaules = new String [cont];
@@ -399,19 +399,19 @@ public class UtilString {
         
         for (int i = 0; i<cont; i++){
         
-        String paraula ="";       
-           
+            String paraula ="";       
+            
             for (int j = inici; j<text.length(); j++){
                 char c = text.charAt(j);
                 inici ++;
                 
                 
-                if (!Character.isWhitespace(c)){
+                if (!Character.isWhitespace(c) && c != ','){
                     fraseComencada = true;
                 }
                 
                 if (fraseComencada){
-                    if (Character.isWhitespace(c)){                
+                    if (Character.isWhitespace(c) || c == ','){                
                         if (hihaEspai){
                             continue;
                         }
@@ -426,7 +426,7 @@ public class UtilString {
                     paraula += c;
                 }
                 
-                if (Character.isWhitespace(c)){
+                if (Character.isWhitespace(c) || c == ','){
                     continue;
                 }
                 
