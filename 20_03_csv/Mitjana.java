@@ -38,7 +38,6 @@ public class Mitjana {
                     String[] array = UtilString.separa(linia);
                     
                     int suma = 0;
-                    int numNotes=0;
                     
                     for (int i=4; i<(4 + nombre); i++){
                         if (i >= array.length){
@@ -49,10 +48,10 @@ public class Mitjana {
                         
                         if (!text.isEmpty()){
                             
-                        if(UtilString.esEnter(text)){ 
-                            suma += Integer.parseInt(text);
-                            numNotes++;
-                        }
+                            if(UtilString.esEnter(text)){ 
+                                suma += Integer.parseInt(text);
+                               
+                            }
                         }
                     }
                     
@@ -64,10 +63,9 @@ public class Mitjana {
                         System.out.print (text + " ");
                     }
                     
-                    if (numNotes > 0){
-                        double mitjana = (double)suma / numNotes;
-                        System.out.println("(" + mitjana + ")");
-                    }    
+                    double mitjana = (double)suma / nombre;
+                    System.out.printf("(%.2f)\n", mitjana);
+                    
                 }
                 numLinies ++;
             }
