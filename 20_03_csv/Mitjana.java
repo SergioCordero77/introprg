@@ -39,7 +39,7 @@ public class Mitjana {
                     
                     int suma = 0;
                     
-                    for (int i=1; i<=nombre; i++){
+                    for (int i=4; i<(4 + nombre); i++){
                         if (i >= array.length){
                             break;
                         }
@@ -47,6 +47,10 @@ public class Mitjana {
                         String text = array[i];
                         
                         if (!text.isEmpty()){
+                        
+                            if(text.equals("NP")){
+                                text = "0";
+                            }
                             
                             if(UtilString.esEnter(text)){ 
                                 suma += Integer.parseInt(text);
@@ -63,6 +67,7 @@ public class Mitjana {
                         System.out.print (text + " ");
                     }
                     
+
                         double mitjana = (double)suma / nombre;
                         System.out.printf("(%.2f)\n", mitjana);
                     
