@@ -68,7 +68,7 @@ public class Mitjana {
                         }
                     }
                     
-                    //System.out.println ("XXX: " + suma);
+                    System.out.println ("XXX Suma notes: " + suma);
                     
                     //Imprimim resultat final
                     for (int i=0; i<3; i++){
