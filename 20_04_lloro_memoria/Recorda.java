@@ -52,14 +52,21 @@ public class Recorda {
         FileReader fileReader = new FileReader(cami);
         BufferedReader input = new BufferedReader(fileReader);
         
-        while (true) {
-            String linia = input.readLine(); // Lectura de la linia
-            if (null == linia){ 
-                break;
-            }
-            else{
-                System.out.println("El lloro recorda: " + linia);
-            }
+        String linia = input.readLine(); // Lectura de la linia
+        
+        if (linia == null){
+            System.out.println("El lloro no recorda res");
+        }
+        else{
+            while (true) {             
+                if (null == linia){ 
+                    break;
+                }
+                else{
+                    System.out.println("El lloro recorda: " + linia);
+                    linia = input.readLine(); // Lectura de la linia
+                }
+            }    
         }
         System.out.println("Adéu");    // escriure
         input.close();
