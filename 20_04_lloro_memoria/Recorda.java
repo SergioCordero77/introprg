@@ -38,7 +38,7 @@ public class Recorda {
             System.out.println("El lloro registra: " + text);
         
             
-            sortida.write(text);    // escriure
+            sortida.write("El lloro recorda: " + text);    // escriure
             sortida.newLine();  // salt de linia
             
             
