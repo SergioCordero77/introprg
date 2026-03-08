@@ -39,7 +39,7 @@ public class Mitjana {
                     
                     int suma = 0;
                     
-                    for (int i=4; i<(4 + nombre); i++){
+                    for (int i=3; i<3 + nombre; i++){
                         if (i >= array.length){
                             break;
                         }
@@ -59,6 +59,7 @@ public class Mitjana {
                         }
                     }
                     
+                    //System.out.println ("XXX: " + suma);
                     
                     //Imprimim resultat final
                     for (int i=0; i<3; i++){
