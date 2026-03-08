@@ -1,5 +1,14 @@
 /*
- * Programa que mostra les linies d'un fitxer en el qual la linia comença i acaba per vocal.
+ * Programa que llegeix un fitxer CSV anomenat "notes.csv" que conté
+ * el nom dels alumnes i les seves notes.
+ * 
+ * El programa calcula la mitjana de notes per a cada alumne segons
+ * el nombre d'exàmens indicat per paràmetre. Si no s'indica cap
+ * paràmetre, es consideren 6 exàmens per defecte.
+ * 
+ * Les notes "NP" es consideren com a 0 en el càlcul de la mitjana.
+ * Finalment es mostra per pantalla el nom de cada alumne i la seva
+ * mitjana amb dos decimals.
  */
 import java.io.BufferedReader;
 import java.io.FileReader;
