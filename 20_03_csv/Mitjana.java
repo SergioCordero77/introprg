@@ -84,6 +84,7 @@ public class Mitjana {
                         
                         if(Character.isDigit(text.charAt(0))){
                             esDigit = true;
+                            break;
                         }
                         
                         if (text.charAt(text.length()-1) == ' '){
