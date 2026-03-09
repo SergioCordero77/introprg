@@ -85,7 +85,7 @@ public class Mitjana {
                     
 
                         double mitjana = (double)suma / nombre;
-                        System.out.printf("(%.2f)\n", mitjana);
+                        System.out.printf(" (%.2f)\n", mitjana);
                     
                 }
                 numLinies ++;
