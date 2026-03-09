@@ -87,7 +87,7 @@ public class Traduccio {
                     continue;
                 }
                 
-                linia = linia.replace(array[0], array[1]);
+                linia = linia.replace(UtilString.normalitzaBlancs(array[0]), UtilString.normalitzaBlancs(array[1]));
                 
                 liniaTraduccio = input.readLine(); // Tornem a llegir la linia
             }
