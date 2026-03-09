@@ -47,6 +47,11 @@ public class Mitjana {
         
         int nombre = Integer.parseInt(cadenaNum);
         
+        if (nombre < 2){
+            System.out.println ("Com a mínim 2 exàmens.");
+            return;
+        }
+        
         System.out.println ("Càlcul de la mitjana de notes per " + nombre + " exàmens");
        
         boolean hihaNotes = false;
