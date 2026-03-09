@@ -68,10 +68,6 @@ public class Mitjana {
                                 hihaNotes = true;
                             }
                         }
-                        
-                        if (!hihaNotes){
-                            System.out.println ("El fitxer notes.csv no conté cap nota.");
-                        }
                     }
                     
                     //System.out.println ("XXX Suma notes: " + suma);
@@ -91,6 +87,11 @@ public class Mitjana {
                 numLinies ++;
             }
         }
+        
+        if (!hihaNotes){
+            System.out.println ("El fitxer notes.csv no conté cap nota.");
+        }
+        
         input.close();
     }
 }
