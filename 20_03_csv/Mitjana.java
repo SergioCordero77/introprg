@@ -49,8 +49,10 @@ public class Mitjana {
                     if (linia.isBlank()){
                     continue;
                     }
+                    
+                    String normalitzada = UtilString.normalitzaBlancs (linia);
             
-                    String[] array = UtilString.separa(linia);
+                    String[] array = UtilString.separa(normalitzada);
                     
                     int suma = 0;
                     
