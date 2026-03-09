@@ -32,7 +32,20 @@ public class Mitjana {
             numero = args[0];
         }
         
-        int nombre = Integer.parseInt(numero);
+        String cadenaNum = "";
+        
+        for (int i = 0; i<numero.length(); i++){
+            char c = numero.charAt(i);
+            
+            if (Character.isDigit(c)){
+                cadenaNum += c;
+            }
+            else{
+                System.out.println ("Error");
+            }
+        }
+        
+        int nombre = Integer.parseInt(cadenaNum);
         
         System.out.println ("Càlcul de la mitjana de notes per " + nombre + " exàmens");
        
