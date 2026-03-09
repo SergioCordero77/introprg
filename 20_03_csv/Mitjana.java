@@ -18,10 +18,10 @@ public class Mitjana {
         String cami = "notes.csv";
         FileReader fileReader = new FileReader(cami);
         BufferedReader input = new BufferedReader(fileReader);
+        //input.readLine();
         
         int numLinies=0;
-        
-        
+           
         // Nombre d'examens que volem analitzar
         String numero = "";
         
@@ -36,6 +36,8 @@ public class Mitjana {
         
         System.out.println ("Càlcul de la mitjana de notes per " + nombre + " exàmens");
        
+        boolean hihaNotes = false;
+        
         while (true) {
             String linia = input.readLine(); // Lectura de la linia
             if (null == linia){ 
@@ -63,8 +65,12 @@ public class Mitjana {
                             
                             if(UtilString.esEnter(text)){ 
                                 suma += Integer.parseInt(text);
-                               
+                                hihaNotes = true;
                             }
+                        }
+                        
+                        if (!hihaNotes){
+                            System.out.println ("El fitxer notes.csv no conté cap nota.");
                         }
                     }
                     
