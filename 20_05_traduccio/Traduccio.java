@@ -24,9 +24,9 @@ public class Traduccio {
             return;
         }
     
-        String cami = "origen.txt";
-        String traduccio = "traduccio.csv";
-        String destinacio = "destinacio.txt";
+        String cami = args[0];
+        String traduccio = args[1];
+        String destinacio = args[2];
         
         tradueix(cami, traduccio, destinacio);
                                     
