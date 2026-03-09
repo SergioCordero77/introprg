@@ -80,7 +80,7 @@ public class Mitjana {
                     for (int i=0; i<1; i++){
                         String text = array[i];
                         
-                        System.out.print (text);
+                        System.out.print (text + " ");
                     }
                     
 
