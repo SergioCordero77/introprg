@@ -36,24 +36,28 @@ public class Traduccio {
         
         String liniaOrigen = inputOrigen.readLine(); // Lectura de la linia
         
-        while (true) {
-                       
-                if (null == liniaOrigen){ 
-                    break;
-                }
-                else{
-                    
-                    String traduccioFinal = tradueixLinia (liniaOrigen, fitxerTraduccio);
-                    
-                    sortida.write(traduccioFinal);    // escriure
-                    sortida.newLine();  // salt de linia
-                    
-                    liniaOrigen = inputOrigen.readLine(); // Tornem a llegir la linia
-                }
-        }    
-        
-        inputOrigen.close();
-        sortida.close();
+        if (liniaOrigen.isBlank()){
+            return;
+        }
+        else{
+            while (true) {
+                           
+                    if (null == liniaOrigen){ 
+                        break;
+                    }
+                    else{
+                        
+                        String traduccioFinal = tradueixLinia (liniaOrigen, fitxerTraduccio);
+                        
+                        sortida.write(traduccioFinal);    // escriure
+                        sortida.newLine();  // salt de linia
+                        
+                        liniaOrigen = inputOrigen.readLine(); // Tornem a llegir la linia
+                    }
+            }           
+            inputOrigen.close();
+            sortida.close();
+        }
     }
     
     public static String tradueixLinia(String linia, String fitxerTraduccio) throws IOException{
