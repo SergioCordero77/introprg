@@ -18,6 +18,11 @@ import java.io.BufferedWriter;
 import java.io.IOException;
 public class Traduccio {
     public static void main(String[] args) throws IOException {
+        
+        if (args.length != 3){
+            return;
+        }
+    
         String cami = "origen.txt";
         String traduccio = "traduccio.csv";
         String destinacio = "destinacio.txt";
