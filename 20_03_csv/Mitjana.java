@@ -41,7 +41,7 @@ public class Mitjana {
                 cadenaNum += c;
             }
             else{
-                return;
+                cadenaNum = "6";
             }
         }
         
