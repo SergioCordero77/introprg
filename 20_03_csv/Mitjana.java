@@ -45,6 +45,10 @@ public class Mitjana {
             }
             else{
                 if (numLinies != 0){
+                
+                    if (linia.isEmpty()){
+                    continue;
+                    }
             
                     String[] array = UtilString.separa(linia);
                     
