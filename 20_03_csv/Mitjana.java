@@ -41,7 +41,7 @@ public class Mitjana {
                 cadenaNum += c;
             }
             else{
-                System.out.println ("Error");
+                return;
             }
         }
         
