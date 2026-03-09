@@ -69,8 +69,8 @@ public class Mitjana {
                                 text = "0";
                             }
                             
-                            if(UtilString.esEnter(text)){ 
-                                suma += Integer.parseInt(text);
+                            if(UtilString.esEnter(UtilString.normalitzaBlancs(text))){ 
+                                suma += Integer.parseInt(UtilString.normalitzaBlancs(text));
                                 hihaNotes = true;
                             }
                         }
