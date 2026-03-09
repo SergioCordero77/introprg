@@ -80,7 +80,12 @@ public class Mitjana {
                     for (int i=0; i<1; i++){
                         String text = array[i];
                         
-                        System.out.print (text + " ");
+                        if (text.charAt(text.length()-1) == ' '){
+                            System.out.print (text);
+                        }
+                        else{
+                            System.out.print (text + " ");
+                        }
                     }
                     
 
