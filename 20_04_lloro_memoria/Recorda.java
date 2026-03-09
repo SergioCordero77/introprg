@@ -34,10 +34,10 @@ public class Recorda {
         BufferedWriter sortida = new BufferedWriter(new FileWriter(cami));  // obrir
         
         while (!text.isEmpty()){
-        
-            System.out.println("El lloro registra: " + text);
             
             String normalitzat = UtilString.normalitzaBlancs (text);
+            
+            System.out.println("El lloro registra: " + normalitzat);
             
             sortida.write(normalitzat);    // escriure
             sortida.newLine();  // salt de linia
