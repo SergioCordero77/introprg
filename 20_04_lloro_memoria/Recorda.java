@@ -36,9 +36,10 @@ public class Recorda {
         while (!text.isEmpty()){
         
             System.out.println("El lloro registra: " + text);
-        
             
-            sortida.write(text);    // escriure
+            String normalitzat = UtilString.normalitzaBlancs (text);
+            
+            sortida.write(normalitzat);    // escriure
             sortida.newLine();  // salt de linia
             
             
