@@ -76,9 +76,15 @@ public class Mitjana {
                         }
                     }
                     
+                    boolean nomBuit = false;
+                    
                     //Imprimim resultat final
                     for (int i=0; i<1; i++){
                         String text = array[i];
+                        
+                        if(text.isBlank()){
+                            nomBuit = true;
+                        }
                         
                         if (text.charAt(text.length()-1) == ' '){
                             System.out.print (text);
@@ -88,9 +94,12 @@ public class Mitjana {
                         }
                     }
                     
+                    if(nomBuit){
+                        continue;
+                    }
 
-                        double mitjana = (double)suma / nombre;
-                        System.out.printf("(%.2f)\n", mitjana);
+                    double mitjana = (double)suma / nombre;
+                    System.out.printf("(%.2f)\n", mitjana);
                     
                 }
                 numLinies ++;
