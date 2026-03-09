@@ -381,11 +381,11 @@ public class UtilString {
         for (int i = 0; i<text.length(); i++){
             char c = text.charAt(i);
             
-            if (!Character.isWhitespace(c) && c != ',' && !dinsParaula){
+            if (c != ',' && !dinsParaula){
                 dinsParaula = true;
                 cont ++;
             }
-            else if (Character.isWhitespace(c) || c == ','){
+            else if (c == ','){
                 dinsParaula = false; 
             }
         }
@@ -406,12 +406,12 @@ public class UtilString {
                 inici ++;
                 
                 
-                if (!Character.isWhitespace(c) && c != ','){
+                if (c != ','){
                     fraseComencada = true;
                 }
                 
                 if (fraseComencada){
-                    if (Character.isWhitespace(c) || c == ','){                
+                    if (c == ','){                
                         if (hihaEspai){
                             continue;
                         }
@@ -426,7 +426,7 @@ public class UtilString {
                     paraula += c;
                 }
                 
-                if (Character.isWhitespace(c) || c == ','){
+                if (c == ','){
                     continue;
                 }
                 

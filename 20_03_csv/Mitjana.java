@@ -50,7 +50,7 @@ public class Mitjana {
                     
                     int suma = 0;
                     
-                    for (int i=3; i<3 + nombre; i++){
+                    for (int i=1; i<1 + nombre; i++){
                         if (i >= array.length){
                             break;
                         }
@@ -70,10 +70,8 @@ public class Mitjana {
                         }
                     }
                     
-                    //System.out.println ("XXX Suma notes: " + suma);
-                    
                     //Imprimim resultat final
-                    for (int i=0; i<3; i++){
+                    for (int i=0; i<1; i++){
                         String text = array[i];
                         
                         System.out.print (text + " ");
