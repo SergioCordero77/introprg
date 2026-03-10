@@ -10,7 +10,7 @@ public class Log{
     public static String printError(String mensaje) throws IOException{
         String cami = "log.txt";
         
-        BufferedWriter sortida = new BufferedWriter(new FileWriter(cami));  // obrir
+        BufferedWriter sortida = new BufferedWriter(new FileWriter(cami, true));  // obrir
         
         CONT ++;
          
@@ -27,7 +27,7 @@ public class Log{
     public static String printWarning(String mensaje)throws IOException{
         String cami = "log.txt";
         
-        BufferedWriter sortida = new BufferedWriter(new FileWriter(cami));  // obrir
+        BufferedWriter sortida = new BufferedWriter(new FileWriter(cami, true));  // obrir
         
         CONT ++;
          
@@ -44,7 +44,7 @@ public class Log{
     public static String printInfo(String mensaje)throws IOException{
         String cami = "log.txt";
         
-        BufferedWriter sortida = new BufferedWriter(new FileWriter(cami));  // obrir
+        BufferedWriter sortida = new BufferedWriter(new FileWriter(cami, true));  // obrir
         
         CONT ++; 
          
@@ -61,7 +61,9 @@ public class Log{
     public static String printDebug(String mensaje)throws IOException{
         String cami = "log.txt";
         
-        BufferedWriter sortida = new BufferedWriter(new FileWriter(cami));  // obrir
+        BufferedWriter sortida = new BufferedWriter(new FileWriter(cami, true));  // obrir
+        
+        CONT ++;
          
         String missatge = "["+CONT+"]" + " DEBUG: " + mensaje;
         
