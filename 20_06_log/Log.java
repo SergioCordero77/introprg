@@ -1,3 +1,16 @@
+/*
+ * Programa que proporciona utilitats per registrar missatges en un fitxer de log anomenat "log.txt" situat al directori actual d'execució.
+ *
+ * El registre permet guardar informació rellevant sobre l'execució del programa, com errors, avisos, informació general i missatges de depuració.
+ *
+ * Els tipus de missatges seràn els seüents: ERROR, WARNING, INFO o DEBUG.
+ *
+ * Cada mòdul de registre:
+ *  - Obre el fitxer "log.txt" en mode ampliació.
+ *  - Escriu la nova línia al final del fitxer.
+ *  - Tanca el fitxer.
+ *  - Retorna la línia escrita.
+ */
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.FileWriter;
