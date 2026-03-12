@@ -6,8 +6,8 @@ public class ConsultaNota{
     
         String cami = "notes.csv";
         
-        FileReader fileReader = new FileReader(cami);
-        BufferedReader input = new BufferedReader(fileReader);
+        //FileReader fileReader = new FileReader(cami);
+        //BufferedReader input = new BufferedReader(fileReader);
         
         while(true){
             System.out.println("Alumne:");
@@ -23,9 +23,31 @@ public class ConsultaNota{
                         if (prova.isBlank()){
                             return;
                         }
+                        
+                        // Variables obtingudes dels diferents móduls
+                        int numAlumnes = carregaAlumnes(cami).length;
+                        int numProves = carregaProves(cami).length;
+                        int fila = filaAlumne(alumne, carregaAlumnes(cami));
+                        int col = columnaProva(prova, carregaProves(cami));
+                        int notaDemanada = 0;
+                        
+                        
+                        int [][] taula = carregaNotes(cami, numAlumnes, numProves);
+                        
+                        if (fila<0){
+                            System.out.println("No es troba l'alumne");
+                        }
+                        else if (col<0){
+                            System.out.println("No es troba la prova");
+                        }
+                        else{
+                            notaDemanada = taula[fila][col];
+                        }
+                        
+                        System.out.println("Nota: " + notaDemanada);
                 }
         }
-        input.close();
+        //input.close();
         
         }
     
@@ -60,11 +82,11 @@ public class ConsultaNota{
         String[] alumnes = new String [cont-1]; // Se li resta 1 perque la primera linia no la volem
         
         int contArray = -1;
-        int conLinia = 0;
+        int contLinia = 0;
         
         // Treballem l'array per extreure l'String
         while(true){
-            String linia = input.readLine(); // Lectura de la linia
+            String linia = input2.readLine(); // Lectura de la linia
             
             if (null == linia){ 
                 break;
@@ -82,7 +104,7 @@ public class ConsultaNota{
                     String[] array = UtilString.separa(linia); // Creem l'array a partir de la linia
                     
                     //Agreguem el nom a l'array d'alumnes
-                    alumnes [contArray] = array [0];
+                    alumnes [contArray - 1] = array [0];
                 }
             }
         }
@@ -97,6 +119,8 @@ public class ConsultaNota{
         
         int cont = 0;
         
+        String[] notes = null;
+        
         while(true){
             String linia = input.readLine(); // lectura
             if (linia == null){
@@ -109,39 +133,62 @@ public class ConsultaNota{
                 else{
                     String[] array = UtilString.separa(linia); // Creem l'array a partir de la linia
                     
-                    String[] notes = new String [array.length-1];
+                    notes = new String [array.length-1];
+                    int posicioNota = 1;
                     
-                    
-                    // El for comença amb i=1 perque el '0' correspon al nom de l'alumne
-                    for (int i=1; i<array.length; i++){
+                    for (int i=0; i<array.length; i++){
                         
-                        notes[i] = array [i];
+                        notes[i] = array [posicioNota];
+                        posicioNota++;
                     }
-                    return notes;
+                    break;
                 }
+            }
         }
         input.close(); //tanquem
+        return notes;
     }
     
-    public static int[][] carregaNotes(String nomFitxer, int numAlumnes, int numProves) throws IOException{
-        
+    public static int[][] carregaNotes(String nomFitxer, int numAlumnes, int numProves) throws IOException {
+
         FileReader fileReader = new FileReader(nomFitxer);
-        BufferedReader input = new BufferedReader(fileReader); //obrir
-        
-        // inicialitzem la taula de notes
+        BufferedReader input = new BufferedReader(fileReader);
+
         int [][] notes = new int [numAlumnes][numProves];
         
-        for (int fila=0; fila<notes.length; fila++){
-            for(int col=1; col<notes[fila].length; col++){
-                String linia = input.readLine(); //lectura
-                
-                String[] array = UtilString.separa(linia);
-                
-                notes [fila][col] = Integer.parseInt(array[col]);
-            }
-        } 
+        input.readLine(); // lectura i saltem la primera linia 'capçalera'
         
-        input.close(); //tanquem
+        for (int fila=0; fila<notes.length; fila++){
+            
+            String linia = input.readLine(); // 2a lectura
+            String[] array = UtilString.separa(linia);
+            
+            for(int col=0; col<notes[fila].length; col++){
+
+                if (UtilString.esEnter(array[col+1])){
+
+                    int numero = Integer.parseInt(array[col+1]); //'col+1' perque col=0 apunta al nom de l'estudiant
+
+                    if(numero>=0 && numero<=100){
+                        notes[fila][col] = numero;
+                    }
+                    else{
+                        notes[fila][col] = -2;
+                    }
+                }
+                else if (array[col+1].equals("NP")){
+                    notes[fila][col] = -1;
+                }
+                else if (array[col+1].equals("NULL")){
+                    notes[fila][col] = -3;
+                }
+                else{
+                    notes[fila][col] = -2;
+                }
+            }
+        }
+        input.close();
+        return notes;
     }
     
     public static int filaAlumne(String nomAlumne, String[] alumnes) throws IOException{
@@ -150,7 +197,7 @@ public class ConsultaNota{
             String nom = alumnes[i];
             
             //Es troba el nom de l'alumne
-            if (nom==nomAlumne){
+            if (nom.equals(nomAlumne)){
                 return i;
             }
         }
@@ -163,7 +210,7 @@ public class ConsultaNota{
             String prova = proves[i];
             
             //Es troba el nom de la prova
-            if (prova==nomProva){
+            if (prova.equals(nomProva)){
                 return i;
             }
         }
