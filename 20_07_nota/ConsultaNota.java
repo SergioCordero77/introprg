@@ -53,8 +53,6 @@ public class ConsultaNota{
         FileReader fileReader = new FileReader(nomFitxer);
         BufferedReader input = new BufferedReader(fileReader);
         
-        input.readLine();
-        
         int cont = 0;      
         
         //Comptem quantes linies hi ha en el fitxer per saber quant llarga ha de ser l'array
