@@ -51,6 +51,10 @@ public class ConsultaNota{
                             System.out.println("No Presentat");
                             continue;
                         }
+                        else if (taula[fila][col] == -3){
+                            System.out.println("No hi ha nota");
+                            continue;
+                        }
                         else{
                             notaDemanada = taula[fila][col];
                         }
