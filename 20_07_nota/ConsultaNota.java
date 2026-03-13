@@ -44,10 +44,7 @@ public class ConsultaNota{
                         
                         int [][] taula = carregaNotes(cami, numAlumnes, numProves);
                         
-                        if (fila<0){
-                            System.out.println("No es troba l'alumne");
-                        }
-                        else if (taula[fila][col] == -1){
+                        if (taula[fila][col] == -1){
                             System.out.println("No Presentat");
                             continue;
                         }
@@ -177,12 +174,12 @@ public class ConsultaNota{
             
             for(int col=0; col<notes[fila].length; col++){
 
-                if (UtilString.esEnter(UtilString.normalitzaBlancs(array[col+1]))){
+                if (col+1 >= array.length){
+                    notes[fila][col] = -3;   // no hi ha nota
+                    continue;
+                }
 
-                    if (col+1 >= array.length){
-                        notes[fila][col] = -3;   // no hay nota
-                        continue;
-                    }
+                if (UtilString.esEnter(UtilString.normalitzaBlancs(array[col+1]))){
 
                     int numero = Integer.parseInt(UtilString.normalitzaBlancs(array[col+1])); //'col+1' perque col=0 apunta al nom de l'estudiant
 
