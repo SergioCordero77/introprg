@@ -34,6 +34,10 @@ public class ConsultaNota{
                             System.out.println("Arreveure");
                             return;
                         }
+                        else if (col==-1){
+                            System.out.println("Prova \""+ prova +"\" no disponible");
+                            continue;
+                        }
                         
                         int notaDemanada = 0;
                         
