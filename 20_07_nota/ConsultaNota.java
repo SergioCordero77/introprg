@@ -19,6 +19,7 @@ public class ConsultaNota{
                     String prova = Entrada.readLine();
                     
                         if (prova.isBlank()){
+                            System.out.println("Arreveure");
                             return;
                         }
                         
