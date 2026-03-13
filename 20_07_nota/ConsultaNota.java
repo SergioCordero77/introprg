@@ -7,27 +7,34 @@ public class ConsultaNota{
         String cami = "notes.csv";
         
         while(true){
+            // Variables obtingudes dels diferents móduls
+            int numAlumnes = carregaAlumnes(cami).length;
+            int numProves = carregaProves(cami).length;
+        
             System.out.println("Alumne:");
             String alumne = UtilString.normalitzaBlancs(UtilString.normalitzaText(Entrada.readLine()));
-            
+                
+                int fila = filaAlumne(alumne, carregaAlumnes(cami));
+                
                 if (alumne.isBlank()){
                     System.out.println("Arreveure");
                     return;
                 }
+                else if (fila == -1){
+                    System.out.println("Alumne \""+ alumne +"\" no disponible");
+                    continue;
+                }
                 else{
                     System.out.println("Prova:");
                     String prova = Entrada.readLine();
-                    
+                        
+                        int col = columnaProva(prova, carregaProves(cami));
+                        
                         if (prova.isBlank()){
                             System.out.println("Arreveure");
                             return;
                         }
                         
-                        // Variables obtingudes dels diferents móduls
-                        int numAlumnes = carregaAlumnes(cami).length;
-                        int numProves = carregaProves(cami).length;
-                        int fila = filaAlumne(alumne, carregaAlumnes(cami));
-                        int col = columnaProva(prova, carregaProves(cami));
                         int notaDemanada = 0;
                         
                         
