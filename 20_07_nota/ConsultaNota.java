@@ -179,6 +179,11 @@ public class ConsultaNota{
 
                 if (UtilString.esEnter(UtilString.normalitzaBlancs(array[col+1]))){
 
+                    if (col+1 >= array.length){
+                        notes[fila][col] = -3;   // no hay nota
+                        continue;
+                    }
+
                     int numero = Integer.parseInt(UtilString.normalitzaBlancs(array[col+1])); //'col+1' perque col=0 apunta al nom de l'estudiant
 
                     if(numero>=0 && numero<=100){
@@ -190,9 +195,6 @@ public class ConsultaNota{
                 }
                 else if (array[col+1].equals("NP")){
                     notes[fila][col] = -1;
-                }
-                else if (array[col+1].equals("NULL")){
-                    notes[fila][col] = -3;
                 }
                 else{
                     notes[fila][col] = -2;
