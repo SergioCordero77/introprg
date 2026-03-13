@@ -8,7 +8,7 @@ public class ConsultaNota{
         
         while(true){
             System.out.println("Alumne:");
-            String alumne = UtilString.normalitzaBlancs(Entrada.readLine());
+            String alumne = UtilString.normalitzaBlancs(UtilString.normalitzaText(Entrada.readLine()));
             
                 if (alumne.isBlank()){
                     System.out.println("Arreveure");
@@ -190,7 +190,7 @@ public class ConsultaNota{
     public static int filaAlumne(String nomAlumne, String[] alumnes) throws IOException{
         
         for(int i=0; i<alumnes.length; i++){
-            String nom = UtilString.normalitzaBlancs(alumnes[i]);
+            String nom = UtilString.normalitzaBlancs(UtilString.normalitzaText(alumnes[i]));
             
             //Es troba el nom de l'alumne
             if (nom.equals(nomAlumne)){
