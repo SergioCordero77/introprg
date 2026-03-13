@@ -11,6 +11,7 @@ public class ConsultaNota{
             String alumne = UtilString.normalitzaBlancs(Entrada.readLine());
             
                 if (alumne.isBlank()){
+                    System.out.println("Arreveure");
                     return;
                 }
                 else{
@@ -43,7 +44,7 @@ public class ConsultaNota{
                         
                         System.out.println("Nota: " + notaDemanada);
                 }
-        }        
+        }     
     }
     
     public static String[] carregaAlumnes(String nomFitxer) throws IOException{
