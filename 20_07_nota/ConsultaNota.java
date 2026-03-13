@@ -38,6 +38,7 @@ public class ConsultaNota{
                         }
                         else if (taula[fila][col] == -1){
                             System.out.println("No Presentat");
+                            continue;
                         }
                         else{
                             notaDemanada = taula[fila][col];
