@@ -37,7 +37,7 @@ public class ConsultaNota{
                             System.out.println("No es troba l'alumne");
                         }
                         else if (col<0){
-                            System.out.println("No presentat");
+                            System.out.println("No Presentat");
                         }
                         else{
                             notaDemanada = taula[fila][col];
