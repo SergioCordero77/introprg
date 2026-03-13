@@ -6,12 +6,9 @@ public class ConsultaNota{
     
         String cami = "notes.csv";
         
-        //FileReader fileReader = new FileReader(cami);
-        //BufferedReader input = new BufferedReader(fileReader);
-        
         while(true){
             System.out.println("Alumne:");
-            String alumne = Entrada.readLine();
+            String alumne = UtilString.normalitzaBlancs(Entrada.readLine());
             
                 if (alumne.isBlank()){
                     return;
@@ -46,10 +43,8 @@ public class ConsultaNota{
                         
                         System.out.println("Nota: " + notaDemanada);
                 }
-        }
-        //input.close();
-        
-        }
+        }        
+    }
     
     public static String[] carregaAlumnes(String nomFitxer) throws IOException{
         
@@ -79,10 +74,11 @@ public class ConsultaNota{
         FileReader fileReader2 = new FileReader(nomFitxer);
         BufferedReader input2 = new BufferedReader(fileReader2);
         
+        input2.readLine(); // Lectura. Saltem la primera linia 'capçalera'
+        
         String[] alumnes = new String [cont-1]; // Se li resta 1 perque la primera linia no la volem
         
-        int contArray = -1;
-        int contLinia = 0;
+        int contArray = 0;
         
         // Treballem l'array per extreure l'String
         while(true){
@@ -95,17 +91,12 @@ public class ConsultaNota{
                 if(linia.isBlank()){
                     continue;
                 }
-                
-                contLinia ++;
-                
-                if (contLinia != 0){
-                    contArray ++;
-                
-                    String[] array = UtilString.separa(linia); // Creem l'array a partir de la linia
                     
-                    //Agreguem el nom a l'array d'alumnes
-                    alumnes [contArray - 1] = array [0];
-                }
+                String[] array = UtilString.separa(linia); // Creem l'array a partir de la linia
+                
+                //Agreguem el nom a l'array d'alumnes
+                alumnes [contArray] = UtilString.normalitzaBlancs(array [0]);
+                contArray ++;
             }
         }
         input2.close();
@@ -134,12 +125,10 @@ public class ConsultaNota{
                     String[] array = UtilString.separa(linia); // Creem l'array a partir de la linia
                     
                     notes = new String [array.length-1];
-                    int posicioNota = 1;
                     
-                    for (int i=0; i<array.length; i++){
+                    for (int i=0; i<notes.length; i++){
                         
-                        notes[i] = array [posicioNota];
-                        posicioNota++;
+                        notes[i] = UtilString.normalitzaBlancs(array [i+1]); //'i+1' perque col=0 apunta al nom de l'estudiant
                     }
                     break;
                 }
@@ -153,21 +142,26 @@ public class ConsultaNota{
 
         FileReader fileReader = new FileReader(nomFitxer);
         BufferedReader input = new BufferedReader(fileReader);
-
-        int [][] notes = new int [numAlumnes][numProves];
         
         input.readLine(); // lectura i saltem la primera linia 'capçalera'
+        
+        int [][] notes = new int [numAlumnes][numProves];
         
         for (int fila=0; fila<notes.length; fila++){
             
             String linia = input.readLine(); // 2a lectura
+            
+            if (linia.isBlank()){ 
+                continue;
+            }
+            
             String[] array = UtilString.separa(linia);
             
             for(int col=0; col<notes[fila].length; col++){
 
-                if (UtilString.esEnter(array[col+1])){
+                if (UtilString.esEnter(UtilString.normalitzaBlancs(array[col+1]))){
 
-                    int numero = Integer.parseInt(array[col+1]); //'col+1' perque col=0 apunta al nom de l'estudiant
+                    int numero = Integer.parseInt(UtilString.normalitzaBlancs(array[col+1])); //'col+1' perque col=0 apunta al nom de l'estudiant
 
                     if(numero>=0 && numero<=100){
                         notes[fila][col] = numero;
@@ -194,7 +188,7 @@ public class ConsultaNota{
     public static int filaAlumne(String nomAlumne, String[] alumnes) throws IOException{
         
         for(int i=0; i<alumnes.length; i++){
-            String nom = alumnes[i];
+            String nom = UtilString.normalitzaBlancs(alumnes[i]);
             
             //Es troba el nom de l'alumne
             if (nom.equals(nomAlumne)){
