@@ -33,11 +33,8 @@ public class ConsultaNota{
                         
                         int [][] taula = carregaNotes(cami, numAlumnes, numProves);
                         
-                        if (fila<0){
-                            System.out.println("No es troba l'alumne");
-                        }
-                        else if (col<0){
-                            System.out.println("No es troba la prova");
+                        if (col<0){
+                            System.out.println("No presentat");
                         }
                         else{
                             notaDemanada = taula[fila][col];
