@@ -13,11 +13,11 @@ public class ConsultaNota{
         
             System.out.println("Alumne:");
             String alumneNoFiltrat = Entrada.readLine();
-            String alumne = UtilString.normalitzaBlancs(UtilString.normalitzaText(alumneNoFiltrat));
+            String alumne = UtilString.normalitzaBlancs(UtilString.normalitzaText(alumneNoFiltrat)).toLowerCase();
                 
                 int fila = filaAlumne(alumne, carregaAlumnes(cami));
                 
-                if (alumne.isBlank()){
+                if (alumneNoFiltrat.isBlank()){
                     System.out.println("Arreveure");
                     return;
                 }
@@ -32,7 +32,7 @@ public class ConsultaNota{
                         
                         int col = columnaProva(prova, carregaProves(cami));
                         
-                        if (prova.isBlank()){
+                        if (provaNoFiltrada.isBlank()){
                             System.out.println("Arreveure");
                             return;
                         }
@@ -211,7 +211,7 @@ public class ConsultaNota{
     public static int filaAlumne(String nomAlumne, String[] alumnes) throws IOException{
         
         for(int i=0; i<alumnes.length; i++){
-            String nom = UtilString.normalitzaBlancs(alumnes[i]);
+            String nom = UtilString.normalitzaBlancs(UtilString.normalitzaText(alumnes[i]).toLowerCase());
             
             //Es troba el nom de l'alumne
             if (nom.equals(nomAlumne)){
