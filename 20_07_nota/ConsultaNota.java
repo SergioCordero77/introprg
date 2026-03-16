@@ -13,7 +13,7 @@ public class ConsultaNota{
         
             System.out.println("Alumne:");
             String alumneNoFiltrat = Entrada.readLine();
-            String alumne = UtilString.normalitzaBlancs(UtilString.normalitzaText(Entrada.readLine()));
+            String alumne = UtilString.normalitzaBlancs(UtilString.normalitzaText(alumneNoFiltrat));
                 
                 int fila = filaAlumne(alumne, carregaAlumnes(cami));
                 
