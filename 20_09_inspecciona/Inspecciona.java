@@ -61,6 +61,8 @@ public class Inspecciona{
                             
                                 Arrays.sort(continguts); //Ordenem els contingut alfabeticament
                                 
+                                System.out.print("directori que conté: ");
+                                
                                 for(int j=0; j<continguts.length; j++){
                                     String item = continguts[j];
                                     
