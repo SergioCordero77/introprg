@@ -6,16 +6,16 @@ public class ConsultaNota{
     
         String cami = "notes.csv";
         
-        while(true){
-            // Variables obtingudes dels diferents móduls
-            int numAlumnes = carregaAlumnes(cami).length;
-            int numProves = carregaProves(cami).length;
-            
-            if (numProves == 0 || numAlumnes == 0) {
-                System.out.println("El fitxer notes.csv no es vàlid");   
-                return;             
-            }
+        // Variables obtingudes dels diferents móduls
+        int numAlumnes = carregaAlumnes(cami).length;
+        int numProves = carregaProves(cami).length;
         
+        if (numProves == 0 || numAlumnes == 0) {
+            System.out.println("El fitxer notes.csv no es vàlid");   
+            return;             
+        }
+        
+        while(true){
             System.out.println("Alumne:");
             String alumneNoFiltrat = Entrada.readLine();       
                 
@@ -157,10 +157,6 @@ public class ConsultaNota{
                     for (int i=0; i<notes.length; i++){
                         
                         notes[i] = UtilString.normalitzaBlancs(UtilString.normalitzaText(array [i+1])); //'i+1' perque col=0 apunta al nom de l'estudiant
-                        
-                        if (notes[i].isBlank()){
-                            notes [i] = null;
-                        }
                     }
                     break;
                 }
@@ -236,10 +232,6 @@ public class ConsultaNota{
         
         for(int i=0; i<proves.length; i++){
             String prova = UtilString.normalitzaBlancs(UtilString.normalitzaText(proves[i]).toLowerCase());
-            
-            if (prova == null){
-                continue;
-            }
             
             //Es troba el nom de la prova
             if (prova.equals(nomProva)){
