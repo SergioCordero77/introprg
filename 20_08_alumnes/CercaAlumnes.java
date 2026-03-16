@@ -126,7 +126,7 @@ public class CercaAlumnes {
     }
     
     public static String normalitzaTextiBlancs (String text){
-        return UtilString.normalitzaBlancs(UtilString.normalitzaText(text));
+        return UtilString.normalitzaBlancs(UtilString.normalitzaText(text).toLowerCase());
     }
 
     public static void main(String[] args) throws IOException {
