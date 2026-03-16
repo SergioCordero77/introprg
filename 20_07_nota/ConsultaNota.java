@@ -1,3 +1,13 @@
+/*
+ * Programa que permet consultar la nota que ha tret un alumne en una prova concreta a partir d'un fitxer CSV amb les notes.
+ *
+ * El programa va demanant el nom de l'alumna i el nom de la prova. Si existeix una nota per aquest alumne en aquesta prova, es mostra per pantalla. Si no hi ha cap nota disponible, s'indica amb un missatge.
+ *
+ * El programa continua demanant dades fins que l'usuari introdueix un valor buit per al nom de l'alumne o per al nom de la prova.
+ *
+ * Les dades es llegeixen del fitxer "notes.csv".
+ * Les comparacions de noms no tenen en compte majúscules, minúscules ni alguns caràcters especials del català.
+ */
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
