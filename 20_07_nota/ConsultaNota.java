@@ -49,15 +49,15 @@ public class ConsultaNota{
                         
                         if (taula[fila][col] == -1){
                             System.out.println("No Presentat");
-                            continue;
+                            //continue;
                         }
                         else if (taula[fila][col] == -2){
                             System.out.println("Nota amb valor no numèric o fora de rang");
-                            continue;
+                            //continue;
                         }
                         else if (taula[fila][col] == -3){
                             System.out.println("Nota no disponible");
-                            continue;
+                            //continue;
                         }
                         else{
                             notaDemanada = taula[fila][col];
