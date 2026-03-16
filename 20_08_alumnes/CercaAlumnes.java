@@ -71,7 +71,7 @@ public class CercaAlumnes {
 
     public static String alumneACsv(Alumne alumne) {
         // XXX a completar encara que no es fa servir en aquest programa
-        return alumne.nom;
+        return alumne.nom + "," + alumne.email + "," + alumne.edat + "," + alumne.esOient + "," + notesACsv(alumne.notes);
     }
 
     public static Alumne csvAAlumne(String csv) {
