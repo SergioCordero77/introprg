@@ -25,8 +25,7 @@ public class ConsultaNota{
                     System.out.println("Alumne \""+ alumneNoFiltrat +"\" no disponible");
                     continue;
                 }
-                
-                while (true){
+                else{
                     System.out.println("Prova:");
                     String provaNoFiltrada = Entrada.readLine();
                     String prova = UtilString.normalitzaBlancs(UtilString.normalitzaText(provaNoFiltrada).toLowerCase());
@@ -49,24 +48,21 @@ public class ConsultaNota{
                         
                         if (taula[fila][col] == -1){
                             System.out.println("No Presentat");
-                            //continue;
-                            break;
+                            continue;
                         }
                         else if (taula[fila][col] == -2){
                             System.out.println("Nota amb valor no numèric o fora de rang");
-                            //continue;
+                            continue;
                         }
                         else if (taula[fila][col] == -3){
                             System.out.println("Nota no disponible");
-                            //continue;
+                            continue;
                         }
                         else{
                             notaDemanada = taula[fila][col];
                         }
                         
                         System.out.println("Nota: " + notaDemanada);
-                        
-                        break;
                 }
         }     
     }
