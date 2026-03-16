@@ -11,7 +11,7 @@ public class ConsultaNota{
             int numAlumnes = carregaAlumnes(cami).length;
             int numProves = carregaProves(cami).length;
             
-            if (numProves == 0) {
+            if (numProves == 0 || numAlumnes == 0) {
                 System.out.println("El fitxer notes.csv no es vàlid");   
                 return;             
             }
