@@ -48,6 +48,10 @@ public class ConsultaNota{
                             System.out.println("No Presentat");
                             continue;
                         }
+                        else if (taula[fila][col] == -2){
+                            System.out.println("Nota amb valor no numèric o fora de rang");
+                            continue;
+                        }
                         else if (taula[fila][col] == -3){
                             System.out.println("Nota no disponible");
                             continue;
