@@ -10,6 +10,10 @@ public class ConsultaNota{
             // Variables obtingudes dels diferents móduls
             int numAlumnes = carregaAlumnes(cami).length;
             int numProves = carregaProves(cami).length;
+            
+            if (numProves == 0) {   
+                return;             
+            }
         
             System.out.println("Alumne:");
             String alumneNoFiltrat = Entrada.readLine();       
@@ -173,10 +177,6 @@ public class ConsultaNota{
         for (int fila=0; fila<notes.length; fila++){
             
             String linia = input.readLine(); // 2a lectura
-            
-            if (linia == null){
-                break;
-            }
             
             if (linia.isBlank()){ 
                 continue;
