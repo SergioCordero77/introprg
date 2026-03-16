@@ -49,7 +49,7 @@ public class ConsultaNota{
                             continue;
                         }
                         else if (taula[fila][col] == -3){
-                            System.out.println("No hi ha nota");
+                            System.out.println("Nota no disponible");
                             continue;
                         }
                         else{
