@@ -170,11 +170,12 @@ public class CercaAlumnes {
                     alumneTrobat = true;
                 }
             }
-            
-            if (!alumneTrobat){
-                System.out.println("No s'ha trobat cap alumne");
-            }
         }
+        
+        if (!alumneTrobat){
+            System.out.println("No s'ha trobat cap alumne");
+        }
+        
         // consideracions finals com ara el tancament del fitxer
         input.close();
         }
