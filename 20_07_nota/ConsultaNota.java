@@ -12,7 +12,7 @@ public class ConsultaNota{
             int numProves = carregaProves(cami).length;
             
             if (numProves == 0) {
-                System.out.println("El fitxer notes.csv no es vàlid");   
+                System.out.println("El fitxer notes.csv no es vàlid");   
                 return;             
             }
         
