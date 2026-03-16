@@ -12,57 +12,59 @@ public class ConsultaNota{
             int numProves = carregaProves(cami).length;
         
             System.out.println("Alumne:");
-            String alumneNoFiltrat = Entrada.readLine();
-            String alumne = UtilString.normalitzaBlancs(UtilString.normalitzaText(alumneNoFiltrat)).toLowerCase();
-                
-                int fila = filaAlumne(alumne, carregaAlumnes(cami));
+            String alumneNoFiltrat = Entrada.readLine();       
                 
                 if (alumneNoFiltrat.isBlank()){
                     System.out.println("Arreveure");
                     return;
                 }
-                else if (fila == -1){
+                
+                String alumne = UtilString.normalitzaBlancs(UtilString.normalitzaText(alumneNoFiltrat)).toLowerCase();
+                int fila = filaAlumne(alumne, carregaAlumnes(cami));
+                
+                if (fila == -1){
                     System.out.println("Alumne \""+ alumneNoFiltrat +"\" no disponible");
                     continue;
                 }
                 else{
                     System.out.println("Prova:");
                     String provaNoFiltrada = Entrada.readLine();
+                    
+                    if (provaNoFiltrada.isBlank()){
+                        System.out.println("Arreveure");
+                        return;
+                    }
+                    
                     String prova = UtilString.normalitzaBlancs(UtilString.normalitzaText(provaNoFiltrada).toLowerCase());
-                        
-                        int col = columnaProva(prova, carregaProves(cami));
-                        
-                        if (provaNoFiltrada.isBlank()){
-                            System.out.println("Arreveure");
-                            return;
-                        }
-                        else if (col==-1){
-                            System.out.println("Prova \""+ provaNoFiltrada +"\" no disponible");
-                            continue;
-                        }
-                        
-                        int notaDemanada = 0;
-                        
-                        
-                        int [][] taula = carregaNotes(cami, numAlumnes, numProves);
-                        
-                        if (taula[fila][col] == -1){
-                            System.out.println("No Presentat");
-                            continue;
-                        }
-                        else if (taula[fila][col] == -2){
-                            System.out.println("Nota amb valor no numèric o fora de rang");
-                            continue;
-                        }
-                        else if (taula[fila][col] == -3){
-                            System.out.println("Nota no disponible");
-                            continue;
-                        }
-                        else{
-                            notaDemanada = taula[fila][col];
-                        }
-                        
-                        System.out.println("Nota: " + notaDemanada);
+                    int col = columnaProva(prova, carregaProves(cami));
+                    
+                    if (col==-1){
+                        System.out.println("Prova \""+ provaNoFiltrada +"\" no disponible");
+                        continue;
+                    }
+                    
+                    int notaDemanada = 0;
+                    
+                    
+                    int [][] taula = carregaNotes(cami, numAlumnes, numProves);
+                    
+                    if (taula[fila][col] == -1){
+                        System.out.println("No Presentat");
+                        continue;
+                    }
+                    else if (taula[fila][col] == -2){
+                        System.out.println("Nota amb valor no numèric o fora de rang");
+                        continue;
+                    }
+                    else if (taula[fila][col] == -3){
+                        System.out.println("Nota no disponible");
+                        continue;
+                    }
+                    else{
+                        notaDemanada = taula[fila][col];
+                    }
+                    
+                    System.out.println("Nota: " + notaDemanada);
                 }
         }     
     }
