@@ -30,10 +30,10 @@ public class CercaAlumnes {
         System.out.println ("- edat: " + alumne.edat);
         
         if (alumne.esOient){
-            System.out.println ("- es oïent: Sí");
+            System.out.println ("- és oïent: Sí");
         }
         else{
-            System.out.println ("- es oïent: No");
+            System.out.println ("- és oïent: No");
         }
         
         System.out.println ("- notes: " + notesACsv(alumne.notes));
