@@ -35,7 +35,7 @@ public class ConsultaNota{
                             return;
                         }
                         else if (col==-1){
-                            System.out.println("Prova \""+ prova +"java\" no disponible");
+                            System.out.println("Prova \""+ prova +"\" no disponible");
                             continue;
                         }
                         
