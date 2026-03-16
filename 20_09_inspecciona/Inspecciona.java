@@ -76,7 +76,7 @@ public class Inspecciona{
                             else{
                                 mostraPermisos(fitxer);
                                 
-                                System.out.println("Directori buit");
+                                System.out.println("directori buit");
                             }
                         }
                         else if (fitxer.isFile()){
