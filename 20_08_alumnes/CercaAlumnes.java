@@ -1,3 +1,14 @@
+/*
+ * Programa que llegeix un fitxer CSV que conté informació d'alumnes (nom, email, edat, si és oient i les seves notes).
+ *
+ * El programa rep per línia de comandes un criteri de cerca. Aquest criteri es busca dins del nom de l'alumne o dins del nom d'usuari del seu correu electrònic.
+ *
+ * Si el criteri coincideix, es mostren les dades de l'alumne per pantalla.
+ *
+ * El programa no diferencia entre majúscules i minúscules ni tampoc té en compte accents o caràcters especials del català.
+ *
+ * Les dades dels alumnes es llegeixen del fitxer "alumnes.csv".
+ */
 import java.io.IOException;
 import java.io.FileReader;
 import java.io.BufferedReader;
