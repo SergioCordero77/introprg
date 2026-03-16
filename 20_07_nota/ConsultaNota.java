@@ -174,6 +174,10 @@ public class ConsultaNota{
             
             String linia = input.readLine(); // 2a lectura
             
+            if (linia == null){
+                break;
+            }
+            
             if (linia.isBlank()){ 
                 continue;
             }
