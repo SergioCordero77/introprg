@@ -156,7 +156,12 @@ public class ConsultaNota{
                     
                     for (int i=0; i<notes.length; i++){
                         
-                        notes[i] = UtilString.normalitzaBlancs(UtilString.normalitzaText(array [i+1])); //'i+1' perque col=0 apunta al nom de l'estudiant
+                        if (notes[i].isBlank()){
+                            notes[i] = null;
+                        }
+                        else{
+                            notes[i] = UtilString.normalitzaBlancs(UtilString.normalitzaText(array [i+1])); //'i+1' perque col=0 apunta al nom de l'estudiant
+                        }
                     }
                     break;
                 }
@@ -232,6 +237,10 @@ public class ConsultaNota{
         
         for(int i=0; i<proves.length; i++){
             String prova = UtilString.normalitzaBlancs(UtilString.normalitzaText(proves[i]).toLowerCase());
+            
+            if(prova == null){
+                continue;
+            }
             
             //Es troba el nom de la prova
             if (prova.equals(nomProva)){
