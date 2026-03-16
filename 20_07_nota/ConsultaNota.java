@@ -155,12 +155,13 @@ public class ConsultaNota{
                     notes = new String [array.length-1];
                     
                     for (int i=0; i<notes.length; i++){
+                        String nota = UtilString.normalitzaBlancs(UtilString.normalitzaText(array [i+1])); //'i+1' perque col=0 apunta al nom de l'estudiant
                         
-                        if (notes[i].isBlank()){
+                        if (nota.isBlank()){
                             notes[i] = null;
                         }
                         else{
-                            notes[i] = UtilString.normalitzaBlancs(UtilString.normalitzaText(array [i+1])); //'i+1' perque col=0 apunta al nom de l'estudiant
+                            notes[i] = nota;
                         }
                     }
                     break;
