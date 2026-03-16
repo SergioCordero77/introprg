@@ -28,7 +28,7 @@ public class ConsultaNota{
                 else{
                     System.out.println("Prova:");
                     String provaNoFiltrada = Entrada.readLine();
-                    String prova = UtilString.normalitzaBlancs(UtilString.normalitzaText(provaNoFiltrada));
+                    String prova = UtilString.normalitzaBlancs(UtilString.normalitzaText(provaNoFiltrada).toLowerCase());
                         
                         int col = columnaProva(prova, carregaProves(cami));
                         
@@ -224,7 +224,7 @@ public class ConsultaNota{
     public static int columnaProva(String nomProva, String[] proves){
         
         for(int i=0; i<proves.length; i++){
-            String prova = UtilString.normalitzaBlancs(UtilString.normalitzaText(proves[i]));
+            String prova = UtilString.normalitzaBlancs(UtilString.normalitzaText(proves[i]).toLowerCase());
             
             //Es troba el nom de la prova
             if (prova.equals(nomProva)){
