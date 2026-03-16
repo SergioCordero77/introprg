@@ -9,6 +9,9 @@ public class ConsultaNota{
         // Variables obtingudes dels diferents móduls
         int numAlumnes = carregaAlumnes(cami).length;
         int numProves = carregaProves(cami).length;
+        String[] alumnes = carregaAlumnes(cami);
+        String[] proves = carregaProves(cami);
+        int [][] taula = carregaNotes(cami, numAlumnes, numProves);
         
         if (numProves == 0 || numAlumnes == 0) {
             System.out.println("El fitxer notes.csv no es vàlid");   
@@ -25,7 +28,7 @@ public class ConsultaNota{
                 }
                 
                 String alumne = UtilString.normalitzaBlancs(UtilString.normalitzaText(alumneNoFiltrat)).toLowerCase();
-                int fila = filaAlumne(alumne, carregaAlumnes(cami));
+                int fila = filaAlumne(alumne, alumnes);
                 
                 if (fila == -1){
                     System.out.println("Alumne \""+ alumneNoFiltrat +"\" no disponible");
@@ -41,35 +44,30 @@ public class ConsultaNota{
                     }
                     
                     String prova = UtilString.normalitzaBlancs(UtilString.normalitzaText(provaNoFiltrada).toLowerCase());
-                    int col = columnaProva(prova, carregaProves(cami));
+                    int col = columnaProva(prova, proves);
                     
                     if (col==-1){
                         System.out.println("Prova \""+ provaNoFiltrada +"\" no disponible");
                         continue;
                     }
                     
-                    int notaDemanada = 0;
+                    int notaDemanada = taula[fila][col];
                     
-                    
-                    int [][] taula = carregaNotes(cami, numAlumnes, numProves);
-                    
-                    if (taula[fila][col] == -1){
+                    if (notaDemanada == -1){
                         System.out.println("No Presentat");
                         continue;
                     }
-                    else if (taula[fila][col] == -2){
+                    else if (notaDemanada == -2){
                         System.out.println("Nota amb valor no numèric o fora de rang");
                         continue;
                     }
-                    else if (taula[fila][col] == -3){
+                    else if (notaDemanada == -3){
                         System.out.println("Nota no disponible");
                         continue;
                     }
                     else{
-                        notaDemanada = taula[fila][col];
+                        System.out.println("Nota: " + notaDemanada);
                     }
-                    
-                    System.out.println("Nota: " + notaDemanada);
                 }
         }     
     }
