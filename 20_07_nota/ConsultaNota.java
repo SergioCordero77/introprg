@@ -148,7 +148,7 @@ public class ConsultaNota{
                     
                     for (int i=0; i<notes.length; i++){
                         
-                        notes[i] = UtilString.normalitzaBlancs(array [i+1]); //'i+1' perque col=0 apunta al nom de l'estudiant
+                        notes[i] = UtilString.normalitzaBlancs(UtilString.normalitzaText(array [i+1])); //'i+1' perque col=0 apunta al nom de l'estudiant
                     }
                     break;
                 }
