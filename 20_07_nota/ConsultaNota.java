@@ -12,6 +12,7 @@ public class ConsultaNota{
             int numProves = carregaProves(cami).length;
         
             System.out.println("Alumne:");
+            String alumneNoFiltrat = Entrada.readLine();
             String alumne = UtilString.normalitzaBlancs(UtilString.normalitzaText(Entrada.readLine()));
                 
                 int fila = filaAlumne(alumne, carregaAlumnes(cami));
