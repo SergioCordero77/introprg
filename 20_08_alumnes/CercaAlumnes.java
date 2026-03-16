@@ -165,11 +165,9 @@ public class CercaAlumnes {
                     ||
                     usuariNormalitzat.contains(parametreNormalitzat)){
                     mostraAlumne(alumne);
-                    break;
                 }
                 else{
                     System.out.println("No s'ha trobat cap alumne");
-                    break;
                 }
             }
         }
