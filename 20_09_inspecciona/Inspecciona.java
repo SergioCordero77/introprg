@@ -91,7 +91,7 @@ public class Inspecciona{
                                 FileReader fileReader = new FileReader (fitxer);
                                 BufferedReader input = new BufferedReader (fileReader);
                                 
-                                System.out.println("Amb els contingut: ");
+                                System.out.println("Amb els continguts: ");
                                 while (true){
                                     String linia = input.readLine();
                                     if (linia==null){
