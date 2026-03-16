@@ -166,6 +166,9 @@ public class CercaAlumnes {
                     usuariNormalitzat.contains(parametreNormalitzat)){
                     mostraAlumne(alumne);
                 }
+                else{
+                    System.out.println("No s'ha trobat cap alumne");
+                }
             }
         }
         // consideracions finals com ara el tancament del fitxer
