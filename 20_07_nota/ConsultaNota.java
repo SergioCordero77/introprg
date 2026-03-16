@@ -26,7 +26,7 @@ public class ConsultaNota{
                 }
                 else{
                     System.out.println("Prova:");
-                    String prova = Entrada.readLine();
+                    String prova = UtilString.normalitzaBlancs(UtilString.normalitzaText(Entrada.readLine()));
                         
                         int col = columnaProva(prova, carregaProves(cami));
                         
@@ -35,7 +35,7 @@ public class ConsultaNota{
                             return;
                         }
                         else if (col==-1){
-                            System.out.println("Prova \""+ prova +"\" no disponible");
+                            System.out.println("Prova \""+ prova +"java\" no disponible");
                             continue;
                         }
                         
