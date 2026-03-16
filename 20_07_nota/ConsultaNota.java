@@ -25,7 +25,8 @@ public class ConsultaNota{
                     System.out.println("Alumne \""+ alumneNoFiltrat +"\" no disponible");
                     continue;
                 }
-                else{
+                
+                while (true){
                     System.out.println("Prova:");
                     String provaNoFiltrada = Entrada.readLine();
                     String prova = UtilString.normalitzaBlancs(UtilString.normalitzaText(provaNoFiltrada).toLowerCase());
@@ -63,6 +64,8 @@ public class ConsultaNota{
                         }
                         
                         System.out.println("Nota: " + notaDemanada);
+                        
+                        break;
                 }
         }     
     }
