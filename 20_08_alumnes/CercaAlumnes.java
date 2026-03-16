@@ -144,6 +144,8 @@ public class CercaAlumnes {
         
         input.readLine(); //Llegeix la primera linia (capçalera)
 
+        boolean alumneTrobat = false;
+
         while (true) {
             // llegeix entrada i finalitza bucle si no en queden més
             String linia = input.readLine();
@@ -165,10 +167,12 @@ public class CercaAlumnes {
                     ||
                     usuariNormalitzat.contains(parametreNormalitzat)){
                     mostraAlumne(alumne);
+                    alumneTrobat = true;
                 }
-                else{
-                    System.out.println("No s'ha trobat cap alumne");
-                }
+            }
+            
+            if (!alumneTrobat){
+                System.out.println("No s'ha trobat cap alumne");
             }
         }
         // consideracions finals com ara el tancament del fitxer
