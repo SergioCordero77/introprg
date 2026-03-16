@@ -132,7 +132,7 @@ public class CercaAlumnes {
     public static void main(String[] args) throws IOException {
         // assegura que hi ha el criteri de cerca
         if(args.length == 0){
-            System.out.println("No es troba alumne");
+            System.out.println("Ús: CercaAlumnes «criteri de cerca»");
         }
         else{
         // declaracions, inicialitzacions, apertura de fitxer, ignora línia de capçaleres, etc.
