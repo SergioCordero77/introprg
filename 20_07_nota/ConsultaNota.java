@@ -62,8 +62,6 @@ public class ConsultaNota{
                         }
                         
                         System.out.println("Nota: " + notaDemanada);
-                        
-                        break;
                 }
         }     
     }
