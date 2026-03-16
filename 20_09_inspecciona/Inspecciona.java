@@ -87,21 +87,25 @@ public class Inspecciona{
                             
                                 System.out.println("fitxer de mida en bytes: " + fitxer.length());
                                 
-                                //Declarem i obrim el fitxer per analitzar-lo linia a linia
-                                FileReader fileReader = new FileReader (fitxer);
-                                BufferedReader input = new BufferedReader (fileReader);
+                                String nomFitxer = fitxer.getName();
                                 
-                                System.out.println("Amb els continguts:");
-                                while (true){
-                                    String linia = input.readLine();
-                                    if (linia==null){
-                                        break;
+                                if(fitxer.canRead() && (nomFitxer.contains(".txt") || nomFitxer.contains(".java"))){
+                                    //Declarem i obrim el fitxer per analitzar-lo linia a linia
+                                    FileReader fileReader = new FileReader (fitxer);
+                                    BufferedReader input = new BufferedReader (fileReader);
+                                    
+                                    System.out.println("Amb els continguts:");
+                                    while (true){
+                                        String linia = input.readLine();
+                                        if (linia==null){
+                                            break;
+                                        }
+                                        else{
+                                            System.out.println("|" + linia + "|");
+                                        }
                                     }
-                                    else{
-                                        System.out.println("|" + linia + "|");
-                                    }
+                                    input.close();
                                 }
-                                input.close();
                             }
                             else{
                                 mostraPermisos(fitxer);
