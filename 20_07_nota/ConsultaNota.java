@@ -22,7 +22,7 @@ public class ConsultaNota{
                     return;
                 }
                 else if (fila == -1){
-                    System.out.println("Alumne \""+ alumne +"\" no disponible");
+                    System.out.println("Alumne \""+ alumneNoFiltrat +"\" no disponible");
                     continue;
                 }
                 else{
