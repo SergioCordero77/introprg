@@ -5,7 +5,7 @@ public class Ascensor{
     int pis = -1;
     
     public static void puja(Ascensor ascensor){
-        ascensor.pis=0;
+        ascensor.pis++;;
     }
     
     public static void main (String [] args){
