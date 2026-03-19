@@ -8,6 +8,6 @@ public class Ascensor{
         Ascensor ascensor;  //declaració de la referència a l'Ascensor
         ascensor = new Ascensor();    //creem la instància de l'Ascensor (ara 'ascensor' apunta a 'class Ascensor')
         
-        System.out.println("L'ascensor es troba a la planta " + ascensor.pis);
+        System.out.println("L'ascensor està a la planta " + ascensor.pis);
     }
 }
