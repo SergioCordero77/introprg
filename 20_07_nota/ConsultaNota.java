@@ -28,58 +28,75 @@ public class ConsultaNota{
             return;             
         }
         
-        while(true){
-            System.out.println("Alumne:");
-            String alumneNoFiltrat = Entrada.readLine();       
-                
-                if (alumneNoFiltrat.isBlank()){
-                    System.out.println("Arreveure");
-                    return;
-                }
-                
-                String alumne = UtilString.normalitzaBlancs(UtilString.normalitzaText(alumneNoFiltrat)).toLowerCase();
-                int fila = filaAlumne(alumne, alumnes);
-                
-                if (fila == -1){
-                    System.out.println("Alumne \""+ alumneNoFiltrat +"\" no disponible");
-                    continue;
-                }
-                else{
-                    System.out.println("Prova:");
-                    String provaNoFiltrada = Entrada.readLine();
+        if(hihaNota(proves)){
+            while(true){
+                System.out.println("Alumne:");
+                String alumneNoFiltrat = Entrada.readLine();
                     
-                    if (provaNoFiltrada.isBlank()){
+                    if (alumneNoFiltrat.isBlank()){
                         System.out.println("Arreveure");
                         return;
                     }
                     
-                    String prova = UtilString.normalitzaBlancs(UtilString.normalitzaText(provaNoFiltrada).toLowerCase());
-                    int col = columnaProva(prova, proves);
+                    String alumne = UtilString.normalitzaBlancs(UtilString.normalitzaText(alumneNoFiltrat)).toLowerCase();
+                    int fila = filaAlumne(alumne, alumnes);
                     
-                    if (col==-1){
-                        System.out.println("Prova \""+ provaNoFiltrada +"\" no disponible");
-                        continue;
-                    }
-                    
-                    int notaDemanada = taula[fila][col];
-                    
-                    if (notaDemanada == -1){
-                        System.out.println("No Presentat");
-                        continue;
-                    }
-                    else if (notaDemanada == -2){
-                        System.out.println("Nota amb valor no numèric o fora de rang");
-                        continue;
-                    }
-                    else if (notaDemanada == -3){
-                        System.out.println("Nota no disponible");
+                    if (fila == -1){
+                        System.out.println("Alumne \""+ alumneNoFiltrat +"\" no disponible");
                         continue;
                     }
                     else{
-                        System.out.println("Nota: " + notaDemanada);
+                        System.out.println("Prova:");
+                        String provaNoFiltrada = Entrada.readLine();
+                        
+                        if (provaNoFiltrada.isBlank()){
+                            System.out.println("Arreveure");
+                            return;
+                        }
+                        
+                        String prova = UtilString.normalitzaBlancs(UtilString.normalitzaText(provaNoFiltrada).toLowerCase());
+                        int col = columnaProva(prova, proves);
+                        
+                        if (col==-1){
+                            System.out.println("Prova \""+ provaNoFiltrada +"\" no disponible");
+                            continue;
+                        }
+                        
+                        int notaDemanada = taula[fila][col];
+                        
+                        if (notaDemanada == -1){
+                            System.out.println("No Presentat");
+                            continue;
+                        }
+                        else if (notaDemanada == -2){
+                            System.out.println("Nota amb valor no numèric o fora de rang");
+                            continue;
+                        }
+                        else if (notaDemanada == -3){
+                            System.out.println("Nota no disponible");
+                            continue;
+                        }
+                        else{
+                            System.out.println("Nota: " + notaDemanada);
+                        }
                     }
-                }
+            }
+        }
+        else{
+            System.out.print("falta nota");
+            return;
         }     
+    }
+    
+    public static boolean hihaNota(String [] proves){
+        boolean hihaNotes = true;
+        
+        for (int i=0; i<proves.length; i++){
+            if (proves[i].isBlank()){
+                return false;
+            }
+        }
+        return true;
     }
     
     public static String[] carregaAlumnes(String nomFitxer) throws IOException{
