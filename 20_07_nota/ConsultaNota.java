@@ -92,7 +92,7 @@ public class ConsultaNota{
         boolean hihaNotes = true;
         
         for (int i=0; i<proves.length; i++){
-            if (proves[i].isBlank()){
+            if (proves[i] == null || proves[i].isBlank()){
                 return false;
             }
         }
