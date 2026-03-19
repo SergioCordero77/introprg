@@ -263,9 +263,9 @@ public class ConsultaNota{
     
         for(int i = 0; i < proves.length; i++){
             
-            if(proves[i] == null){
+           /* if(proves[i] == null){
                 continue;
-            }
+            }*/
             
             String prova = UtilString.normalitzaBlancs(
                                UtilString.normalitzaText(proves[i])
