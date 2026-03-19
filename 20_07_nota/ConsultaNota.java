@@ -262,11 +262,12 @@ public class ConsultaNota{
     public static int columnaProva(String nomProva, String[] proves){
         
         for(int i=0; i<proves.length; i++){
-            String prova = UtilString.normalitzaBlancs(UtilString.normalitzaText(proves[i]).toLowerCase());
             
-            if(prova == null){
+            if(proves[i] == null){
                 continue;
             }
+            
+            String prova = UtilString.normalitzaBlancs(UtilString.normalitzaText(proves[i]).toLowerCase());
             
             //Es troba el nom de la prova
             if (prova.equals(nomProva)){
