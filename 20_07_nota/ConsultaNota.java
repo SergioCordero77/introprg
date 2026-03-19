@@ -148,7 +148,7 @@ public class ConsultaNota{
                 String[] array = UtilString.separa(linia); // Creem l'array a partir de la linia
                 
                 //Agreguem el nom a l'array d'alumnes
-                alumnes [contArray] = UtilString.normalitzaBlancs(UtilString.normalitzaText(array [0]));
+                alumnes [contArray] = UtilString.normalitzaBlancs(array [0]);
                 contArray ++;
             }
         }
