@@ -83,7 +83,7 @@ public class ConsultaNota{
             }
         }
         else{
-            System.out.print("falta nota");
+            System.out.print("El fitxer notes.csv no es vàlid");
             return;
         }     
     }
