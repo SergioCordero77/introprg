@@ -263,15 +263,19 @@ public class ConsultaNota{
     
         for(int i = 0; i < proves.length; i++){
             
-           /* if(proves[i] == null){
+           if(proves[i] == null){
                 continue;
-            }*/
+            }
+            
+            String nomProvaFiltrat = UtilString.normalitzaBlancs(
+                             UtilString.normalitzaText(nomProva)
+                         ).toLowerCase();
             
             String prova = UtilString.normalitzaBlancs(
                                UtilString.normalitzaText(proves[i])
                            ).toLowerCase();
             
-            if (prova.equals(nomProva)){
+            if (prova.equals(nomProvaFiltrat)){
                 return i;
             }
         }
