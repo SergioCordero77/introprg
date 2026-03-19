@@ -249,10 +249,21 @@ public class ConsultaNota{
     public static int filaAlumne(String nomAlumne, String[] alumnes) throws IOException{
         
         for(int i=0; i<alumnes.length; i++){
-            String nom = UtilString.normalitzaBlancs(UtilString.normalitzaText(alumnes[i]).toLowerCase());
+            
+            if(alumnes[i] == null){
+                continue;
+            }
+            
+            String nomAlumneFiltrat = UtilString.normalitzaBlancs(
+                             UtilString.normalitzaText(nomAlumne)
+                         ).toLowerCase();
+            
+            String nom = UtilString.normalitzaBlancs(
+                               UtilString.normalitzaText(alumnes[i])
+                           ).toLowerCase();
             
             //Es troba el nom de l'alumne
-            if (nom.equals(nomAlumne)){
+            if (nom.equals(nomAlumneFiltrat)){
                 return i;
             }
         }
