@@ -9,7 +9,7 @@ public class UsaAscensor{
         Ascensor ascensor = new Ascensor();
         
         System.out.println("Pis inicial: " + ascensor.pis);
-        System.out.println("Posició inicial: " + ascensor.moviment);
+        System.out.println("Moviment inicial: " + ascensor.moviment);
          
         ascensor.moviment = "pujant"; 
          
