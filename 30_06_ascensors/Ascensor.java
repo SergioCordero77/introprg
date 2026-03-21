@@ -23,19 +23,24 @@ public class Ascensor{
             System.out.println("Cal indicar un únic valor enter.");
         }
         else{
-            int quants = Integer.parseInt(args[0]);
-            
-            if(quants<1){
-                System.out.println("Cal indicar un únic valor enter.");
+            if(UtilString.esEnter(args[0])){
+                int quants = Integer.parseInt(args[0]);
+                
+                if(quants<1){
+                    System.out.println("Cal indicar un únic valor enter.");
+                }
+                else{
+                    Ascensor[] ascensors = creaAscensorsEnEscala(quants);
+                    for (int i=0; i<ascensors.length; i++){
+                        
+                        ascensors[i].pis = i;
+                        
+                        System.out.printf("Ascensor %d al pis %d%n", i, ascensors[i].pis);
+                    }
+                }
             }
             else{
-                Ascensor[] ascensors = creaAscensorsEnEscala(quants);
-                for (int i=0; i<ascensors.length; i++){
-                    
-                    ascensors[i].pis = i;
-                    
-                    System.out.printf("Ascensor %d al pis %d%n", i, ascensors[i].pis);
-                }
+                System.out.println("Cal indicar un únic valor enter.");
             }
         }
     }
