@@ -1,3 +1,7 @@
+/*
+ * Programa que determinara el número d'ascensors que hi s'hauràn de crear per línia de comandes.
+ * Cada ascensor estarà en el pis indicat per la seva posició de l'array.
+ */
 public class Ascensor{
     int pis = 0;
     
@@ -15,11 +19,13 @@ public class Ascensor{
     
     public static void main(String [] args){
         
-        System.out.println("Quants ascensors?");
-        int quants = Integer.parseInt(Entrada.readLine());
+        int quants = Integer.parseInt(args[0]);
         
         Ascensor[] ascensors = creaAscensorsEnEscala(quants);
         for (int i=0; i<ascensors.length; i++){
+            
+            ascensors[i].pis = i;
+            
             System.out.printf("Ascensor %d al pis %d%n", i, ascensors[i].pis);
         }
     }
