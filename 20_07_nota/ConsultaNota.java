@@ -1,13 +1,3 @@
-/*
- * Programa que permet consultar la nota que ha tret un alumne en una prova concreta a partir d'un fitxer CSV amb les notes.
- *
- * El programa va demanant el nom de l'alumna i el nom de la prova. Si existeix una nota per aquest alumne en aquesta prova, es mostra per pantalla. Si no hi ha cap nota disponible, s'indica amb un missatge.
- *
- * El programa continua demanant dades fins que l'usuari introdueix un valor buit per al nom de l'alumne o per al nom de la prova.
- *
- * Les dades es llegeixen del fitxer "notes.csv".
- * Les comparacions de noms no tenen en compte majúscules, minúscules ni alguns caràcters especials del català.
- */
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -16,87 +6,60 @@ public class ConsultaNota{
     
         String cami = "notes.csv";
         
-        // Variables obtingudes dels diferents móduls
-        int numAlumnes = carregaAlumnes(cami).length;
-        int numProves = carregaProves(cami).length;
-        String[] alumnes = carregaAlumnes(cami);
-        String[] proves = carregaProves(cami);
-        int [][] taula = carregaNotes(cami, numAlumnes, numProves);
+        // consideracions finals com ara el tancament del 
+        while(true){
+            // Variables obtingudes dels diferents móduls
+            int numAlumnes = carregaAlumnes(cami).length;
+            int numProves = carregaProves(cami).length;
         
-        if (numProves == 0 || numAlumnes == 0) {
-            System.out.println("El fitxer notes.csv no és vàlid");   
-            return;             
-        }
-        
-        if(hihaNota(proves)){
-            while(true){
-                System.out.println("Alumne:");
-                String alumneNoFiltrat = Entrada.readLine();
-                    
-                    if (alumneNoFiltrat.isBlank()){
-                        System.out.println("Arreveure");
-                        return;
-                    }
-                    
-                    String alumne = UtilString.normalitzaBlancs(UtilString.normalitzaText(alumneNoFiltrat)).toLowerCase();
-                    int fila = filaAlumne(alumne, alumnes);
-                    
-                    if (fila == -1){
-                        System.out.println("Alumne \""+ alumneNoFiltrat +"\" no disponible");
-                        continue;
-                    }
-                    else{
-                        System.out.println("Prova:");
-                        String provaNoFiltrada = Entrada.readLine();
+            System.out.println("Alumne:");
+            String alumne = UtilString.normalitzaBlancs(UtilString.normalitzaText(Entrada.readLine()));
+                
+                int fila = filaAlumne(alumne, carregaAlumnes(cami));
+                
+                if (alumne.isBlank()){
+                    System.out.println("Arreveure");
+                    return;
+                }
+                else if (fila == -1){
+                    System.out.println("Alumne \""+ alumne +"\" no disponible");
+                    continue;
+                }
+                else{
+                    System.out.println("Prova:");
+                    String prova = Entrada.readLine();
                         
-                        if (provaNoFiltrada.isBlank()){
+                        int col = columnaProva(prova, carregaProves(cami));
+                        
+                        if (prova.isBlank()){
                             System.out.println("Arreveure");
                             return;
                         }
-                        
-                        String prova = UtilString.normalitzaBlancs(UtilString.normalitzaText(provaNoFiltrada).toLowerCase());
-                        int col = columnaProva(prova, proves);
-                        
-                        if (col==-1){
-                            System.out.println("Prova \""+ provaNoFiltrada +"\" no disponible");
+                        else if (col==-1){
+                            System.out.println("Prova \""+ prova +"\" no disponible");
                             continue;
                         }
                         
-                        int notaDemanada = taula[fila][col];
+                        int notaDemanada = 0;
                         
-                        if (notaDemanada == -1){
+                        
+                        int [][] taula = carregaNotes(cami, numAlumnes, numProves);
+                        
+                        if (taula[fila][col] == -1){
                             System.out.println("No Presentat");
                             continue;
                         }
-                        else if (notaDemanada == -2){
-                            System.out.println("Nota amb valor no numèric o fora de rang");
-                            continue;
-                        }
-                        else if (notaDemanada == -3){
+                        else if (taula[fila][col] == -3){
                             System.out.println("Nota no disponible");
                             continue;
                         }
                         else{
-                            System.out.println("Nota: " + notaDemanada);
+                            notaDemanada = taula[fila][col];
                         }
-                    }
-            }
-        }
-        else{
-            System.out.print("El fitxer notes.csv no és vàlid");
-            return;
+                        
+                        System.out.println("Nota: " + notaDemanada);
+                }
         }     
-    }
-    
-    public static boolean hihaNota(String [] proves){
-        boolean hihaNotes = true;
-        
-        for (int i=0; i<proves.length; i++){
-            if (proves[i] == null || proves[i].isBlank()){
-                return false;
-            }
-        }
-        return true;
     }
     
     public static String[] carregaAlumnes(String nomFitxer) throws IOException{
@@ -180,14 +143,8 @@ public class ConsultaNota{
                     notes = new String [array.length-1];
                     
                     for (int i=0; i<notes.length; i++){
-                        String nota = UtilString.normalitzaBlancs(UtilString.normalitzaText(array [i+1])); //'i+1' perque col=0 apunta al nom de l'estudiant
                         
-                        if (nota.isBlank()){
-                            notes[i] = null;
-                        }
-                        else{
-                            notes[i] = nota;
-                        }
+                        notes[i] = UtilString.normalitzaBlancs(array [i+1]); //'i+1' perque col=0 apunta al nom de l'estudiant
                     }
                     break;
                 }
@@ -224,7 +181,7 @@ public class ConsultaNota{
                 }
 
                 if (UtilString.esEnter(UtilString.normalitzaBlancs(array[col+1]))){
-                    
+
                     int numero = Integer.parseInt(UtilString.normalitzaBlancs(array[col+1])); //'col+1' perque col=0 apunta al nom de l'estudiant
 
                     if(numero>=0 && numero<=100){
@@ -249,21 +206,10 @@ public class ConsultaNota{
     public static int filaAlumne(String nomAlumne, String[] alumnes) throws IOException{
         
         for(int i=0; i<alumnes.length; i++){
-            
-            if(alumnes[i] == null){
-                continue;
-            }
-            
-            String nomAlumneFiltrat = UtilString.normalitzaBlancs(
-                             UtilString.normalitzaText(nomAlumne)
-                         ).toLowerCase();
-            
-            String nom = UtilString.normalitzaBlancs(
-                               UtilString.normalitzaText(alumnes[i])
-                           ).toLowerCase();
+            String nom = UtilString.normalitzaBlancs(UtilString.normalitzaText(alumnes[i]));
             
             //Es troba el nom de l'alumne
-            if (nom.equals(nomAlumneFiltrat)){
+            if (nom.equals(nomAlumne)){
                 return i;
             }
         }
@@ -271,22 +217,12 @@ public class ConsultaNota{
     }
     
     public static int columnaProva(String nomProva, String[] proves){
-    
-        for(int i = 0; i < proves.length; i++){
+        
+        for(int i=0; i<proves.length; i++){
+            String prova = proves[i];
             
-           if(proves[i] == null){
-                continue;
-            }
-            
-            String nomProvaFiltrat = UtilString.normalitzaBlancs(
-                             UtilString.normalitzaText(nomProva)
-                         ).toLowerCase();
-            
-            String prova = UtilString.normalitzaBlancs(
-                               UtilString.normalitzaText(proves[i])
-                           ).toLowerCase();
-            
-            if (prova.equals(nomProvaFiltrat)){
+            //Es troba el nom de la prova
+            if (prova.equals(nomProva)){
                 return i;
             }
         }
