@@ -26,7 +26,7 @@ public class Ascensor{
             if(UtilString.esEnter(args[0])){
                 int quants = Integer.parseInt(args[0]);
                 
-                if(quants<0){
+                if(quants<1){
                     System.out.println("Cal indicar un únic valor enter.");
                 }
                 else{
