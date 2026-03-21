@@ -12,6 +12,8 @@ public class Ascensor{
             for(int i=0; i<arrayAscensor.length; i++){
                 Ascensor ascensor;
                 arrayAscensor[i] = new Ascensor();
+                
+                arrayAscensor[i].pis = i;
             }
             
         return arrayAscensor;
@@ -32,9 +34,6 @@ public class Ascensor{
                 else{
                     Ascensor[] ascensors = creaAscensorsEnEscala(quants);
                     for (int i=0; i<ascensors.length; i++){
-                        
-                        ascensors[i].pis = i;
-                        
                         System.out.printf("Ascensor %d al pis %d%n", i, ascensors[i].pis);
                     }
                 }
