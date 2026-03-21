@@ -19,12 +19,12 @@ public class Ascensor{
     
     public static void main(String [] args){
         
-        int quants = Integer.parseInt(args[0]);
-        
         if (args.length == 0){
             System.out.println("Cal indicar un únic valor enter.");
         }
         else{
+            int quants = Integer.parseInt(args[0]);
+            
             if(quants<1){
                 System.out.println("Cal indicar un únic valor enter.");
             }
