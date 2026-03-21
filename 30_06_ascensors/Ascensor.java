@@ -21,12 +21,17 @@ public class Ascensor{
         
         int quants = Integer.parseInt(args[0]);
         
-        Ascensor[] ascensors = creaAscensorsEnEscala(quants);
-        for (int i=0; i<ascensors.length; i++){
-            
-            ascensors[i].pis = i;
-            
-            System.out.printf("Ascensor %d al pis %d%n", i, ascensors[i].pis);
+        if (args.length == 0){
+            System.out.println("Cal indicar un únic valor enter.");
+        }
+        else{
+            Ascensor[] ascensors = creaAscensorsEnEscala(quants);
+            for (int i=0; i<ascensors.length; i++){
+                
+                ascensors[i].pis = i;
+                
+                System.out.printf("Ascensor %d al pis %d%n", i, ascensors[i].pis);
+            }
         }
     }
 }
