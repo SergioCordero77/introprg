@@ -40,7 +40,7 @@ public class Ascensor{
                 }
             }
             else{
-                System.out.println("Cal indicar un únic valor enter.");
+                return;
             }
         }
     }
