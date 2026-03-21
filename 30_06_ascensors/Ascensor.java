@@ -19,7 +19,7 @@ public class Ascensor{
     
     public static void main(String [] args){
         
-        if (args.length == 0){
+        if (args.length != 1){
             System.out.println("Cal indicar un únic valor enter.");
         }
         else{
