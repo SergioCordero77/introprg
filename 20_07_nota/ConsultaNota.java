@@ -24,7 +24,7 @@ public class ConsultaNota{
         int [][] taula = carregaNotes(cami, numAlumnes, numProves);
         
         if (numProves == 0 || numAlumnes == 0) {
-            System.out.println("El fitxer notes.csv no és vàlid");   
+            System.out.println("El fitxer notes.csv no és vàlid");   
             return;             
         }
         
@@ -83,7 +83,7 @@ public class ConsultaNota{
             }
         }
         else{
-            System.out.print("El fitxer notes.csv no és vàlid");
+            System.out.print("El fitxer notes.csv no és vàlid");
             return;
         }     
     }
