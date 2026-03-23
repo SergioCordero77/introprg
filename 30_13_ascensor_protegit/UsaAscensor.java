@@ -18,7 +18,18 @@ public class UsaAscensor {
         else{
             int pis = ascensor.getPis();
         
-            if (args[0].equals("-1") && args[0].equals("10")){
+            if (args[0].equals("-1") || 
+                args[0].equals("0") ||
+                args[0].equals("1") ||
+                args[0].equals("2") ||
+                args[0].equals("3") ||
+                args[0].equals("4") ||
+                args[0].equals("5") ||
+                args[0].equals("6") ||
+                args[0].equals("7") ||
+                args[0].equals("8") ||
+                args[0].equals("9") ||
+                args[0].equals("10")){
                 pis = Integer.parseInt(args[0]);
             }
             
