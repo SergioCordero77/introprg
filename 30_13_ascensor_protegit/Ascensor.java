@@ -12,7 +12,7 @@ public class Ascensor{
     }
     
     public void setPis (int nouPis){    //modifica el valor de pis
-        if (nouPis>=-1 || nouPis<=10){
+        if (nouPis>=-1 && nouPis<=10){
             pis = nouPis;
         }
     }
