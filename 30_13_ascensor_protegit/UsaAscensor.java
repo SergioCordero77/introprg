@@ -16,8 +16,12 @@ public class UsaAscensor {
             return;
         }
         else{
+            int pis = ascensor.getPis();
+        
+            if (args[0].equals("-1") && args[0].equals("10")){
+                pis = Integer.parseInt(args[0]);
+            }
             
-            int pis = Integer.parseInt(args[0]);
             String moviment = args[1];
             
             System.out.println("Pis inicial: " + ascensor.getPis());
