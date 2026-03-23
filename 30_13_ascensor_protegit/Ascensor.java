@@ -16,7 +16,7 @@ public class Ascensor{
             pis = nouPis;
         }
         else {
-            pis = nouPis;
+            pis = -1;
         }
     }
     
@@ -29,7 +29,7 @@ public class Ascensor{
             moviment = nouMoviment;
         }
         else{
-            moviment = nouMoviment;
+            moviment = "aturat";
         }
     }
 }
