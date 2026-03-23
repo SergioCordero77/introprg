@@ -12,10 +12,10 @@ public class UsaAscensor {
     public static void main(String[] args) {
         Ascensor ascensor = new Ascensor();
         
-        if(args.length != 2){
+       // if(args.length != 2){
       
-        }
-        else{
+        //}
+        //else{
             
             int pis = Integer.parseInt(args[0]);
             String moviment = args[1];
@@ -26,6 +26,6 @@ public class UsaAscensor {
             ascensor.setMoviment(moviment);
             System.out.println("Pis final: " + ascensor.getPis());
             System.out.println("Moviment final: " + ascensor.getMoviment());
-        }
+        //}
     }
 }
