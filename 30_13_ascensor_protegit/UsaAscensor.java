@@ -10,11 +10,12 @@ Inicialment, l'ascensor començarà a la planta -1 i aturat.
 public class UsaAscensor {
     /* XXX */
     public static void main(String[] args) {
+        Ascensor ascensor = new Ascensor();
+        
         if(args.length != 2){
-            System.out.println("Error");
+      
         }
         else{
-            Ascensor ascensor = new Ascensor();
             
             int pis = Integer.parseInt(args[0]);
             String moviment = args[1];
