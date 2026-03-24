@@ -12,25 +12,26 @@ public class UsaAscensor {
     public static void main(String[] args) {
         Ascensor ascensor = new Ascensor();
         
-        int pis = ascensor.getPis();
+        int pis;
+        String moviment;
     
-        if (args[0].equals("-1") || 
-            args[0].equals("0") ||
-            args[0].equals("1") ||
-            args[0].equals("2") ||
-            args[0].equals("3") ||
-            args[0].equals("4") ||
-            args[0].equals("5") ||
-            args[0].equals("6") ||
-            args[0].equals("7") ||
-            args[0].equals("8") ||
-            args[0].equals("9") ||
-            args[0].equals("10")){
+        if (UtilString.esEnter(args[0]) && 
+            args.length<0 &&
+            !args[0].isBlank()){
             pis = Integer.parseInt(args[0]);
         }
+        else{
+            pis = ascensor.getPis();
+        }
         
-        String moviment = ascensor.getMoviment();
-        
+        if (UtilString.esEnter(args[1]) && 
+            args.length<1 &&
+            !args[1].isBlank()){
+            moviment = args[1];
+        }
+        else{
+            moviment = ascensor.getMoviment();
+        }
         
         System.out.println("Pis inicial: " + ascensor.getPis());
         System.out.println("Moviment inicial: " + ascensor.getMoviment());
