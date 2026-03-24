@@ -29,7 +29,8 @@ public class UsaAscensor {
             pis = Integer.parseInt(args[0]);
         }
         
-        String moviment = args[1];
+        String moviment = ascensor.getMoviment();
+        
         
         System.out.println("Pis inicial: " + ascensor.getPis());
         System.out.println("Moviment inicial: " + ascensor.getMoviment());
