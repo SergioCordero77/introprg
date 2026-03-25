@@ -15,8 +15,8 @@ public class UsaAscensor {
         int pis;
         String moviment;
     
-        if (UtilString.esEnter(args[0]) && 
-            args.length<0 &&
+        if (args.length>0 &&
+            UtilString.esEnter(args[0]) && 
             !args[0].isBlank()){
             pis = Integer.parseInt(args[0]);
         }
@@ -24,8 +24,7 @@ public class UsaAscensor {
             pis = ascensor.getPis();
         }
         
-        if (UtilString.esEnter(args[1]) && 
-            args.length<1 &&
+        if (args.length>1 && 
             !args[1].isBlank()){
             moviment = args[1];
         }

@@ -15,9 +15,6 @@ public class Ascensor{
         if (nouPis>=-1 && nouPis<=10){
             pis = nouPis;
         }
-        else {
-            pis = -1;
-        }
     }
     
     public String getMoviment(){    //consulta el valor de pis
@@ -25,11 +22,9 @@ public class Ascensor{
     }
     
     public void setMoviment (String nouMoviment){    //modifica el valor de pis
+    
         if (nouMoviment.equals("aturat") || nouMoviment.equals("pujant") || nouMoviment.equals("baixant")){
             moviment = nouMoviment;
-        }
-        else{
-            moviment = "aturat";
         }
     }
 }
