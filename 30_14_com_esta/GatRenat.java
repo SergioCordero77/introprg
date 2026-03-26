@@ -5,40 +5,20 @@ public class GatRenat {
     private int vides = 7;
     private String posicio = "estirat";
     
-    public boolean esViu (int vides){
-        if(vides>0){
-            return true;
-        }
-        else{
-            return false;
-        }
+    public boolean esViu (){
+        return vides > 0;
     }
     
-    public boolean esDret (String posicio){
-        if(posicio.equals("dret")){
-            return true;
-        }
-        else{
-            return false;
-        }
+    public boolean esDret (){
+        return posicio.equals("dret");
     }
     
-    public boolean esAssegut (String posicio){
-        if(posicio.equals("assegut")){
-            return true;
-        }
-        else{
-            return false;
-        }
+    public boolean esAssegut (){
+        return posicio.equals("assegut");
     }
       
-    public boolean esEstirat (String posicio){
-        if(posicio.equals("estirat")){
-            return true;
-        }
-        else{
-            return false;
-        }
+    public boolean esEstirat (){
+        return posicio.equals("estirat");
     }
     
     public int getVides(){    //consulta el valor de vides
