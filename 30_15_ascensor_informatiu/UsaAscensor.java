@@ -10,10 +10,20 @@ public class UsaAscensor {
         System.out.println("Pis inicial: " + ascensor.getPis());
         System.out.println("Moviment inicial: " + ascensor.getMoviment());
         System.out.println("Introdueix nou pis:");
-        ascensor.setPis(Integer.parseInt(Entrada.readLine()));
+        if(UtilString.esEnter(Entrada.readLine())){
+            ascensor.setMoviment(Entrada.readLine());
+        }
+        else{
+            ascensor.getPis();
+        }
 
         System.out.println("Introdueix nou moviment:");
-        ascensor.setMoviment(Entrada.readLine());
+        if(ascensor.esAturat() || ascensor.esPujant() || ascensor.esBaixant()){
+            ascensor.setMoviment(Entrada.readLine());
+        }
+        else{
+            ascensor.getMoviment();
+        }
 
         System.out.println("Pis final: " + ascensor.getPis());
         System.out.println("Moviment final: " + ascensor.getMoviment());

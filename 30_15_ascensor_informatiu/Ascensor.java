@@ -42,6 +42,9 @@ public class Ascensor{
         else if (esPujant()){
             return moviment + " al pis " + pis;
         }
+        else if (esBaixant()){
+            return moviment + " al pis " + pis;
+        }
         else{
             return moviment + " al pis " + pis;
         }
