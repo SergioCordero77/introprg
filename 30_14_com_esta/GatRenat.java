@@ -2,10 +2,10 @@
  * Classe GatRenat implementada amb els seus atributs i funcions.
  */
 public class GatRenat {
-    int vides = 7;
-    String posicio = "estirat";
+    private int vides = 7;
+    private String posicio = "estirat";
     
-    public static boolean esViu (int vides){
+    public boolean esViu (int vides){
         if(vides>0){
             return true;
         }
@@ -14,7 +14,7 @@ public class GatRenat {
         }
     }
     
-    public static boolean esDret (String posicio){
+    public boolean esDret (String posicio){
         if(posicio.equals("dret")){
             return true;
         }
@@ -23,7 +23,7 @@ public class GatRenat {
         }
     }
     
-    public static boolean esAssegut (String posicio){
+    public boolean esAssegut (String posicio){
         if(posicio.equals("assegut")){
             return true;
         }
@@ -32,12 +32,35 @@ public class GatRenat {
         }
     }
       
-    public static boolean esEstirat (String posicio){
+    public boolean esEstirat (String posicio){
         if(posicio.equals("estirat")){
             return true;
         }
         else{
             return false;
+        }
+    }
+    
+    public int getVides(){    //consulta el valor de vides
+        return vides;
+    }
+    
+    public void setVides (int novesVides){    //modifica el valor de vides
+        vides = novesVides;
+    }
+    
+    public String getPosicio(){    //consulta el valor de pis
+        return posicio;
+    }
+    
+    public void setPosicio (String novaPosicio){    //modifica el valor de pis
+    
+        if (novaPosicio.equals("dret") || 
+            novaPosicio.equals("assegut")){
+            posicio = novaPosicio;
+        }
+        else{
+            posicio = "estirat";
         }
     }
 }
