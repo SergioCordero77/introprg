@@ -10,8 +10,10 @@ public class UsaAscensor {
         System.out.println("Pis inicial: " + ascensor.getPis());
         System.out.println("Moviment inicial: " + ascensor.getMoviment());
         System.out.println("Introdueix nou pis:");
-        if(UtilString.esEnter(Entrada.readLine())){
-            ascensor.setMoviment(Entrada.readLine());
+        String nouPis = Entrada.readLine();
+        
+        if(UtilString.esEnter(nouPis)){
+            ascensor.setPis(Integer.parseInt(nouPis));
         }
         else{
             ascensor.getPis();
