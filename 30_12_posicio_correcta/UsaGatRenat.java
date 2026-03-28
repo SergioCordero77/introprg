@@ -1,3 +1,7 @@
+/*
+ * Programa que et diu les propietats inicials del GatRenat 
+ * i després li donem una posició nova per Entrada.readLine()
+ */
 public class UsaGatRenat {
      public static void main(String[] args) {
          GatRenat renat = new GatRenat();
