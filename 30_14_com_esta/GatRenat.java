@@ -1,5 +1,14 @@
 /*
- * Classe GatRenat implementada amb els seus atributs i funcions.
+ * Aquesta classe representa un gat anomenat Renat amb dos atributs principals:
+ * - vides: indica el nombre de vides que té el gat (per defecte 7).
+ * - posicio: indica en quina posició es troba el gat ("estirat", "dret" o "assegut").
+ * 
+ * Inclou mètodes getters i setters per accedir i modificar aquests atributs,
+ * aplicant certes restriccions per assegurar valors correctes:
+ * - Les vides no poden ser negatives.
+ * - La posició només pot ser una de les definides.
+ * 
+ * També inclou booleans per saber si el gat està viu, dret, assegut o assegut.
  */
 public class GatRenat {
     private int vides = 7;
