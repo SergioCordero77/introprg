@@ -46,7 +46,10 @@ public class GatRenat {
         if(esViu()){
             return "...";
         }
-        else{
+        else if (vides<0){
+            return "...";
+        }
+        else {
             this.vides = vides;
             return "guai!";
         }
