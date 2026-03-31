@@ -35,14 +35,24 @@ public class Ascensor{
         if (moviment.equals("pujant")){
             if (esAdalt()){
                 moviment = "baixant";
+                pis --;
             }
-            return pis++;
+            else{
+                pis++;
+            }
+            
+            return pis;
         }
         else if (moviment.equals("baixant")){
             if (esAbaix()){
                 moviment = "pujant";
+                pis++;
             }
-            return pis--;
+            else{
+                pis --;
+            }
+            
+            return pis;
         }
         
         return pis;
