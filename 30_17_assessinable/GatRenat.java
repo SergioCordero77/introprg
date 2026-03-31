@@ -37,6 +37,7 @@ public class GatRenat {
             return "...";
         }
         else{
+            vides = 1;
             return "guai!";
         }
     }
