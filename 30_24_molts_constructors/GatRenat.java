@@ -11,7 +11,7 @@
  * - El mètode getVides() permet consultar el nombre de vides actual.
  * - El mètode setVides() permet canviar les vides.
  * - El mètode getPosicio() permet consultar la posició actual.
-  * - El mètode setPosicio() permet canviar la posició.
+ * - El mètode setPosicio() permet canviar la posició.
  * - El mètode toString() retorna una representació en format text de l’estat del gat.
  * - El mètode main crea una instància de GatRenat i mostra les seves vides per pantalla.
  */
