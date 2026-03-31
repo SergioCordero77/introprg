@@ -19,13 +19,13 @@ public class GatRenat {
     
     //El gat es mort o reviu
     public String mor(){
-        if(esViu()){
+        if(vides>0){
+            if (vides==1){
+                vides--;
+                return "ximpún";
+            }
             vides--;
             return "auch";
-        }
-        else if (!esViu() && vides==0){
-            vides--;
-            return "ximpún";
         }
         else{
             return "...";
