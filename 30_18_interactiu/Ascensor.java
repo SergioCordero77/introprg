@@ -1,7 +1,13 @@
-/*
- * Programa que defineix una classe que es diu Ascensor que té com a valors
-    - pis: int.
-    - moviment: String.
+/* 
+ * Classe Ascensor.
+ * L’ascensor es pot moure entre els pisos -1 (planta baixa) i 10 (últim pis).
+ * Permet arrencar en direcció amunt o avall, aturar-se i avançar al següent pis.
+ *
+ * Funcionament:
+ * - L’ascensor té un estat (aturat, pujant o baixant).
+ * - Si arriba al pis més alt (10), canvia automàticament a baixant.
+ * - Si arriba al pis més baix (-1), canvia automàticament a pujant.
+ * - El mètode seguentPis() gestiona el moviment i el canvi de direcció.
  */
 public class Ascensor{
     private int pis = -1;
