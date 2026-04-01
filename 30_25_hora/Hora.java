@@ -98,7 +98,7 @@ public class Hora{
                             minuts*60 +
                             segons;
                          
-        int increment = segonsTotals + segons;
+        int increment = segonsTotals - segons;
         
         this.hores = (increment/3600)%24;
         this.minuts = (this.hores*60)%60;
