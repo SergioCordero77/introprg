@@ -47,12 +47,12 @@ public class GatRenat {
     }
     
     public String getPosicio() { return posicio; }
-    public void setPosicio(String novaPosicio) {
-        if (novaPosicio.equals("dret") || novaPosicio.equals("assegut")){
-            posicio = novaPosicio;
+    public void setPosicio(String posicio) {
+        if (posicio.equals("dret") || posicio.equals("assegut")){
+            this.posicio = posicio;
         }
         else{
-            posicio = "estirat";
+            this.posicio = "estirat";
         }
     }
     
