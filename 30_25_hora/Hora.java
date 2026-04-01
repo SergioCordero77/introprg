@@ -49,7 +49,7 @@ public class Hora{
                 this.minuts = 0;
                 this.hores ++;
                 
-                if(this.hores>24){
+                if(this.hores>23){
                     this.hores = 0;
                 }
             }
@@ -68,7 +68,7 @@ public class Hora{
                 this.hores --;
                 
                 if(this.hores<0){
-                    this.hores = 24;
+                    this.hores = 23;
                 }
             }
         }
