@@ -1,7 +1,7 @@
 public class Hora{
     int hores = 0;
-    int minuts = 00;
-    int segons = 00;
+    int minuts = 0;
+    int segons = 0;
     
     //contructor sense parametres
     public Hora (){
