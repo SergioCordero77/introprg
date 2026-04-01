@@ -9,6 +9,10 @@ public class Hora{
     
     //constructor amb paràmetres
     public Hora (int hores, int minuts, int segons){
+           setHores(hores);
+           setMinuts(minuts);
+           setSegons(segons); 
+        
         if(getHores()<0 || getHores()>23 ||
            getMinuts()<0 || getMinuts()>59 || 
            getSegons()<0 || getSegons()>59){
@@ -16,11 +20,6 @@ public class Hora{
            this.hores = 0;
            this.minuts = 0;
            this.segons = 0;    
-       }
-       else{
-           setHores(hores);
-           setMinuts(minuts);
-           setSegons(segons);  
        }
     }
     
