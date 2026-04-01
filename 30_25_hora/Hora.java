@@ -100,27 +100,15 @@ public class Hora{
                          
         int decrement = segonsTotals - segons;
         
-        if (this.hores<0){
-            this.hores = ((this.hores-this.hores)-this.hores)%24;
-        }
-        else{
-            this.minuts = (decrement/3600)%24;
+        int totalSegonsAlDia = 24*3600;
+        
+        if (decrement<0){
+            decrement = (totalSegonsAlDia + decrement)%totalSegonsAlDia;
         }
         
-        if (this.minuts<0){
-            this.minuts = ((this.minuts-this.minuts)-this.minuts)%60;
-        }
-        else{
-            this.minuts = (decrement/60)%60;
-        }
-        
-        
-        if (this.segons<0){
-            this.segons = ((this.segons-this.segons)-this.segons)%60;
-        }
-        else{
-            this.segons = decrement%60;
-        }
+        this.hores = (decrement/3600)%24;
+        this.minuts = (decrement/60)%60;
+        this.segons = decrement%60;
         
         /*
         
