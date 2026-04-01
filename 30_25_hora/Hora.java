@@ -14,6 +14,7 @@ public class Hora{
         setSegons(segons);
     }
     
+    //getters
     public int getHores(){
         return hores;
     }
@@ -26,16 +27,17 @@ public class Hora{
         return segons;
     }
     
+    //setter
     public void setHores(int hora){
-        this.hores = hora;
+        this.hores = hora%24;
     }
     
     public void setMinuts(int minuts){
-        this.minuts = minuts;
+        this.minuts = minuts%60;
     }
     
     public void setSegons(int segons){
-        this.segons = segons;
+        this.segons = segons%60;
     }
     
     public void incrementa (){
@@ -76,20 +78,26 @@ public class Hora{
     
     public void incrementa (int segons){
         
+        //Total de segons que hi ha a la nostra hora
         int segonsTotals =  hores*3600 +
                             minuts*60 +
                             this.segons;
-                            
+        
+        //Total de segons que hi ha en un dia                    
         int totalSegonsAlDia = 24*3600;
         
+        //cicle de 24h
         int segonsNormalitzats = segons%totalSegonsAlDia;
-                         
+        
+        //increment de segons                 
         int increment = segonsTotals + segonsNormalitzats;
         
+        //contron si l'increment és negatiu
         if (increment<0){
             increment = (totalSegonsAlDia + increment)%totalSegonsAlDia;
         }
         
+        //conversió final de segons a hores, minuts i segons
         this.hores = (increment/3600)%24;
         this.minuts = (increment/60)%60;
         this.segons = increment%60;
@@ -115,20 +123,26 @@ public class Hora{
     
     public void decrementa (int segons){
         
+        //Total de segons que hi ha a la nostra hora
         int segonsTotals =  hores*3600 +
                             minuts*60 +
                             this.segons;
-                            
+        
+        //Total de segons que hi ha en un dia                    
         int totalSegonsAlDia = 24*3600;
         
+        //cicle de 24h
         int segonsNormalitzats = segons%totalSegonsAlDia;
-                         
+        
+        //decrement de segons                 
         int decrement = segonsTotals - segonsNormalitzats;
         
+        //control si el decrement és negatiu
         if (decrement<0){
             decrement = (totalSegonsAlDia + decrement)%totalSegonsAlDia;
         }
         
+        //conversió final de segons a hores, minuts i segons
         this.hores = (decrement/3600)%24;
         this.minuts = (decrement/60)%60;
         this.segons = decrement%60;
@@ -159,14 +173,14 @@ public class Hora{
         else if (hores > hora.hores){
             return 1;
         }
-        else{
+        else{ //Si la hora es igual, s'hauran de comparar els minuts
             if (minuts < hora.minuts){
                 return -1;
             }
             else if (minuts > hora.minuts){
                 return 1;
             }
-            else{
+            else{ //Si els minuts són iguals, s'hauran de comparar els segons
                 if (segons < hora.segons){
                     return -1;
                 }
