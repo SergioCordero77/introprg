@@ -1,3 +1,10 @@
+/*
+ * Programa que crea un objecte a partir de la classe ascensor.
+ * Mostra la posició inicial de l'ascensor que li passem per Entrada.readLine().
+ * Després li demanem que puji i que baixi.
+ * Finalment, volem que baixi fins a la planta baixa. L'ascensor ha de pujar fins a adalt
+ * i després baixar fins a la planta baixa.
+ */
 public class UsaAscensor {
      public static int llegeixEnter() {
          String resposta = Entrada.readLine();
@@ -32,4 +39,4 @@ public class UsaAscensor {
          ascensor.aturat();
          System.out.printf("Està %s. Final de trajecte!%n", ascensor.comEsta());
      }
- }
+}
