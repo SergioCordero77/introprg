@@ -43,6 +43,7 @@ public class Hora{
         
         if (this.segons==60){
             this.segons=0;
+            this.minuts++;
         }
     }
     
@@ -51,6 +52,7 @@ public class Hora{
         
         if(this.segons<0){
             this.segons = 59;
+            this.minuts --;
         }
     }
     
