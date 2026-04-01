@@ -44,6 +44,15 @@ public class Hora{
         if (this.segons==60){
             this.segons=0;
             this.minuts++;
+            
+            if(this.minuts==60){
+                this.minuts = 0;
+                this.hores ++;
+                
+                if(this.hores>24){
+                    this.hores = 0;
+                }
+            }
         }
     }
     
@@ -53,6 +62,15 @@ public class Hora{
         if(this.segons<0){
             this.segons = 59;
             this.minuts --;
+            
+            if(this.minuts<0){
+                this.minuts = 59;
+                this.hores --;
+                
+                if(this.hores<0){
+                    this.hores = 24;
+                }
+            }
         }
     }
     
