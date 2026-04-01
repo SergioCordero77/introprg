@@ -93,10 +93,23 @@ public class Hora{
     }
     
     public void decrementa (int segons){
+        
+        int segonsTotals =  hores*3600 +
+                            minuts*60 +
+                            segons;
+                         
+        int increment = segonsTotals + segons;
+        
+        this.hores = (increment/3600)%24;
+        this.minuts = (this.hores*60)%60;
+        this.segons = (this.minuts*60)%60;
+        
+        /*
+        
         this.segons -= segons;
         
         if(this.segons<0){
-            this.segons = ((this.segons)%3600)+(this.segons*2);
+            this.segons = (60 + this.segons)%60;
             this.minuts --;
             
             if(this.minuts<0){
@@ -107,7 +120,7 @@ public class Hora{
                     this.hores = (24 + this.hores)%24;
                 }
             }
-        }
+        }*/
     }
     
     public int compareTo(Hora hora){
