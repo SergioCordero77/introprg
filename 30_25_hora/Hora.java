@@ -104,11 +104,9 @@ public class Hora{
                          
         int decrement = segonsTotals - segonsNormalitzats;
         
-        
-        /*
         if (decrement<0){
             decrement = (totalSegonsAlDia + decrement)%totalSegonsAlDia;
-        }*/
+        }
         
         this.hores = (decrement/3600)%24;
         this.minuts = (decrement/60)%60;
