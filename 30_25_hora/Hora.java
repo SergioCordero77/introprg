@@ -96,7 +96,7 @@ public class Hora{
         this.segons -= segons;
         
         if(this.segons<0){
-            this.segons = (3600 + this.segons)%3600;
+            this.segons = (this.segons)%3600;
             this.minuts --;
             
             if(this.minuts<0){
