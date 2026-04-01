@@ -40,10 +40,18 @@ public class Hora{
     
     public void incrementa (){
         this.segons ++;
+        
+        if (this.segons==60){
+            this.segons=0;
+        }
     }
     
     public void decrementa (){
         this.segons --;
+        
+        if(this.segons<0){
+            this.segons = 59;
+        }
     }
     
     public void incrementa (int segons){
