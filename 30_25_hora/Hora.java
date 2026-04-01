@@ -96,15 +96,15 @@ public class Hora{
         this.segons -= segons;
         
         if(this.segons<0){
-            this.segons = 60 - this.segons;
+            this.segons = 60 + this.segons;
             this.minuts --;
             
             if(this.minuts<0){
-                this.minuts = 60 - this.minuts;
+                this.minuts = 60 + this.minuts;
                 this.hores --;
                 
                 if(this.hores<0){
-                    this.hores = 24 - this.hores;
+                    this.hores = 24 + this.hores;
                 }
             }
         }
