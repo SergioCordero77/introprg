@@ -116,6 +116,10 @@ public class Hora{
     }
     
     public Hora duplica(){
+        setHores(this.hores);
+        setMinuts(this.minuts);
+        setSegons(this.segons); 
+           
         Hora copia = new Hora();
         return copia;
     }
