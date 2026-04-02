@@ -22,6 +22,13 @@
  * - El mètode toString() retorna la hora en el següent format "0:00:00".
  * - El mètode main crea dos objectes hora, els compara i ens diu quina hora és més gran, 
  * després incrementa un segon la hora a hora1 i decrementa un segon a la hora2 i els torna a comparar.
+ 
+ * AMPLIACIÓ:
+ * S'introdueixen nous mètodes:
+ * - El mètode boolean esValida(int hores, int minuts, int segons): retorna true si i només sí les hores, minuts i segons indicats, en aquest ordre, pels paràmetres, corresponen a una combinació vàlida per una hora. (mètode static)
+ * - El mètode int compareTo(Hora, Hora): retorna -1 si la primera hora és menor que (anterior a) la segona, 0 si són iguals i 1 si la primera és més gran que (posterior a) la segona. (mètode static)
+ * - El mètode Hora duplica(): retorna una nova instància de la classe Hora amb els mateixos valors per les propietats de l'hora corresponent.
+ * - El mètode Hora duplica(Hora): retorna una nova instància de la classe Hora amb els mateixos valors per les propietats de l'hora rebuda. (mètode static)
  */
 public class Hora{
     int hores = 0;
