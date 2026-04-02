@@ -1,3 +1,28 @@
+/* 
+ * Classe Hora.
+ * Representa una hora concreta amb els atributs hora, minuts i segons.
+ *
+ * Funcionament:
+ * - Hi ha 2 constructors:
+        - Constructor que no rep res per paràmetres.
+        - Constructor que rep hores, minuts i segons per paràmetre.
+ * - Hi ha 3 getters:
+ *      -El mètode getHores() permet consultar les hores.
+ *      -El mètode getMinuts() permet consultar els minuts.
+ *      -El mètode getSegons() permet consultar els segons.
+ * - Hi ha 3 setters:
+ *      -El mètode setHores() permet canviar les hores.
+ *      -El mètode setMinuts() permet canviar els minuts.
+ *      -El mètode setSegons() permet canviar els segons.
+ * - El mètode incrementa() que afegeix un segon a la hora.
+ * - El mètode decrementa() que treu un segon a la hora.
+ * - El mètode incrementa(int segons) que afegeix tants segons a la hora com se li hagi passat per paràmetre.
+ * - El mètode decrementa(int segons) que decrementa tants segons a la hora com se li hagi passat per paràmetre.
+ * - El mètode comparteToHora(Hora) que compara 2 hores i ens retorna si hi ha una hora més gran o si són iguals.
+ * - El mètode toString() retorna la hora en el següent format "0:00:00".
+ * - El mètode main crea dos objectes hora, els compara i ens diu quina hora és més gran, 
+ * després incrementa un segon la hora a hora1 i decrementa un segon a la hora2 i els torna a comparar.
+ */
 public class Hora{
     int hores = 0;
     int minuts = 0;
