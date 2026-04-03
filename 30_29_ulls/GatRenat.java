@@ -78,8 +78,8 @@ public class GatRenat {
     public String aixecat(){
         posicio = "dret";
         
-        ullDret.obert();
-        ullEsquerre.obert();
+        ullDret.obret();
+        ullEsquerre.obret();
         
         return "dret";
     }
@@ -87,7 +87,7 @@ public class GatRenat {
     public String seu(){
         posicio = "assegut";
         
-        ullDret.obert();
+        ullDret.obret();
         ullEsquerre.tancat();
         
         return "assegut";

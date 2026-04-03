@@ -15,7 +15,7 @@ public class UllDeGat{
     }
 
 /*********************** mètodes ***********************/
-    public void obert(){
+    public void obret(){
         obert = true;
     }
     
