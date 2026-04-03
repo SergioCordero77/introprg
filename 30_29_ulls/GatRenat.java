@@ -54,11 +54,23 @@ public class GatRenat {
     //posicio
     public String getPosicio() { return posicio; }
     public void setPosicio(String posicio) {
-        if (posicio.equals("dret") || posicio.equals("assegut")){
+        if (posicio.equals("dret")){
             this.posicio = posicio;
+            
+            ullDret.obret();
+            ullEsquerre.obret();
+        }
+        else if (posicio.equals("assegut")){
+            this.posicio = posicio;
+            
+            ullDret.obret();
+            ullEsquerre.tancat();
         }
         else{
             this.posicio = "estirat";
+            
+            ullDret.tancat();
+            ullEsquerre.tancat();
         }
     }
     
@@ -76,28 +88,19 @@ public class GatRenat {
 /*********************** mètodes ***********************/
     //Accions del gat
     public String aixecat(){
-        posicio = "dret";
-        
-        ullDret.obret();
-        ullEsquerre.obret();
+        setPosicio("dret");
         
         return "dret";
     }
     
     public String seu(){
-        posicio = "assegut";
-        
-        ullDret.obret();
-        ullEsquerre.tancat();
+        setPosicio("assegut");
         
         return "assegut";
     }
     
     public String estirat(){
-        posicio = "estirat";
-        
-        ullDret.tancat();
-        ullEsquerre.tancat();
+        setPosicio("estirat");
         
         return "estirat";
     }
