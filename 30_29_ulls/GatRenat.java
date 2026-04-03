@@ -33,13 +33,10 @@ public class GatRenat {
     
     //constructor amb el paràmetre posicio
     public GatRenat(String posicio) {
-        setPosicio(posicio);
-        
         ullDret = new UllDeGat();
         ullEsquerre = new UllDeGat();
         
-        ullDret.tancat();
-        ullEsquerre.tancat();
+        setPosicio(posicio);
     }
     
 /****************** getters i setters ******************/
