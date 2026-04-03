@@ -67,6 +67,8 @@ public class GatRenat {
             instancia = novaInstancia;
             return instancia;
         }
+        instancia.setVides(vides);
+        
         return instancia;
     }
     
@@ -76,6 +78,8 @@ public class GatRenat {
             instancia = novaInstancia;
             return instancia;
         }
+        instancia.setPosicio(posicio);
+        
         return instancia;
     }
     
@@ -85,6 +89,9 @@ public class GatRenat {
             instancia = novaInstancia;
             return instancia;
         }
+        instancia.setVides(vides);
+        instancia.setPosicio(posicio);
+        
         return instancia;
     }
     
