@@ -13,6 +13,27 @@ public class GatRenat {
     private String posicio = "estirat";
     private Picarol picarol;
     
+/********************* constructors *********************/   
+    //constructor sense parametres
+    public GatRenat() {
+    }
+    
+    //constructor amb el paràmetre vides
+    public GatRenat(int vides) {
+        setVides(vides);
+    }
+    
+    //constructor amb el paràmetre posicio
+    public GatRenat(String posicio) {
+        setPosicio(posicio);
+    }
+    
+    //constructor amb el paràmetre vides i el paràmetre posicio
+    public GatRenat(int vides, String posicio) {
+        setVides(vides);
+        setPosicio(posicio);
+    }
+    
 /****************** getters i setters ******************/
     //vides
     public int getVides() { return vides; }
