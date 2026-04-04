@@ -1,12 +1,12 @@
 /*
  * Classe GatRenat.
- * Representa un gat anomenat Renat amb l'atribut vides, posicio, picarol i hihaPicarol.
+ * Representa un gat anomenat Renat amb l'atribut vides, posicio, picarol.
  *
  * Funcionament:
  * 
  * - El mètode agafaPicarol(Picarol): assigna un picarol. Si en tenia un, el substitueix pel nou i retorna l'anterior. Si no en tenia cap, retorna el valor null.
  * - El mètode deixaPicarol(): retorna el picarol i a partir d'aquest moment deixa de tenir picarol. Si no en tenia cap, retorna null.
- * - El mètode hihaPicarol(): cert si té un picarol assignat. En néixer, el gat Renat no en té.
+ * - El mètode hiHaPicarol(): cert si té un picarol assignat. En néixer, el gat Renat no en té.
  */
 public class GatRenat {
     private int vides = 7;
@@ -72,7 +72,7 @@ public class GatRenat {
         return anterior;
     }
     
-    public boolean hihaPicarol(){
+    public boolean hiHaPicarol(){
         return picarol != null;
     }
     
@@ -83,7 +83,7 @@ public class GatRenat {
         }
         else{
             posicio = "dret";
-            if (hihaPicarol()){
+            if (hiHaPicarol()){
                 picarol.sona();
             }
             return "ja m'aixeco";
@@ -96,7 +96,7 @@ public class GatRenat {
         }
         else{
             posicio = "assegut";
-            if (hihaPicarol()){
+            if (hiHaPicarol()){
                 picarol.sona();
             }
             return "ja m'assec";
@@ -109,7 +109,7 @@ public class GatRenat {
         }
         else{
             posicio = "estirat";
-            if (hihaPicarol()){
+            if (hiHaPicarol()){
                 picarol.sona();
             }
             return "ja m'estiro";
