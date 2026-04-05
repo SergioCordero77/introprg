@@ -1,3 +1,19 @@
+/*
+ * Programa per provar el funcionament de la classe GatRenat.
+ * Aquest programa obté la instància única del gat Renat
+ * i mostra la seva posició inicial.
+ * 
+ * A partir dels arguments rebuts per línia de comandes, es van canviant
+ * les posicions del gat segons el valor indicat:
+ *   1 -> estirat
+ *   2 -> assegut
+ *   3 -> dret
+ * Qualsevol altre valor no modifica la posició actual.
+ * 
+ * Després de cada canvi, es mostra la nova posició del gat.
+ * 
+ * Autor: Estudiant de DAW
+ */
 public class UsaGatRenat {
      public static void main(String[] args) {
          GatRenat renat = GatRenat.getInstancia();
