@@ -20,19 +20,19 @@ public class GatRenat {
     }
     
     public int getVides() { return vides; }
-    public void setVides(int novesVides) {
-        if (novesVides >= 0)  {
-            vides = novesVides;
+    public void setVides(int vides) {
+        if (vides >= 0)  {
+            this.vides = vides;
         }
     }
     
     public String getPosicio() { return posicio; }
-    public void setPosicio(String novaPosicio) {
-        if (novaPosicio.equals("dret") || novaPosicio.equals("assegut")){
-            posicio = novaPosicio;
+    public void setPosicio(String posicio) {
+        if (posicio.equals("dret") || posicio.equals("assegut")){
+            this.posicio = posicio;
         }
         else{
-            posicio = "estirat";
+            this.posicio = "estirat";
         }
     }
     
