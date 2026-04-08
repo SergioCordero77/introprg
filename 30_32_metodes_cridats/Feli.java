@@ -1,3 +1,13 @@
+/*
+ * Classe Feli, Classe Gat, Classe GatRenat i Classe Menjar.
+ *
+ * Aquest programa defineix una jerarquia de classes relacionada amb felins.
+ * Hi ha la classe base Feli i dues subclasses: Gat i GatRenat.
+ * També hi ha la classe Menjar, que representa el tipus de menjar.
+ *
+ * Es practica l’herència, la sobreescriptura de mètodes (override)
+ * i l’ús de super per cridar mètodes de la classe pare.
+ */
 class Feli {
     public Feli() {
         System.out.println("Neix Felí");
