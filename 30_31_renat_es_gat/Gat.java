@@ -1,3 +1,13 @@
+/* 
+ * Classe Animal.
+ * Representa un animal amb l'atribut vides i posició.
+ *
+ * Funcionament:
+ * - El mètode getVides() permet consultar el nombre de vides actual.
+ * - El mètode setVides() permet canviar les vides.
+ * - El mètode getPosicio() permet consultar la posició actual.
+ * - El mètode setPosicio() permet canviar la posició.
+ */
 public class Gat{
     private int vides = 7;
     private String posicio = "estirat";

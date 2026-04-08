@@ -1,3 +1,8 @@
+/*
+ * Main que comprova que demana que el gat canvii de posició
+ * i retorna la posició encara que no la tingui definida en GatRenat perquè
+ * està definida a la classe Animal
+ */
 public class UsaGatRenat{
     public static void main(String[] args) {
         GatRenat renat = new GatRenat();

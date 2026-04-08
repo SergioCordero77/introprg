@@ -1,4 +1,6 @@
 /* 
+ * Classe GatRenat
+ *
  * Inclou mètodes getters i setters per accedir i modificar aquests atributs,
  * aplicant certes restriccions per assegurar valors correctes:
  * - Les vides no poden ser negatives.
