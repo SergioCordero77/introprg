@@ -32,7 +32,7 @@ public class DemoCrides{
         gat.miola();
         renat.miola();
         
-        Menjar bacalla = new Menjar("bacalla");
+        Menjar bacalla = new Menjar("bacallà");
         
         renat.menja(bacalla);
     }
