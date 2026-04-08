@@ -73,13 +73,15 @@ public class GatRenat {
     
     //ull
     public UllDeGat getUllDret(){
+        UllDeGat copiaUllDret = new UllDeGat(ullDret.esObert());
         
-        return ullDret;
+        return copiaUllDret;
     }
     
     public UllDeGat getUllEsquerre(){
+        UllDeGat copiaUllEsquerre = new UllDeGat(ullEsquerre.esObert());
         
-        return ullEsquerre;
+        return copiaUllEsquerre;
     }
     
 /*********************** mètodes ***********************/
