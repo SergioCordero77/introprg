@@ -1,3 +1,13 @@
+/*
+ * Classe UllDeGat
+ * Representa l'ull del gat.
+ * 
+ * Funcionament:
+ * Té 2 constructors:
+    - El primer no rep res per paràmetres.
+    - El segon rep per paràmetre un boolean per saber si l'ull està obert o tancat.
+ * Té mètodes per obrir, tancar i boolean per saber si l'ull està oberto o tancat.
+ */
 public class UllDeGat{
     private boolean obert;
 
