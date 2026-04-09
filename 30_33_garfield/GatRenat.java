@@ -10,26 +10,31 @@
         - Constructor que rep vides i posicio per paràmetres.
  */
 public class GatRenat extends Gat{
-    private int vides = 7;
-    private String posicio = "estirat";
     
     //constructor sense parametres
     public GatRenat() {
+        super("Renat");
     }
     
     //constructor amb el paràmetre vides
     public GatRenat(int vides) {
-        setVides(vides);
+        super("Renat", vides);
+        
+        super.setVides(vides);
     }
     
     //constructor amb el paràmetre posicio
     public GatRenat(String posicio) {
-        setPosicio(posicio);
+        super("Renat", posicio);
+        
+        super.setPosicio(posicio);
     }
     
     //constructor amb el paràmetre vides i el paràmetre posicio
     public GatRenat(int vides, String posicio) {
-        setVides(vides);
-        setPosicio(posicio);
+        super("Renat", vides, posicio);
+        
+        super.setVides(vides);
+        super.setPosicio(posicio);
     }
 }

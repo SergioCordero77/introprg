@@ -17,56 +17,65 @@
  */
 public class Gat{
     final private String NOM;
-    private int vides = 0;
+    private int vides = 7;
     private String posicio = "estirat";
     
 /****************** constructors ******************/
     public Gat(String nom){
-        if (nom=null || nom.isBlank()){
+        if (nom==null || nom.isBlank()){
             this.NOM = "anònim";
         }
-        this.NOM = nom;
+        else{
+            this.NOM = nom;
+        }
     }
     
     public Gat(String nom, int vides){
-        if (nom=null || nom.isBlank()){
+        if (nom==null || nom.isBlank()){
             this.NOM = "anònim";
         }
-        this.NOM = nom;
+        else{
+            this.NOM = nom;
+        }
         
-        this.vides = setVides(vides);
+        setVides(vides);
     }
     
     public Gat(String nom, String posicio){
-        if (nom=null || nom.isBlank()){
+        if (nom==null || nom.isBlank()){
             this.NOM = "anònim";
         }
-        this.NOM = nom;
+        else{
+            this.NOM = nom;
+        }
         
-        this.posicio = setPosicio(posicio);
+        setPosicio(posicio);
     }
     
     public Gat(String nom, int vides, String posicio){
-        if (nom=null || nom.isBlank()){
+        if (nom==null || nom.isBlank()){
             this.NOM = "anònim";
         }
-        this.NOM = nom;
+        else{
+            this.NOM = nom;
+        }
         
-        this.vides = setVides(vides);
-        
-        this.posicio = setPosicio(posicio);
+        setVides(vides);
+        setPosicio(posicio);
     }
 /****************** getters i setters ******************/
-    public int getNom(){    //consulta el nom
-        return nom;
+    public String getNom(){    //consulta el nom
+        return NOM;
     }
     
     public int getVides(){    //consulta el valor de vides
         return vides;
     }
     
-    public void setVides (int novesVides){    //modifica el valor de vides
-        vides = novesVides;
+    public void setVides(int vides){    //modifica el valor de vides
+        if(vides>=0){
+            this.vides = vides;
+        }
     }
     
     public String getPosicio(){    //consulta el valor de pis
@@ -134,6 +143,4 @@ public class Gat{
     }
     
 
-}
-    
 }
