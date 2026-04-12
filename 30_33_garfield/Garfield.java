@@ -26,12 +26,15 @@ public class Garfield extends Gat{
     }
     
     public String estirat(){
-        if (esEstirat() || esDret()){
+        if (esEstirat()){
             return "passo de fer res";
         }
-        else{
+        else (esAssegut()){
             super.setPosicio ("estirat");
             return "ja m'estiro";
+        }
+        else{
+            return "Bai, Maitea, bai";
         }
     }
 }
