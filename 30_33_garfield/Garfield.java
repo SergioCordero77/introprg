@@ -1,4 +1,15 @@
-
+/* 
+ * Classe Garfield.
+ * Representa un gat anomenat Garfield amb un comportament especial respecte a les accions.
+ *
+ * Funcionament:
+ * - Té un constructor que inicialitza el gat amb nom "Garfield", 9 vides i posició "estirat".
+ * - Sobreescriu el mètode setVides() per limitar les vides entre 0 i 9.
+ * - Sobreescriu els mètodes aixecat() i estirat() per modificar el comportament:
+        - Si està estirat i se li demana aixecar-se, respon "Bai Maitea, bai".
+        - Si està dret i se li demana estirar-se, respon "Bai Maitea, bai".
+        - En altres casos, actua de manera similar a un gat normal.
+ */
 public class Garfield extends Gat{
 
 /****************** contructor ******************/
