@@ -7,7 +7,7 @@
         - Constructor que rep nom i vides per paràmetre.
         - Constructor que rep nom i posicio per paràmetre.
         - Constructor que rep nom, vides i posicio per paràmetres.
- * - El mètode getNom() permet consultar el nom actual.
+ * - El mètode getnom() permet consultar el nom actual.
  * - El mètode getVides() permet consultar el nombre de vides actual.
  * - El mètode setVides() permet canviar les vides.
  * - El mètode getPosicio() permet consultar la posició actual.
@@ -16,26 +16,26 @@
  * - String per a que el gat faci l'acció d'aixecar-se, estirar-se o seure.
  */
 public class Gat{
-    final private String NOM;
+    private String nom;
     private int vides = 7;
     private String posicio = "estirat";
     
 /****************** constructors ******************/
     public Gat(String nom){
         if (nom==null || nom.isBlank()){
-            this.NOM = "anònim";
+            this.nom = "anònim";
         }
         else{
-            this.NOM = nom;
+            this.nom = nom;
         }
     }
     
     public Gat(String nom, int vides){
         if (nom==null || nom.isBlank()){
-            this.NOM = "anònim";
+            this.nom = "anònim";
         }
         else{
-            this.NOM = nom;
+            this.nom = nom;
         }
         
         setVides(vides);
@@ -43,10 +43,10 @@ public class Gat{
     
     public Gat(String nom, String posicio){
         if (nom==null || nom.isBlank()){
-            this.NOM = "anònim";
+            this.nom = "anònim";
         }
         else{
-            this.NOM = nom;
+            this.nom = nom;
         }
         
         setPosicio(posicio);
@@ -54,10 +54,10 @@ public class Gat{
     
     public Gat(String nom, int vides, String posicio){
         if (nom==null || nom.isBlank()){
-            this.NOM = "anònim";
+            this.nom = "anònim";
         }
         else{
-            this.NOM = nom;
+            this.nom = nom;
         }
         
         setVides(vides);
@@ -65,7 +65,7 @@ public class Gat{
     }
 /****************** getters i setters ******************/
     public String getNom(){    //consulta el nom
-        return NOM;
+        return nom;
     }
     
     public int getVides(){    //consulta el valor de vides
