@@ -34,7 +34,7 @@ public class Garfield extends Gat{
             return "ja m'estiro";
         }
         else{
-            return "Bai, Maitea, bai";
+            return "Bai Maitea bai";
         }
     }
 }
