@@ -16,12 +16,15 @@ public class Garfield extends Gat{
 /****************** mètodes ******************/    
     //Accions del gat
     public String aixecat(){
-        if (esDret() || esEstirat()){
+        if (esDret()){
             return "passo de fer res";
         }
-        else{
+        else if(esAssegut()){
             super.setPosicio("dret");
             return "ja m'aixeco";
+        }
+        else{
+            return "Bai Maitea, bai";
         }
     }
     
