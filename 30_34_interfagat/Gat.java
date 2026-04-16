@@ -65,13 +65,14 @@ public class Gat implements EsserViu{
     }
 
 /****************** mètodes ******************/
+    @Override
     public boolean esViu(){
         return vides>0;
     }
     
+    @Override
     public String mor(){
         if(esViu()){
-            setVides(0);
             return "adéu món cruel";
         }
         else{
@@ -79,12 +80,12 @@ public class Gat implements EsserViu{
         }
     }
     
+    @Override
     public String reviu(){
         if(esViu()){
             return "encara miolo";
         }
         else{
-            setVides(1);
             return "guai!";
         }
     }
